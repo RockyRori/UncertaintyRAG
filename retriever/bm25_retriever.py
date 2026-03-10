@@ -1,28 +1,34 @@
-import json
 from rank_bm25 import BM25Okapi
+from utils.io_utils import load_json
+from utils.text_utils import normalize_text
 
 
 class BM25Retriever:
     def __init__(self, corpus_path: str):
-        with open(corpus_path, "r", encoding="utf-8") as f:
-            self.corpus = json.load(f)
+        self.corpus = load_json(corpus_path)
+        self.passages = [item["text"] for item in self.corpus]
+        self.ids = [item["id"] for item in self.corpus]
 
-        self.texts = [doc["text"] for doc in self.corpus]
-        self.ids = [doc["id"] for doc in self.corpus]
-        self.tokenized_corpus = [text.lower().split() for text in self.texts]
+        self.tokenized_corpus = [
+            normalize_text(p).split() for p in self.passages
+        ]
         self.bm25 = BM25Okapi(self.tokenized_corpus)
 
-    def retrieve(self, query: str, top_k: int = 3):
-        tokenized_query = query.lower().split()
-        scores = self.bm25.get_scores(tokenized_query)
+    def retrieve(self, question: str, top_k: int = 5):
+        query_tokens = normalize_text(question).split()
+        scores = self.bm25.get_scores(query_tokens)
 
         ranked = sorted(
-            zip(self.ids, self.texts, scores),
+            zip(self.ids, self.passages, scores),
             key=lambda x: x[2],
             reverse=True
         )[:top_k]
 
         return [
-            {"doc_id": doc_id, "text": text, "score": float(score)}
-            for doc_id, text, score in ranked
+            {
+                "id": pid,
+                "text": text,
+                "score": float(score)
+            }
+            for pid, text, score in ranked
         ]

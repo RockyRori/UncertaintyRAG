@@ -1,0 +1,1582 @@
+[
+  {
+    "id": "q_0_2",
+    "question": "Which planet is the largest in the Solar System?",
+    "gold_answers": [
+      "Jupiter"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 9.811667557949914
+      },
+      {
+        "id": "p20",
+        "text": "Mercury is the smallest planet in the Solar System.",
+        "score": 7.748286114434322
+      },
+      {
+        "id": "p12",
+        "text": "Mars is often called the red planet.",
+        "score": 2.4325214796162453
+      },
+      {
+        "id": "p10",
+        "text": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+        "score": 2.390492324978722
+      },
+      {
+        "id": "p17",
+        "text": "K2 is the second-highest mountain in the world.",
+        "score": 2.0916918880735644
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Jupiter",
+      "Mercury",
+      "Mars",
+      "Earth",
+      "uranus"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_0_4",
+    "question": "Who developed the theory of relativity?",
+    "gold_answers": [
+      "Albert Einstein",
+      "Einstein"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p5",
+        "text": "Albert Einstein developed the theory of relativity.",
+        "score": 9.59443956491361
+      },
+      {
+        "id": "p11",
+        "text": "Berlin is the capital of Germany.",
+        "score": 1.2189316843373832
+      },
+      {
+        "id": "p19",
+        "text": "Rome is the capital city of Italy.",
+        "score": 1.13856256229316
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.9505430565933722
+      },
+      {
+        "id": "p16",
+        "text": "Isaac Newton formulated the laws of motion and universal gravitation.",
+        "score": 0.9505430565933722
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Albert Einstein",
+      "heinrich schumann",
+      "physicists",
+      "physicists",
+      "Isaac Newton"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_0_7",
+    "question": "Who painted the Mona Lisa?",
+    "gold_answers": [
+      "Leonardo da Vinci",
+      "Da Vinci"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p8",
+        "text": "Leonardo da Vinci painted the Mona Lisa.",
+        "score": 7.836679906739777
+      },
+      {
+        "id": "p13",
+        "text": "Vincent van Gogh painted The Starry Night.",
+        "score": 2.199428571659477
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.0
+      },
+      {
+        "id": "p2",
+        "text": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+        "score": 0.0
+      },
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 0.0
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Leonardo da Vinci",
+      "Vincent van Gogh",
+      "franz héliot",
+      "William Shakespeare",
+      "franz heinrich schumann"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_1_2",
+    "question": "Which planet is the largest in the Solar System?",
+    "gold_answers": [
+      "Jupiter"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 9.811667557949914
+      },
+      {
+        "id": "p20",
+        "text": "Mercury is the smallest planet in the Solar System.",
+        "score": 7.748286114434322
+      },
+      {
+        "id": "p12",
+        "text": "Mars is often called the red planet.",
+        "score": 2.4325214796162453
+      },
+      {
+        "id": "p10",
+        "text": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+        "score": 2.390492324978722
+      },
+      {
+        "id": "p17",
+        "text": "K2 is the second-highest mountain in the world.",
+        "score": 2.0916918880735644
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Jupiter",
+      "Mercury",
+      "Mars",
+      "Earth",
+      "uranus"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_1_4",
+    "question": "Who developed the theory of relativity?",
+    "gold_answers": [
+      "Albert Einstein",
+      "Einstein"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p5",
+        "text": "Albert Einstein developed the theory of relativity.",
+        "score": 9.59443956491361
+      },
+      {
+        "id": "p11",
+        "text": "Berlin is the capital of Germany.",
+        "score": 1.2189316843373832
+      },
+      {
+        "id": "p19",
+        "text": "Rome is the capital city of Italy.",
+        "score": 1.13856256229316
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.9505430565933722
+      },
+      {
+        "id": "p16",
+        "text": "Isaac Newton formulated the laws of motion and universal gravitation.",
+        "score": 0.9505430565933722
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Albert Einstein",
+      "heinrich schumann",
+      "physicists",
+      "physicists",
+      "Isaac Newton"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_1_7",
+    "question": "Who painted the Mona Lisa?",
+    "gold_answers": [
+      "Leonardo da Vinci",
+      "Da Vinci"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p8",
+        "text": "Leonardo da Vinci painted the Mona Lisa.",
+        "score": 7.836679906739777
+      },
+      {
+        "id": "p13",
+        "text": "Vincent van Gogh painted The Starry Night.",
+        "score": 2.199428571659477
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.0
+      },
+      {
+        "id": "p2",
+        "text": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+        "score": 0.0
+      },
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 0.0
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Leonardo da Vinci",
+      "Vincent van Gogh",
+      "franz héliot",
+      "William Shakespeare",
+      "franz heinrich schumann"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_2_2",
+    "question": "Which planet is the largest in the Solar System?",
+    "gold_answers": [
+      "Jupiter"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 9.811667557949914
+      },
+      {
+        "id": "p20",
+        "text": "Mercury is the smallest planet in the Solar System.",
+        "score": 7.748286114434322
+      },
+      {
+        "id": "p12",
+        "text": "Mars is often called the red planet.",
+        "score": 2.4325214796162453
+      },
+      {
+        "id": "p10",
+        "text": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+        "score": 2.390492324978722
+      },
+      {
+        "id": "p17",
+        "text": "K2 is the second-highest mountain in the world.",
+        "score": 2.0916918880735644
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Jupiter",
+      "Mercury",
+      "Mars",
+      "Earth",
+      "uranus"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_2_4",
+    "question": "Who developed the theory of relativity?",
+    "gold_answers": [
+      "Albert Einstein",
+      "Einstein"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p5",
+        "text": "Albert Einstein developed the theory of relativity.",
+        "score": 9.59443956491361
+      },
+      {
+        "id": "p11",
+        "text": "Berlin is the capital of Germany.",
+        "score": 1.2189316843373832
+      },
+      {
+        "id": "p19",
+        "text": "Rome is the capital city of Italy.",
+        "score": 1.13856256229316
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.9505430565933722
+      },
+      {
+        "id": "p16",
+        "text": "Isaac Newton formulated the laws of motion and universal gravitation.",
+        "score": 0.9505430565933722
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Albert Einstein",
+      "heinrich schumann",
+      "physicists",
+      "physicists",
+      "Isaac Newton"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_2_7",
+    "question": "Who painted the Mona Lisa?",
+    "gold_answers": [
+      "Leonardo da Vinci",
+      "Da Vinci"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p8",
+        "text": "Leonardo da Vinci painted the Mona Lisa.",
+        "score": 7.836679906739777
+      },
+      {
+        "id": "p13",
+        "text": "Vincent van Gogh painted The Starry Night.",
+        "score": 2.199428571659477
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.0
+      },
+      {
+        "id": "p2",
+        "text": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+        "score": 0.0
+      },
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 0.0
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Leonardo da Vinci",
+      "Vincent van Gogh",
+      "franz héliot",
+      "William Shakespeare",
+      "franz heinrich schumann"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_3_2",
+    "question": "Which planet is the largest in the Solar System?",
+    "gold_answers": [
+      "Jupiter"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 9.811667557949914
+      },
+      {
+        "id": "p20",
+        "text": "Mercury is the smallest planet in the Solar System.",
+        "score": 7.748286114434322
+      },
+      {
+        "id": "p12",
+        "text": "Mars is often called the red planet.",
+        "score": 2.4325214796162453
+      },
+      {
+        "id": "p10",
+        "text": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+        "score": 2.390492324978722
+      },
+      {
+        "id": "p17",
+        "text": "K2 is the second-highest mountain in the world.",
+        "score": 2.0916918880735644
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Jupiter",
+      "Mercury",
+      "Mars",
+      "Earth",
+      "uranus"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_3_4",
+    "question": "Who developed the theory of relativity?",
+    "gold_answers": [
+      "Albert Einstein",
+      "Einstein"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p5",
+        "text": "Albert Einstein developed the theory of relativity.",
+        "score": 9.59443956491361
+      },
+      {
+        "id": "p11",
+        "text": "Berlin is the capital of Germany.",
+        "score": 1.2189316843373832
+      },
+      {
+        "id": "p19",
+        "text": "Rome is the capital city of Italy.",
+        "score": 1.13856256229316
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.9505430565933722
+      },
+      {
+        "id": "p16",
+        "text": "Isaac Newton formulated the laws of motion and universal gravitation.",
+        "score": 0.9505430565933722
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Albert Einstein",
+      "heinrich schumann",
+      "physicists",
+      "physicists",
+      "Isaac Newton"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_3_7",
+    "question": "Who painted the Mona Lisa?",
+    "gold_answers": [
+      "Leonardo da Vinci",
+      "Da Vinci"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p8",
+        "text": "Leonardo da Vinci painted the Mona Lisa.",
+        "score": 7.836679906739777
+      },
+      {
+        "id": "p13",
+        "text": "Vincent van Gogh painted The Starry Night.",
+        "score": 2.199428571659477
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.0
+      },
+      {
+        "id": "p2",
+        "text": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+        "score": 0.0
+      },
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 0.0
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Leonardo da Vinci",
+      "Vincent van Gogh",
+      "franz héliot",
+      "William Shakespeare",
+      "franz heinrich schumann"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_4_2",
+    "question": "Which planet is the largest in the Solar System?",
+    "gold_answers": [
+      "Jupiter"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 9.811667557949914
+      },
+      {
+        "id": "p20",
+        "text": "Mercury is the smallest planet in the Solar System.",
+        "score": 7.748286114434322
+      },
+      {
+        "id": "p12",
+        "text": "Mars is often called the red planet.",
+        "score": 2.4325214796162453
+      },
+      {
+        "id": "p10",
+        "text": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+        "score": 2.390492324978722
+      },
+      {
+        "id": "p17",
+        "text": "K2 is the second-highest mountain in the world.",
+        "score": 2.0916918880735644
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Jupiter",
+      "Mercury",
+      "Mars",
+      "Earth",
+      "uranus"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_4_4",
+    "question": "Who developed the theory of relativity?",
+    "gold_answers": [
+      "Albert Einstein",
+      "Einstein"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p5",
+        "text": "Albert Einstein developed the theory of relativity.",
+        "score": 9.59443956491361
+      },
+      {
+        "id": "p11",
+        "text": "Berlin is the capital of Germany.",
+        "score": 1.2189316843373832
+      },
+      {
+        "id": "p19",
+        "text": "Rome is the capital city of Italy.",
+        "score": 1.13856256229316
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.9505430565933722
+      },
+      {
+        "id": "p16",
+        "text": "Isaac Newton formulated the laws of motion and universal gravitation.",
+        "score": 0.9505430565933722
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Albert Einstein",
+      "heinrich schumann",
+      "physicists",
+      "physicists",
+      "Isaac Newton"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_4_7",
+    "question": "Who painted the Mona Lisa?",
+    "gold_answers": [
+      "Leonardo da Vinci",
+      "Da Vinci"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p8",
+        "text": "Leonardo da Vinci painted the Mona Lisa.",
+        "score": 7.836679906739777
+      },
+      {
+        "id": "p13",
+        "text": "Vincent van Gogh painted The Starry Night.",
+        "score": 2.199428571659477
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.0
+      },
+      {
+        "id": "p2",
+        "text": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+        "score": 0.0
+      },
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 0.0
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Leonardo da Vinci",
+      "Vincent van Gogh",
+      "franz héliot",
+      "William Shakespeare",
+      "franz heinrich schumann"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_5_2",
+    "question": "Which planet is the largest in the Solar System?",
+    "gold_answers": [
+      "Jupiter"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 9.811667557949914
+      },
+      {
+        "id": "p20",
+        "text": "Mercury is the smallest planet in the Solar System.",
+        "score": 7.748286114434322
+      },
+      {
+        "id": "p12",
+        "text": "Mars is often called the red planet.",
+        "score": 2.4325214796162453
+      },
+      {
+        "id": "p10",
+        "text": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+        "score": 2.390492324978722
+      },
+      {
+        "id": "p17",
+        "text": "K2 is the second-highest mountain in the world.",
+        "score": 2.0916918880735644
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Jupiter",
+      "Mercury",
+      "Mars",
+      "Earth",
+      "uranus"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_5_4",
+    "question": "Who developed the theory of relativity?",
+    "gold_answers": [
+      "Albert Einstein",
+      "Einstein"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p5",
+        "text": "Albert Einstein developed the theory of relativity.",
+        "score": 9.59443956491361
+      },
+      {
+        "id": "p11",
+        "text": "Berlin is the capital of Germany.",
+        "score": 1.2189316843373832
+      },
+      {
+        "id": "p19",
+        "text": "Rome is the capital city of Italy.",
+        "score": 1.13856256229316
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.9505430565933722
+      },
+      {
+        "id": "p16",
+        "text": "Isaac Newton formulated the laws of motion and universal gravitation.",
+        "score": 0.9505430565933722
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Albert Einstein",
+      "heinrich schumann",
+      "physicists",
+      "physicists",
+      "Isaac Newton"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_5_7",
+    "question": "Who painted the Mona Lisa?",
+    "gold_answers": [
+      "Leonardo da Vinci",
+      "Da Vinci"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p8",
+        "text": "Leonardo da Vinci painted the Mona Lisa.",
+        "score": 7.836679906739777
+      },
+      {
+        "id": "p13",
+        "text": "Vincent van Gogh painted The Starry Night.",
+        "score": 2.199428571659477
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.0
+      },
+      {
+        "id": "p2",
+        "text": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+        "score": 0.0
+      },
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 0.0
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Leonardo da Vinci",
+      "Vincent van Gogh",
+      "franz héliot",
+      "William Shakespeare",
+      "franz heinrich schumann"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_6_2",
+    "question": "Which planet is the largest in the Solar System?",
+    "gold_answers": [
+      "Jupiter"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 9.811667557949914
+      },
+      {
+        "id": "p20",
+        "text": "Mercury is the smallest planet in the Solar System.",
+        "score": 7.748286114434322
+      },
+      {
+        "id": "p12",
+        "text": "Mars is often called the red planet.",
+        "score": 2.4325214796162453
+      },
+      {
+        "id": "p10",
+        "text": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+        "score": 2.390492324978722
+      },
+      {
+        "id": "p17",
+        "text": "K2 is the second-highest mountain in the world.",
+        "score": 2.0916918880735644
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Jupiter",
+      "Mercury",
+      "Mars",
+      "Earth",
+      "uranus"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_6_4",
+    "question": "Who developed the theory of relativity?",
+    "gold_answers": [
+      "Albert Einstein",
+      "Einstein"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p5",
+        "text": "Albert Einstein developed the theory of relativity.",
+        "score": 9.59443956491361
+      },
+      {
+        "id": "p11",
+        "text": "Berlin is the capital of Germany.",
+        "score": 1.2189316843373832
+      },
+      {
+        "id": "p19",
+        "text": "Rome is the capital city of Italy.",
+        "score": 1.13856256229316
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.9505430565933722
+      },
+      {
+        "id": "p16",
+        "text": "Isaac Newton formulated the laws of motion and universal gravitation.",
+        "score": 0.9505430565933722
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Albert Einstein",
+      "heinrich schumann",
+      "physicists",
+      "physicists",
+      "Isaac Newton"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_6_7",
+    "question": "Who painted the Mona Lisa?",
+    "gold_answers": [
+      "Leonardo da Vinci",
+      "Da Vinci"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p8",
+        "text": "Leonardo da Vinci painted the Mona Lisa.",
+        "score": 7.836679906739777
+      },
+      {
+        "id": "p13",
+        "text": "Vincent van Gogh painted The Starry Night.",
+        "score": 2.199428571659477
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.0
+      },
+      {
+        "id": "p2",
+        "text": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+        "score": 0.0
+      },
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 0.0
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Leonardo da Vinci",
+      "Vincent van Gogh",
+      "franz héliot",
+      "William Shakespeare",
+      "franz heinrich schumann"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_7_2",
+    "question": "Which planet is the largest in the Solar System?",
+    "gold_answers": [
+      "Jupiter"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 9.811667557949914
+      },
+      {
+        "id": "p20",
+        "text": "Mercury is the smallest planet in the Solar System.",
+        "score": 7.748286114434322
+      },
+      {
+        "id": "p12",
+        "text": "Mars is often called the red planet.",
+        "score": 2.4325214796162453
+      },
+      {
+        "id": "p10",
+        "text": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+        "score": 2.390492324978722
+      },
+      {
+        "id": "p17",
+        "text": "K2 is the second-highest mountain in the world.",
+        "score": 2.0916918880735644
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Jupiter",
+      "Mercury",
+      "Mars",
+      "Earth",
+      "uranus"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_7_4",
+    "question": "Who developed the theory of relativity?",
+    "gold_answers": [
+      "Albert Einstein",
+      "Einstein"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p5",
+        "text": "Albert Einstein developed the theory of relativity.",
+        "score": 9.59443956491361
+      },
+      {
+        "id": "p11",
+        "text": "Berlin is the capital of Germany.",
+        "score": 1.2189316843373832
+      },
+      {
+        "id": "p19",
+        "text": "Rome is the capital city of Italy.",
+        "score": 1.13856256229316
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.9505430565933722
+      },
+      {
+        "id": "p16",
+        "text": "Isaac Newton formulated the laws of motion and universal gravitation.",
+        "score": 0.9505430565933722
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Albert Einstein",
+      "heinrich schumann",
+      "physicists",
+      "physicists",
+      "Isaac Newton"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_7_7",
+    "question": "Who painted the Mona Lisa?",
+    "gold_answers": [
+      "Leonardo da Vinci",
+      "Da Vinci"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p8",
+        "text": "Leonardo da Vinci painted the Mona Lisa.",
+        "score": 7.836679906739777
+      },
+      {
+        "id": "p13",
+        "text": "Vincent van Gogh painted The Starry Night.",
+        "score": 2.199428571659477
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.0
+      },
+      {
+        "id": "p2",
+        "text": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+        "score": 0.0
+      },
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 0.0
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Leonardo da Vinci",
+      "Vincent van Gogh",
+      "franz héliot",
+      "William Shakespeare",
+      "franz heinrich schumann"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_8_2",
+    "question": "Which planet is the largest in the Solar System?",
+    "gold_answers": [
+      "Jupiter"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 9.811667557949914
+      },
+      {
+        "id": "p20",
+        "text": "Mercury is the smallest planet in the Solar System.",
+        "score": 7.748286114434322
+      },
+      {
+        "id": "p12",
+        "text": "Mars is often called the red planet.",
+        "score": 2.4325214796162453
+      },
+      {
+        "id": "p10",
+        "text": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+        "score": 2.390492324978722
+      },
+      {
+        "id": "p17",
+        "text": "K2 is the second-highest mountain in the world.",
+        "score": 2.0916918880735644
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Jupiter",
+      "Mercury",
+      "Mars",
+      "Earth",
+      "uranus"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_8_4",
+    "question": "Who developed the theory of relativity?",
+    "gold_answers": [
+      "Albert Einstein",
+      "Einstein"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p5",
+        "text": "Albert Einstein developed the theory of relativity.",
+        "score": 9.59443956491361
+      },
+      {
+        "id": "p11",
+        "text": "Berlin is the capital of Germany.",
+        "score": 1.2189316843373832
+      },
+      {
+        "id": "p19",
+        "text": "Rome is the capital city of Italy.",
+        "score": 1.13856256229316
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.9505430565933722
+      },
+      {
+        "id": "p16",
+        "text": "Isaac Newton formulated the laws of motion and universal gravitation.",
+        "score": 0.9505430565933722
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Albert Einstein",
+      "heinrich schumann",
+      "physicists",
+      "physicists",
+      "Isaac Newton"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_8_7",
+    "question": "Who painted the Mona Lisa?",
+    "gold_answers": [
+      "Leonardo da Vinci",
+      "Da Vinci"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p8",
+        "text": "Leonardo da Vinci painted the Mona Lisa.",
+        "score": 7.836679906739777
+      },
+      {
+        "id": "p13",
+        "text": "Vincent van Gogh painted The Starry Night.",
+        "score": 2.199428571659477
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.0
+      },
+      {
+        "id": "p2",
+        "text": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+        "score": 0.0
+      },
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 0.0
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Leonardo da Vinci",
+      "Vincent van Gogh",
+      "franz héliot",
+      "William Shakespeare",
+      "franz heinrich schumann"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_9_2",
+    "question": "Which planet is the largest in the Solar System?",
+    "gold_answers": [
+      "Jupiter"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 9.811667557949914
+      },
+      {
+        "id": "p20",
+        "text": "Mercury is the smallest planet in the Solar System.",
+        "score": 7.748286114434322
+      },
+      {
+        "id": "p12",
+        "text": "Mars is often called the red planet.",
+        "score": 2.4325214796162453
+      },
+      {
+        "id": "p10",
+        "text": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+        "score": 2.390492324978722
+      },
+      {
+        "id": "p17",
+        "text": "K2 is the second-highest mountain in the world.",
+        "score": 2.0916918880735644
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Jupiter",
+      "Mercury",
+      "Mars",
+      "Earth",
+      "uranus"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_9_4",
+    "question": "Who developed the theory of relativity?",
+    "gold_answers": [
+      "Albert Einstein",
+      "Einstein"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p5",
+        "text": "Albert Einstein developed the theory of relativity.",
+        "score": 9.59443956491361
+      },
+      {
+        "id": "p11",
+        "text": "Berlin is the capital of Germany.",
+        "score": 1.2189316843373832
+      },
+      {
+        "id": "p19",
+        "text": "Rome is the capital city of Italy.",
+        "score": 1.13856256229316
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.9505430565933722
+      },
+      {
+        "id": "p16",
+        "text": "Isaac Newton formulated the laws of motion and universal gravitation.",
+        "score": 0.9505430565933722
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Albert Einstein",
+      "heinrich schumann",
+      "physicists",
+      "physicists",
+      "Isaac Newton"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  },
+  {
+    "id": "q_9_7",
+    "question": "Who painted the Mona Lisa?",
+    "gold_answers": [
+      "Leonardo da Vinci",
+      "Da Vinci"
+    ],
+    "retrieved_passages": [
+      {
+        "id": "p8",
+        "text": "Leonardo da Vinci painted the Mona Lisa.",
+        "score": 7.836679906739777
+      },
+      {
+        "id": "p13",
+        "text": "Vincent van Gogh painted The Starry Night.",
+        "score": 2.199428571659477
+      },
+      {
+        "id": "p1",
+        "text": "Paris is the capital and most populous city of France.",
+        "score": 0.0
+      },
+      {
+        "id": "p2",
+        "text": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+        "score": 0.0
+      },
+      {
+        "id": "p3",
+        "text": "Jupiter is the largest planet in the Solar System.",
+        "score": 0.0
+      }
+    ],
+    "final_answer": "[1]",
+    "correct": 0,
+    "single_passage_answers": [
+      "Leonardo da Vinci",
+      "Vincent van Gogh",
+      "franz héliot",
+      "William Shakespeare",
+      "franz heinrich schumann"
+    ],
+    "utilities": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "confidence": 1.0,
+    "uncertainty": 0.0
+  }
+]

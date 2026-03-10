@@ -1,0 +1,12 @@
+Question: What is the largest ocean on Earth?
+Gold: ['Pacific Ocean', 'Pacific']
+Pred: The Pacific Ocean
+Utilities: [1, 0, 0, 0, 0]
+Confidence: 1.0
+Uncertainty: 0.0
+EM: 1
+Running Phase 2A: 100%|██████████████████████████████████████████████████████████████| 100/100 [01:20<00:00,  1.24it/s]
+
+================================================================================
+Phase 2A finished.
+{'num_samples': 100, 'accuracy': 0.7, 'auroc': 0.5, 'avg_uncertainty': {'overall': 0.0, 'correct_only': 0.0, 'incorrect_only': 0.0}, 'selective_accuracy_at_80': {'kept_count': 80, 'kept_ratio': 0.8, 'accuracy': 0.7}}
