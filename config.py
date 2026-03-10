@@ -1,25 +1,23 @@
-from dataclasses import dataclass
+from pathlib import Path
 
+ROOT_DIR = Path(__file__).resolve().parent
 
-@dataclass
-class Config:
-    # data
-    dataset_path: str = "data/mini_dataset.json"
-    corpus_path: str = "data/corpus.json"
+DATA_DIR = ROOT_DIR / "data"
+MODELS_DIR = ROOT_DIR / "models"
+SAVED_MODELS_DIR = MODELS_DIR / "saved"
 
-    # retrieval
-    top_k: int = 5
+CORPUS_PATH = DATA_DIR / "corpus.json"
+MINI_DATASET_PATH = DATA_DIR / "mini_dataset.json"
+UTILITY_DATASET_PATH = DATA_DIR / "utility_dataset.json"
 
-    # model
-    model_name: str = "google/flan-t5-base"
-    max_input_length: int = 512
-    max_new_tokens: int = 32
-    device: str = "cuda"
+UTILITY_MODEL_PATH = SAVED_MODELS_DIR / "utility_mlp.pt"
+TFIDF_VECTORIZER_PATH = SAVED_MODELS_DIR / "tfidf_vectorizer.pkl"
 
-    # output
-    predictions_path: str = "outputs/predictions.jsonl"
-    metrics_path: str = "outputs/metrics.json"
-    error_cases_path: str = "outputs/error_cases.json"
-
-    # run
-    use_demo_data: bool = True
+RANDOM_SEED = 42
+TEST_SIZE = 0.2
+MAX_FEATURES = 5000
+BATCH_SIZE = 32
+EPOCHS = 10
+LEARNING_RATE = 1e-3
+DROPOUT = 0.2
+HIDDEN_DIM = 256

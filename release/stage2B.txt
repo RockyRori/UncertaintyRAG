@@ -1,0 +1,39 @@
+(nano) PS C:\Project\UncertaintyRAG> python -m training.train_utility_model
+Using device: cuda
+Using pos_weight = 6.1429
+Epoch 1/10 | Train Loss: 1.1590 | Val Acc: 0.8000 | Val F1: 0.5833
+Saved best model to C:\Project\UncertaintyRAG\models\saved\utility_mlp.pt
+Epoch 2/10 | Train Loss: 1.0708 | Val Acc: 0.8200 | Val F1: 0.6087
+Saved best model to C:\Project\UncertaintyRAG\models\saved\utility_mlp.pt
+Epoch 3/10 | Train Loss: 0.9853 | Val Acc: 0.8200 | Val F1: 0.6087
+Epoch 4/10 | Train Loss: 0.8427 | Val Acc: 0.8200 | Val F1: 0.6087
+Epoch 5/10 | Train Loss: 0.7126 | Val Acc: 0.8200 | Val F1: 0.6087
+Epoch 6/10 | Train Loss: 0.6073 | Val Acc: 0.8200 | Val F1: 0.6087
+Epoch 7/10 | Train Loss: 0.5384 | Val Acc: 0.8200 | Val F1: 0.6087
+Epoch 8/10 | Train Loss: 0.4881 | Val Acc: 0.8200 | Val F1: 0.6087
+Epoch 9/10 | Train Loss: 0.4605 | Val Acc: 0.8200 | Val F1: 0.6087
+Epoch 10/10 | Train Loss: 0.4271 | Val Acc: 0.8300 | Val F1: 0.6222
+Saved best model to C:\Project\UncertaintyRAG\models\saved\utility_mlp.pt
+
+Final validation report (best threshold = 0.5 assumption):
+              precision    recall  f1-score   support
+
+           0     1.0000    0.8023    0.8903        86
+           1     0.4516    1.0000    0.6222        14
+
+    accuracy                         0.8300       100
+   macro avg     0.7258    0.9012    0.7563       100
+weighted avg     0.9232    0.8300    0.8528       100
+
+Training complete.
+
+
+(nano) PS C:\Project\UncertaintyRAG> python -m main
+================================================================================
+Question: What is the capital of France?
+Gold: ['Paris']
+Pred: Paris
+Utilities: [0.0073, 0.0069, 0.0165, 0.7791, 0.7352]
+Confidence: 0.7791
+Uncertainty: 0.2209
+EM: 1

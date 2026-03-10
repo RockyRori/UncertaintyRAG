@@ -1,0 +1,2502 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 1
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 1
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 1
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 1
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 1
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 1
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 1
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 1
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Vincent van Gogh painted The Starry Night.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 1
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 1
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 1
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Vincent van Gogh painted The Starry Night.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 1
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Vincent van Gogh painted The Starry Night.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 1
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 1
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 1
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 1
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Vincent van Gogh painted The Starry Night.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 1
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Vincent van Gogh painted The Starry Night.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 1
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 1
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Vincent van Gogh painted The Starry Night.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 1
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 1
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 1
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 1
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 1
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 1
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 1
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 1
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Vincent van Gogh painted The Starry Night.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 1
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 1
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 1
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 1
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Vincent van Gogh painted The Starry Night.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 1
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 1
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 1
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 1
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 1
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 1
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 1
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 1
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 1
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Vincent van Gogh painted The Starry Night.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 1
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 1
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Vincent van Gogh painted The Starry Night.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 1
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 1
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 1
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Vincent van Gogh painted The Starry Night.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Vincent van Gogh painted The Starry Night.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 1
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 1
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Vincent van Gogh painted The Starry Night.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Vincent van Gogh painted The Starry Night.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 1
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 1
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Vincent van Gogh painted The Starry Night.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 1
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 1
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Vincent van Gogh painted The Starry Night.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 1
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 1
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 1
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Vincent van Gogh painted The Starry Night.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 1
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 1
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 1
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 1
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 1
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 1
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 1
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Rome is the capital city of Italy.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 1
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 1
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of France?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 1
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 1
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Mars is often called the red planet.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 1
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "label": 1
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "William Shakespeare wrote many famous plays, including Hamlet, Macbeth, and Othello.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+    "label": 0
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Paris is the capital and most populous city of France.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 1
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "The Atlantic Ocean lies between the Americas and Europe and Africa.",
+    "label": 0
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Silver has the chemical symbol Ag.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "Isaac Newton formulated the laws of motion and universal gravitation.",
+    "label": 0
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "passage": "The chemical symbol for gold is Au.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 1
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Jupiter is the largest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Leonardo da Vinci painted the Mona Lisa.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 0
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "passage": "Oxygen is essential for respiration in many living organisms.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Albert Einstein developed the theory of relativity.",
+    "label": 1
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Mercury is the smallest planet in the Solar System.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Berlin is the capital of Germany.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "Plants absorb carbon dioxide from the atmosphere during photosynthesis.",
+    "label": 0
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "passage": "K2 is the second-highest mountain in the world.",
+    "label": 0
+  }
+]
