@@ -1,0 +1,20 @@
+(nano) PS C:\Project\UncertaintyRAG> python .\main.py
+Device set to use cuda:0
+================================================================================
+Question: What is the capital of France?
+Gold: Paris
+Pred: Paris
+Uncertainty: 0.571104360137215
+EM: 1
+================================================================================
+Question: Which planet is the largest in the Solar System?
+Gold: Jupiter
+Pred: Jupiter
+Uncertainty: 0.22087249281671115
+EM: 1
+================================================================================
+Question: Who wrote Hamlet?
+Gold: William Shakespeare
+Pred: William Shakespeare
+Uncertainty: 0.9999990000010001
+EM: 1

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "doc1",
+    "text": "The capital of France is Paris. Paris is known for the Eiffel Tower."
+  },
+  {
+    "id": "doc2",
+    "text": "The largest planet in the Solar System is Jupiter."
+  },
+  {
+    "id": "doc3",
+    "text": "Water boils at 100 degrees Celsius under standard atmospheric pressure."
+  },
+  {
+    "id": "doc4",
+    "text": "The author of Hamlet is William Shakespeare."
+  }
+]

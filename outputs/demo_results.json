@@ -1,0 +1,74 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "gold_answer": "Paris",
+    "pred_answer": "Paris",
+    "retrieved_docs": [
+      {
+        "doc_id": "doc1",
+        "text": "The capital of France is Paris. Paris is known for the Eiffel Tower.",
+        "score": 1.1952561773005028
+      },
+      {
+        "doc_id": "doc2",
+        "text": "The largest planet in the Solar System is Jupiter.",
+        "score": 0.4442627165611427
+      },
+      {
+        "doc_id": "doc4",
+        "text": "The author of Hamlet is William Shakespeare.",
+        "score": 0.4069726826927313
+      }
+    ],
+    "uncertainty": 0.571104360137215,
+    "exact_match": 1
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "gold_answer": "Jupiter",
+    "pred_answer": "Jupiter",
+    "retrieved_docs": [
+      {
+        "doc_id": "doc2",
+        "text": "The largest planet in the Solar System is Jupiter.",
+        "score": 4.215212187373548
+      },
+      {
+        "doc_id": "doc1",
+        "text": "The capital of France is Paris. Paris is known for the Eiffel Tower.",
+        "score": 0.6877131437065757
+      },
+      {
+        "doc_id": "doc4",
+        "text": "The author of Hamlet is William Shakespeare.",
+        "score": 0.6104590240390969
+      }
+    ],
+    "uncertainty": 0.22087249281671115,
+    "exact_match": 1
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "gold_answer": "William Shakespeare",
+    "pred_answer": "William Shakespeare",
+    "retrieved_docs": [
+      {
+        "doc_id": "doc1",
+        "text": "The capital of France is Paris. Paris is known for the Eiffel Tower.",
+        "score": 0.0
+      },
+      {
+        "doc_id": "doc2",
+        "text": "The largest planet in the Solar System is Jupiter.",
+        "score": 0.0
+      },
+      {
+        "doc_id": "doc3",
+        "text": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+        "score": 0.0
+      }
+    ],
+    "uncertainty": 0.9999990000010001,
+    "exact_match": 1
+  }
+]
