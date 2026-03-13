@@ -14,7 +14,7 @@ class BM25Retriever:
         ]
         self.bm25 = BM25Okapi(self.tokenized_corpus)
 
-    def retrieve(self, question: str, top_k: int = 5):
+    def retrieve(self, question: str, top_k: int = 5, offset: int = 0, exclude_ids: set | None = None):
         query_tokens = normalize_text(question).split()
         scores = self.bm25.get_scores(query_tokens)
 
@@ -22,7 +22,16 @@ class BM25Retriever:
             zip(self.ids, self.passages, scores),
             key=lambda x: x[2],
             reverse=True
-        )[:top_k]
+        )
+
+        exclude_ids = exclude_ids or set()
+        filtered = [
+            (pid, text, score)
+            for pid, text, score in ranked
+            if pid not in exclude_ids
+        ]
+
+        sliced = filtered[offset: offset + top_k]
 
         return [
             {
@@ -30,5 +39,5 @@ class BM25Retriever:
                 "text": text,
                 "score": float(score)
             }
-            for pid, text, score in ranked
+            for pid, text, score in sliced
         ]

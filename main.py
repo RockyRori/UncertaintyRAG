@@ -1,3 +1,7 @@
+"""
+Phase 2 main entry.
+Phase 3 please use: python main_phase3.py
+"""
 from config import MINI_DATASET_PATH
 from utils.io_utils import load_json
 from inference.predict_utility import UtilityPredictor

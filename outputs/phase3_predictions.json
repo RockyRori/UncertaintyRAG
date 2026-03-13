@@ -1,0 +1,1786 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "gold_answers": [
+      "Paris"
+    ],
+    "final_answer": "Paris",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.40827348450080425,
+    "retrieval_uncertainty": 0.22087401151657104,
+    "conflict_uncertainty": 0.6666666666666667,
+    "stability_uncertainty": 0.4891823937125934,
+    "steps": 4,
+    "num_evidence": 3,
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.7791,
+          0.0394,
+          0.0352
+        ],
+        "candidate_answers": [
+          "Paris",
+          "Berlin",
+          "Rome"
+        ],
+        "retrieval_uncertainty": 0.2209,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4892,
+        "total_uncertainty": 0.4083
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.7791,
+          0.0394,
+          0.0352
+        ],
+        "candidate_answers": [
+          "Paris",
+          "Berlin",
+          "Rome"
+        ],
+        "retrieval_uncertainty": 0.2209,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4892,
+        "total_uncertainty": 0.4083
+      },
+      {
+        "step": 3,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.7791,
+          0.0394,
+          0.0352
+        ],
+        "candidate_answers": [
+          "Paris",
+          "Berlin",
+          "Rome"
+        ],
+        "retrieval_uncertainty": 0.2209,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4892,
+        "total_uncertainty": 0.4083
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.7791,
+          0.0394,
+          0.0352
+        ],
+        "candidate_answers": [
+          "Paris",
+          "Berlin",
+          "Rome"
+        ],
+        "retrieval_uncertainty": 0.2209,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4892,
+        "total_uncertainty": 0.4083
+      }
+    ]
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "gold_answers": [
+      "Jupiter"
+    ],
+    "final_answer": "Jupiter",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.39228149723954353,
+    "retrieval_uncertainty": 0.22530978918075562,
+    "conflict_uncertainty": 0.6666666666666667,
+    "stability_uncertainty": 0.3981330132458285,
+    "steps": 4,
+    "num_evidence": 3,
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.7747,
+          0.1683,
+          0.0566
+        ],
+        "candidate_answers": [
+          "Jupiter",
+          "Mercury",
+          "Pacific"
+        ],
+        "retrieval_uncertainty": 0.2253,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.3981,
+        "total_uncertainty": 0.3923
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.7747,
+          0.1683,
+          0.0566
+        ],
+        "candidate_answers": [
+          "Jupiter",
+          "Mercury",
+          "Pacific"
+        ],
+        "retrieval_uncertainty": 0.2253,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.3981,
+        "total_uncertainty": 0.3923
+      },
+      {
+        "step": 3,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.7747,
+          0.1683,
+          0.0566
+        ],
+        "candidate_answers": [
+          "Jupiter",
+          "Mercury",
+          "Pacific"
+        ],
+        "retrieval_uncertainty": 0.2253,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.3981,
+        "total_uncertainty": 0.3923
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.7747,
+          0.1683,
+          0.0566
+        ],
+        "candidate_answers": [
+          "Jupiter",
+          "Mercury",
+          "Pacific"
+        ],
+        "retrieval_uncertainty": 0.2253,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.3981,
+        "total_uncertainty": 0.3923
+      }
+    ]
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "gold_answers": [
+      "William Shakespeare",
+      "Shakespeare"
+    ],
+    "final_answer": "William Shakespeare",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.17039579893242818,
+    "retrieval_uncertainty": 0.12897467613220215,
+    "conflict_uncertainty": 0.33333333333333337,
+    "stability_uncertainty": 0.029542304331635526,
+    "steps": 1,
+    "num_evidence": 3,
+    "history": [
+      {
+        "step": 1,
+        "action": "ANSWER",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.871,
+          0.7542,
+          0.661
+        ],
+        "candidate_answers": [
+          "William Shakespeare",
+          "john scott",
+          "john scott"
+        ],
+        "retrieval_uncertainty": 0.129,
+        "conflict_uncertainty": 0.3333,
+        "stability_uncertainty": 0.0295,
+        "total_uncertainty": 0.1704
+      }
+    ]
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "gold_answers": [
+      "H2O"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.7046487454230547,
+    "retrieval_uncertainty": 0.9587599895894527,
+    "conflict_uncertainty": 0.75,
+    "stability_uncertainty": 0.0013437531416417377,
+    "steps": 3,
+    "num_evidence": 7,
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.0018,
+          0.0018,
+          0.001
+        ],
+        "candidate_answers": [
+          "gold",
+          "Ag",
+          "Oxygen"
+        ],
+        "retrieval_uncertainty": 0.9982,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.0,
+        "total_uncertainty": 0.6991
+      },
+      {
+        "step": 2,
+        "action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "utilities": [
+          0.0018,
+          0.0018,
+          0.001,
+          0.0009,
+          0.0015
+        ],
+        "candidate_answers": [
+          "gold",
+          "Ag",
+          "Oxygen",
+          "",
+          "K2"
+        ],
+        "retrieval_uncertainty": 0.9982,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.0,
+        "total_uncertainty": 0.7241
+      },
+      {
+        "step": 3,
+        "action": "ABSTAIN",
+        "remaining_budget": 0,
+        "num_evidence": 7,
+        "utilities": [
+          0.0018,
+          0.0018,
+          0.001,
+          0.0009,
+          0.0015,
+          0.0412,
+          0.003
+        ],
+        "candidate_answers": [
+          "gold",
+          "Ag",
+          "Oxygen",
+          "",
+          "K2",
+          "",
+          ""
+        ],
+        "retrieval_uncertainty": 0.9588,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.0013,
+        "total_uncertainty": 0.7046
+      }
+    ]
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "gold_answers": [
+      "Mount Everest",
+      "Everest"
+    ],
+    "final_answer": "K2",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.36386315375086453,
+    "retrieval_uncertainty": 0.14992886781692505,
+    "conflict_uncertainty": 0.6666666666666667,
+    "stability_uncertainty": 0.44449359921201,
+    "steps": 4,
+    "num_evidence": 3,
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.0395,
+          0.8501,
+          0.5305
+        ],
+        "candidate_answers": [
+          "K2",
+          "Mount Everest",
+          "Jupiter"
+        ],
+        "retrieval_uncertainty": 0.1499,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4445,
+        "total_uncertainty": 0.3639
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8501,
+          0.5305,
+          0.0395
+        ],
+        "candidate_answers": [
+          "Mount Everest",
+          "Jupiter",
+          "K2"
+        ],
+        "retrieval_uncertainty": 0.1499,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4445,
+        "total_uncertainty": 0.3639
+      },
+      {
+        "step": 3,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8501,
+          0.5305,
+          0.0395
+        ],
+        "candidate_answers": [
+          "Mount Everest",
+          "Jupiter",
+          "K2"
+        ],
+        "retrieval_uncertainty": 0.1499,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4445,
+        "total_uncertainty": 0.3639
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8501,
+          0.5305,
+          0.0395
+        ],
+        "candidate_answers": [
+          "Mount Everest",
+          "Jupiter",
+          "K2"
+        ],
+        "retrieval_uncertainty": 0.1499,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4445,
+        "total_uncertainty": 0.3639
+      }
+    ]
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "gold_answers": [
+      "Leonardo da Vinci",
+      "Da Vinci"
+    ],
+    "final_answer": "Leonardo da Vinci",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.40449990551219395,
+    "retrieval_uncertainty": 0.19861537218093872,
+    "conflict_uncertainty": 0.6666666666666667,
+    "stability_uncertainty": 0.5259610971086227,
+    "steps": 4,
+    "num_evidence": 3,
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8014,
+          0.0333,
+          0.0311
+        ],
+        "candidate_answers": [
+          "Leonardo da Vinci",
+          "Vincent van Gogh",
+          "a swan"
+        ],
+        "retrieval_uncertainty": 0.1986,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.526,
+        "total_uncertainty": 0.4045
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8014,
+          0.0333,
+          0.0311
+        ],
+        "candidate_answers": [
+          "Leonardo da Vinci",
+          "Vincent van Gogh",
+          "a swan"
+        ],
+        "retrieval_uncertainty": 0.1986,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.526,
+        "total_uncertainty": 0.4045
+      },
+      {
+        "step": 3,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8014,
+          0.0333,
+          0.0311
+        ],
+        "candidate_answers": [
+          "Leonardo da Vinci",
+          "Vincent van Gogh",
+          "a swan"
+        ],
+        "retrieval_uncertainty": 0.1986,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.526,
+        "total_uncertainty": 0.4045
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8014,
+          0.0333,
+          0.0311
+        ],
+        "candidate_answers": [
+          "Leonardo da Vinci",
+          "Vincent van Gogh",
+          "a swan"
+        ],
+        "retrieval_uncertainty": 0.1986,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.526,
+        "total_uncertainty": 0.4045
+      }
+    ]
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "gold_answers": [
+      "Tokyo"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.4913684071514262,
+    "retrieval_uncertainty": 0.6246699690818787,
+    "conflict_uncertainty": 0.5714285714285714,
+    "stability_uncertainty": 0.038024255909577635,
+    "steps": 3,
+    "num_evidence": 7,
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.0073,
+          0.007,
+          0.3753
+        ],
+        "candidate_answers": [
+          "Berlin",
+          "Rome",
+          "Paris"
+        ],
+        "retrieval_uncertainty": 0.6247,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.1205,
+        "total_uncertainty": 0.5364
+      },
+      {
+        "step": 2,
+        "action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "utilities": [
+          0.0073,
+          0.007,
+          0.3753,
+          0.2244,
+          0.002
+        ],
+        "candidate_answers": [
+          "Berlin",
+          "Rome",
+          "Paris",
+          "Tokyo",
+          "Tokyo"
+        ],
+        "retrieval_uncertainty": 0.6247,
+        "conflict_uncertainty": 0.6,
+        "stability_uncertainty": 0.0913,
+        "total_uncertainty": 0.5106
+      },
+      {
+        "step": 3,
+        "action": "ABSTAIN",
+        "remaining_budget": 0,
+        "num_evidence": 7,
+        "utilities": [
+          0.0073,
+          0.007,
+          0.3753,
+          0.2244,
+          0.002,
+          0.0036,
+          0.1396
+        ],
+        "candidate_answers": [
+          "Berlin",
+          "Rome",
+          "Paris",
+          "Tokyo",
+          "Tokyo",
+          "K2",
+          "Tokyo"
+        ],
+        "retrieval_uncertainty": 0.6247,
+        "conflict_uncertainty": 0.5714,
+        "stability_uncertainty": 0.038,
+        "total_uncertainty": 0.4914
+      }
+    ]
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "gold_answers": [
+      "Lion",
+      "The lion"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.5195787379092983,
+    "retrieval_uncertainty": 0.953201413154602,
+    "conflict_uncertainty": 0.1428571428571429,
+    "stability_uncertainty": 0.0006044423742715502,
+    "steps": 3,
+    "num_evidence": 7,
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.0014,
+          0.0015,
+          0.0468
+        ],
+        "candidate_answers": [
+          "lion",
+          "lion",
+          "lion"
+        ],
+        "retrieval_uncertainty": 0.9532,
+        "conflict_uncertainty": 0.0,
+        "stability_uncertainty": 0.0018,
+        "total_uncertainty": 0.477
+      },
+      {
+        "step": 2,
+        "action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "utilities": [
+          0.0014,
+          0.0015,
+          0.0468,
+          0.0251,
+          0.0011
+        ],
+        "candidate_answers": [
+          "lion",
+          "lion",
+          "lion",
+          "lion",
+          "K2"
+        ],
+        "retrieval_uncertainty": 0.9532,
+        "conflict_uncertainty": 0.2,
+        "stability_uncertainty": 0.0014,
+        "total_uncertainty": 0.5369
+      },
+      {
+        "step": 3,
+        "action": "ABSTAIN",
+        "remaining_budget": 0,
+        "num_evidence": 7,
+        "utilities": [
+          0.0014,
+          0.0015,
+          0.0468,
+          0.0251,
+          0.0011,
+          0.0179,
+          0.002
+        ],
+        "candidate_answers": [
+          "lion",
+          "lion",
+          "lion",
+          "lion",
+          "K2",
+          "lion",
+          "lion"
+        ],
+        "retrieval_uncertainty": 0.9532,
+        "conflict_uncertainty": 0.1429,
+        "stability_uncertainty": 0.0006,
+        "total_uncertainty": 0.5196
+      }
+    ]
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "gold_answers": [
+      "Carbon dioxide",
+      "CO2"
+    ],
+    "final_answer": "carbon dioxide",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.36764004609320633,
+    "retrieval_uncertainty": 0.1601043939590454,
+    "conflict_uncertainty": 0.6666666666666667,
+    "stability_uncertainty": 0.43793924556841796,
+    "steps": 4,
+    "num_evidence": 3,
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8399,
+          0.0407,
+          0.5574
+        ],
+        "candidate_answers": [
+          "carbon dioxide",
+          "K2",
+          "helium"
+        ],
+        "retrieval_uncertainty": 0.1601,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4379,
+        "total_uncertainty": 0.3676
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8399,
+          0.5574,
+          0.0407
+        ],
+        "candidate_answers": [
+          "carbon dioxide",
+          "helium",
+          "K2"
+        ],
+        "retrieval_uncertainty": 0.1601,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4379,
+        "total_uncertainty": 0.3676
+      },
+      {
+        "step": 3,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8399,
+          0.5574,
+          0.0407
+        ],
+        "candidate_answers": [
+          "carbon dioxide",
+          "helium",
+          "K2"
+        ],
+        "retrieval_uncertainty": 0.1601,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4379,
+        "total_uncertainty": 0.3676
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8399,
+          0.5574,
+          0.0407
+        ],
+        "candidate_answers": [
+          "carbon dioxide",
+          "helium",
+          "K2"
+        ],
+        "retrieval_uncertainty": 0.1601,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4379,
+        "total_uncertainty": 0.3676
+      }
+    ]
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "gold_answers": [
+      "Albert Einstein",
+      "Einstein"
+    ],
+    "final_answer": "Albert Einstein",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.38166832171728415,
+    "retrieval_uncertainty": 0.15283572673797607,
+    "conflict_uncertainty": 0.6666666666666667,
+    "stability_uncertainty": 0.5262522917414804,
+    "steps": 4,
+    "num_evidence": 3,
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8472,
+          0.08,
+          0.0755
+        ],
+        "candidate_answers": [
+          "Albert Einstein",
+          "john w. scott",
+          "john scott"
+        ],
+        "retrieval_uncertainty": 0.1528,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.5263,
+        "total_uncertainty": 0.3817
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8472,
+          0.08,
+          0.0755
+        ],
+        "candidate_answers": [
+          "Albert Einstein",
+          "john w. scott",
+          "john scott"
+        ],
+        "retrieval_uncertainty": 0.1528,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.5263,
+        "total_uncertainty": 0.3817
+      },
+      {
+        "step": 3,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8472,
+          0.08,
+          0.0755
+        ],
+        "candidate_answers": [
+          "Albert Einstein",
+          "john w. scott",
+          "john scott"
+        ],
+        "retrieval_uncertainty": 0.1528,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.5263,
+        "total_uncertainty": 0.3817
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8472,
+          0.08,
+          0.0755
+        ],
+        "candidate_answers": [
+          "Albert Einstein",
+          "john w. scott",
+          "john scott"
+        ],
+        "retrieval_uncertainty": 0.1528,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.5263,
+        "total_uncertainty": 0.3817
+      }
+    ]
+  },
+  {
+    "question": "What is the capital of France?",
+    "gold_answers": [
+      "Paris"
+    ],
+    "final_answer": "Paris",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.40827348450080425,
+    "retrieval_uncertainty": 0.22087401151657104,
+    "conflict_uncertainty": 0.6666666666666667,
+    "stability_uncertainty": 0.4891823937125934,
+    "steps": 4,
+    "num_evidence": 3,
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.7791,
+          0.0394,
+          0.0352
+        ],
+        "candidate_answers": [
+          "Paris",
+          "Berlin",
+          "Rome"
+        ],
+        "retrieval_uncertainty": 0.2209,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4892,
+        "total_uncertainty": 0.4083
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.7791,
+          0.0394,
+          0.0352
+        ],
+        "candidate_answers": [
+          "Paris",
+          "Berlin",
+          "Rome"
+        ],
+        "retrieval_uncertainty": 0.2209,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4892,
+        "total_uncertainty": 0.4083
+      },
+      {
+        "step": 3,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.7791,
+          0.0394,
+          0.0352
+        ],
+        "candidate_answers": [
+          "Paris",
+          "Berlin",
+          "Rome"
+        ],
+        "retrieval_uncertainty": 0.2209,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4892,
+        "total_uncertainty": 0.4083
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.7791,
+          0.0394,
+          0.0352
+        ],
+        "candidate_answers": [
+          "Paris",
+          "Berlin",
+          "Rome"
+        ],
+        "retrieval_uncertainty": 0.2209,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4892,
+        "total_uncertainty": 0.4083
+      }
+    ]
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "gold_answers": [
+      "Jupiter"
+    ],
+    "final_answer": "Jupiter",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.39228149723954353,
+    "retrieval_uncertainty": 0.22530978918075562,
+    "conflict_uncertainty": 0.6666666666666667,
+    "stability_uncertainty": 0.3981330132458285,
+    "steps": 4,
+    "num_evidence": 3,
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.7747,
+          0.1683,
+          0.0566
+        ],
+        "candidate_answers": [
+          "Jupiter",
+          "Mercury",
+          "Pacific"
+        ],
+        "retrieval_uncertainty": 0.2253,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.3981,
+        "total_uncertainty": 0.3923
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.7747,
+          0.1683,
+          0.0566
+        ],
+        "candidate_answers": [
+          "Jupiter",
+          "Mercury",
+          "Pacific"
+        ],
+        "retrieval_uncertainty": 0.2253,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.3981,
+        "total_uncertainty": 0.3923
+      },
+      {
+        "step": 3,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.7747,
+          0.1683,
+          0.0566
+        ],
+        "candidate_answers": [
+          "Jupiter",
+          "Mercury",
+          "Pacific"
+        ],
+        "retrieval_uncertainty": 0.2253,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.3981,
+        "total_uncertainty": 0.3923
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.7747,
+          0.1683,
+          0.0566
+        ],
+        "candidate_answers": [
+          "Jupiter",
+          "Mercury",
+          "Pacific"
+        ],
+        "retrieval_uncertainty": 0.2253,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.3981,
+        "total_uncertainty": 0.3923
+      }
+    ]
+  },
+  {
+    "question": "Who wrote Hamlet?",
+    "gold_answers": [
+      "William Shakespeare",
+      "Shakespeare"
+    ],
+    "final_answer": "William Shakespeare",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.17039579893242818,
+    "retrieval_uncertainty": 0.12897467613220215,
+    "conflict_uncertainty": 0.33333333333333337,
+    "stability_uncertainty": 0.029542304331635526,
+    "steps": 1,
+    "num_evidence": 3,
+    "history": [
+      {
+        "step": 1,
+        "action": "ANSWER",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.871,
+          0.7542,
+          0.661
+        ],
+        "candidate_answers": [
+          "William Shakespeare",
+          "john scott",
+          "john scott"
+        ],
+        "retrieval_uncertainty": 0.129,
+        "conflict_uncertainty": 0.3333,
+        "stability_uncertainty": 0.0295,
+        "total_uncertainty": 0.1704
+      }
+    ]
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "gold_answers": [
+      "H2O"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.7046487454230547,
+    "retrieval_uncertainty": 0.9587599895894527,
+    "conflict_uncertainty": 0.75,
+    "stability_uncertainty": 0.0013437531416417377,
+    "steps": 3,
+    "num_evidence": 7,
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.0018,
+          0.0018,
+          0.001
+        ],
+        "candidate_answers": [
+          "gold",
+          "Ag",
+          "Oxygen"
+        ],
+        "retrieval_uncertainty": 0.9982,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.0,
+        "total_uncertainty": 0.6991
+      },
+      {
+        "step": 2,
+        "action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "utilities": [
+          0.0018,
+          0.0018,
+          0.001,
+          0.0009,
+          0.0015
+        ],
+        "candidate_answers": [
+          "gold",
+          "Ag",
+          "Oxygen",
+          "",
+          "K2"
+        ],
+        "retrieval_uncertainty": 0.9982,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.0,
+        "total_uncertainty": 0.7241
+      },
+      {
+        "step": 3,
+        "action": "ABSTAIN",
+        "remaining_budget": 0,
+        "num_evidence": 7,
+        "utilities": [
+          0.0018,
+          0.0018,
+          0.001,
+          0.0009,
+          0.0015,
+          0.0412,
+          0.003
+        ],
+        "candidate_answers": [
+          "gold",
+          "Ag",
+          "Oxygen",
+          "",
+          "K2",
+          "",
+          ""
+        ],
+        "retrieval_uncertainty": 0.9588,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.0013,
+        "total_uncertainty": 0.7046
+      }
+    ]
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "gold_answers": [
+      "Mount Everest",
+      "Everest"
+    ],
+    "final_answer": "K2",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.36386315375086453,
+    "retrieval_uncertainty": 0.14992886781692505,
+    "conflict_uncertainty": 0.6666666666666667,
+    "stability_uncertainty": 0.44449359921201,
+    "steps": 4,
+    "num_evidence": 3,
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.0395,
+          0.8501,
+          0.5305
+        ],
+        "candidate_answers": [
+          "K2",
+          "Mount Everest",
+          "Jupiter"
+        ],
+        "retrieval_uncertainty": 0.1499,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4445,
+        "total_uncertainty": 0.3639
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8501,
+          0.5305,
+          0.0395
+        ],
+        "candidate_answers": [
+          "Mount Everest",
+          "Jupiter",
+          "K2"
+        ],
+        "retrieval_uncertainty": 0.1499,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4445,
+        "total_uncertainty": 0.3639
+      },
+      {
+        "step": 3,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8501,
+          0.5305,
+          0.0395
+        ],
+        "candidate_answers": [
+          "Mount Everest",
+          "Jupiter",
+          "K2"
+        ],
+        "retrieval_uncertainty": 0.1499,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4445,
+        "total_uncertainty": 0.3639
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8501,
+          0.5305,
+          0.0395
+        ],
+        "candidate_answers": [
+          "Mount Everest",
+          "Jupiter",
+          "K2"
+        ],
+        "retrieval_uncertainty": 0.1499,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4445,
+        "total_uncertainty": 0.3639
+      }
+    ]
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "gold_answers": [
+      "Leonardo da Vinci",
+      "Da Vinci"
+    ],
+    "final_answer": "Leonardo da Vinci",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.40449990551219395,
+    "retrieval_uncertainty": 0.19861537218093872,
+    "conflict_uncertainty": 0.6666666666666667,
+    "stability_uncertainty": 0.5259610971086227,
+    "steps": 4,
+    "num_evidence": 3,
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8014,
+          0.0333,
+          0.0311
+        ],
+        "candidate_answers": [
+          "Leonardo da Vinci",
+          "Vincent van Gogh",
+          "a swan"
+        ],
+        "retrieval_uncertainty": 0.1986,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.526,
+        "total_uncertainty": 0.4045
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8014,
+          0.0333,
+          0.0311
+        ],
+        "candidate_answers": [
+          "Leonardo da Vinci",
+          "Vincent van Gogh",
+          "a swan"
+        ],
+        "retrieval_uncertainty": 0.1986,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.526,
+        "total_uncertainty": 0.4045
+      },
+      {
+        "step": 3,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8014,
+          0.0333,
+          0.0311
+        ],
+        "candidate_answers": [
+          "Leonardo da Vinci",
+          "Vincent van Gogh",
+          "a swan"
+        ],
+        "retrieval_uncertainty": 0.1986,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.526,
+        "total_uncertainty": 0.4045
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8014,
+          0.0333,
+          0.0311
+        ],
+        "candidate_answers": [
+          "Leonardo da Vinci",
+          "Vincent van Gogh",
+          "a swan"
+        ],
+        "retrieval_uncertainty": 0.1986,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.526,
+        "total_uncertainty": 0.4045
+      }
+    ]
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "gold_answers": [
+      "Tokyo"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.4913684071514262,
+    "retrieval_uncertainty": 0.6246699690818787,
+    "conflict_uncertainty": 0.5714285714285714,
+    "stability_uncertainty": 0.038024255909577635,
+    "steps": 3,
+    "num_evidence": 7,
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.0073,
+          0.007,
+          0.3753
+        ],
+        "candidate_answers": [
+          "Berlin",
+          "Rome",
+          "Paris"
+        ],
+        "retrieval_uncertainty": 0.6247,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.1205,
+        "total_uncertainty": 0.5364
+      },
+      {
+        "step": 2,
+        "action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "utilities": [
+          0.0073,
+          0.007,
+          0.3753,
+          0.2244,
+          0.002
+        ],
+        "candidate_answers": [
+          "Berlin",
+          "Rome",
+          "Paris",
+          "Tokyo",
+          "Tokyo"
+        ],
+        "retrieval_uncertainty": 0.6247,
+        "conflict_uncertainty": 0.6,
+        "stability_uncertainty": 0.0913,
+        "total_uncertainty": 0.5106
+      },
+      {
+        "step": 3,
+        "action": "ABSTAIN",
+        "remaining_budget": 0,
+        "num_evidence": 7,
+        "utilities": [
+          0.0073,
+          0.007,
+          0.3753,
+          0.2244,
+          0.002,
+          0.0036,
+          0.1396
+        ],
+        "candidate_answers": [
+          "Berlin",
+          "Rome",
+          "Paris",
+          "Tokyo",
+          "Tokyo",
+          "K2",
+          "Tokyo"
+        ],
+        "retrieval_uncertainty": 0.6247,
+        "conflict_uncertainty": 0.5714,
+        "stability_uncertainty": 0.038,
+        "total_uncertainty": 0.4914
+      }
+    ]
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "gold_answers": [
+      "Lion",
+      "The lion"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.5195787379092983,
+    "retrieval_uncertainty": 0.953201413154602,
+    "conflict_uncertainty": 0.1428571428571429,
+    "stability_uncertainty": 0.0006044423742715502,
+    "steps": 3,
+    "num_evidence": 7,
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.0014,
+          0.0015,
+          0.0468
+        ],
+        "candidate_answers": [
+          "lion",
+          "lion",
+          "lion"
+        ],
+        "retrieval_uncertainty": 0.9532,
+        "conflict_uncertainty": 0.0,
+        "stability_uncertainty": 0.0018,
+        "total_uncertainty": 0.477
+      },
+      {
+        "step": 2,
+        "action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "utilities": [
+          0.0014,
+          0.0015,
+          0.0468,
+          0.0251,
+          0.0011
+        ],
+        "candidate_answers": [
+          "lion",
+          "lion",
+          "lion",
+          "lion",
+          "K2"
+        ],
+        "retrieval_uncertainty": 0.9532,
+        "conflict_uncertainty": 0.2,
+        "stability_uncertainty": 0.0014,
+        "total_uncertainty": 0.5369
+      },
+      {
+        "step": 3,
+        "action": "ABSTAIN",
+        "remaining_budget": 0,
+        "num_evidence": 7,
+        "utilities": [
+          0.0014,
+          0.0015,
+          0.0468,
+          0.0251,
+          0.0011,
+          0.0179,
+          0.002
+        ],
+        "candidate_answers": [
+          "lion",
+          "lion",
+          "lion",
+          "lion",
+          "K2",
+          "lion",
+          "lion"
+        ],
+        "retrieval_uncertainty": 0.9532,
+        "conflict_uncertainty": 0.1429,
+        "stability_uncertainty": 0.0006,
+        "total_uncertainty": 0.5196
+      }
+    ]
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "gold_answers": [
+      "Carbon dioxide",
+      "CO2"
+    ],
+    "final_answer": "carbon dioxide",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.36764004609320633,
+    "retrieval_uncertainty": 0.1601043939590454,
+    "conflict_uncertainty": 0.6666666666666667,
+    "stability_uncertainty": 0.43793924556841796,
+    "steps": 4,
+    "num_evidence": 3,
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8399,
+          0.0407,
+          0.5574
+        ],
+        "candidate_answers": [
+          "carbon dioxide",
+          "K2",
+          "helium"
+        ],
+        "retrieval_uncertainty": 0.1601,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4379,
+        "total_uncertainty": 0.3676
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8399,
+          0.5574,
+          0.0407
+        ],
+        "candidate_answers": [
+          "carbon dioxide",
+          "helium",
+          "K2"
+        ],
+        "retrieval_uncertainty": 0.1601,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4379,
+        "total_uncertainty": 0.3676
+      },
+      {
+        "step": 3,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8399,
+          0.5574,
+          0.0407
+        ],
+        "candidate_answers": [
+          "carbon dioxide",
+          "helium",
+          "K2"
+        ],
+        "retrieval_uncertainty": 0.1601,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4379,
+        "total_uncertainty": 0.3676
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8399,
+          0.5574,
+          0.0407
+        ],
+        "candidate_answers": [
+          "carbon dioxide",
+          "helium",
+          "K2"
+        ],
+        "retrieval_uncertainty": 0.1601,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.4379,
+        "total_uncertainty": 0.3676
+      }
+    ]
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "gold_answers": [
+      "Albert Einstein",
+      "Einstein"
+    ],
+    "final_answer": "Albert Einstein",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.38166832171728415,
+    "retrieval_uncertainty": 0.15283572673797607,
+    "conflict_uncertainty": 0.6666666666666667,
+    "stability_uncertainty": 0.5262522917414804,
+    "steps": 4,
+    "num_evidence": 3,
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8472,
+          0.08,
+          0.0755
+        ],
+        "candidate_answers": [
+          "Albert Einstein",
+          "john w. scott",
+          "john scott"
+        ],
+        "retrieval_uncertainty": 0.1528,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.5263,
+        "total_uncertainty": 0.3817
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8472,
+          0.08,
+          0.0755
+        ],
+        "candidate_answers": [
+          "Albert Einstein",
+          "john w. scott",
+          "john scott"
+        ],
+        "retrieval_uncertainty": 0.1528,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.5263,
+        "total_uncertainty": 0.3817
+      },
+      {
+        "step": 3,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8472,
+          0.08,
+          0.0755
+        ],
+        "candidate_answers": [
+          "Albert Einstein",
+          "john w. scott",
+          "john scott"
+        ],
+        "retrieval_uncertainty": 0.1528,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.5263,
+        "total_uncertainty": 0.3817
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "utilities": [
+          0.8472,
+          0.08,
+          0.0755
+        ],
+        "candidate_answers": [
+          "Albert Einstein",
+          "john w. scott",
+          "john scott"
+        ],
+        "retrieval_uncertainty": 0.1528,
+        "conflict_uncertainty": 0.6667,
+        "stability_uncertainty": 0.5263,
+        "total_uncertainty": 0.3817
+      }
+    ]
+  }
+]
