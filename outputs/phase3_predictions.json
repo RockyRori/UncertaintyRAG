@@ -4,15 +4,15 @@
     "gold_answers": [
       "Paris"
     ],
-    "final_answer": "Paris",
-    "final_action": "ANSWER",
-    "correct": 1,
-    "uncertainty": 0.40827348450080425,
-    "retrieval_uncertainty": 0.22087401151657104,
-    "conflict_uncertainty": 0.6666666666666667,
-    "stability_uncertainty": 0.4891823937125934,
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.4352812260770923,
+    "retrieval_uncertainty": 0.3001611828804016,
+    "conflict_uncertainty": 0.75,
+    "stability_uncertainty": 0.30100317318445746,
     "steps": 4,
-    "num_evidence": 3,
+    "num_evidence": 4,
     "history": [
       {
         "step": 1,
@@ -20,79 +20,81 @@
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.7791,
-          0.0394,
-          0.0352
+          0.6692,
+          0.1032,
+          0.1023
         ],
         "candidate_answers": [
           "Paris",
           "Berlin",
           "Rome"
         ],
-        "retrieval_uncertainty": 0.2209,
+        "retrieval_uncertainty": 0.3308,
         "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4892,
-        "total_uncertainty": 0.4083
+        "stability_uncertainty": 0.2852,
+        "total_uncertainty": 0.4224
       },
       {
         "step": 2,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 4,
         "utilities": [
-          0.7791,
-          0.0394,
-          0.0352
+          0.6692,
+          0.1032,
+          0.1023,
+          0.6998
         ],
         "candidate_answers": [
           "Paris",
           "Berlin",
-          "Rome"
+          "Rome",
+          "l'on"
         ],
-        "retrieval_uncertainty": 0.2209,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4892,
-        "total_uncertainty": 0.4083
+        "retrieval_uncertainty": 0.3002,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.301,
+        "total_uncertainty": 0.4353
       },
       {
         "step": 3,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 2,
         "utilities": [
-          0.7791,
-          0.0394,
-          0.0352
+          0.6998,
+          0.6692
         ],
         "candidate_answers": [
-          "Paris",
-          "Berlin",
-          "Rome"
+          "l'on",
+          "Paris"
         ],
-        "retrieval_uncertainty": 0.2209,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4892,
-        "total_uncertainty": 0.4083
+        "retrieval_uncertainty": 0.3002,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.0009,
+        "total_uncertainty": 0.3003
       },
       {
         "step": 4,
-        "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "action": "ABSTAIN",
+        "remaining_budget": 0,
+        "num_evidence": 4,
         "utilities": [
-          0.7791,
-          0.0394,
-          0.0352
+          0.6998,
+          0.6692,
+          0.1032,
+          0.1023
         ],
         "candidate_answers": [
+          "l'on",
           "Paris",
           "Berlin",
           "Rome"
         ],
-        "retrieval_uncertainty": 0.2209,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4892,
-        "total_uncertainty": 0.4083
+        "retrieval_uncertainty": 0.3002,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.301,
+        "total_uncertainty": 0.4353
       }
     ]
   },
@@ -101,15 +103,15 @@
     "gold_answers": [
       "Jupiter"
     ],
-    "final_answer": "Jupiter",
-    "final_action": "ANSWER",
-    "correct": 1,
-    "uncertainty": 0.39228149723954353,
-    "retrieval_uncertainty": 0.22530978918075562,
-    "conflict_uncertainty": 0.6666666666666667,
-    "stability_uncertainty": 0.3981330132458285,
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.42245960547272005,
+    "retrieval_uncertainty": 0.3406425714492798,
+    "conflict_uncertainty": 0.75,
+    "stability_uncertainty": 0.13569159874040082,
     "steps": 4,
-    "num_evidence": 3,
+    "num_evidence": 4,
     "history": [
       {
         "step": 1,
@@ -117,79 +119,81 @@
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.7747,
-          0.1683,
-          0.0566
+          0.6594,
+          0.2742,
+          0.2633
         ],
         "candidate_answers": [
           "Jupiter",
           "Mercury",
           "Pacific"
         ],
-        "retrieval_uncertainty": 0.2253,
+        "retrieval_uncertainty": 0.3406,
         "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.3981,
-        "total_uncertainty": 0.3923
+        "stability_uncertainty": 0.1357,
+        "total_uncertainty": 0.3975
       },
       {
         "step": 2,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 4,
         "utilities": [
-          0.7747,
-          0.1683,
-          0.0566
+          0.6594,
+          0.2742,
+          0.2633,
+          0.1673
         ],
         "candidate_answers": [
           "Jupiter",
           "Mercury",
-          "Pacific"
+          "Pacific",
+          "Mars"
         ],
-        "retrieval_uncertainty": 0.2253,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.3981,
-        "total_uncertainty": 0.3923
+        "retrieval_uncertainty": 0.3406,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.1357,
+        "total_uncertainty": 0.4225
       },
       {
         "step": 3,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 2,
         "utilities": [
-          0.7747,
-          0.1683,
-          0.0566
+          0.6594,
+          0.2742
         ],
         "candidate_answers": [
           "Jupiter",
-          "Mercury",
-          "Pacific"
+          "Mercury"
         ],
-        "retrieval_uncertainty": 0.2253,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.3981,
-        "total_uncertainty": 0.3923
+        "retrieval_uncertainty": 0.3406,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.1484,
+        "total_uncertainty": 0.35
       },
       {
         "step": 4,
-        "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "action": "ABSTAIN",
+        "remaining_budget": 0,
+        "num_evidence": 4,
         "utilities": [
-          0.7747,
-          0.1683,
-          0.0566
+          0.6594,
+          0.2742,
+          0.2633,
+          0.1673
         ],
         "candidate_answers": [
           "Jupiter",
           "Mercury",
-          "Pacific"
+          "Pacific",
+          "Mars"
         ],
-        "retrieval_uncertainty": 0.2253,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.3981,
-        "total_uncertainty": 0.3923
+        "retrieval_uncertainty": 0.3406,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.1357,
+        "total_uncertainty": 0.4225
       }
     ]
   },
@@ -199,35 +203,79 @@
       "William Shakespeare",
       "Shakespeare"
     ],
-    "final_answer": "William Shakespeare",
-    "final_action": "ANSWER",
-    "correct": 1,
-    "uncertainty": 0.17039579893242818,
-    "retrieval_uncertainty": 0.12897467613220215,
-    "conflict_uncertainty": 0.33333333333333337,
-    "stability_uncertainty": 0.029542304331635526,
-    "steps": 1,
-    "num_evidence": 3,
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.2710706947741956,
+    "retrieval_uncertainty": 0.36392349004745483,
+    "conflict_uncertainty": 0.25,
+    "stability_uncertainty": 0.07054474875234086,
+    "steps": 3,
+    "num_evidence": 4,
     "history": [
       {
         "step": 1,
-        "action": "ANSWER",
+        "action": "RERANK",
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.871,
-          0.7542,
-          0.661
+          0.6361,
+          0.3542,
+          0.3545
         ],
         "candidate_answers": [
           "William Shakespeare",
           "john scott",
           "john scott"
         ],
-        "retrieval_uncertainty": 0.129,
+        "retrieval_uncertainty": 0.3639,
         "conflict_uncertainty": 0.3333,
-        "stability_uncertainty": 0.0295,
-        "total_uncertainty": 0.1704
+        "stability_uncertainty": 0.0705,
+        "total_uncertainty": 0.2961
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 4,
+        "utilities": [
+          0.6361,
+          0.3545,
+          0.3542,
+          0.1571
+        ],
+        "candidate_answers": [
+          "William Shakespeare",
+          "john scott",
+          "john scott",
+          "john scott"
+        ],
+        "retrieval_uncertainty": 0.3639,
+        "conflict_uncertainty": 0.25,
+        "stability_uncertainty": 0.0705,
+        "total_uncertainty": 0.2711
+      },
+      {
+        "step": 3,
+        "action": "ABSTAIN",
+        "remaining_budget": 0,
+        "num_evidence": 4,
+        "utilities": [
+          0.6361,
+          0.3545,
+          0.3542,
+          0.1571
+        ],
+        "candidate_answers": [
+          "William Shakespeare",
+          "john scott",
+          "john scott",
+          "john scott"
+        ],
+        "retrieval_uncertainty": 0.3639,
+        "conflict_uncertainty": 0.25,
+        "stability_uncertainty": 0.0705,
+        "total_uncertainty": 0.2711
       }
     ]
   },
@@ -239,10 +287,10 @@
     "final_answer": "ABSTAIN",
     "final_action": "ABSTAIN",
     "correct": 0,
-    "uncertainty": 0.7046487454230547,
-    "retrieval_uncertainty": 0.9587599895894527,
+    "uncertainty": 0.7060412286604805,
+    "retrieval_uncertainty": 0.9619828164577484,
     "conflict_uncertainty": 0.75,
-    "stability_uncertainty": 0.0013437531416417377,
+    "stability_uncertainty": 0.0002491021580316814,
     "steps": 3,
     "num_evidence": 7,
     "history": [
@@ -252,19 +300,19 @@
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.0018,
-          0.0018,
-          0.001
+          0.0014,
+          0.0013,
+          0.0189
         ],
         "candidate_answers": [
           "gold",
           "Ag",
           "Oxygen"
         ],
-        "retrieval_uncertainty": 0.9982,
+        "retrieval_uncertainty": 0.9811,
         "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.0,
-        "total_uncertainty": 0.6991
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6906
       },
       {
         "step": 2,
@@ -272,11 +320,11 @@
         "remaining_budget": 1,
         "num_evidence": 5,
         "utilities": [
-          0.0018,
-          0.0018,
-          0.001,
-          0.0009,
-          0.0015
+          0.0014,
+          0.0013,
+          0.0189,
+          0.0259,
+          0.0013
         ],
         "candidate_answers": [
           "gold",
@@ -285,10 +333,10 @@
           "",
           "K2"
         ],
-        "retrieval_uncertainty": 0.9982,
+        "retrieval_uncertainty": 0.9741,
         "conflict_uncertainty": 0.75,
-        "stability_uncertainty": 0.0,
-        "total_uncertainty": 0.7241
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.7121
       },
       {
         "step": 3,
@@ -296,13 +344,13 @@
         "remaining_budget": 0,
         "num_evidence": 7,
         "utilities": [
-          0.0018,
-          0.0018,
-          0.001,
-          0.0009,
-          0.0015,
-          0.0412,
-          0.003
+          0.0014,
+          0.0013,
+          0.0189,
+          0.0259,
+          0.0013,
+          0.038,
+          0.0093
         ],
         "candidate_answers": [
           "gold",
@@ -313,10 +361,10 @@
           "",
           ""
         ],
-        "retrieval_uncertainty": 0.9588,
+        "retrieval_uncertainty": 0.962,
         "conflict_uncertainty": 0.75,
-        "stability_uncertainty": 0.0013,
-        "total_uncertainty": 0.7046
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.706
       }
     ]
   },
@@ -326,15 +374,15 @@
       "Mount Everest",
       "Everest"
     ],
-    "final_answer": "K2",
-    "final_action": "ANSWER",
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
     "correct": 0,
-    "uncertainty": 0.36386315375086453,
-    "retrieval_uncertainty": 0.14992886781692505,
-    "conflict_uncertainty": 0.6666666666666667,
-    "stability_uncertainty": 0.44449359921201,
+    "uncertainty": 0.34655017310663844,
+    "retrieval_uncertainty": 0.3491417169570923,
+    "conflict_uncertainty": 0.5,
+    "stability_uncertainty": 0.1098965731404613,
     "steps": 4,
-    "num_evidence": 3,
+    "num_evidence": 4,
     "history": [
       {
         "step": 1,
@@ -342,79 +390,77 @@
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.0395,
-          0.8501,
-          0.5305
+          0.0136,
+          0.6509,
+          0.3194
         ],
         "candidate_answers": [
           "K2",
           "Mount Everest",
           "Jupiter"
         ],
-        "retrieval_uncertainty": 0.1499,
+        "retrieval_uncertainty": 0.3491,
         "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4445,
-        "total_uncertainty": 0.3639
+        "stability_uncertainty": 0.2709,
+        "total_uncertainty": 0.4287
       },
       {
         "step": 2,
         "action": "RERANK",
         "remaining_budget": 2,
-        "num_evidence": 3,
+        "num_evidence": 2,
         "utilities": [
-          0.8501,
-          0.5305,
-          0.0395
+          0.6509,
+          0.3194
         ],
         "candidate_answers": [
           "Mount Everest",
-          "Jupiter",
-          "K2"
+          "Jupiter"
         ],
-        "retrieval_uncertainty": 0.1499,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4445,
-        "total_uncertainty": 0.3639
+        "retrieval_uncertainty": 0.3491,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.1099,
+        "total_uncertainty": 0.3466
       },
       {
         "step": 3,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 4,
         "utilities": [
-          0.8501,
-          0.5305,
-          0.0395
+          0.6509,
+          0.3194,
+          0.0136,
+          0.0873
         ],
         "candidate_answers": [
           "Mount Everest",
           "Jupiter",
-          "K2"
+          "K2",
+          "sacramento"
         ],
-        "retrieval_uncertainty": 0.1499,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4445,
-        "total_uncertainty": 0.3639
+        "retrieval_uncertainty": 0.3491,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.2139,
+        "total_uncertainty": 0.4424
       },
       {
         "step": 4,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 2,
         "utilities": [
-          0.8501,
-          0.5305,
-          0.0395
+          0.6509,
+          0.3194
         ],
         "candidate_answers": [
           "Mount Everest",
-          "Jupiter",
-          "K2"
+          "Jupiter"
         ],
-        "retrieval_uncertainty": 0.1499,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4445,
-        "total_uncertainty": 0.3639
+        "retrieval_uncertainty": 0.3491,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.1099,
+        "total_uncertainty": 0.3466
       }
     ]
   },
@@ -424,15 +470,15 @@
       "Leonardo da Vinci",
       "Da Vinci"
     ],
-    "final_answer": "Leonardo da Vinci",
-    "final_action": "ANSWER",
-    "correct": 1,
-    "uncertainty": 0.40449990551219395,
-    "retrieval_uncertainty": 0.19861537218093872,
-    "conflict_uncertainty": 0.6666666666666667,
-    "stability_uncertainty": 0.5259610971086227,
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.29350464197925014,
+    "retrieval_uncertainty": 0.2577124834060669,
+    "conflict_uncertainty": 0.5,
+    "stability_uncertainty": 0.07324200138108328,
     "steps": 4,
-    "num_evidence": 3,
+    "num_evidence": 4,
     "history": [
       {
         "step": 1,
@@ -440,79 +486,77 @@
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.8014,
-          0.0333,
-          0.0311
+          0.7423,
+          0.1492,
+          0.0105
         ],
         "candidate_answers": [
           "Leonardo da Vinci",
           "Vincent van Gogh",
           "a swan"
         ],
-        "retrieval_uncertainty": 0.1986,
+        "retrieval_uncertainty": 0.2577,
         "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.526,
-        "total_uncertainty": 0.4045
+        "stability_uncertainty": 0.4029,
+        "total_uncertainty": 0.4094
       },
       {
         "step": 2,
         "action": "RERANK",
         "remaining_budget": 2,
-        "num_evidence": 3,
+        "num_evidence": 2,
         "utilities": [
-          0.8014,
-          0.0333,
-          0.0311
+          0.7423,
+          0.1492
         ],
         "candidate_answers": [
           "Leonardo da Vinci",
-          "Vincent van Gogh",
-          "a swan"
+          "Vincent van Gogh"
         ],
-        "retrieval_uncertainty": 0.1986,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.526,
-        "total_uncertainty": 0.4045
+        "retrieval_uncertainty": 0.2577,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.3518,
+        "total_uncertainty": 0.3492
       },
       {
         "step": 3,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 4,
         "utilities": [
-          0.8014,
-          0.0333,
-          0.0311
+          0.7423,
+          0.1492,
+          0.0105,
+          0.4717
         ],
         "candidate_answers": [
           "Leonardo da Vinci",
           "Vincent van Gogh",
-          "a swan"
+          "a swan",
+          "adam scott"
         ],
-        "retrieval_uncertainty": 0.1986,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.526,
-        "total_uncertainty": 0.4045
+        "retrieval_uncertainty": 0.2577,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.2351,
+        "total_uncertainty": 0.4009
       },
       {
         "step": 4,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 2,
         "utilities": [
-          0.8014,
-          0.0333,
-          0.0311
+          0.7423,
+          0.4717
         ],
         "candidate_answers": [
           "Leonardo da Vinci",
-          "Vincent van Gogh",
-          "a swan"
+          "adam scott"
         ],
-        "retrieval_uncertainty": 0.1986,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.526,
-        "total_uncertainty": 0.4045
+        "retrieval_uncertainty": 0.2577,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.0732,
+        "total_uncertainty": 0.2935
       }
     ]
   },
@@ -521,87 +565,97 @@
     "gold_answers": [
       "Tokyo"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "Paris",
+    "final_action": "ANSWER",
     "correct": 0,
-    "uncertainty": 0.4913684071514262,
-    "retrieval_uncertainty": 0.6246699690818787,
-    "conflict_uncertainty": 0.5714285714285714,
-    "stability_uncertainty": 0.038024255909577635,
-    "steps": 3,
-    "num_evidence": 7,
+    "uncertainty": 0.19284497839297002,
+    "retrieval_uncertainty": 0.08224540948867798,
+    "conflict_uncertainty": 0.5,
+    "stability_uncertainty": 0.008611368243155226,
+    "steps": 4,
+    "num_evidence": 2,
     "history": [
       {
         "step": 1,
-        "action": "RETRIEVE_MORE",
+        "action": "RERANK",
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.0073,
-          0.007,
-          0.3753
+          0.4976,
+          0.489,
+          0.825
         ],
         "candidate_answers": [
           "Berlin",
           "Rome",
           "Paris"
         ],
-        "retrieval_uncertainty": 0.6247,
+        "retrieval_uncertainty": 0.175,
         "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.1205,
-        "total_uncertainty": 0.5364
+        "stability_uncertainty": 0.0978,
+        "total_uncertainty": 0.3071
       },
       {
         "step": 2,
-        "action": "RETRIEVE_MORE",
+        "action": "RERANK",
         "remaining_budget": 1,
-        "num_evidence": 5,
+        "num_evidence": 4,
         "utilities": [
-          0.0073,
-          0.007,
-          0.3753,
-          0.2244,
-          0.002
+          0.825,
+          0.4976,
+          0.489,
+          0.9178
         ],
         "candidate_answers": [
+          "Paris",
           "Berlin",
           "Rome",
-          "Paris",
-          "Tokyo",
           "Tokyo"
         ],
-        "retrieval_uncertainty": 0.6247,
-        "conflict_uncertainty": 0.6,
-        "stability_uncertainty": 0.0913,
-        "total_uncertainty": 0.5106
+        "retrieval_uncertainty": 0.0822,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.1299,
+        "total_uncertainty": 0.2921
       },
       {
         "step": 3,
-        "action": "ABSTAIN",
-        "remaining_budget": 0,
-        "num_evidence": 7,
+        "action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 2,
         "utilities": [
-          0.0073,
-          0.007,
-          0.3753,
-          0.2244,
-          0.002,
-          0.0036,
-          0.1396
+          0.9178,
+          0.825
         ],
         "candidate_answers": [
-          "Berlin",
-          "Rome",
-          "Paris",
           "Tokyo",
-          "Tokyo",
-          "K2",
-          "Tokyo"
+          "Paris"
         ],
-        "retrieval_uncertainty": 0.6247,
-        "conflict_uncertainty": 0.5714,
-        "stability_uncertainty": 0.038,
-        "total_uncertainty": 0.4914
+        "retrieval_uncertainty": 0.0822,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.0086,
+        "total_uncertainty": 0.1928
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 4,
+        "utilities": [
+          0.9178,
+          0.825,
+          0.4976,
+          0.489
+        ],
+        "candidate_answers": [
+          "Tokyo",
+          "Paris",
+          "Berlin",
+          "Rome"
+        ],
+        "retrieval_uncertainty": 0.0822,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.1299,
+        "total_uncertainty": 0.2921
       }
     ]
   },
@@ -611,87 +665,35 @@
       "Lion",
       "The lion"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
-    "uncertainty": 0.5195787379092983,
-    "retrieval_uncertainty": 0.953201413154602,
-    "conflict_uncertainty": 0.1428571428571429,
-    "stability_uncertainty": 0.0006044423742715502,
-    "steps": 3,
-    "num_evidence": 7,
+    "final_answer": "lion",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.030734969240107705,
+    "retrieval_uncertainty": 0.060916006565093994,
+    "conflict_uncertainty": 0.0,
+    "stability_uncertainty": 0.001384829787803533,
+    "steps": 1,
+    "num_evidence": 3,
     "history": [
       {
         "step": 1,
-        "action": "RETRIEVE_MORE",
+        "action": "ANSWER",
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.0014,
-          0.0015,
-          0.0468
+          0.8998,
+          0.8994,
+          0.9391
         ],
         "candidate_answers": [
           "lion",
           "lion",
           "lion"
         ],
-        "retrieval_uncertainty": 0.9532,
+        "retrieval_uncertainty": 0.0609,
         "conflict_uncertainty": 0.0,
-        "stability_uncertainty": 0.0018,
-        "total_uncertainty": 0.477
-      },
-      {
-        "step": 2,
-        "action": "RETRIEVE_MORE",
-        "remaining_budget": 1,
-        "num_evidence": 5,
-        "utilities": [
-          0.0014,
-          0.0015,
-          0.0468,
-          0.0251,
-          0.0011
-        ],
-        "candidate_answers": [
-          "lion",
-          "lion",
-          "lion",
-          "lion",
-          "K2"
-        ],
-        "retrieval_uncertainty": 0.9532,
-        "conflict_uncertainty": 0.2,
         "stability_uncertainty": 0.0014,
-        "total_uncertainty": 0.5369
-      },
-      {
-        "step": 3,
-        "action": "ABSTAIN",
-        "remaining_budget": 0,
-        "num_evidence": 7,
-        "utilities": [
-          0.0014,
-          0.0015,
-          0.0468,
-          0.0251,
-          0.0011,
-          0.0179,
-          0.002
-        ],
-        "candidate_answers": [
-          "lion",
-          "lion",
-          "lion",
-          "lion",
-          "K2",
-          "lion",
-          "lion"
-        ],
-        "retrieval_uncertainty": 0.9532,
-        "conflict_uncertainty": 0.1429,
-        "stability_uncertainty": 0.0006,
-        "total_uncertainty": 0.5196
+        "total_uncertainty": 0.0307
       }
     ]
   },
@@ -701,15 +703,15 @@
       "Carbon dioxide",
       "CO2"
     ],
-    "final_answer": "carbon dioxide",
-    "final_action": "ANSWER",
-    "correct": 1,
-    "uncertainty": 0.36764004609320633,
-    "retrieval_uncertainty": 0.1601043939590454,
-    "conflict_uncertainty": 0.6666666666666667,
-    "stability_uncertainty": 0.43793924556841796,
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.3289948618628204,
+    "retrieval_uncertainty": 0.29609739780426025,
+    "conflict_uncertainty": 0.5,
+    "stability_uncertainty": 0.1547308148034512,
     "steps": 4,
-    "num_evidence": 3,
+    "num_evidence": 4,
     "history": [
       {
         "step": 1,
@@ -717,79 +719,77 @@
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.8399,
-          0.0407,
-          0.5574
+          0.7039,
+          0.0093,
+          0.3105
         ],
         "candidate_answers": [
           "carbon dioxide",
           "K2",
           "helium"
         ],
-        "retrieval_uncertainty": 0.1601,
+        "retrieval_uncertainty": 0.2961,
         "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4379,
-        "total_uncertainty": 0.3676
+        "stability_uncertainty": 0.3235,
+        "total_uncertainty": 0.4128
       },
       {
         "step": 2,
         "action": "RERANK",
         "remaining_budget": 2,
-        "num_evidence": 3,
+        "num_evidence": 2,
         "utilities": [
-          0.8399,
-          0.5574,
-          0.0407
+          0.7039,
+          0.3105
         ],
         "candidate_answers": [
           "carbon dioxide",
-          "helium",
-          "K2"
+          "helium"
         ],
-        "retrieval_uncertainty": 0.1601,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4379,
-        "total_uncertainty": 0.3676
+        "retrieval_uncertainty": 0.2961,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.1547,
+        "total_uncertainty": 0.329
       },
       {
         "step": 3,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 4,
         "utilities": [
-          0.8399,
-          0.5574,
-          0.0407
+          0.7039,
+          0.3105,
+          0.0093,
+          0.0914
         ],
         "candidate_answers": [
           "carbon dioxide",
           "helium",
-          "K2"
+          "K2",
+          "Mercury"
         ],
-        "retrieval_uncertainty": 0.1601,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4379,
-        "total_uncertainty": 0.3676
+        "retrieval_uncertainty": 0.2961,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.2569,
+        "total_uncertainty": 0.4244
       },
       {
         "step": 4,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 2,
         "utilities": [
-          0.8399,
-          0.5574,
-          0.0407
+          0.7039,
+          0.3105
         ],
         "candidate_answers": [
           "carbon dioxide",
-          "helium",
-          "K2"
+          "helium"
         ],
-        "retrieval_uncertainty": 0.1601,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4379,
-        "total_uncertainty": 0.3676
+        "retrieval_uncertainty": 0.2961,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.1547,
+        "total_uncertainty": 0.329
       }
     ]
   },
@@ -799,15 +799,15 @@
       "Albert Einstein",
       "Einstein"
     ],
-    "final_answer": "Albert Einstein",
-    "final_action": "ANSWER",
-    "correct": 1,
-    "uncertainty": 0.38166832171728415,
-    "retrieval_uncertainty": 0.15283572673797607,
-    "conflict_uncertainty": 0.6666666666666667,
-    "stability_uncertainty": 0.5262522917414804,
-    "steps": 4,
-    "num_evidence": 3,
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.3533243071769548,
+    "retrieval_uncertainty": 0.30569469928741455,
+    "conflict_uncertainty": 0.5,
+    "stability_uncertainty": 0.25238478766623734,
+    "steps": 3,
+    "num_evidence": 4,
     "history": [
       {
         "step": 1,
@@ -815,79 +815,63 @@
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.8472,
-          0.08,
-          0.0755
+          0.6943,
+          0.0773,
+          0.085
         ],
         "candidate_answers": [
           "Albert Einstein",
           "john w. scott",
           "john scott"
         ],
-        "retrieval_uncertainty": 0.1528,
+        "retrieval_uncertainty": 0.3057,
         "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.5263,
-        "total_uncertainty": 0.3817
+        "stability_uncertainty": 0.3342,
+        "total_uncertainty": 0.4197
       },
       {
         "step": 2,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 4,
         "utilities": [
-          0.8472,
-          0.08,
-          0.0755
+          0.6943,
+          0.085,
+          0.0773,
+          0.4639
         ],
         "candidate_answers": [
           "Albert Einstein",
+          "john scott",
           "john w. scott",
           "john scott"
         ],
-        "retrieval_uncertainty": 0.1528,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.5263,
-        "total_uncertainty": 0.3817
+        "retrieval_uncertainty": 0.3057,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.2524,
+        "total_uncertainty": 0.3533
       },
       {
         "step": 3,
-        "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "action": "ABSTAIN",
+        "remaining_budget": 0,
+        "num_evidence": 4,
         "utilities": [
-          0.8472,
-          0.08,
-          0.0755
+          0.6943,
+          0.4639,
+          0.0773,
+          0.085
         ],
         "candidate_answers": [
           "Albert Einstein",
+          "john scott",
           "john w. scott",
           "john scott"
         ],
-        "retrieval_uncertainty": 0.1528,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.5263,
-        "total_uncertainty": 0.3817
-      },
-      {
-        "step": 4,
-        "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
-        "utilities": [
-          0.8472,
-          0.08,
-          0.0755
-        ],
-        "candidate_answers": [
-          "Albert Einstein",
-          "john w. scott",
-          "john scott"
-        ],
-        "retrieval_uncertainty": 0.1528,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.5263,
-        "total_uncertainty": 0.3817
+        "retrieval_uncertainty": 0.3057,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.2524,
+        "total_uncertainty": 0.3533
       }
     ]
   },
@@ -896,15 +880,15 @@
     "gold_answers": [
       "Paris"
     ],
-    "final_answer": "Paris",
-    "final_action": "ANSWER",
-    "correct": 1,
-    "uncertainty": 0.40827348450080425,
-    "retrieval_uncertainty": 0.22087401151657104,
-    "conflict_uncertainty": 0.6666666666666667,
-    "stability_uncertainty": 0.4891823937125934,
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.4352812260770923,
+    "retrieval_uncertainty": 0.3001611828804016,
+    "conflict_uncertainty": 0.75,
+    "stability_uncertainty": 0.30100317318445746,
     "steps": 4,
-    "num_evidence": 3,
+    "num_evidence": 4,
     "history": [
       {
         "step": 1,
@@ -912,79 +896,81 @@
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.7791,
-          0.0394,
-          0.0352
+          0.6692,
+          0.1032,
+          0.1023
         ],
         "candidate_answers": [
           "Paris",
           "Berlin",
           "Rome"
         ],
-        "retrieval_uncertainty": 0.2209,
+        "retrieval_uncertainty": 0.3308,
         "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4892,
-        "total_uncertainty": 0.4083
+        "stability_uncertainty": 0.2852,
+        "total_uncertainty": 0.4224
       },
       {
         "step": 2,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 4,
         "utilities": [
-          0.7791,
-          0.0394,
-          0.0352
+          0.6692,
+          0.1032,
+          0.1023,
+          0.6998
         ],
         "candidate_answers": [
           "Paris",
           "Berlin",
-          "Rome"
+          "Rome",
+          "l'on"
         ],
-        "retrieval_uncertainty": 0.2209,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4892,
-        "total_uncertainty": 0.4083
+        "retrieval_uncertainty": 0.3002,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.301,
+        "total_uncertainty": 0.4353
       },
       {
         "step": 3,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 2,
         "utilities": [
-          0.7791,
-          0.0394,
-          0.0352
+          0.6998,
+          0.6692
         ],
         "candidate_answers": [
-          "Paris",
-          "Berlin",
-          "Rome"
+          "l'on",
+          "Paris"
         ],
-        "retrieval_uncertainty": 0.2209,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4892,
-        "total_uncertainty": 0.4083
+        "retrieval_uncertainty": 0.3002,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.0009,
+        "total_uncertainty": 0.3003
       },
       {
         "step": 4,
-        "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "action": "ABSTAIN",
+        "remaining_budget": 0,
+        "num_evidence": 4,
         "utilities": [
-          0.7791,
-          0.0394,
-          0.0352
+          0.6998,
+          0.6692,
+          0.1032,
+          0.1023
         ],
         "candidate_answers": [
+          "l'on",
           "Paris",
           "Berlin",
           "Rome"
         ],
-        "retrieval_uncertainty": 0.2209,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4892,
-        "total_uncertainty": 0.4083
+        "retrieval_uncertainty": 0.3002,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.301,
+        "total_uncertainty": 0.4353
       }
     ]
   },
@@ -993,15 +979,15 @@
     "gold_answers": [
       "Jupiter"
     ],
-    "final_answer": "Jupiter",
-    "final_action": "ANSWER",
-    "correct": 1,
-    "uncertainty": 0.39228149723954353,
-    "retrieval_uncertainty": 0.22530978918075562,
-    "conflict_uncertainty": 0.6666666666666667,
-    "stability_uncertainty": 0.3981330132458285,
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.42245960547272005,
+    "retrieval_uncertainty": 0.3406425714492798,
+    "conflict_uncertainty": 0.75,
+    "stability_uncertainty": 0.13569159874040082,
     "steps": 4,
-    "num_evidence": 3,
+    "num_evidence": 4,
     "history": [
       {
         "step": 1,
@@ -1009,79 +995,81 @@
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.7747,
-          0.1683,
-          0.0566
+          0.6594,
+          0.2742,
+          0.2633
         ],
         "candidate_answers": [
           "Jupiter",
           "Mercury",
           "Pacific"
         ],
-        "retrieval_uncertainty": 0.2253,
+        "retrieval_uncertainty": 0.3406,
         "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.3981,
-        "total_uncertainty": 0.3923
+        "stability_uncertainty": 0.1357,
+        "total_uncertainty": 0.3975
       },
       {
         "step": 2,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 4,
         "utilities": [
-          0.7747,
-          0.1683,
-          0.0566
+          0.6594,
+          0.2742,
+          0.2633,
+          0.1673
         ],
         "candidate_answers": [
           "Jupiter",
           "Mercury",
-          "Pacific"
+          "Pacific",
+          "Mars"
         ],
-        "retrieval_uncertainty": 0.2253,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.3981,
-        "total_uncertainty": 0.3923
+        "retrieval_uncertainty": 0.3406,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.1357,
+        "total_uncertainty": 0.4225
       },
       {
         "step": 3,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 2,
         "utilities": [
-          0.7747,
-          0.1683,
-          0.0566
+          0.6594,
+          0.2742
         ],
         "candidate_answers": [
           "Jupiter",
-          "Mercury",
-          "Pacific"
+          "Mercury"
         ],
-        "retrieval_uncertainty": 0.2253,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.3981,
-        "total_uncertainty": 0.3923
+        "retrieval_uncertainty": 0.3406,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.1484,
+        "total_uncertainty": 0.35
       },
       {
         "step": 4,
-        "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "action": "ABSTAIN",
+        "remaining_budget": 0,
+        "num_evidence": 4,
         "utilities": [
-          0.7747,
-          0.1683,
-          0.0566
+          0.6594,
+          0.2742,
+          0.2633,
+          0.1673
         ],
         "candidate_answers": [
           "Jupiter",
           "Mercury",
-          "Pacific"
+          "Pacific",
+          "Mars"
         ],
-        "retrieval_uncertainty": 0.2253,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.3981,
-        "total_uncertainty": 0.3923
+        "retrieval_uncertainty": 0.3406,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.1357,
+        "total_uncertainty": 0.4225
       }
     ]
   },
@@ -1091,35 +1079,79 @@
       "William Shakespeare",
       "Shakespeare"
     ],
-    "final_answer": "William Shakespeare",
-    "final_action": "ANSWER",
-    "correct": 1,
-    "uncertainty": 0.17039579893242818,
-    "retrieval_uncertainty": 0.12897467613220215,
-    "conflict_uncertainty": 0.33333333333333337,
-    "stability_uncertainty": 0.029542304331635526,
-    "steps": 1,
-    "num_evidence": 3,
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.2710706947741956,
+    "retrieval_uncertainty": 0.36392349004745483,
+    "conflict_uncertainty": 0.25,
+    "stability_uncertainty": 0.07054474875234086,
+    "steps": 3,
+    "num_evidence": 4,
     "history": [
       {
         "step": 1,
-        "action": "ANSWER",
+        "action": "RERANK",
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.871,
-          0.7542,
-          0.661
+          0.6361,
+          0.3542,
+          0.3545
         ],
         "candidate_answers": [
           "William Shakespeare",
           "john scott",
           "john scott"
         ],
-        "retrieval_uncertainty": 0.129,
+        "retrieval_uncertainty": 0.3639,
         "conflict_uncertainty": 0.3333,
-        "stability_uncertainty": 0.0295,
-        "total_uncertainty": 0.1704
+        "stability_uncertainty": 0.0705,
+        "total_uncertainty": 0.2961
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 4,
+        "utilities": [
+          0.6361,
+          0.3545,
+          0.3542,
+          0.1571
+        ],
+        "candidate_answers": [
+          "William Shakespeare",
+          "john scott",
+          "john scott",
+          "john scott"
+        ],
+        "retrieval_uncertainty": 0.3639,
+        "conflict_uncertainty": 0.25,
+        "stability_uncertainty": 0.0705,
+        "total_uncertainty": 0.2711
+      },
+      {
+        "step": 3,
+        "action": "ABSTAIN",
+        "remaining_budget": 0,
+        "num_evidence": 4,
+        "utilities": [
+          0.6361,
+          0.3545,
+          0.3542,
+          0.1571
+        ],
+        "candidate_answers": [
+          "William Shakespeare",
+          "john scott",
+          "john scott",
+          "john scott"
+        ],
+        "retrieval_uncertainty": 0.3639,
+        "conflict_uncertainty": 0.25,
+        "stability_uncertainty": 0.0705,
+        "total_uncertainty": 0.2711
       }
     ]
   },
@@ -1131,10 +1163,10 @@
     "final_answer": "ABSTAIN",
     "final_action": "ABSTAIN",
     "correct": 0,
-    "uncertainty": 0.7046487454230547,
-    "retrieval_uncertainty": 0.9587599895894527,
+    "uncertainty": 0.7060412286604805,
+    "retrieval_uncertainty": 0.9619828164577484,
     "conflict_uncertainty": 0.75,
-    "stability_uncertainty": 0.0013437531416417377,
+    "stability_uncertainty": 0.0002491021580316814,
     "steps": 3,
     "num_evidence": 7,
     "history": [
@@ -1144,19 +1176,19 @@
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.0018,
-          0.0018,
-          0.001
+          0.0014,
+          0.0013,
+          0.0189
         ],
         "candidate_answers": [
           "gold",
           "Ag",
           "Oxygen"
         ],
-        "retrieval_uncertainty": 0.9982,
+        "retrieval_uncertainty": 0.9811,
         "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.0,
-        "total_uncertainty": 0.6991
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6906
       },
       {
         "step": 2,
@@ -1164,11 +1196,11 @@
         "remaining_budget": 1,
         "num_evidence": 5,
         "utilities": [
-          0.0018,
-          0.0018,
-          0.001,
-          0.0009,
-          0.0015
+          0.0014,
+          0.0013,
+          0.0189,
+          0.0259,
+          0.0013
         ],
         "candidate_answers": [
           "gold",
@@ -1177,10 +1209,10 @@
           "",
           "K2"
         ],
-        "retrieval_uncertainty": 0.9982,
+        "retrieval_uncertainty": 0.9741,
         "conflict_uncertainty": 0.75,
-        "stability_uncertainty": 0.0,
-        "total_uncertainty": 0.7241
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.7121
       },
       {
         "step": 3,
@@ -1188,13 +1220,13 @@
         "remaining_budget": 0,
         "num_evidence": 7,
         "utilities": [
-          0.0018,
-          0.0018,
-          0.001,
-          0.0009,
-          0.0015,
-          0.0412,
-          0.003
+          0.0014,
+          0.0013,
+          0.0189,
+          0.0259,
+          0.0013,
+          0.038,
+          0.0093
         ],
         "candidate_answers": [
           "gold",
@@ -1205,10 +1237,10 @@
           "",
           ""
         ],
-        "retrieval_uncertainty": 0.9588,
+        "retrieval_uncertainty": 0.962,
         "conflict_uncertainty": 0.75,
-        "stability_uncertainty": 0.0013,
-        "total_uncertainty": 0.7046
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.706
       }
     ]
   },
@@ -1218,15 +1250,15 @@
       "Mount Everest",
       "Everest"
     ],
-    "final_answer": "K2",
-    "final_action": "ANSWER",
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
     "correct": 0,
-    "uncertainty": 0.36386315375086453,
-    "retrieval_uncertainty": 0.14992886781692505,
-    "conflict_uncertainty": 0.6666666666666667,
-    "stability_uncertainty": 0.44449359921201,
+    "uncertainty": 0.34655017310663844,
+    "retrieval_uncertainty": 0.3491417169570923,
+    "conflict_uncertainty": 0.5,
+    "stability_uncertainty": 0.1098965731404613,
     "steps": 4,
-    "num_evidence": 3,
+    "num_evidence": 4,
     "history": [
       {
         "step": 1,
@@ -1234,79 +1266,77 @@
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.0395,
-          0.8501,
-          0.5305
+          0.0136,
+          0.6509,
+          0.3194
         ],
         "candidate_answers": [
           "K2",
           "Mount Everest",
           "Jupiter"
         ],
-        "retrieval_uncertainty": 0.1499,
+        "retrieval_uncertainty": 0.3491,
         "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4445,
-        "total_uncertainty": 0.3639
+        "stability_uncertainty": 0.2709,
+        "total_uncertainty": 0.4287
       },
       {
         "step": 2,
         "action": "RERANK",
         "remaining_budget": 2,
-        "num_evidence": 3,
+        "num_evidence": 2,
         "utilities": [
-          0.8501,
-          0.5305,
-          0.0395
+          0.6509,
+          0.3194
         ],
         "candidate_answers": [
           "Mount Everest",
-          "Jupiter",
-          "K2"
+          "Jupiter"
         ],
-        "retrieval_uncertainty": 0.1499,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4445,
-        "total_uncertainty": 0.3639
+        "retrieval_uncertainty": 0.3491,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.1099,
+        "total_uncertainty": 0.3466
       },
       {
         "step": 3,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 4,
         "utilities": [
-          0.8501,
-          0.5305,
-          0.0395
+          0.6509,
+          0.3194,
+          0.0136,
+          0.0873
         ],
         "candidate_answers": [
           "Mount Everest",
           "Jupiter",
-          "K2"
+          "K2",
+          "sacramento"
         ],
-        "retrieval_uncertainty": 0.1499,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4445,
-        "total_uncertainty": 0.3639
+        "retrieval_uncertainty": 0.3491,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.2139,
+        "total_uncertainty": 0.4424
       },
       {
         "step": 4,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 2,
         "utilities": [
-          0.8501,
-          0.5305,
-          0.0395
+          0.6509,
+          0.3194
         ],
         "candidate_answers": [
           "Mount Everest",
-          "Jupiter",
-          "K2"
+          "Jupiter"
         ],
-        "retrieval_uncertainty": 0.1499,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4445,
-        "total_uncertainty": 0.3639
+        "retrieval_uncertainty": 0.3491,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.1099,
+        "total_uncertainty": 0.3466
       }
     ]
   },
@@ -1316,15 +1346,15 @@
       "Leonardo da Vinci",
       "Da Vinci"
     ],
-    "final_answer": "Leonardo da Vinci",
-    "final_action": "ANSWER",
-    "correct": 1,
-    "uncertainty": 0.40449990551219395,
-    "retrieval_uncertainty": 0.19861537218093872,
-    "conflict_uncertainty": 0.6666666666666667,
-    "stability_uncertainty": 0.5259610971086227,
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.29350464197925014,
+    "retrieval_uncertainty": 0.2577124834060669,
+    "conflict_uncertainty": 0.5,
+    "stability_uncertainty": 0.07324200138108328,
     "steps": 4,
-    "num_evidence": 3,
+    "num_evidence": 4,
     "history": [
       {
         "step": 1,
@@ -1332,79 +1362,77 @@
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.8014,
-          0.0333,
-          0.0311
+          0.7423,
+          0.1492,
+          0.0105
         ],
         "candidate_answers": [
           "Leonardo da Vinci",
           "Vincent van Gogh",
           "a swan"
         ],
-        "retrieval_uncertainty": 0.1986,
+        "retrieval_uncertainty": 0.2577,
         "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.526,
-        "total_uncertainty": 0.4045
+        "stability_uncertainty": 0.4029,
+        "total_uncertainty": 0.4094
       },
       {
         "step": 2,
         "action": "RERANK",
         "remaining_budget": 2,
-        "num_evidence": 3,
+        "num_evidence": 2,
         "utilities": [
-          0.8014,
-          0.0333,
-          0.0311
+          0.7423,
+          0.1492
         ],
         "candidate_answers": [
           "Leonardo da Vinci",
-          "Vincent van Gogh",
-          "a swan"
+          "Vincent van Gogh"
         ],
-        "retrieval_uncertainty": 0.1986,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.526,
-        "total_uncertainty": 0.4045
+        "retrieval_uncertainty": 0.2577,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.3518,
+        "total_uncertainty": 0.3492
       },
       {
         "step": 3,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 4,
         "utilities": [
-          0.8014,
-          0.0333,
-          0.0311
+          0.7423,
+          0.1492,
+          0.0105,
+          0.4717
         ],
         "candidate_answers": [
           "Leonardo da Vinci",
           "Vincent van Gogh",
-          "a swan"
+          "a swan",
+          "adam scott"
         ],
-        "retrieval_uncertainty": 0.1986,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.526,
-        "total_uncertainty": 0.4045
+        "retrieval_uncertainty": 0.2577,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.2351,
+        "total_uncertainty": 0.4009
       },
       {
         "step": 4,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 2,
         "utilities": [
-          0.8014,
-          0.0333,
-          0.0311
+          0.7423,
+          0.4717
         ],
         "candidate_answers": [
           "Leonardo da Vinci",
-          "Vincent van Gogh",
-          "a swan"
+          "adam scott"
         ],
-        "retrieval_uncertainty": 0.1986,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.526,
-        "total_uncertainty": 0.4045
+        "retrieval_uncertainty": 0.2577,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.0732,
+        "total_uncertainty": 0.2935
       }
     ]
   },
@@ -1413,87 +1441,97 @@
     "gold_answers": [
       "Tokyo"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "Paris",
+    "final_action": "ANSWER",
     "correct": 0,
-    "uncertainty": 0.4913684071514262,
-    "retrieval_uncertainty": 0.6246699690818787,
-    "conflict_uncertainty": 0.5714285714285714,
-    "stability_uncertainty": 0.038024255909577635,
-    "steps": 3,
-    "num_evidence": 7,
+    "uncertainty": 0.19284497839297002,
+    "retrieval_uncertainty": 0.08224540948867798,
+    "conflict_uncertainty": 0.5,
+    "stability_uncertainty": 0.008611368243155226,
+    "steps": 4,
+    "num_evidence": 2,
     "history": [
       {
         "step": 1,
-        "action": "RETRIEVE_MORE",
+        "action": "RERANK",
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.0073,
-          0.007,
-          0.3753
+          0.4976,
+          0.489,
+          0.825
         ],
         "candidate_answers": [
           "Berlin",
           "Rome",
           "Paris"
         ],
-        "retrieval_uncertainty": 0.6247,
+        "retrieval_uncertainty": 0.175,
         "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.1205,
-        "total_uncertainty": 0.5364
+        "stability_uncertainty": 0.0978,
+        "total_uncertainty": 0.3071
       },
       {
         "step": 2,
-        "action": "RETRIEVE_MORE",
+        "action": "RERANK",
         "remaining_budget": 1,
-        "num_evidence": 5,
+        "num_evidence": 4,
         "utilities": [
-          0.0073,
-          0.007,
-          0.3753,
-          0.2244,
-          0.002
+          0.825,
+          0.4976,
+          0.489,
+          0.9178
         ],
         "candidate_answers": [
+          "Paris",
           "Berlin",
           "Rome",
-          "Paris",
-          "Tokyo",
           "Tokyo"
         ],
-        "retrieval_uncertainty": 0.6247,
-        "conflict_uncertainty": 0.6,
-        "stability_uncertainty": 0.0913,
-        "total_uncertainty": 0.5106
+        "retrieval_uncertainty": 0.0822,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.1299,
+        "total_uncertainty": 0.2921
       },
       {
         "step": 3,
-        "action": "ABSTAIN",
-        "remaining_budget": 0,
-        "num_evidence": 7,
+        "action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 2,
         "utilities": [
-          0.0073,
-          0.007,
-          0.3753,
-          0.2244,
-          0.002,
-          0.0036,
-          0.1396
+          0.9178,
+          0.825
         ],
         "candidate_answers": [
-          "Berlin",
-          "Rome",
-          "Paris",
           "Tokyo",
-          "Tokyo",
-          "K2",
-          "Tokyo"
+          "Paris"
         ],
-        "retrieval_uncertainty": 0.6247,
-        "conflict_uncertainty": 0.5714,
-        "stability_uncertainty": 0.038,
-        "total_uncertainty": 0.4914
+        "retrieval_uncertainty": 0.0822,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.0086,
+        "total_uncertainty": 0.1928
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 4,
+        "utilities": [
+          0.9178,
+          0.825,
+          0.4976,
+          0.489
+        ],
+        "candidate_answers": [
+          "Tokyo",
+          "Paris",
+          "Berlin",
+          "Rome"
+        ],
+        "retrieval_uncertainty": 0.0822,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.1299,
+        "total_uncertainty": 0.2921
       }
     ]
   },
@@ -1503,87 +1541,35 @@
       "Lion",
       "The lion"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
-    "uncertainty": 0.5195787379092983,
-    "retrieval_uncertainty": 0.953201413154602,
-    "conflict_uncertainty": 0.1428571428571429,
-    "stability_uncertainty": 0.0006044423742715502,
-    "steps": 3,
-    "num_evidence": 7,
+    "final_answer": "lion",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.030734969240107705,
+    "retrieval_uncertainty": 0.060916006565093994,
+    "conflict_uncertainty": 0.0,
+    "stability_uncertainty": 0.001384829787803533,
+    "steps": 1,
+    "num_evidence": 3,
     "history": [
       {
         "step": 1,
-        "action": "RETRIEVE_MORE",
+        "action": "ANSWER",
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.0014,
-          0.0015,
-          0.0468
+          0.8998,
+          0.8994,
+          0.9391
         ],
         "candidate_answers": [
           "lion",
           "lion",
           "lion"
         ],
-        "retrieval_uncertainty": 0.9532,
+        "retrieval_uncertainty": 0.0609,
         "conflict_uncertainty": 0.0,
-        "stability_uncertainty": 0.0018,
-        "total_uncertainty": 0.477
-      },
-      {
-        "step": 2,
-        "action": "RETRIEVE_MORE",
-        "remaining_budget": 1,
-        "num_evidence": 5,
-        "utilities": [
-          0.0014,
-          0.0015,
-          0.0468,
-          0.0251,
-          0.0011
-        ],
-        "candidate_answers": [
-          "lion",
-          "lion",
-          "lion",
-          "lion",
-          "K2"
-        ],
-        "retrieval_uncertainty": 0.9532,
-        "conflict_uncertainty": 0.2,
         "stability_uncertainty": 0.0014,
-        "total_uncertainty": 0.5369
-      },
-      {
-        "step": 3,
-        "action": "ABSTAIN",
-        "remaining_budget": 0,
-        "num_evidence": 7,
-        "utilities": [
-          0.0014,
-          0.0015,
-          0.0468,
-          0.0251,
-          0.0011,
-          0.0179,
-          0.002
-        ],
-        "candidate_answers": [
-          "lion",
-          "lion",
-          "lion",
-          "lion",
-          "K2",
-          "lion",
-          "lion"
-        ],
-        "retrieval_uncertainty": 0.9532,
-        "conflict_uncertainty": 0.1429,
-        "stability_uncertainty": 0.0006,
-        "total_uncertainty": 0.5196
+        "total_uncertainty": 0.0307
       }
     ]
   },
@@ -1593,15 +1579,15 @@
       "Carbon dioxide",
       "CO2"
     ],
-    "final_answer": "carbon dioxide",
-    "final_action": "ANSWER",
-    "correct": 1,
-    "uncertainty": 0.36764004609320633,
-    "retrieval_uncertainty": 0.1601043939590454,
-    "conflict_uncertainty": 0.6666666666666667,
-    "stability_uncertainty": 0.43793924556841796,
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.3289948618628204,
+    "retrieval_uncertainty": 0.29609739780426025,
+    "conflict_uncertainty": 0.5,
+    "stability_uncertainty": 0.1547308148034512,
     "steps": 4,
-    "num_evidence": 3,
+    "num_evidence": 4,
     "history": [
       {
         "step": 1,
@@ -1609,79 +1595,77 @@
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.8399,
-          0.0407,
-          0.5574
+          0.7039,
+          0.0093,
+          0.3105
         ],
         "candidate_answers": [
           "carbon dioxide",
           "K2",
           "helium"
         ],
-        "retrieval_uncertainty": 0.1601,
+        "retrieval_uncertainty": 0.2961,
         "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4379,
-        "total_uncertainty": 0.3676
+        "stability_uncertainty": 0.3235,
+        "total_uncertainty": 0.4128
       },
       {
         "step": 2,
         "action": "RERANK",
         "remaining_budget": 2,
-        "num_evidence": 3,
+        "num_evidence": 2,
         "utilities": [
-          0.8399,
-          0.5574,
-          0.0407
+          0.7039,
+          0.3105
         ],
         "candidate_answers": [
           "carbon dioxide",
-          "helium",
-          "K2"
+          "helium"
         ],
-        "retrieval_uncertainty": 0.1601,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4379,
-        "total_uncertainty": 0.3676
+        "retrieval_uncertainty": 0.2961,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.1547,
+        "total_uncertainty": 0.329
       },
       {
         "step": 3,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 4,
         "utilities": [
-          0.8399,
-          0.5574,
-          0.0407
+          0.7039,
+          0.3105,
+          0.0093,
+          0.0914
         ],
         "candidate_answers": [
           "carbon dioxide",
           "helium",
-          "K2"
+          "K2",
+          "Mercury"
         ],
-        "retrieval_uncertainty": 0.1601,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4379,
-        "total_uncertainty": 0.3676
+        "retrieval_uncertainty": 0.2961,
+        "conflict_uncertainty": 0.75,
+        "stability_uncertainty": 0.2569,
+        "total_uncertainty": 0.4244
       },
       {
         "step": 4,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 2,
         "utilities": [
-          0.8399,
-          0.5574,
-          0.0407
+          0.7039,
+          0.3105
         ],
         "candidate_answers": [
           "carbon dioxide",
-          "helium",
-          "K2"
+          "helium"
         ],
-        "retrieval_uncertainty": 0.1601,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.4379,
-        "total_uncertainty": 0.3676
+        "retrieval_uncertainty": 0.2961,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.1547,
+        "total_uncertainty": 0.329
       }
     ]
   },
@@ -1691,15 +1675,15 @@
       "Albert Einstein",
       "Einstein"
     ],
-    "final_answer": "Albert Einstein",
-    "final_action": "ANSWER",
-    "correct": 1,
-    "uncertainty": 0.38166832171728415,
-    "retrieval_uncertainty": 0.15283572673797607,
-    "conflict_uncertainty": 0.6666666666666667,
-    "stability_uncertainty": 0.5262522917414804,
-    "steps": 4,
-    "num_evidence": 3,
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.3533243071769548,
+    "retrieval_uncertainty": 0.30569469928741455,
+    "conflict_uncertainty": 0.5,
+    "stability_uncertainty": 0.25238478766623734,
+    "steps": 3,
+    "num_evidence": 4,
     "history": [
       {
         "step": 1,
@@ -1707,79 +1691,63 @@
         "remaining_budget": 2,
         "num_evidence": 3,
         "utilities": [
-          0.8472,
-          0.08,
-          0.0755
+          0.6943,
+          0.0773,
+          0.085
         ],
         "candidate_answers": [
           "Albert Einstein",
           "john w. scott",
           "john scott"
         ],
-        "retrieval_uncertainty": 0.1528,
+        "retrieval_uncertainty": 0.3057,
         "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.5263,
-        "total_uncertainty": 0.3817
+        "stability_uncertainty": 0.3342,
+        "total_uncertainty": 0.4197
       },
       {
         "step": 2,
         "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "remaining_budget": 1,
+        "num_evidence": 4,
         "utilities": [
-          0.8472,
-          0.08,
-          0.0755
+          0.6943,
+          0.085,
+          0.0773,
+          0.4639
         ],
         "candidate_answers": [
           "Albert Einstein",
+          "john scott",
           "john w. scott",
           "john scott"
         ],
-        "retrieval_uncertainty": 0.1528,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.5263,
-        "total_uncertainty": 0.3817
+        "retrieval_uncertainty": 0.3057,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.2524,
+        "total_uncertainty": 0.3533
       },
       {
         "step": 3,
-        "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
+        "action": "ABSTAIN",
+        "remaining_budget": 0,
+        "num_evidence": 4,
         "utilities": [
-          0.8472,
-          0.08,
-          0.0755
+          0.6943,
+          0.4639,
+          0.0773,
+          0.085
         ],
         "candidate_answers": [
           "Albert Einstein",
+          "john scott",
           "john w. scott",
           "john scott"
         ],
-        "retrieval_uncertainty": 0.1528,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.5263,
-        "total_uncertainty": 0.3817
-      },
-      {
-        "step": 4,
-        "action": "RERANK",
-        "remaining_budget": 2,
-        "num_evidence": 3,
-        "utilities": [
-          0.8472,
-          0.08,
-          0.0755
-        ],
-        "candidate_answers": [
-          "Albert Einstein",
-          "john w. scott",
-          "john scott"
-        ],
-        "retrieval_uncertainty": 0.1528,
-        "conflict_uncertainty": 0.6667,
-        "stability_uncertainty": 0.5263,
-        "total_uncertainty": 0.3817
+        "retrieval_uncertainty": 0.3057,
+        "conflict_uncertainty": 0.5,
+        "stability_uncertainty": 0.2524,
+        "total_uncertainty": 0.3533
       }
     ]
   }

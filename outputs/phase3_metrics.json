@@ -1,23 +1,23 @@
 {
-  "accuracy": 0.6,
-  "auroc": 0.7916666666666666,
+  "accuracy": 0.1,
+  "auroc": 1.0,
   "avg_uncertainty": {
-    "overall": 0.4204218098230103,
-    "correct_only": 0.3541265089992434,
-    "incorrect_only": 0.519864761058661
+    "overall": 0.338080668674323,
+    "correct_only": 0.030734969240107705,
+    "incorrect_only": 0.37223019083368025
   },
   "selective_accuracy_80": {
     "kept_count": 16,
     "kept_ratio": 0.8,
-    "accuracy": 0.75
+    "accuracy": 0.125
   },
   "decision_summary": {
     "count": 20,
-    "answer_rate": 0.7,
-    "abstain_rate": 0.3,
-    "accuracy_all": 0.6,
-    "accuracy_answered_only": 0.8571428571428571,
+    "answer_rate": 0.2,
+    "abstain_rate": 0.8,
+    "accuracy_all": 0.1,
+    "accuracy_answered_only": 0.5,
     "avg_steps": 3.4,
-    "avg_evidence": 4.2
+    "avg_evidence": 4.0
   }
 }

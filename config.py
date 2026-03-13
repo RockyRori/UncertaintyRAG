@@ -24,7 +24,7 @@ DROPOUT = 0.2
 HIDDEN_DIM = 256
 
 # -----------------------
-# Phase 3: decision-aware retrieval
+# Phase3 retrieval decision config
 # -----------------------
 INITIAL_TOP_K = 3
 RETRIEVE_MORE_K = 2
@@ -35,11 +35,19 @@ TAU_ANSWER = 0.75
 TAU_RETRIEVE = 0.45
 TAU_CONFLICT = 0.35
 
-UNCERTAINTY_ALPHA = 0.5   # retrieval uncertainty
-UNCERTAINTY_BETA = 0.3    # conflict uncertainty
-UNCERTAINTY_GAMMA = 0.2   # stability uncertainty
+UNCERTAINTY_ALPHA = 0.5
+UNCERTAINTY_BETA = 0.3
+UNCERTAINTY_GAMMA = 0.2
 
-# generator
+# -----------------------
+# Generator config
+# -----------------------
 GENERATOR_MODEL_NAME = "google/flan-t5-small"
 MAX_INPUT_LENGTH = 512
 MAX_NEW_TOKENS = 32
+
+# -----------------------
+# Utility dataset config
+# -----------------------
+UTILITY_INCLUDE_SUPPORT_SCORE = True
+UTILITY_POSITIVE_THRESHOLD = 0.5

@@ -75,7 +75,26 @@ class DecisionAwareRAG:
     def _rerank(self, state: DecisionState) -> None:
         if not state.evidence or not state.utilities:
             return
-        state.evidence, state.utilities = rerank_by_utility(state.evidence, state.utilities)
+        # state.evidence, state.utilities = rerank_by_utility(state.evidence, state.utilities)
+        old_uncertainty = state.total_uncertainty
+
+        state.evidence, state.utilities = rerank_by_utility(
+            state.evidence,
+            state.utilities,
+            keep_top_m=2
+        )
+
+        self._update_state_scores(state)
+
+        delta = old_uncertainty - state.total_uncertainty
+
+        if delta < 0.05:
+            # rerank 没有显著降低 uncertainty
+            if state.remaining_budget > 0:
+                self._retrieve_more(state)
+            else:
+                self._abstain(state)
+            return state
 
     def _answer(self, state: DecisionState) -> None:
         top_passages = [e["text"] for e in state.evidence[:3]]
