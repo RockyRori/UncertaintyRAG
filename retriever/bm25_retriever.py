@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Any, Dict, List, Union
+from typing import Any, Dict, List, Union, Optional, Set
 import re
 
 from rank_bm25 import BM25Okapi
@@ -9,18 +9,6 @@ from utils.io_utils import load_json
 
 class BM25Retriever:
     def __init__(self, corpus_source: Union[str, Path, List[Dict[str, Any]]]):
-        """
-        corpus_source can be:
-        1. a file path to a json corpus
-        2. an already loaded list of corpus records
-
-        Each corpus record is expected to be a dict like:
-        {
-            "id": "...",
-            "text": "...",
-            ...
-        }
-        """
         if isinstance(corpus_source, (str, Path)):
             self.corpus = load_json(corpus_source)
         elif isinstance(corpus_source, list):
@@ -53,20 +41,30 @@ class BM25Retriever:
         text = text.lower()
         return re.findall(r"\w+", text)
 
-    def retrieve(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
-        if not query or not str(query).strip():
+    def retrieve(
+        self,
+        question: str,
+        top_k: int = 5,
+        offset: int = 0,
+        exclude_ids: Optional[Set[str]] = None,
+    ) -> List[Dict[str, Any]]:
+        if not question or not str(question).strip():
             return []
 
-        tokenized_query = self._tokenize(query)
+        exclude_ids = exclude_ids or set()
+
+        tokenized_query = self._tokenize(question)
         scores = self.bm25.get_scores(tokenized_query)
 
         ranked_indices = sorted(
             range(len(scores)),
             key=lambda i: scores[i],
             reverse=True
-        )[:top_k]
+        )
 
         results = []
+        skipped = 0
+
         for idx in ranked_indices:
             doc = self.corpus[idx]
 
@@ -78,7 +76,19 @@ class BM25Retriever:
                     "text": str(doc),
                 }
 
+            doc_id = result.get("id", f"doc_{idx}")
+            if doc_id in exclude_ids:
+                continue
+
+            if skipped < offset:
+                skipped += 1
+                continue
+
+            result["id"] = doc_id
             result["score"] = float(scores[idx])
             results.append(result)
+
+            if len(results) >= top_k:
+                break
 
         return results

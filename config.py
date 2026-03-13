@@ -22,7 +22,7 @@ OUTPUTS_DIR = ROOT_DIR / "outputs"
 # Dataset selection
 # =========================================================
 DATASET_NAME = "squad"
-DATASET_VERSION = "v1.1"   # 当前先用 SQuAD 1.1，后续可切 v2.0
+DATASET_VERSION = "v1.1"  # 当前先用 SQuAD 1.1，后续可切 v2.0
 
 # =========================================================
 # Raw dataset paths
@@ -39,9 +39,13 @@ SQUAD_DEV_V20_PATH = SQUAD_RAW_DIR / "dev-v2.0.json"
 # Processed dataset paths
 # =========================================================
 DATASET_QA_PATH = PROCESSED_DATA_DIR / f"{DATASET_NAME}_{DATASET_VERSION}_qa.json"
-DATASET_CORPUS_PATH = PROCESSED_DATA_DIR / f"{DATASET_NAME}_{DATASET_VERSION}_corpus.json"
+DATASET_CORPUS_PATH = (
+    PROCESSED_DATA_DIR / f"{DATASET_NAME}_{DATASET_VERSION}_corpus.json"
+)
 DATASET_STATS_PATH = PROCESSED_DATA_DIR / f"{DATASET_NAME}_{DATASET_VERSION}_stats.json"
-UTILITY_DATASET_PATH = PROCESSED_DATA_DIR / f"{DATASET_NAME}_{DATASET_VERSION}_utility.json"
+UTILITY_DATASET_PATH = (
+    PROCESSED_DATA_DIR / f"{DATASET_NAME}_{DATASET_VERSION}_utility.json"
+)
 
 # =========================================================
 # Mini / sampled dataset paths
@@ -72,20 +76,6 @@ LEARNING_RATE = 1e-3
 DROPOUT = 0.2
 HIDDEN_DIM = 256
 
-# =========================================================
-# Retrieval config
-# =========================================================
-INITIAL_TOP_K = 3
-RETRIEVE_MORE_K = 2
-MAX_RETRIEVAL_BUDGET = 2
-MAX_DECISION_STEPS = 4
-
-# =========================================================
-# Decision thresholds
-# =========================================================
-TAU_ANSWER = 0.75
-TAU_RETRIEVE = 0.45
-TAU_CONFLICT = 0.35
 
 # =========================================================
 # Uncertainty weighting
@@ -129,6 +119,20 @@ DEFAULT_UTILITY_SAVE_EVERY = 20
 THRESHOLD_SEARCH_START = 0.05
 THRESHOLD_SEARCH_END = 0.95
 THRESHOLD_SEARCH_STEP = 0.05
+
+# =========================================================
+# Decision thresholds
+# =========================================================
+TAU_ANSWER = 0.55
+TAU_RETRIEVE = 0.35
+TAU_CONFLICT = 0.60
+TAU_STOP = 0.45
+TAU_DELTA = 0.01
+TAU_GAIN = 0.01
+INITIAL_TOP_K = 3
+RETRIEVE_MORE_K = 2
+MAX_RETRIEVAL_BUDGET = 2
+MAX_DECISION_STEPS = 5
 
 # =========================================================
 # Create necessary directories automatically

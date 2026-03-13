@@ -1,5 +1,7 @@
+from collections import defaultdict
+from typing import List
+
 import numpy as np
-from utils.text_utils import majority_answer
 
 
 class DecisionAwareUncertainty:
@@ -8,39 +10,51 @@ class DecisionAwareUncertainty:
         self.beta = beta
         self.gamma = gamma
 
-    def retrieval_uncertainty(self, utilities: list[float]) -> float:
+    def retrieval_uncertainty(self, utilities: List[float]) -> float:
         if not utilities:
             return 1.0
-        return float(1.0 - max(utilities))
+        max_u = max(float(u) for u in utilities)
+        return 1.0 - max_u
 
-    def conflict_uncertainty(self, answers: list[str]) -> float:
-        cleaned = [a for a in answers if a and a.strip()]
-        if not cleaned:
+    def conflict_uncertainty(self, utilities: List[float], answers: List[str]) -> float:
+        if not utilities or not answers or len(utilities) != len(answers):
             return 1.0
-        _, majority_count = majority_answer(cleaned)
-        return float(1.0 - (majority_count / len(cleaned)))
 
-    def stability_uncertainty(self, utilities: list[float], top_m: int = 3) -> float:
+        weight_by_answer = defaultdict(float)
+        total_weight = 0.0
+
+        for u, ans in zip(utilities, answers):
+            ans = str(ans).strip().lower()
+            if not ans:
+                continue
+            w = max(float(u), 0.0)
+            weight_by_answer[ans] += w
+            total_weight += w
+
+        if total_weight <= 1e-8:
+            return 1.0
+
+        majority_weight = max(weight_by_answer.values()) if weight_by_answer else 0.0
+        return 1.0 - (majority_weight / total_weight)
+
+    def stability_uncertainty(self, utilities: List[float]) -> float:
         if not utilities:
             return 1.0
 
-        top_utils = sorted(utilities, reverse=True)[:top_m]
-        if len(top_utils) == 1:
-            return float(1.0 - top_utils[0])
+        arr = np.array(utilities, dtype=float)
 
-        # 方差越大，说明边界不稳定
-        var = float(np.var(top_utils))
+        # 全都一样时方差为 0，表示“排序很稳定”
+        var = float(np.var(arr))
 
-        # 简单压到 [0,1] 附近，别让数值乱飞
-        return min(var * 4.0, 1.0)
+        # 做一个轻量裁剪，避免极端值把总分搞飞
+        return min(1.0, var)
 
-    def total_uncertainty(self, utilities: list[float], answers: list[str]) -> dict:
+    def total_uncertainty(self, utilities: List[float], answers: List[str]) -> dict:
         ur = self.retrieval_uncertainty(utilities)
-        uc = self.conflict_uncertainty(answers)
+        uc = self.conflict_uncertainty(utilities, answers)
         us = self.stability_uncertainty(utilities)
 
         total = self.alpha * ur + self.beta * uc + self.gamma * us
-        total = float(min(max(total, 0.0), 1.0))
 
         return {
             "retrieval_uncertainty": ur,

@@ -1,0 +1,25 @@
+{
+  "accuracy": 0.4,
+  "auroc": 1.0,
+  "avg_uncertainty": {
+    "overall": 0.5767224098043662,
+    "correct_only": 0.5302512839451957,
+    "incorrect_only": 0.6077031603771467
+  },
+  "selective_accuracy_80": {
+    "kept_count": 8,
+    "kept_ratio": 0.8,
+    "accuracy": 0.5
+  },
+  "decision_summary": {
+    "count": 10,
+    "answer_rate": 0.6,
+    "abstain_rate": 0.4,
+    "accuracy_all": 0.4,
+    "accuracy_answered_only": 0.6666666666666666,
+    "avg_steps": 3.4,
+    "avg_evidence": 3.6,
+    "avg_budget_used": 1.3,
+    "overconfident_error_rate": 0.0
+  }
+}

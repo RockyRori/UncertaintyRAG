@@ -1,0 +1,632 @@
+[
+  {
+    "question": "What poet wrote a long poem describing Roman religious holidays?",
+    "gold_answers": [
+      "Ovid"
+    ],
+    "final_answer": "Romans",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.5522603481716718,
+    "retrieval_uncertainty": 0.8184730618943492,
+    "conflict_uncertainty": 0.4749982160399132,
+    "stability_uncertainty": 0.002621762062616301,
+    "steps": 2,
+    "num_evidence": 3,
+    "budget_used": 0,
+    "stop_reason": "single_shot_rerank",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "utilities": [
+          0.1815,
+          0.0416,
+          0.0568,
+          0.0777,
+          0.0259
+        ],
+        "candidate_answers": [
+          "Ovid",
+          "Cdmon's Hymn",
+          "Percy Shelley",
+          "Romans",
+          "Virgil At Maecenas"
+        ],
+        "retrieval_uncertainty": 0.8185,
+        "conflict_uncertainty": 0.5267,
+        "stability_uncertainty": 0.003,
+        "total_uncertainty": 0.5679
+      },
+      {
+        "step": 2,
+        "action": "RERANK_ANSWER",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "utilities": [
+          0.1815,
+          0.1074,
+          0.0568
+        ],
+        "candidate_answers": [
+          "Ovid",
+          "Romans",
+          "Percy Shelley"
+        ],
+        "retrieval_uncertainty": 0.8185,
+        "conflict_uncertainty": 0.475,
+        "stability_uncertainty": 0.0026,
+        "total_uncertainty": 0.5523
+      }
+    ]
+  },
+  {
+    "question": "What is the form of hydrogen and carbon called?",
+    "gold_answers": [
+      "hydrocarbons"
+    ],
+    "final_answer": "a hydrogen economy",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.5832581041763689,
+    "retrieval_uncertainty": 0.8355072757799458,
+    "conflict_uncertainty": 0.5510795193185201,
+    "stability_uncertainty": 0.0009030524542005311,
+    "steps": 2,
+    "num_evidence": 3,
+    "budget_used": 0,
+    "stop_reason": "single_shot_rerank",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "utilities": [
+          0.1171,
+          0.1404,
+          0.0858,
+          0.0885,
+          0.0592
+        ],
+        "candidate_answers": [
+          "hydrocarbons",
+          "ortho-para",
+          "carbon-hydrogen bonds",
+          "carbon",
+          "protonated molecular hydrogen"
+        ],
+        "retrieval_uncertainty": 0.8596,
+        "conflict_uncertainty": 0.7141,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.6442
+      },
+      {
+        "step": 2,
+        "action": "RERANK_ANSWER",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "utilities": [
+          0.1645,
+          0.0979,
+          0.104
+        ],
+        "candidate_answers": [
+          "ortho-para",
+          "hydrocarbons",
+          "carbon"
+        ],
+        "retrieval_uncertainty": 0.8355,
+        "conflict_uncertainty": 0.5511,
+        "stability_uncertainty": 0.0009,
+        "total_uncertainty": 0.5833
+      }
+    ]
+  },
+  {
+    "question": "What adjective did Lawrence Toppman use to describe Craig's portrayal of James Bond?",
+    "gold_answers": [
+      "Bored"
+    ],
+    "final_answer": "Bored",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.4522983469325536,
+    "retrieval_uncertainty": 0.6692183954153399,
+    "conflict_uncertainty": 0.38463391634898525,
+    "stability_uncertainty": 0.011494871600940487,
+    "steps": 2,
+    "num_evidence": 3,
+    "budget_used": 0,
+    "stop_reason": "single_shot_rerank",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "utilities": [
+          0.3308,
+          0.1056,
+          0.0819,
+          0.0853,
+          0.0497
+        ],
+        "candidate_answers": [
+          "Bored",
+          "fourth",
+          "short",
+          "recurring",
+          "co-producer"
+        ],
+        "retrieval_uncertainty": 0.6692,
+        "conflict_uncertainty": 0.4936,
+        "stability_uncertainty": 0.0103,
+        "total_uncertainty": 0.4848
+      },
+      {
+        "step": 2,
+        "action": "RERANK_ANSWER",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "utilities": [
+          0.3308,
+          0.1056,
+          0.1012
+        ],
+        "candidate_answers": [
+          "Bored",
+          "fourth",
+          "recurring"
+        ],
+        "retrieval_uncertainty": 0.6692,
+        "conflict_uncertainty": 0.3846,
+        "stability_uncertainty": 0.0115,
+        "total_uncertainty": 0.4523
+      }
+    ]
+  },
+  {
+    "question": "To what two islands does the ferry service connect?",
+    "gold_answers": [
+      "Bainbridge and Vashon"
+    ],
+    "final_answer": "Gothenburg, Sweden",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.6145495085935296,
+    "retrieval_uncertainty": 0.8799816049392137,
+    "conflict_uncertainty": 0.5816604722445056,
+    "stability_uncertainty": 0.0003028222528556133,
+    "steps": 2,
+    "num_evidence": 3,
+    "budget_used": 0,
+    "stop_reason": "single_shot_rerank",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "utilities": [
+          0.12,
+          0.0863,
+          0.0806,
+          0.0491,
+          0.0484
+        ],
+        "candidate_answers": [
+          "East Cowes and Cowes",
+          "France (Roscoff) and Spain (Santander)",
+          "Bergen and Stavanger",
+          "Bellingham, Washington and Prince Rupert, British Columbia",
+          "translunar"
+        ],
+        "retrieval_uncertainty": 0.88,
+        "conflict_uncertainty": 0.6877,
+        "stability_uncertainty": 0.0007,
+        "total_uncertainty": 0.6464
+      },
+      {
+        "step": 2,
+        "action": "RERANK_ANSWER",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "utilities": [
+          0.12,
+          0.0863,
+          0.0806
+        ],
+        "candidate_answers": [
+          "East Cowes and Cowes",
+          "France (Roscoff) and Spain (Santander)",
+          "Bergen and Stavanger"
+        ],
+        "retrieval_uncertainty": 0.88,
+        "conflict_uncertainty": 0.5817,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6145
+      }
+    ]
+  },
+  {
+    "question": "What took the place of Mac's Xserve server?",
+    "gold_answers": [
+      "Mac Mini and Mac Pro"
+    ],
+    "final_answer": "Apple",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.5931938950345588,
+    "retrieval_uncertainty": 0.8686820918306755,
+    "conflict_uncertainty": 0.528995924247448,
+    "stability_uncertainty": 0.0007703592249329909,
+    "steps": 2,
+    "num_evidence": 3,
+    "budget_used": 0,
+    "stop_reason": "single_shot_rerank",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "utilities": [
+          0.1313,
+          0.0809,
+          0.0666,
+          0.0663,
+          0.0507
+        ],
+        "candidate_answers": [
+          "Mac Mini and Mac Pro",
+          "Beringia",
+          "Mac OS 8",
+          "IBM",
+          "Macintosh 128k"
+        ],
+        "retrieval_uncertainty": 0.8687,
+        "conflict_uncertainty": 0.6682,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.635
+      },
+      {
+        "step": 2,
+        "action": "RERANK_ANSWER",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "utilities": [
+          0.1313,
+          0.0809,
+          0.0666
+        ],
+        "candidate_answers": [
+          "Mac Mini and Mac Pro",
+          "Beringia",
+          "Mac OS 8"
+        ],
+        "retrieval_uncertainty": 0.8687,
+        "conflict_uncertainty": 0.529,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.5932
+      }
+    ]
+  },
+  {
+    "question": "What is one example of an application that videoconferencing manufacturers have begun to offer?",
+    "gold_answers": [
+      "still image streaming"
+    ],
+    "final_answer": "Live and still image streaming",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.6449549710389585,
+    "retrieval_uncertainty": 0.9211263230486898,
+    "conflict_uncertainty": 0.6145934286510841,
+    "stability_uncertainty": 6.890459644172707e-05,
+    "steps": 2,
+    "num_evidence": 3,
+    "budget_used": 0,
+    "stop_reason": "single_shot_rerank",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "utilities": [
+          0.0789,
+          0.0586,
+          0.0333,
+          0.0571,
+          0.0441
+        ],
+        "candidate_answers": [
+          "live and still image streaming",
+          "diagnosis, consulting, transmission of medical images",
+          "calling or conferencing on a one-on-one, one-to-many or many-to-many basis for personal, business,",
+          "chat programs",
+          "VoIP"
+        ],
+        "retrieval_uncertainty": 0.9211,
+        "conflict_uncertainty": 0.7101,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.6736
+      },
+      {
+        "step": 2,
+        "action": "RERANK_ANSWER",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "utilities": [
+          0.0789,
+          0.0586,
+          0.0672
+        ],
+        "candidate_answers": [
+          "live and still image streaming",
+          "diagnosis, consulting, transmission of medical images",
+          "chat programs"
+        ],
+        "retrieval_uncertainty": 0.9211,
+        "conflict_uncertainty": 0.6146,
+        "stability_uncertainty": 0.0001,
+        "total_uncertainty": 0.645
+      }
+    ]
+  },
+  {
+    "question": "What are Italian dialects termed in the Italian language?",
+    "gold_answers": [
+      "dialetti"
+    ],
+    "final_answer": "Italian",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.5416058303120705,
+    "retrieval_uncertainty": 0.8681377507787585,
+    "conflict_uncertainty": 0.35819617030211137,
+    "stability_uncertainty": 0.00039051916028941773,
+    "steps": 2,
+    "num_evidence": 3,
+    "budget_used": 0,
+    "stop_reason": "single_shot_rerank",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "utilities": [
+          0.1319,
+          0.1006,
+          0.1035,
+          0.0849,
+          0.0783
+        ],
+        "candidate_answers": [
+          "dialects",
+          "Dialects",
+          "standard Italian",
+          "Spanish",
+          "dialects of standard Italian"
+        ],
+        "retrieval_uncertainty": 0.8681,
+        "conflict_uncertainty": 0.5343,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.5944
+      },
+      {
+        "step": 2,
+        "action": "RERANK_ANSWER",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "utilities": [
+          0.1319,
+          0.1214,
+          0.0857
+        ],
+        "candidate_answers": [
+          "dialects",
+          "standard Italian",
+          "Dialects"
+        ],
+        "retrieval_uncertainty": 0.8681,
+        "conflict_uncertainty": 0.3582,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.5416
+      }
+    ]
+  },
+  {
+    "question": "Along with exhibition and distribution, what business did the Universal Film Manufacturing Company engage in?",
+    "gold_answers": [
+      "movie production"
+    ],
+    "final_answer": "The Champagne Murders)",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.572839881784266,
+    "retrieval_uncertainty": 0.8184606670479003,
+    "conflict_uncertainty": 0.5440892119991289,
+    "stability_uncertainty": 0.0019139233028856192,
+    "steps": 2,
+    "num_evidence": 3,
+    "budget_used": 0,
+    "stop_reason": "single_shot_rerank",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "utilities": [
+          0.1815,
+          0.057,
+          0.12,
+          0.0641,
+          0.06
+        ],
+        "candidate_answers": [
+          "movie production",
+          "Universal Studios",
+          "NBC Universal",
+          "production company",
+          "digital distribution"
+        ],
+        "retrieval_uncertainty": 0.8185,
+        "conflict_uncertainty": 0.6239,
+        "stability_uncertainty": 0.0023,
+        "total_uncertainty": 0.5969
+      },
+      {
+        "step": 2,
+        "action": "RERANK_ANSWER",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "utilities": [
+          0.1815,
+          0.1413,
+          0.0754
+        ],
+        "candidate_answers": [
+          "movie production",
+          "NBC Universal",
+          "production company"
+        ],
+        "retrieval_uncertainty": 0.8185,
+        "conflict_uncertainty": 0.5441,
+        "stability_uncertainty": 0.0019,
+        "total_uncertainty": 0.5728
+      }
+    ]
+  },
+  {
+    "question": "Whose life was 'Schindler's List' based on?",
+    "gold_answers": [
+      "Oskar Schindler"
+    ],
+    "final_answer": "The Holocaust",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.5072804153019964,
+    "retrieval_uncertainty": 0.7722932672018801,
+    "conflict_uncertainty": 0.400369603431569,
+    "stability_uncertainty": 0.005114503357928687,
+    "steps": 2,
+    "num_evidence": 3,
+    "budget_used": 0,
+    "stop_reason": "single_shot_rerank",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "utilities": [
+          0.2277,
+          0.0746,
+          0.0413,
+          0.0655,
+          0.039
+        ],
+        "candidate_answers": [
+          "Oskar Schindler",
+          "Steven_Spielberg Spielberg",
+          "Janusz Kamiski",
+          "Steven_Spielberg",
+          "Steven_Spielberg Spielberg"
+        ],
+        "retrieval_uncertainty": 0.7723,
+        "conflict_uncertainty": 0.4918,
+        "stability_uncertainty": 0.005,
+        "total_uncertainty": 0.5347
+      },
+      {
+        "step": 2,
+        "action": "RERANK_ANSWER",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "utilities": [
+          0.2277,
+          0.0746,
+          0.0775
+        ],
+        "candidate_answers": [
+          "Oskar Schindler",
+          "Steven_Spielberg Spielberg",
+          "Steven_Spielberg"
+        ],
+        "retrieval_uncertainty": 0.7723,
+        "conflict_uncertainty": 0.4004,
+        "stability_uncertainty": 0.0051,
+        "total_uncertainty": 0.5073
+      }
+    ]
+  },
+  {
+    "question": "In what presidential election year did Schwarzenegger make a name for himself as a prominent Republican?",
+    "gold_answers": [
+      "1988"
+    ],
+    "final_answer": "2008",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.6124568934586475,
+    "retrieval_uncertainty": 0.8451949231664995,
+    "conflict_uncertainty": 0.6326397976227154,
+    "stability_uncertainty": 0.0003374629429160042,
+    "steps": 2,
+    "num_evidence": 3,
+    "budget_used": 0,
+    "stop_reason": "single_shot_rerank",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "utilities": [
+          0.1548,
+          0.1521,
+          0.1145,
+          0.0964,
+          0.0659
+        ],
+        "candidate_answers": [
+          "2008",
+          "1988",
+          "2006",
+          "2006",
+          "2004"
+        ],
+        "retrieval_uncertainty": 0.8452,
+        "conflict_uncertainty": 0.6386,
+        "stability_uncertainty": 0.0011,
+        "total_uncertainty": 0.6144
+      },
+      {
+        "step": 2,
+        "action": "RERANK_ANSWER",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "utilities": [
+          0.1548,
+          0.1521,
+          0.1145
+        ],
+        "candidate_answers": [
+          "2008",
+          "1988",
+          "2006"
+        ],
+        "retrieval_uncertainty": 0.8452,
+        "conflict_uncertainty": 0.6326,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6125
+      }
+    ]
+  }
+]

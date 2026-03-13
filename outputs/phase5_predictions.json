@@ -1,0 +1,1060 @@
+[
+  {
+    "question": "What poet wrote a long poem describing Roman religious holidays?",
+    "gold_answers": [
+      "Ovid"
+    ],
+    "final_answer": "Ovid",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.567850602902212,
+    "retrieval_uncertainty": 0.8184730618943492,
+    "conflict_uncertainty": 0.5266870635042458,
+    "stability_uncertainty": 0.0030397645188186776,
+    "steps": 2,
+    "num_evidence": 5,
+    "budget_used": 1,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1815,
+        "delta_uncertainty": 0.4845,
+        "evidence_gain": 0.1815,
+        "utilities": [
+          0.1815,
+          0.0416,
+          0.0568
+        ],
+        "candidate_answers": [
+          "Ovid",
+          "Cdmon's Hymn",
+          "Percy Shelley"
+        ],
+        "retrieval_uncertainty": 0.8185,
+        "conflict_uncertainty": 0.3516,
+        "stability_uncertainty": 0.0039,
+        "total_uncertainty": 0.5155
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1815,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1815,
+          0.0416,
+          0.0568,
+          0.0777,
+          0.0259
+        ],
+        "candidate_answers": [
+          "Ovid",
+          "Cdmon's Hymn",
+          "Percy Shelley",
+          "Romans",
+          "Virgil At Maecenas"
+        ],
+        "retrieval_uncertainty": 0.8185,
+        "conflict_uncertainty": 0.5267,
+        "stability_uncertainty": 0.003,
+        "total_uncertainty": 0.5679
+      }
+    ]
+  },
+  {
+    "question": "What is the form of hydrogen and carbon called?",
+    "gold_answers": [
+      "hydrocarbons"
+    ],
+    "final_answer": "ortho-para",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.5850541070392118,
+    "retrieval_uncertainty": 0.8355072757799458,
+    "conflict_uncertainty": 0.5569354644462579,
+    "stability_uncertainty": 0.0010991490768081525,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1404,
+        "delta_uncertainty": 0.3928,
+        "evidence_gain": 0.1404,
+        "utilities": [
+          0.1171,
+          0.1404,
+          0.0858
+        ],
+        "candidate_answers": [
+          "hydrocarbons",
+          "ortho-para",
+          "carbon-hydrogen bonds"
+        ],
+        "retrieval_uncertainty": 0.8596,
+        "conflict_uncertainty": 0.591,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6072
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1404,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1171,
+          0.1404,
+          0.0858,
+          0.0885,
+          0.0592
+        ],
+        "candidate_answers": [
+          "hydrocarbons",
+          "ortho-para",
+          "carbon-hydrogen bonds",
+          "carbon",
+          "protonated molecular hydrogen"
+        ],
+        "retrieval_uncertainty": 0.8596,
+        "conflict_uncertainty": 0.7141,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.6442
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1645,
+        "delta_uncertainty": 0.0609,
+        "evidence_gain": 0.0241,
+        "utilities": [
+          0.1645,
+          0.0979,
+          0.104
+        ],
+        "candidate_answers": [
+          "ortho-para",
+          "hydrocarbons",
+          "carbon"
+        ],
+        "retrieval_uncertainty": 0.8355,
+        "conflict_uncertainty": 0.5511,
+        "stability_uncertainty": 0.0009,
+        "total_uncertainty": 0.5833
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1645,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1645,
+          0.0979,
+          0.104,
+          0.0731,
+          0.0592
+        ],
+        "candidate_answers": [
+          "ortho-para",
+          "hydrocarbons",
+          "carbon",
+          "carbon-hydrogen bonds",
+          "protonated molecular hydrogen"
+        ],
+        "retrieval_uncertainty": 0.8355,
+        "conflict_uncertainty": 0.6702,
+        "stability_uncertainty": 0.0013,
+        "total_uncertainty": 0.6191
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1645,
+        "delta_uncertainty": 0.034,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1645,
+          0.1235,
+          0.0833
+        ],
+        "candidate_answers": [
+          "ortho-para",
+          "carbon",
+          "hydrocarbons"
+        ],
+        "retrieval_uncertainty": 0.8355,
+        "conflict_uncertainty": 0.5569,
+        "stability_uncertainty": 0.0011,
+        "total_uncertainty": 0.5851
+      }
+    ]
+  },
+  {
+    "question": "What adjective did Lawrence Toppman use to describe Craig's portrayal of James Bond?",
+    "gold_answers": [
+      "Bored"
+    ],
+    "final_answer": "Bored",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.4456418893446617,
+    "retrieval_uncertainty": 0.6692183954153399,
+    "conflict_uncertainty": 0.36172182455608737,
+    "stability_uncertainty": 0.012580721350827731,
+    "steps": 1,
+    "num_evidence": 3,
+    "budget_used": 0,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "STOP",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.3308,
+        "delta_uncertainty": 0.5544,
+        "evidence_gain": 0.3308,
+        "utilities": [
+          0.3308,
+          0.1056,
+          0.0819
+        ],
+        "candidate_answers": [
+          "Bored",
+          "fourth",
+          "short"
+        ],
+        "retrieval_uncertainty": 0.6692,
+        "conflict_uncertainty": 0.3617,
+        "stability_uncertainty": 0.0126,
+        "total_uncertainty": 0.4456
+      }
+    ]
+  },
+  {
+    "question": "To what two islands does the ferry service connect?",
+    "gold_answers": [
+      "Bainbridge and Vashon"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6145495085935296,
+    "retrieval_uncertainty": 0.8799816049392137,
+    "conflict_uncertainty": 0.5816604722445056,
+    "stability_uncertainty": 0.0003028222528556133,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.12,
+        "delta_uncertainty": 0.3855,
+        "evidence_gain": 0.12,
+        "utilities": [
+          0.12,
+          0.0863,
+          0.0806
+        ],
+        "candidate_answers": [
+          "East Cowes and Cowes",
+          "France (Roscoff) and Spain (Santander)",
+          "Bergen and Stavanger"
+        ],
+        "retrieval_uncertainty": 0.88,
+        "conflict_uncertainty": 0.5817,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6145
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.12,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.12,
+          0.0863,
+          0.0806,
+          0.0491,
+          0.0484
+        ],
+        "candidate_answers": [
+          "East Cowes and Cowes",
+          "France (Roscoff) and Spain (Santander)",
+          "Bergen and Stavanger",
+          "Bellingham, Washington and Prince Rupert, British Columbia",
+          "translunar"
+        ],
+        "retrieval_uncertainty": 0.88,
+        "conflict_uncertainty": 0.6877,
+        "stability_uncertainty": 0.0007,
+        "total_uncertainty": 0.6464
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.12,
+        "delta_uncertainty": 0.0319,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.12,
+          0.0863,
+          0.0806
+        ],
+        "candidate_answers": [
+          "East Cowes and Cowes",
+          "France (Roscoff) and Spain (Santander)",
+          "Bergen and Stavanger"
+        ],
+        "retrieval_uncertainty": 0.88,
+        "conflict_uncertainty": 0.5817,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6145
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.12,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.12,
+          0.0863,
+          0.0806,
+          0.0491,
+          0.0484
+        ],
+        "candidate_answers": [
+          "East Cowes and Cowes",
+          "France (Roscoff) and Spain (Santander)",
+          "Bergen and Stavanger",
+          "Bellingham, Washington and Prince Rupert, British Columbia",
+          "translunar"
+        ],
+        "retrieval_uncertainty": 0.88,
+        "conflict_uncertainty": 0.6877,
+        "stability_uncertainty": 0.0007,
+        "total_uncertainty": 0.6464
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.12,
+        "delta_uncertainty": 0.0319,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.12,
+          0.0863,
+          0.0806
+        ],
+        "candidate_answers": [
+          "East Cowes and Cowes",
+          "France (Roscoff) and Spain (Santander)",
+          "Bergen and Stavanger"
+        ],
+        "retrieval_uncertainty": 0.88,
+        "conflict_uncertainty": 0.5817,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6145
+      }
+    ]
+  },
+  {
+    "question": "What took the place of Mac's Xserve server?",
+    "gold_answers": [
+      "Mac Mini and Mac Pro"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.5931938950345588,
+    "retrieval_uncertainty": 0.8686820918306755,
+    "conflict_uncertainty": 0.528995924247448,
+    "stability_uncertainty": 0.0007703592249329909,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1313,
+        "delta_uncertainty": 0.4068,
+        "evidence_gain": 0.1313,
+        "utilities": [
+          0.1313,
+          0.0809,
+          0.0666
+        ],
+        "candidate_answers": [
+          "Mac Mini and Mac Pro",
+          "Beringia",
+          "Mac OS 8"
+        ],
+        "retrieval_uncertainty": 0.8687,
+        "conflict_uncertainty": 0.529,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.5932
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1313,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1313,
+          0.0809,
+          0.0666,
+          0.0663,
+          0.0507
+        ],
+        "candidate_answers": [
+          "Mac Mini and Mac Pro",
+          "Beringia",
+          "Mac OS 8",
+          "IBM",
+          "Macintosh 128k"
+        ],
+        "retrieval_uncertainty": 0.8687,
+        "conflict_uncertainty": 0.6682,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.635
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1313,
+        "delta_uncertainty": 0.0418,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1313,
+          0.0809,
+          0.0666
+        ],
+        "candidate_answers": [
+          "Mac Mini and Mac Pro",
+          "Beringia",
+          "Mac OS 8"
+        ],
+        "retrieval_uncertainty": 0.8687,
+        "conflict_uncertainty": 0.529,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.5932
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1313,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1313,
+          0.0809,
+          0.0666,
+          0.0663,
+          0.0507
+        ],
+        "candidate_answers": [
+          "Mac Mini and Mac Pro",
+          "Beringia",
+          "Mac OS 8",
+          "IBM",
+          "Macintosh 128k"
+        ],
+        "retrieval_uncertainty": 0.8687,
+        "conflict_uncertainty": 0.6682,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.635
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1313,
+        "delta_uncertainty": 0.0418,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1313,
+          0.0809,
+          0.0666
+        ],
+        "candidate_answers": [
+          "Mac Mini and Mac Pro",
+          "Beringia",
+          "Mac OS 8"
+        ],
+        "retrieval_uncertainty": 0.8687,
+        "conflict_uncertainty": 0.529,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.5932
+      }
+    ]
+  },
+  {
+    "question": "What is one example of an application that videoconferencing manufacturers have begun to offer?",
+    "gold_answers": [
+      "still image streaming"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6465263699216701,
+    "retrieval_uncertainty": 0.9210395629615976,
+    "conflict_uncertainty": 0.6198972242314413,
+    "stability_uncertainty": 0.00018710585719458172,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.0789,
+        "delta_uncertainty": 0.3779,
+        "evidence_gain": 0.0789,
+        "utilities": [
+          0.0789,
+          0.0586,
+          0.0333
+        ],
+        "candidate_answers": [
+          "live and still image streaming",
+          "diagnosis, consulting, transmission of medical images",
+          "calling or conferencing on a one-on-one, one-to-many or many-to-many basis for personal, business,"
+        ],
+        "retrieval_uncertainty": 0.9211,
+        "conflict_uncertainty": 0.5383,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6221
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.0789,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0789,
+          0.0586,
+          0.0333,
+          0.0571,
+          0.0441
+        ],
+        "candidate_answers": [
+          "live and still image streaming",
+          "diagnosis, consulting, transmission of medical images",
+          "calling or conferencing on a one-on-one, one-to-many or many-to-many basis for personal, business,",
+          "chat programs",
+          "VoIP"
+        ],
+        "retrieval_uncertainty": 0.9211,
+        "conflict_uncertainty": 0.7101,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.6736
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.0789,
+        "delta_uncertainty": 0.0287,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0789,
+          0.0586,
+          0.0672
+        ],
+        "candidate_answers": [
+          "live and still image streaming",
+          "diagnosis, consulting, transmission of medical images",
+          "chat programs"
+        ],
+        "retrieval_uncertainty": 0.9211,
+        "conflict_uncertainty": 0.6146,
+        "stability_uncertainty": 0.0001,
+        "total_uncertainty": 0.645
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.0789,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0789,
+          0.0586,
+          0.0672,
+          0.0284,
+          0.0441
+        ],
+        "candidate_answers": [
+          "live and still image streaming",
+          "diagnosis, consulting, transmission of medical images",
+          "chat programs",
+          "calling or conferencing on a one-on-one, one-to-many or many-to-many basis for personal, business,",
+          "VoIP"
+        ],
+        "retrieval_uncertainty": 0.9211,
+        "conflict_uncertainty": 0.7154,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6752
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.079,
+        "delta_uncertainty": 0.0287,
+        "evidence_gain": 0.0001,
+        "utilities": [
+          0.0789,
+          0.079,
+          0.0499
+        ],
+        "candidate_answers": [
+          "live and still image streaming",
+          "chat programs",
+          "diagnosis, consulting, transmission of medical images"
+        ],
+        "retrieval_uncertainty": 0.921,
+        "conflict_uncertainty": 0.6199,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.6465
+      }
+    ]
+  },
+  {
+    "question": "What are Italian dialects termed in the Italian language?",
+    "gold_answers": [
+      "dialetti"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.594438188215262,
+    "retrieval_uncertainty": 0.8681377507787585,
+    "conflict_uncertainty": 0.5343340390978599,
+    "stability_uncertainty": 0.0003455054826235133,
+    "steps": 2,
+    "num_evidence": 5,
+    "budget_used": 1,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1319,
+        "delta_uncertainty": 0.4734,
+        "evidence_gain": 0.1319,
+        "utilities": [
+          0.1319,
+          0.1006,
+          0.1035
+        ],
+        "candidate_answers": [
+          "dialects",
+          "Dialects",
+          "standard Italian"
+        ],
+        "retrieval_uncertainty": 0.8681,
+        "conflict_uncertainty": 0.3082,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.5266
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1319,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1319,
+          0.1006,
+          0.1035,
+          0.0849,
+          0.0783
+        ],
+        "candidate_answers": [
+          "dialects",
+          "Dialects",
+          "standard Italian",
+          "Spanish",
+          "dialects of standard Italian"
+        ],
+        "retrieval_uncertainty": 0.8681,
+        "conflict_uncertainty": 0.5343,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.5944
+      }
+    ]
+  },
+  {
+    "question": "Along with exhibition and distribution, what business did the Universal Film Manufacturing Company engage in?",
+    "gold_answers": [
+      "movie production"
+    ],
+    "final_answer": "movie production",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.572839881784266,
+    "retrieval_uncertainty": 0.8184606670479003,
+    "conflict_uncertainty": 0.5440892119991289,
+    "stability_uncertainty": 0.0019139233028856192,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1815,
+        "delta_uncertainty": 0.4421,
+        "evidence_gain": 0.1815,
+        "utilities": [
+          0.1815,
+          0.057,
+          0.12
+        ],
+        "candidate_answers": [
+          "movie production",
+          "Universal Studios",
+          "NBC Universal"
+        ],
+        "retrieval_uncertainty": 0.8185,
+        "conflict_uncertainty": 0.4938,
+        "stability_uncertainty": 0.0026,
+        "total_uncertainty": 0.5579
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1815,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1815,
+          0.057,
+          0.12,
+          0.0641,
+          0.06
+        ],
+        "candidate_answers": [
+          "movie production",
+          "Universal Studios",
+          "NBC Universal",
+          "production company",
+          "digital distribution"
+        ],
+        "retrieval_uncertainty": 0.8185,
+        "conflict_uncertainty": 0.6239,
+        "stability_uncertainty": 0.0023,
+        "total_uncertainty": 0.5969
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1815,
+        "delta_uncertainty": 0.024,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1815,
+          0.1413,
+          0.0754
+        ],
+        "candidate_answers": [
+          "movie production",
+          "NBC Universal",
+          "production company"
+        ],
+        "retrieval_uncertainty": 0.8185,
+        "conflict_uncertainty": 0.5441,
+        "stability_uncertainty": 0.0019,
+        "total_uncertainty": 0.5728
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1815,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1815,
+          0.1413,
+          0.0754,
+          0.0413,
+          0.06
+        ],
+        "candidate_answers": [
+          "movie production",
+          "NBC Universal",
+          "production company",
+          "Universal Studios",
+          "digital distribution"
+        ],
+        "retrieval_uncertainty": 0.8185,
+        "conflict_uncertainty": 0.6366,
+        "stability_uncertainty": 0.0028,
+        "total_uncertainty": 0.6008
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1815,
+        "delta_uncertainty": 0.0279,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1815,
+          0.1413,
+          0.0754
+        ],
+        "candidate_answers": [
+          "movie production",
+          "NBC Universal",
+          "production company"
+        ],
+        "retrieval_uncertainty": 0.8185,
+        "conflict_uncertainty": 0.5441,
+        "stability_uncertainty": 0.0019,
+        "total_uncertainty": 0.5728
+      }
+    ]
+  },
+  {
+    "question": "Whose life was 'Schindler's List' based on?",
+    "gold_answers": [
+      "Oskar Schindler"
+    ],
+    "final_answer": "Oskar Schindler",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.5346727617496428,
+    "retrieval_uncertainty": 0.7722932672018801,
+    "conflict_uncertainty": 0.4917834806548931,
+    "stability_uncertainty": 0.004955419761174798,
+    "steps": 2,
+    "num_evidence": 5,
+    "budget_used": 1,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.2277,
+        "delta_uncertainty": 0.5114,
+        "evidence_gain": 0.2277,
+        "utilities": [
+          0.2277,
+          0.0746,
+          0.0413
+        ],
+        "candidate_answers": [
+          "Oskar Schindler",
+          "Steven_Spielberg Spielberg",
+          "Janusz Kamiski"
+        ],
+        "retrieval_uncertainty": 0.7723,
+        "conflict_uncertainty": 0.3372,
+        "stability_uncertainty": 0.0066,
+        "total_uncertainty": 0.4886
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.2277,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.2277,
+          0.0746,
+          0.0413,
+          0.0655,
+          0.039
+        ],
+        "candidate_answers": [
+          "Oskar Schindler",
+          "Steven_Spielberg Spielberg",
+          "Janusz Kamiski",
+          "Steven_Spielberg",
+          "Steven_Spielberg Spielberg"
+        ],
+        "retrieval_uncertainty": 0.7723,
+        "conflict_uncertainty": 0.4918,
+        "stability_uncertainty": 0.005,
+        "total_uncertainty": 0.5347
+      }
+    ]
+  },
+  {
+    "question": "In what presidential election year did Schwarzenegger make a name for himself as a prominent Republican?",
+    "gold_answers": [
+      "1988"
+    ],
+    "final_answer": "2008",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.6124568934586475,
+    "retrieval_uncertainty": 0.8451949231664995,
+    "conflict_uncertainty": 0.6326397976227154,
+    "stability_uncertainty": 0.0003374629429160042,
+    "steps": 2,
+    "num_evidence": 3,
+    "budget_used": 0,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1548,
+        "delta_uncertainty": 0.3875,
+        "evidence_gain": 0.1548,
+        "utilities": [
+          0.1548,
+          0.1521,
+          0.1145
+        ],
+        "candidate_answers": [
+          "2008",
+          "1988",
+          "2006"
+        ],
+        "retrieval_uncertainty": 0.8452,
+        "conflict_uncertainty": 0.6326,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6125
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1548,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1548,
+          0.1521,
+          0.1145
+        ],
+        "candidate_answers": [
+          "2008",
+          "1988",
+          "2006"
+        ],
+        "retrieval_uncertainty": 0.8452,
+        "conflict_uncertainty": 0.6326,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6125
+      }
+    ]
+  }
+]

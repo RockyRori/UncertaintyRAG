@@ -1,0 +1,5864 @@
+[
+  {
+    "question": "What poet wrote a long poem describing Roman religious holidays?",
+    "gold_answers": [
+      "Ovid"
+    ],
+    "final_answer": "Ovid",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.567850602902212,
+    "retrieval_uncertainty": 0.8184730618943492,
+    "conflict_uncertainty": 0.5266870635042458,
+    "stability_uncertainty": 0.0030397645188186776,
+    "steps": 2,
+    "num_evidence": 5,
+    "budget_used": 1,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1815,
+        "delta_uncertainty": 0.4845,
+        "evidence_gain": 0.1815,
+        "utilities": [
+          0.1815,
+          0.0416,
+          0.0568
+        ],
+        "candidate_answers": [
+          "Ovid",
+          "Cdmon's Hymn",
+          "Percy Shelley"
+        ],
+        "retrieval_uncertainty": 0.8185,
+        "conflict_uncertainty": 0.3516,
+        "stability_uncertainty": 0.0039,
+        "total_uncertainty": 0.5155
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1815,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1815,
+          0.0416,
+          0.0568,
+          0.0777,
+          0.0259
+        ],
+        "candidate_answers": [
+          "Ovid",
+          "Cdmon's Hymn",
+          "Percy Shelley",
+          "Romans",
+          "Virgil At Maecenas"
+        ],
+        "retrieval_uncertainty": 0.8185,
+        "conflict_uncertainty": 0.5267,
+        "stability_uncertainty": 0.003,
+        "total_uncertainty": 0.5679
+      }
+    ]
+  },
+  {
+    "question": "What is the form of hydrogen and carbon called?",
+    "gold_answers": [
+      "hydrocarbons"
+    ],
+    "final_answer": "ortho-para",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.5850541070392118,
+    "retrieval_uncertainty": 0.8355072757799458,
+    "conflict_uncertainty": 0.5569354644462579,
+    "stability_uncertainty": 0.0010991490768081525,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1404,
+        "delta_uncertainty": 0.3928,
+        "evidence_gain": 0.1404,
+        "utilities": [
+          0.1171,
+          0.1404,
+          0.0858
+        ],
+        "candidate_answers": [
+          "hydrocarbons",
+          "ortho-para",
+          "carbon-hydrogen bonds"
+        ],
+        "retrieval_uncertainty": 0.8596,
+        "conflict_uncertainty": 0.591,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6072
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1404,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1171,
+          0.1404,
+          0.0858,
+          0.0885,
+          0.0592
+        ],
+        "candidate_answers": [
+          "hydrocarbons",
+          "ortho-para",
+          "carbon-hydrogen bonds",
+          "carbon",
+          "protonated molecular hydrogen"
+        ],
+        "retrieval_uncertainty": 0.8596,
+        "conflict_uncertainty": 0.7141,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.6442
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1645,
+        "delta_uncertainty": 0.0609,
+        "evidence_gain": 0.0241,
+        "utilities": [
+          0.1645,
+          0.0979,
+          0.104
+        ],
+        "candidate_answers": [
+          "ortho-para",
+          "hydrocarbons",
+          "carbon"
+        ],
+        "retrieval_uncertainty": 0.8355,
+        "conflict_uncertainty": 0.5511,
+        "stability_uncertainty": 0.0009,
+        "total_uncertainty": 0.5833
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1645,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1645,
+          0.0979,
+          0.104,
+          0.0731,
+          0.0592
+        ],
+        "candidate_answers": [
+          "ortho-para",
+          "hydrocarbons",
+          "carbon",
+          "carbon-hydrogen bonds",
+          "protonated molecular hydrogen"
+        ],
+        "retrieval_uncertainty": 0.8355,
+        "conflict_uncertainty": 0.6702,
+        "stability_uncertainty": 0.0013,
+        "total_uncertainty": 0.6191
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1645,
+        "delta_uncertainty": 0.034,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1645,
+          0.1235,
+          0.0833
+        ],
+        "candidate_answers": [
+          "ortho-para",
+          "carbon",
+          "hydrocarbons"
+        ],
+        "retrieval_uncertainty": 0.8355,
+        "conflict_uncertainty": 0.5569,
+        "stability_uncertainty": 0.0011,
+        "total_uncertainty": 0.5851
+      }
+    ]
+  },
+  {
+    "question": "What adjective did Lawrence Toppman use to describe Craig's portrayal of James Bond?",
+    "gold_answers": [
+      "Bored"
+    ],
+    "final_answer": "Bored",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.4456418893446617,
+    "retrieval_uncertainty": 0.6692183954153399,
+    "conflict_uncertainty": 0.36172182455608737,
+    "stability_uncertainty": 0.012580721350827731,
+    "steps": 1,
+    "num_evidence": 3,
+    "budget_used": 0,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "STOP",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.3308,
+        "delta_uncertainty": 0.5544,
+        "evidence_gain": 0.3308,
+        "utilities": [
+          0.3308,
+          0.1056,
+          0.0819
+        ],
+        "candidate_answers": [
+          "Bored",
+          "fourth",
+          "short"
+        ],
+        "retrieval_uncertainty": 0.6692,
+        "conflict_uncertainty": 0.3617,
+        "stability_uncertainty": 0.0126,
+        "total_uncertainty": 0.4456
+      }
+    ]
+  },
+  {
+    "question": "To what two islands does the ferry service connect?",
+    "gold_answers": [
+      "Bainbridge and Vashon"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6145495085935296,
+    "retrieval_uncertainty": 0.8799816049392137,
+    "conflict_uncertainty": 0.5816604722445056,
+    "stability_uncertainty": 0.0003028222528556133,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.12,
+        "delta_uncertainty": 0.3855,
+        "evidence_gain": 0.12,
+        "utilities": [
+          0.12,
+          0.0863,
+          0.0806
+        ],
+        "candidate_answers": [
+          "East Cowes and Cowes",
+          "France (Roscoff) and Spain (Santander)",
+          "Bergen and Stavanger"
+        ],
+        "retrieval_uncertainty": 0.88,
+        "conflict_uncertainty": 0.5817,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6145
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.12,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.12,
+          0.0863,
+          0.0806,
+          0.0491,
+          0.0484
+        ],
+        "candidate_answers": [
+          "East Cowes and Cowes",
+          "France (Roscoff) and Spain (Santander)",
+          "Bergen and Stavanger",
+          "Bellingham, Washington and Prince Rupert, British Columbia",
+          "translunar"
+        ],
+        "retrieval_uncertainty": 0.88,
+        "conflict_uncertainty": 0.6877,
+        "stability_uncertainty": 0.0007,
+        "total_uncertainty": 0.6464
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.12,
+        "delta_uncertainty": 0.0319,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.12,
+          0.0863,
+          0.0806
+        ],
+        "candidate_answers": [
+          "East Cowes and Cowes",
+          "France (Roscoff) and Spain (Santander)",
+          "Bergen and Stavanger"
+        ],
+        "retrieval_uncertainty": 0.88,
+        "conflict_uncertainty": 0.5817,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6145
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.12,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.12,
+          0.0863,
+          0.0806,
+          0.0491,
+          0.0484
+        ],
+        "candidate_answers": [
+          "East Cowes and Cowes",
+          "France (Roscoff) and Spain (Santander)",
+          "Bergen and Stavanger",
+          "Bellingham, Washington and Prince Rupert, British Columbia",
+          "translunar"
+        ],
+        "retrieval_uncertainty": 0.88,
+        "conflict_uncertainty": 0.6877,
+        "stability_uncertainty": 0.0007,
+        "total_uncertainty": 0.6464
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.12,
+        "delta_uncertainty": 0.0319,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.12,
+          0.0863,
+          0.0806
+        ],
+        "candidate_answers": [
+          "East Cowes and Cowes",
+          "France (Roscoff) and Spain (Santander)",
+          "Bergen and Stavanger"
+        ],
+        "retrieval_uncertainty": 0.88,
+        "conflict_uncertainty": 0.5817,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6145
+      }
+    ]
+  },
+  {
+    "question": "What took the place of Mac's Xserve server?",
+    "gold_answers": [
+      "Mac Mini and Mac Pro"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.5931938950345588,
+    "retrieval_uncertainty": 0.8686820918306755,
+    "conflict_uncertainty": 0.528995924247448,
+    "stability_uncertainty": 0.0007703592249329909,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1313,
+        "delta_uncertainty": 0.4068,
+        "evidence_gain": 0.1313,
+        "utilities": [
+          0.1313,
+          0.0809,
+          0.0666
+        ],
+        "candidate_answers": [
+          "Mac Mini and Mac Pro",
+          "Beringia",
+          "Mac OS 8"
+        ],
+        "retrieval_uncertainty": 0.8687,
+        "conflict_uncertainty": 0.529,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.5932
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1313,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1313,
+          0.0809,
+          0.0666,
+          0.0663,
+          0.0507
+        ],
+        "candidate_answers": [
+          "Mac Mini and Mac Pro",
+          "Beringia",
+          "Mac OS 8",
+          "IBM",
+          "Macintosh 128k"
+        ],
+        "retrieval_uncertainty": 0.8687,
+        "conflict_uncertainty": 0.6682,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.635
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1313,
+        "delta_uncertainty": 0.0418,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1313,
+          0.0809,
+          0.0666
+        ],
+        "candidate_answers": [
+          "Mac Mini and Mac Pro",
+          "Beringia",
+          "Mac OS 8"
+        ],
+        "retrieval_uncertainty": 0.8687,
+        "conflict_uncertainty": 0.529,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.5932
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1313,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1313,
+          0.0809,
+          0.0666,
+          0.0663,
+          0.0507
+        ],
+        "candidate_answers": [
+          "Mac Mini and Mac Pro",
+          "Beringia",
+          "Mac OS 8",
+          "IBM",
+          "Macintosh 128k"
+        ],
+        "retrieval_uncertainty": 0.8687,
+        "conflict_uncertainty": 0.6682,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.635
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1313,
+        "delta_uncertainty": 0.0418,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1313,
+          0.0809,
+          0.0666
+        ],
+        "candidate_answers": [
+          "Mac Mini and Mac Pro",
+          "Beringia",
+          "Mac OS 8"
+        ],
+        "retrieval_uncertainty": 0.8687,
+        "conflict_uncertainty": 0.529,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.5932
+      }
+    ]
+  },
+  {
+    "question": "What is one example of an application that videoconferencing manufacturers have begun to offer?",
+    "gold_answers": [
+      "still image streaming"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6465263699216701,
+    "retrieval_uncertainty": 0.9210395629615976,
+    "conflict_uncertainty": 0.6198972242314413,
+    "stability_uncertainty": 0.00018710585719458172,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.0789,
+        "delta_uncertainty": 0.3779,
+        "evidence_gain": 0.0789,
+        "utilities": [
+          0.0789,
+          0.0586,
+          0.0333
+        ],
+        "candidate_answers": [
+          "live and still image streaming",
+          "diagnosis, consulting, transmission of medical images",
+          "calling or conferencing on a one-on-one, one-to-many or many-to-many basis for personal, business,"
+        ],
+        "retrieval_uncertainty": 0.9211,
+        "conflict_uncertainty": 0.5383,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6221
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.0789,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0789,
+          0.0586,
+          0.0333,
+          0.0571,
+          0.0441
+        ],
+        "candidate_answers": [
+          "live and still image streaming",
+          "diagnosis, consulting, transmission of medical images",
+          "calling or conferencing on a one-on-one, one-to-many or many-to-many basis for personal, business,",
+          "chat programs",
+          "VoIP"
+        ],
+        "retrieval_uncertainty": 0.9211,
+        "conflict_uncertainty": 0.7101,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.6736
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.0789,
+        "delta_uncertainty": 0.0287,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0789,
+          0.0586,
+          0.0672
+        ],
+        "candidate_answers": [
+          "live and still image streaming",
+          "diagnosis, consulting, transmission of medical images",
+          "chat programs"
+        ],
+        "retrieval_uncertainty": 0.9211,
+        "conflict_uncertainty": 0.6146,
+        "stability_uncertainty": 0.0001,
+        "total_uncertainty": 0.645
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.0789,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0789,
+          0.0586,
+          0.0672,
+          0.0284,
+          0.0441
+        ],
+        "candidate_answers": [
+          "live and still image streaming",
+          "diagnosis, consulting, transmission of medical images",
+          "chat programs",
+          "calling or conferencing on a one-on-one, one-to-many or many-to-many basis for personal, business,",
+          "VoIP"
+        ],
+        "retrieval_uncertainty": 0.9211,
+        "conflict_uncertainty": 0.7154,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6752
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.079,
+        "delta_uncertainty": 0.0287,
+        "evidence_gain": 0.0001,
+        "utilities": [
+          0.0789,
+          0.079,
+          0.0499
+        ],
+        "candidate_answers": [
+          "live and still image streaming",
+          "chat programs",
+          "diagnosis, consulting, transmission of medical images"
+        ],
+        "retrieval_uncertainty": 0.921,
+        "conflict_uncertainty": 0.6199,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.6465
+      }
+    ]
+  },
+  {
+    "question": "What are Italian dialects termed in the Italian language?",
+    "gold_answers": [
+      "dialetti"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.594438188215262,
+    "retrieval_uncertainty": 0.8681377507787585,
+    "conflict_uncertainty": 0.5343340390978599,
+    "stability_uncertainty": 0.0003455054826235133,
+    "steps": 2,
+    "num_evidence": 5,
+    "budget_used": 1,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1319,
+        "delta_uncertainty": 0.4734,
+        "evidence_gain": 0.1319,
+        "utilities": [
+          0.1319,
+          0.1006,
+          0.1035
+        ],
+        "candidate_answers": [
+          "dialects",
+          "Dialects",
+          "standard Italian"
+        ],
+        "retrieval_uncertainty": 0.8681,
+        "conflict_uncertainty": 0.3082,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.5266
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1319,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1319,
+          0.1006,
+          0.1035,
+          0.0849,
+          0.0783
+        ],
+        "candidate_answers": [
+          "dialects",
+          "Dialects",
+          "standard Italian",
+          "Spanish",
+          "dialects of standard Italian"
+        ],
+        "retrieval_uncertainty": 0.8681,
+        "conflict_uncertainty": 0.5343,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.5944
+      }
+    ]
+  },
+  {
+    "question": "Along with exhibition and distribution, what business did the Universal Film Manufacturing Company engage in?",
+    "gold_answers": [
+      "movie production"
+    ],
+    "final_answer": "movie production",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.572839881784266,
+    "retrieval_uncertainty": 0.8184606670479003,
+    "conflict_uncertainty": 0.5440892119991289,
+    "stability_uncertainty": 0.0019139233028856192,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1815,
+        "delta_uncertainty": 0.4421,
+        "evidence_gain": 0.1815,
+        "utilities": [
+          0.1815,
+          0.057,
+          0.12
+        ],
+        "candidate_answers": [
+          "movie production",
+          "Universal Studios",
+          "NBC Universal"
+        ],
+        "retrieval_uncertainty": 0.8185,
+        "conflict_uncertainty": 0.4938,
+        "stability_uncertainty": 0.0026,
+        "total_uncertainty": 0.5579
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1815,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1815,
+          0.057,
+          0.12,
+          0.0641,
+          0.06
+        ],
+        "candidate_answers": [
+          "movie production",
+          "Universal Studios",
+          "NBC Universal",
+          "production company",
+          "digital distribution"
+        ],
+        "retrieval_uncertainty": 0.8185,
+        "conflict_uncertainty": 0.6239,
+        "stability_uncertainty": 0.0023,
+        "total_uncertainty": 0.5969
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1815,
+        "delta_uncertainty": 0.024,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1815,
+          0.1413,
+          0.0754
+        ],
+        "candidate_answers": [
+          "movie production",
+          "NBC Universal",
+          "production company"
+        ],
+        "retrieval_uncertainty": 0.8185,
+        "conflict_uncertainty": 0.5441,
+        "stability_uncertainty": 0.0019,
+        "total_uncertainty": 0.5728
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1815,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1815,
+          0.1413,
+          0.0754,
+          0.0413,
+          0.06
+        ],
+        "candidate_answers": [
+          "movie production",
+          "NBC Universal",
+          "production company",
+          "Universal Studios",
+          "digital distribution"
+        ],
+        "retrieval_uncertainty": 0.8185,
+        "conflict_uncertainty": 0.6366,
+        "stability_uncertainty": 0.0028,
+        "total_uncertainty": 0.6008
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1815,
+        "delta_uncertainty": 0.0279,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1815,
+          0.1413,
+          0.0754
+        ],
+        "candidate_answers": [
+          "movie production",
+          "NBC Universal",
+          "production company"
+        ],
+        "retrieval_uncertainty": 0.8185,
+        "conflict_uncertainty": 0.5441,
+        "stability_uncertainty": 0.0019,
+        "total_uncertainty": 0.5728
+      }
+    ]
+  },
+  {
+    "question": "Whose life was 'Schindler's List' based on?",
+    "gold_answers": [
+      "Oskar Schindler"
+    ],
+    "final_answer": "Oskar Schindler",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.5346727617496428,
+    "retrieval_uncertainty": 0.7722932672018801,
+    "conflict_uncertainty": 0.4917834806548931,
+    "stability_uncertainty": 0.004955419761174798,
+    "steps": 2,
+    "num_evidence": 5,
+    "budget_used": 1,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.2277,
+        "delta_uncertainty": 0.5114,
+        "evidence_gain": 0.2277,
+        "utilities": [
+          0.2277,
+          0.0746,
+          0.0413
+        ],
+        "candidate_answers": [
+          "Oskar Schindler",
+          "Steven_Spielberg Spielberg",
+          "Janusz Kamiski"
+        ],
+        "retrieval_uncertainty": 0.7723,
+        "conflict_uncertainty": 0.3372,
+        "stability_uncertainty": 0.0066,
+        "total_uncertainty": 0.4886
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.2277,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.2277,
+          0.0746,
+          0.0413,
+          0.0655,
+          0.039
+        ],
+        "candidate_answers": [
+          "Oskar Schindler",
+          "Steven_Spielberg Spielberg",
+          "Janusz Kamiski",
+          "Steven_Spielberg",
+          "Steven_Spielberg Spielberg"
+        ],
+        "retrieval_uncertainty": 0.7723,
+        "conflict_uncertainty": 0.4918,
+        "stability_uncertainty": 0.005,
+        "total_uncertainty": 0.5347
+      }
+    ]
+  },
+  {
+    "question": "In what presidential election year did Schwarzenegger make a name for himself as a prominent Republican?",
+    "gold_answers": [
+      "1988"
+    ],
+    "final_answer": "2008",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.6124568934586475,
+    "retrieval_uncertainty": 0.8451949231664995,
+    "conflict_uncertainty": 0.6326397976227154,
+    "stability_uncertainty": 0.0003374629429160042,
+    "steps": 2,
+    "num_evidence": 3,
+    "budget_used": 0,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1548,
+        "delta_uncertainty": 0.3875,
+        "evidence_gain": 0.1548,
+        "utilities": [
+          0.1548,
+          0.1521,
+          0.1145
+        ],
+        "candidate_answers": [
+          "2008",
+          "1988",
+          "2006"
+        ],
+        "retrieval_uncertainty": 0.8452,
+        "conflict_uncertainty": 0.6326,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6125
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1548,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1548,
+          0.1521,
+          0.1145
+        ],
+        "candidate_answers": [
+          "2008",
+          "1988",
+          "2006"
+        ],
+        "retrieval_uncertainty": 0.8452,
+        "conflict_uncertainty": 0.6326,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6125
+      }
+    ]
+  },
+  {
+    "question": "What component of the printed circuit board is appraised with boundary scan testing?",
+    "gold_answers": [
+      "ICs"
+    ],
+    "final_answer": "PCB",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.5919815569689234,
+    "retrieval_uncertainty": 0.8314782584818045,
+    "conflict_uncertainty": 0.5869503001376858,
+    "stability_uncertainty": 0.0007866884335773011,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.144,
+        "delta_uncertainty": 0.3926,
+        "evidence_gain": 0.144,
+        "utilities": [
+          0.1377,
+          0.144,
+          0.0761
+        ],
+        "candidate_answers": [
+          "PCB traces",
+          "PCB",
+          "wire leads"
+        ],
+        "retrieval_uncertainty": 0.856,
+        "conflict_uncertainty": 0.5975,
+        "stability_uncertainty": 0.0009,
+        "total_uncertainty": 0.6074
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.144,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1377,
+          0.144,
+          0.0761,
+          0.1013,
+          0.0625
+        ],
+        "candidate_answers": [
+          "PCB traces",
+          "PCB",
+          "wire leads",
+          "copper",
+          "foil conductors"
+        ],
+        "retrieval_uncertainty": 0.856,
+        "conflict_uncertainty": 0.7239,
+        "stability_uncertainty": 0.001,
+        "total_uncertainty": 0.6454
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1685,
+        "delta_uncertainty": 0.0544,
+        "evidence_gain": 0.0245,
+        "utilities": [
+          0.1685,
+          0.1175,
+          0.1189
+        ],
+        "candidate_answers": [
+          "PCB",
+          "PCB traces",
+          "copper"
+        ],
+        "retrieval_uncertainty": 0.8315,
+        "conflict_uncertainty": 0.5838,
+        "stability_uncertainty": 0.0006,
+        "total_uncertainty": 0.591
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1685,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1685,
+          0.1175,
+          0.1189,
+          0.0648,
+          0.0625
+        ],
+        "candidate_answers": [
+          "PCB",
+          "PCB traces",
+          "copper",
+          "wire leads",
+          "foil conductors"
+        ],
+        "retrieval_uncertainty": 0.8315,
+        "conflict_uncertainty": 0.6833,
+        "stability_uncertainty": 0.0016,
+        "total_uncertainty": 0.621
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1685,
+        "delta_uncertainty": 0.0291,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1685,
+          0.1394,
+          0.1001
+        ],
+        "candidate_answers": [
+          "PCB",
+          "copper",
+          "PCB traces"
+        ],
+        "retrieval_uncertainty": 0.8315,
+        "conflict_uncertainty": 0.587,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.592
+      }
+    ]
+  },
+  {
+    "question": "Who had FA cup coverage from 1988-1997?",
+    "gold_answers": [
+      "From 1988 to 1997, the BBC and Sky Sports had coverage of the FA Cup"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6042416244145142,
+    "retrieval_uncertainty": 0.8682208854779567,
+    "conflict_uncertainty": 0.5667943278767773,
+    "stability_uncertainty": 0.0004644165625134432,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1318,
+        "delta_uncertainty": 0.3958,
+        "evidence_gain": 0.1318,
+        "utilities": [
+          0.1318,
+          0.0883,
+          0.0841
+        ],
+        "candidate_answers": [
+          "BBC and Sky Sports",
+          "BSkyB",
+          "Arsenal"
+        ],
+        "retrieval_uncertainty": 0.8682,
+        "conflict_uncertainty": 0.5668,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6042
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1318,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1318,
+          0.0883,
+          0.0841,
+          0.0784,
+          0.0693
+        ],
+        "candidate_answers": [
+          "BBC and Sky Sports",
+          "BSkyB",
+          "Arsenal",
+          "BBC",
+          "Emirates"
+        ],
+        "retrieval_uncertainty": 0.8682,
+        "conflict_uncertainty": 0.7084,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6467
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1318,
+        "delta_uncertainty": 0.0425,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1318,
+          0.0883,
+          0.0841
+        ],
+        "candidate_answers": [
+          "BBC and Sky Sports",
+          "BSkyB",
+          "Arsenal"
+        ],
+        "retrieval_uncertainty": 0.8682,
+        "conflict_uncertainty": 0.5668,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6042
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1318,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1318,
+          0.0883,
+          0.0841,
+          0.0784,
+          0.0693
+        ],
+        "candidate_answers": [
+          "BBC and Sky Sports",
+          "BSkyB",
+          "Arsenal",
+          "BBC",
+          "Emirates"
+        ],
+        "retrieval_uncertainty": 0.8682,
+        "conflict_uncertainty": 0.7084,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6467
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1318,
+        "delta_uncertainty": 0.0425,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1318,
+          0.0883,
+          0.0841
+        ],
+        "candidate_answers": [
+          "BBC and Sky Sports",
+          "BSkyB",
+          "Arsenal"
+        ],
+        "retrieval_uncertainty": 0.8682,
+        "conflict_uncertainty": 0.5668,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6042
+      }
+    ]
+  },
+  {
+    "question": "What percentage of the population was Caucasian in 1940?",
+    "gold_answers": [
+      "92%"
+    ],
+    "final_answer": "3.0%",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.580841355845018,
+    "retrieval_uncertainty": 0.8525303660045588,
+    "conflict_uncertainty": 0.5145077780207123,
+    "stability_uncertainty": 0.0011191971826238663,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1475,
+        "delta_uncertainty": 0.4287,
+        "evidence_gain": 0.1475,
+        "utilities": [
+          0.1475,
+          0.0634,
+          0.074
+        ],
+        "candidate_answers": [
+          "3.0%",
+          "7.0%",
+          "4.40"
+        ],
+        "retrieval_uncertainty": 0.8525,
+        "conflict_uncertainty": 0.4824,
+        "stability_uncertainty": 0.0014,
+        "total_uncertainty": 0.5713
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1475,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1475,
+          0.0634,
+          0.074,
+          0.0591,
+          0.0504
+        ],
+        "candidate_answers": [
+          "3.0%",
+          "7.0%",
+          "4.40",
+          "2.8%",
+          "93%"
+        ],
+        "retrieval_uncertainty": 0.8525,
+        "conflict_uncertainty": 0.6261,
+        "stability_uncertainty": 0.0012,
+        "total_uncertainty": 0.6143
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1475,
+        "delta_uncertainty": 0.0412,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1475,
+          0.0869,
+          0.0539
+        ],
+        "candidate_answers": [
+          "3.0%",
+          "4.40",
+          "7.0%"
+        ],
+        "retrieval_uncertainty": 0.8525,
+        "conflict_uncertainty": 0.4885,
+        "stability_uncertainty": 0.0015,
+        "total_uncertainty": 0.5731
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1475,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1475,
+          0.0869,
+          0.0539,
+          0.0591,
+          0.0504
+        ],
+        "candidate_answers": [
+          "3.0%",
+          "4.40",
+          "7.0%",
+          "2.8%",
+          "93%"
+        ],
+        "retrieval_uncertainty": 0.8525,
+        "conflict_uncertainty": 0.6293,
+        "stability_uncertainty": 0.0013,
+        "total_uncertainty": 0.6153
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1475,
+        "delta_uncertainty": 0.0345,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1475,
+          0.0869,
+          0.0694
+        ],
+        "candidate_answers": [
+          "3.0%",
+          "4.40",
+          "2.8%"
+        ],
+        "retrieval_uncertainty": 0.8525,
+        "conflict_uncertainty": 0.5145,
+        "stability_uncertainty": 0.0011,
+        "total_uncertainty": 0.5808
+      }
+    ]
+  },
+  {
+    "question": "In what year was Columbia University chartered?",
+    "gold_answers": [
+      "1754"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6141185828347787,
+    "retrieval_uncertainty": 0.8913077992813616,
+    "conflict_uncertainty": 0.5612557177144031,
+    "stability_uncertainty": 0.00043983939888515904,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1087,
+        "delta_uncertainty": 0.4152,
+        "evidence_gain": 0.1087,
+        "utilities": [
+          0.1087,
+          0.0677,
+          0.0261
+        ],
+        "candidate_answers": [
+          "1950",
+          "1851",
+          "unanswerable"
+        ],
+        "retrieval_uncertainty": 0.8913,
+        "conflict_uncertainty": 0.4632,
+        "stability_uncertainty": 0.0011,
+        "total_uncertainty": 0.5848
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1087,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1087,
+          0.0677,
+          0.0261,
+          0.0585,
+          0.0509
+        ],
+        "candidate_answers": [
+          "1950",
+          "1851",
+          "unanswerable",
+          "1954",
+          "1953"
+        ],
+        "retrieval_uncertainty": 0.8913,
+        "conflict_uncertainty": 0.6514,
+        "stability_uncertainty": 0.0007,
+        "total_uncertainty": 0.6412
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1087,
+        "delta_uncertainty": 0.0285,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1087,
+          0.0677,
+          0.0689
+        ],
+        "candidate_answers": [
+          "1950",
+          "1851",
+          "1954"
+        ],
+        "retrieval_uncertainty": 0.8913,
+        "conflict_uncertainty": 0.5568,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.6128
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1087,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1087,
+          0.0677,
+          0.0689,
+          0.0222,
+          0.0509
+        ],
+        "candidate_answers": [
+          "1950",
+          "1851",
+          "1954",
+          "unanswerable",
+          "1953"
+        ],
+        "retrieval_uncertainty": 0.8913,
+        "conflict_uncertainty": 0.6586,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.6434
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1087,
+        "delta_uncertainty": 0.0293,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1087,
+          0.0817,
+          0.0573
+        ],
+        "candidate_answers": [
+          "1950",
+          "1954",
+          "1851"
+        ],
+        "retrieval_uncertainty": 0.8913,
+        "conflict_uncertainty": 0.5613,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.6141
+      }
+    ]
+  },
+  {
+    "question": "What is the owner, tenant or manager of a pub known as?",
+    "gold_answers": [
+      "pub landlord"
+    ],
+    "final_answer": "pub landlord",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.5031020353510374,
+    "retrieval_uncertainty": 0.7107112970561218,
+    "conflict_uncertainty": 0.48724577805624336,
+    "stability_uncertainty": 0.007863267030517403,
+    "steps": 2,
+    "num_evidence": 5,
+    "budget_used": 1,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.2893,
+        "delta_uncertainty": 0.5407,
+        "evidence_gain": 0.2893,
+        "utilities": [
+          0.2893,
+          0.079,
+          0.0697
+        ],
+        "candidate_answers": [
+          "pub landlord",
+          "a self-employed tenant",
+          "public bar"
+        ],
+        "retrieval_uncertainty": 0.7107,
+        "conflict_uncertainty": 0.3395,
+        "stability_uncertainty": 0.0103,
+        "total_uncertainty": 0.4593
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.2893,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.2893,
+          0.079,
+          0.0697,
+          0.0738,
+          0.0524
+        ],
+        "candidate_answers": [
+          "pub landlord",
+          "a self-employed tenant",
+          "public bar",
+          "teach tábhairne",
+          "The Fitzroy Tavern"
+        ],
+        "retrieval_uncertainty": 0.7107,
+        "conflict_uncertainty": 0.4872,
+        "stability_uncertainty": 0.0079,
+        "total_uncertainty": 0.5031
+      }
+    ]
+  },
+  {
+    "question": "How many people signed a petition in protest of Everton FC's crest redesign in 2013?",
+    "gold_answers": [
+      "over 22,000"
+    ],
+    "final_answer": "22,000",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.569244343927498,
+    "retrieval_uncertainty": 0.835542337294455,
+    "conflict_uncertainty": 0.5031174159989432,
+    "stability_uncertainty": 0.0026897524029371013,
+    "steps": 2,
+    "num_evidence": 5,
+    "budget_used": 1,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1645,
+        "delta_uncertainty": 0.4919,
+        "evidence_gain": 0.1645,
+        "utilities": [
+          0.1645,
+          0.0422,
+          0.0278
+        ],
+        "candidate_answers": [
+          "22,000",
+          "58",
+          "58"
+        ],
+        "retrieval_uncertainty": 0.8355,
+        "conflict_uncertainty": 0.2987,
+        "stability_uncertainty": 0.0038,
+        "total_uncertainty": 0.5081
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1645,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1645,
+          0.0422,
+          0.0278,
+          0.0717,
+          0.0248
+        ],
+        "candidate_answers": [
+          "22,000",
+          "58",
+          "58",
+          "over a hundred thousand",
+          "58"
+        ],
+        "retrieval_uncertainty": 0.8355,
+        "conflict_uncertainty": 0.5031,
+        "stability_uncertainty": 0.0027,
+        "total_uncertainty": 0.5692
+      }
+    ]
+  },
+  {
+    "question": "What did Griffith's tool help increase?",
+    "gold_answers": [
+      "transparency"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6259789590054678,
+    "retrieval_uncertainty": 0.9021537721302545,
+    "conflict_uncertainty": 0.5828601229010353,
+    "stability_uncertainty": 0.00022018035014990034,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.0978,
+        "delta_uncertainty": 0.374,
+        "evidence_gain": 0.0978,
+        "utilities": [
+          0.0978,
+          0.0747,
+          0.062
+        ],
+        "candidate_answers": [
+          "transparency",
+          "Stormy Monday",
+          "body fat"
+        ],
+        "retrieval_uncertainty": 0.9022,
+        "conflict_uncertainty": 0.5829,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.626
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.0978,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0978,
+          0.0747,
+          0.062,
+          0.0573,
+          0.0373
+        ],
+        "candidate_answers": [
+          "transparency",
+          "Stormy Monday",
+          "body fat",
+          "deforestation",
+          "he was illiterate in Czech, another required subject"
+        ],
+        "retrieval_uncertainty": 0.9022,
+        "conflict_uncertainty": 0.7028,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.662
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.0978,
+        "delta_uncertainty": 0.036,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0978,
+          0.0747,
+          0.062
+        ],
+        "candidate_answers": [
+          "transparency",
+          "Stormy Monday",
+          "body fat"
+        ],
+        "retrieval_uncertainty": 0.9022,
+        "conflict_uncertainty": 0.5829,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.626
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.0978,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0978,
+          0.0747,
+          0.062,
+          0.0573,
+          0.0373
+        ],
+        "candidate_answers": [
+          "transparency",
+          "Stormy Monday",
+          "body fat",
+          "deforestation",
+          "he was illiterate in Czech, another required subject"
+        ],
+        "retrieval_uncertainty": 0.9022,
+        "conflict_uncertainty": 0.7028,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.662
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.0978,
+        "delta_uncertainty": 0.036,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0978,
+          0.0747,
+          0.062
+        ],
+        "candidate_answers": [
+          "transparency",
+          "Stormy Monday",
+          "body fat"
+        ],
+        "retrieval_uncertainty": 0.9022,
+        "conflict_uncertainty": 0.5829,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.626
+      }
+    ]
+  },
+  {
+    "question": "Where do samurais' teachings live on?",
+    "gold_answers": [
+      "everyday life and in modern Japanese martial arts"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6414195884370791,
+    "retrieval_uncertainty": 0.9067496511389812,
+    "conflict_uncertainty": 0.6267712044055096,
+    "stability_uncertainty": 6.700772967817017e-05,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "max_steps",
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.0784,
+        "delta_uncertainty": 0.3503,
+        "evidence_gain": 0.0784,
+        "utilities": [
+          0.0623,
+          0.0784,
+          0.071
+        ],
+        "candidate_answers": [
+          "early, non-sectarian body of teachings",
+          "lichens",
+          "Mahayana"
+        ],
+        "retrieval_uncertainty": 0.9216,
+        "conflict_uncertainty": 0.6296,
+        "stability_uncertainty": 0.0,
+        "total_uncertainty": 0.6497
+      },
+      {
+        "step": 2,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.0933,
+        "delta_uncertainty": 0.0224,
+        "evidence_gain": 0.0148,
+        "utilities": [
+          0.0933,
+          0.0834,
+          0.045
+        ],
+        "candidate_answers": [
+          "lichens",
+          "Mahayana",
+          "early, non-sectarian body of teachings"
+        ],
+        "retrieval_uncertainty": 0.9067,
+        "conflict_uncertainty": 0.5793,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.6272
+      },
+      {
+        "step": 3,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.0933,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0933,
+          0.0834,
+          0.045,
+          0.0621,
+          0.0498
+        ],
+        "candidate_answers": [
+          "lichens",
+          "Mahayana",
+          "early, non-sectarian body of teachings",
+          "Gautama Buddha",
+          "Four Noble Truths"
+        ],
+        "retrieval_uncertainty": 0.9067,
+        "conflict_uncertainty": 0.7205,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.6696
+      },
+      {
+        "step": 4,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.0933,
+        "delta_uncertainty": 0.0282,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0933,
+          0.0834,
+          0.0732
+        ],
+        "candidate_answers": [
+          "lichens",
+          "Mahayana",
+          "Gautama Buddha"
+        ],
+        "retrieval_uncertainty": 0.9067,
+        "conflict_uncertainty": 0.6268,
+        "stability_uncertainty": 0.0001,
+        "total_uncertainty": 0.6414
+      },
+      {
+        "step": 5,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.0933,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0933,
+          0.0834,
+          0.0732,
+          0.0383,
+          0.0498
+        ],
+        "candidate_answers": [
+          "lichens",
+          "Mahayana",
+          "Gautama Buddha",
+          "early, non-sectarian body of teachings",
+          "Four Noble Truths"
+        ],
+        "retrieval_uncertainty": 0.9067,
+        "conflict_uncertainty": 0.7241,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.6707
+      }
+    ]
+  },
+  {
+    "question": "How many years does the term of a Richmond city council representative last?",
+    "gold_answers": [
+      "four"
+    ],
+    "final_answer": "4",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.5704171521887744,
+    "retrieval_uncertainty": 0.7991798011915153,
+    "conflict_uncertainty": 0.5681973283182744,
+    "stability_uncertainty": 0.0018402654876722567,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.2008,
+        "delta_uncertainty": 0.4533,
+        "evidence_gain": 0.2008,
+        "utilities": [
+          0.2008,
+          0.0538,
+          0.1377
+        ],
+        "candidate_answers": [
+          "4",
+          "3",
+          "four"
+        ],
+        "retrieval_uncertainty": 0.7992,
+        "conflict_uncertainty": 0.4881,
+        "stability_uncertainty": 0.0036,
+        "total_uncertainty": 0.5467
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.2008,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.2008,
+          0.0538,
+          0.1377,
+          0.0599,
+          0.0708
+        ],
+        "candidate_answers": [
+          "4",
+          "3",
+          "four",
+          "five",
+          "three"
+        ],
+        "retrieval_uncertainty": 0.7992,
+        "conflict_uncertainty": 0.616,
+        "stability_uncertainty": 0.0032,
+        "total_uncertainty": 0.585
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.2008,
+        "delta_uncertainty": 0.0146,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.2008,
+          0.1666,
+          0.0977
+        ],
+        "candidate_answers": [
+          "4",
+          "four",
+          "three"
+        ],
+        "retrieval_uncertainty": 0.7992,
+        "conflict_uncertainty": 0.5682,
+        "stability_uncertainty": 0.0018,
+        "total_uncertainty": 0.5704
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.2008,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.2008,
+          0.1666,
+          0.0977,
+          0.0394,
+          0.0509
+        ],
+        "candidate_answers": [
+          "4",
+          "four",
+          "three",
+          "3",
+          "five"
+        ],
+        "retrieval_uncertainty": 0.7992,
+        "conflict_uncertainty": 0.6384,
+        "stability_uncertainty": 0.004,
+        "total_uncertainty": 0.5919
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.2008,
+        "delta_uncertainty": 0.0215,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.2008,
+          0.1666,
+          0.0977
+        ],
+        "candidate_answers": [
+          "4",
+          "four",
+          "three"
+        ],
+        "retrieval_uncertainty": 0.7992,
+        "conflict_uncertainty": 0.5682,
+        "stability_uncertainty": 0.0018,
+        "total_uncertainty": 0.5704
+      }
+    ]
+  },
+  {
+    "question": "When did an investigation occur under school casualties?",
+    "gold_answers": [
+      "December 2008"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.631847739243031,
+    "retrieval_uncertainty": 0.9155990568723805,
+    "conflict_uncertainty": 0.5800596748993527,
+    "stability_uncertainty": 0.00015154168517454695,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.0844,
+        "delta_uncertainty": 0.3682,
+        "evidence_gain": 0.0844,
+        "utilities": [
+          0.0844,
+          0.0586,
+          0.058
+        ],
+        "candidate_answers": [
+          "December 2008",
+          "2008",
+          "North Korea and the United States"
+        ],
+        "retrieval_uncertainty": 0.9156,
+        "conflict_uncertainty": 0.5801,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.6318
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.0844,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0844,
+          0.0586,
+          0.058,
+          0.055,
+          0.0368
+        ],
+        "candidate_answers": [
+          "December 2008",
+          "2008",
+          "North Korea and the United States",
+          "August 18",
+          "a beach landing assault"
+        ],
+        "retrieval_uncertainty": 0.9156,
+        "conflict_uncertainty": 0.7117,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.6714
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.0844,
+        "delta_uncertainty": 0.0395,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0844,
+          0.0586,
+          0.058
+        ],
+        "candidate_answers": [
+          "December 2008",
+          "2008",
+          "North Korea and the United States"
+        ],
+        "retrieval_uncertainty": 0.9156,
+        "conflict_uncertainty": 0.5801,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.6318
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.0844,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0844,
+          0.0586,
+          0.058,
+          0.055,
+          0.0368
+        ],
+        "candidate_answers": [
+          "December 2008",
+          "2008",
+          "North Korea and the United States",
+          "August 18",
+          "a beach landing assault"
+        ],
+        "retrieval_uncertainty": 0.9156,
+        "conflict_uncertainty": 0.7117,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.6714
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.0844,
+        "delta_uncertainty": 0.0395,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0844,
+          0.0586,
+          0.058
+        ],
+        "candidate_answers": [
+          "December 2008",
+          "2008",
+          "North Korea and the United States"
+        ],
+        "retrieval_uncertainty": 0.9156,
+        "conflict_uncertainty": 0.5801,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.6318
+      }
+    ]
+  },
+  {
+    "question": "How did Liang Ji die?",
+    "gold_answers": [
+      "forced to commit suicide"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6331778202398727,
+    "retrieval_uncertainty": 0.9139186399733288,
+    "conflict_uncertainty": 0.5869677651830252,
+    "stability_uncertainty": 0.000640853491503626,
+    "steps": 2,
+    "num_evidence": 5,
+    "budget_used": 1,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.0861,
+        "delta_uncertainty": 0.3935,
+        "evidence_gain": 0.0861,
+        "utilities": [
+          0.0861,
+          0.0394,
+          0.0461
+        ],
+        "candidate_answers": [
+          "killed after Deng Mengnü resisted Liang Ji's attempts to control her",
+          "a sage king",
+          "razing of two troublesome temples"
+        ],
+        "retrieval_uncertainty": 0.9139,
+        "conflict_uncertainty": 0.4983,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.6065
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.0861,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0861,
+          0.0394,
+          0.0461,
+          0.0263,
+          0.0105
+        ],
+        "candidate_answers": [
+          "killed after Deng Mengnü resisted Liang Ji's attempts to control her",
+          "a sage king",
+          "razing of two troublesome temples",
+          "a syphilis",
+          "he had passed on the mantle of the imamate to his son Muammad ibn Ismail as the next im"
+        ],
+        "retrieval_uncertainty": 0.9139,
+        "conflict_uncertainty": 0.587,
+        "stability_uncertainty": 0.0006,
+        "total_uncertainty": 0.6332
+      }
+    ]
+  },
+  {
+    "question": "Who supported the reaction against the government?",
+    "gold_answers": [
+      "Durango"
+    ],
+    "final_answer": "Durango",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.5728037448993846,
+    "retrieval_uncertainty": 0.7985856582248766,
+    "conflict_uncertainty": 0.5763794209880733,
+    "stability_uncertainty": 0.002985447452621396,
+    "steps": 2,
+    "num_evidence": 5,
+    "budget_used": 1,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.2014,
+        "delta_uncertainty": 0.47,
+        "evidence_gain": 0.2014,
+        "utilities": [
+          0.2014,
+          0.0813,
+          0.0728
+        ],
+        "candidate_answers": [
+          "Durango",
+          "The Whigs",
+          "Federalist Party"
+        ],
+        "retrieval_uncertainty": 0.7986,
+        "conflict_uncertainty": 0.4334,
+        "stability_uncertainty": 0.0035,
+        "total_uncertainty": 0.53
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.2014,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.2014,
+          0.0813,
+          0.0728,
+          0.0754,
+          0.0447
+        ],
+        "candidate_answers": [
+          "Durango",
+          "The Whigs",
+          "Federalist Party",
+          "Taira and Minamoto",
+          "The United States Commission on International Religious Freedom"
+        ],
+        "retrieval_uncertainty": 0.7986,
+        "conflict_uncertainty": 0.5764,
+        "stability_uncertainty": 0.003,
+        "total_uncertainty": 0.5728
+      }
+    ]
+  },
+  {
+    "question": "What influences role of minority leader?",
+    "gold_answers": [
+      "personality and contextual factors"
+    ],
+    "final_answer": "personality and contextual factors",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.5699617108938873,
+    "retrieval_uncertainty": 0.8077344428771324,
+    "conflict_uncertainty": 0.5528399259862318,
+    "stability_uncertainty": 0.0012125582972576051,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1348,
+        "delta_uncertainty": 0.3908,
+        "evidence_gain": 0.1348,
+        "utilities": [
+          0.1348,
+          0.067,
+          0.1256
+        ],
+        "candidate_answers": [
+          "more partisan nature of the House",
+          "whether the President is of the same party or the other party",
+          "personality and contextual factors"
+        ],
+        "retrieval_uncertainty": 0.8652,
+        "conflict_uncertainty": 0.5883,
+        "stability_uncertainty": 0.0009,
+        "total_uncertainty": 0.6092
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1348,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1348,
+          0.067,
+          0.1256,
+          0.1051,
+          0.0854
+        ],
+        "candidate_answers": [
+          "more partisan nature of the House",
+          "whether the President is of the same party or the other party",
+          "personality and contextual factors",
+          "Minority Whip",
+          "floor leadership"
+        ],
+        "retrieval_uncertainty": 0.8652,
+        "conflict_uncertainty": 0.7397,
+        "stability_uncertainty": 0.0006,
+        "total_uncertainty": 0.6546
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.154,
+        "delta_uncertainty": 0.0436,
+        "evidence_gain": 0.0191,
+        "utilities": [
+          0.1348,
+          0.154,
+          0.1236
+        ],
+        "candidate_answers": [
+          "more partisan nature of the House",
+          "personality and contextual factors",
+          "Minority Whip"
+        ],
+        "retrieval_uncertainty": 0.846,
+        "conflict_uncertainty": 0.6266,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.611
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.154,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1348,
+          0.154,
+          0.1236,
+          0.0486,
+          0.0854
+        ],
+        "candidate_answers": [
+          "more partisan nature of the House",
+          "personality and contextual factors",
+          "Minority Whip",
+          "whether the President is of the same party or the other party",
+          "floor leadership"
+        ],
+        "retrieval_uncertainty": 0.846,
+        "conflict_uncertainty": 0.7182,
+        "stability_uncertainty": 0.0014,
+        "total_uncertainty": 0.6387
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1923,
+        "delta_uncertainty": 0.0688,
+        "evidence_gain": 0.0383,
+        "utilities": [
+          0.1923,
+          0.1141,
+          0.1236
+        ],
+        "candidate_answers": [
+          "personality and contextual factors",
+          "more partisan nature of the House",
+          "Minority Whip"
+        ],
+        "retrieval_uncertainty": 0.8077,
+        "conflict_uncertainty": 0.5528,
+        "stability_uncertainty": 0.0012,
+        "total_uncertainty": 0.57
+      }
+    ]
+  },
+  {
+    "question": "What genre was 'LA 2017'?",
+    "gold_answers": [
+      "futuristic science fiction"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6174194322007841,
+    "retrieval_uncertainty": 0.8721466364930568,
+    "conflict_uncertainty": 0.6040657825589704,
+    "stability_uncertainty": 0.0006318959328229182,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1279,
+        "delta_uncertainty": 0.4053,
+        "evidence_gain": 0.1279,
+        "utilities": [
+          0.1279,
+          0.1229,
+          0.0196
+        ],
+        "candidate_answers": [
+          "MP3",
+          "post-punk",
+          "Comedy"
+        ],
+        "retrieval_uncertainty": 0.8721,
+        "conflict_uncertainty": 0.527,
+        "stability_uncertainty": 0.0025,
+        "total_uncertainty": 0.5947
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1279,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1279,
+          0.1229,
+          0.0196,
+          0.0609,
+          0.0525
+        ],
+        "candidate_answers": [
+          "MP3",
+          "post-punk",
+          "Comedy",
+          "hip hop",
+          "Enlightenment"
+        ],
+        "retrieval_uncertainty": 0.8721,
+        "conflict_uncertainty": 0.6668,
+        "stability_uncertainty": 0.0018,
+        "total_uncertainty": 0.6365
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1279,
+        "delta_uncertainty": 0.019,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1279,
+          0.1229,
+          0.0722
+        ],
+        "candidate_answers": [
+          "MP3",
+          "post-punk",
+          "hip hop"
+        ],
+        "retrieval_uncertainty": 0.8721,
+        "conflict_uncertainty": 0.6041,
+        "stability_uncertainty": 0.0006,
+        "total_uncertainty": 0.6174
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1279,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1279,
+          0.1229,
+          0.0722,
+          0.0167,
+          0.0525
+        ],
+        "candidate_answers": [
+          "MP3",
+          "post-punk",
+          "hip hop",
+          "Comedy",
+          "Enlightenment"
+        ],
+        "retrieval_uncertainty": 0.8721,
+        "conflict_uncertainty": 0.6739,
+        "stability_uncertainty": 0.0018,
+        "total_uncertainty": 0.6386
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1279,
+        "delta_uncertainty": 0.0212,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1279,
+          0.1229,
+          0.0722
+        ],
+        "candidate_answers": [
+          "MP3",
+          "post-punk",
+          "hip hop"
+        ],
+        "retrieval_uncertainty": 0.8721,
+        "conflict_uncertainty": 0.6041,
+        "stability_uncertainty": 0.0006,
+        "total_uncertainty": 0.6174
+      }
+    ]
+  },
+  {
+    "question": "Who had issues with JFK's proposal?",
+    "gold_answers": [
+      "NAACP"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6023041411169561,
+    "retrieval_uncertainty": 0.8922146833177192,
+    "conflict_uncertainty": 0.5202899473360992,
+    "stability_uncertainty": 0.0005490762863337886,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1078,
+        "delta_uncertainty": 0.3977,
+        "evidence_gain": 0.1078,
+        "utilities": [
+          0.1078,
+          0.062,
+          0.0549
+        ],
+        "candidate_answers": [
+          "NAACP",
+          "Balfour, Churchill, Lloyd George, MacDonald, Edward VII",
+          "Hoklo"
+        ],
+        "retrieval_uncertainty": 0.8922,
+        "conflict_uncertainty": 0.5203,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6023
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1078,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1078,
+          0.062,
+          0.0549,
+          0.0544,
+          0.0389
+        ],
+        "candidate_answers": [
+          "NAACP",
+          "Balfour, Churchill, Lloyd George, MacDonald, Edward VII",
+          "Hoklo",
+          "President Kennedy",
+          "the sovereign and one of the ministers"
+        ],
+        "retrieval_uncertainty": 0.8922,
+        "conflict_uncertainty": 0.6611,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6445
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1078,
+        "delta_uncertainty": 0.0422,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1078,
+          0.062,
+          0.0549
+        ],
+        "candidate_answers": [
+          "NAACP",
+          "Balfour, Churchill, Lloyd George, MacDonald, Edward VII",
+          "Hoklo"
+        ],
+        "retrieval_uncertainty": 0.8922,
+        "conflict_uncertainty": 0.5203,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6023
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1078,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1078,
+          0.062,
+          0.0549,
+          0.0544,
+          0.0389
+        ],
+        "candidate_answers": [
+          "NAACP",
+          "Balfour, Churchill, Lloyd George, MacDonald, Edward VII",
+          "Hoklo",
+          "President Kennedy",
+          "the sovereign and one of the ministers"
+        ],
+        "retrieval_uncertainty": 0.8922,
+        "conflict_uncertainty": 0.6611,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6445
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1078,
+        "delta_uncertainty": 0.0422,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1078,
+          0.062,
+          0.0549
+        ],
+        "candidate_answers": [
+          "NAACP",
+          "Balfour, Churchill, Lloyd George, MacDonald, Edward VII",
+          "Hoklo"
+        ],
+        "retrieval_uncertainty": 0.8922,
+        "conflict_uncertainty": 0.5203,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6023
+      }
+    ]
+  },
+  {
+    "question": "What does CATOBAR allow for?",
+    "gold_answers": [
+      "deployment of heavy jets with full loadouts"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.5899266418332525,
+    "retrieval_uncertainty": 0.8748457340631101,
+    "conflict_uncertainty": 0.507795325807147,
+    "stability_uncertainty": 0.000825885297766618,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1252,
+        "delta_uncertainty": 0.424,
+        "evidence_gain": 0.1252,
+        "utilities": [
+          0.1252,
+          0.0684,
+          0.0386
+        ],
+        "candidate_answers": [
+          "CATOBAR recovery",
+          "combat search and rescue",
+          "the deployment of heavy jets with full loadouts"
+        ],
+        "retrieval_uncertainty": 0.8748,
+        "conflict_uncertainty": 0.461,
+        "stability_uncertainty": 0.0013,
+        "total_uncertainty": 0.576
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1252,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1252,
+          0.0684,
+          0.0386,
+          0.0517,
+          0.0424
+        ],
+        "candidate_answers": [
+          "CATOBAR recovery",
+          "combat search and rescue",
+          "the deployment of heavy jets with full loadouts",
+          "prayers at town meetings",
+          "absolute, universal certainty"
+        ],
+        "retrieval_uncertainty": 0.8748,
+        "conflict_uncertainty": 0.6165,
+        "stability_uncertainty": 0.001,
+        "total_uncertainty": 0.6226
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1252,
+        "delta_uncertainty": 0.0326,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1252,
+          0.0684,
+          0.0607
+        ],
+        "candidate_answers": [
+          "CATOBAR recovery",
+          "combat search and rescue",
+          "prayers at town meetings"
+        ],
+        "retrieval_uncertainty": 0.8748,
+        "conflict_uncertainty": 0.5078,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.5899
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1252,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1252,
+          0.0684,
+          0.0607,
+          0.0329,
+          0.0424
+        ],
+        "candidate_answers": [
+          "CATOBAR recovery",
+          "combat search and rescue",
+          "prayers at town meetings",
+          "the deployment of heavy jets with full loadouts",
+          "absolute, universal certainty"
+        ],
+        "retrieval_uncertainty": 0.8748,
+        "conflict_uncertainty": 0.6203,
+        "stability_uncertainty": 0.001,
+        "total_uncertainty": 0.6237
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1252,
+        "delta_uncertainty": 0.0338,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1252,
+          0.0684,
+          0.0607
+        ],
+        "candidate_answers": [
+          "CATOBAR recovery",
+          "combat search and rescue",
+          "prayers at town meetings"
+        ],
+        "retrieval_uncertainty": 0.8748,
+        "conflict_uncertainty": 0.5078,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.5899
+      }
+    ]
+  },
+  {
+    "question": "Where were these forts commonly built?",
+    "gold_answers": [
+      "hills"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6365266994953309,
+    "retrieval_uncertainty": 0.9137216953405882,
+    "conflict_uncertainty": 0.5987837309951539,
+    "stability_uncertainty": 0.00015366263245336677,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.0863,
+        "delta_uncertainty": 0.3724,
+        "evidence_gain": 0.0863,
+        "utilities": [
+          0.0863,
+          0.0728,
+          0.0411
+        ],
+        "candidate_answers": [
+          "the Swedes",
+          "River Plate estuary at Colonia del Sacramento",
+          "Fort San Juan"
+        ],
+        "retrieval_uncertainty": 0.9137,
+        "conflict_uncertainty": 0.5689,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.6276
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.0863,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0863,
+          0.0728,
+          0.0411,
+          0.0476,
+          0.0355
+        ],
+        "candidate_answers": [
+          "the Swedes",
+          "River Plate estuary at Colonia del Sacramento",
+          "Fort San Juan",
+          "Maurienne valley",
+          "the North Sea"
+        ],
+        "retrieval_uncertainty": 0.9137,
+        "conflict_uncertainty": 0.6954,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.6655
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.0863,
+        "delta_uncertainty": 0.029,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0863,
+          0.0728,
+          0.056
+        ],
+        "candidate_answers": [
+          "the Swedes",
+          "River Plate estuary at Colonia del Sacramento",
+          "Maurienne valley"
+        ],
+        "retrieval_uncertainty": 0.9137,
+        "conflict_uncertainty": 0.5988,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.6365
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.0863,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0863,
+          0.0728,
+          0.056,
+          0.0349,
+          0.0355
+        ],
+        "candidate_answers": [
+          "the Swedes",
+          "River Plate estuary at Colonia del Sacramento",
+          "Maurienne valley",
+          "Fort San Juan",
+          "the North Sea"
+        ],
+        "retrieval_uncertainty": 0.9137,
+        "conflict_uncertainty": 0.6977,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.6663
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.0863,
+        "delta_uncertainty": 0.0297,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0863,
+          0.0728,
+          0.056
+        ],
+        "candidate_answers": [
+          "the Swedes",
+          "River Plate estuary at Colonia del Sacramento",
+          "Maurienne valley"
+        ],
+        "retrieval_uncertainty": 0.9137,
+        "conflict_uncertainty": 0.5988,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.6365
+      }
+    ]
+  },
+  {
+    "question": "What bacteria is an exception to single circular chromosome rule?",
+    "gold_answers": [
+      "Spirochaetes of the genus Borrelia"
+    ],
+    "final_answer": "Borrelia burgdorferi",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.5884123304197559,
+    "retrieval_uncertainty": 0.8354574935684485,
+    "conflict_uncertainty": 0.5675806577594298,
+    "stability_uncertainty": 0.0020469315385139696,
+    "steps": 2,
+    "num_evidence": 5,
+    "budget_used": 1,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1645,
+        "delta_uncertainty": 0.4499,
+        "evidence_gain": 0.1645,
+        "utilities": [
+          0.1645,
+          0.0663,
+          0.063
+        ],
+        "candidate_answers": [
+          "Borrelia burgdorferi",
+          "Gene Prokaryotes",
+          "phylum Planctomycetes and candidate phylum Poribacteria"
+        ],
+        "retrieval_uncertainty": 0.8355,
+        "conflict_uncertainty": 0.4399,
+        "stability_uncertainty": 0.0022,
+        "total_uncertainty": 0.5501
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1645,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1645,
+          0.0663,
+          0.063,
+          0.0427,
+          0.044
+        ],
+        "candidate_answers": [
+          "Borrelia burgdorferi",
+          "Gene Prokaryotes",
+          "phylum Planctomycetes and candidate phylum Poribacteria",
+          "Bacteria Bacteriophages",
+          "Bacteria"
+        ],
+        "retrieval_uncertainty": 0.8355,
+        "conflict_uncertainty": 0.5676,
+        "stability_uncertainty": 0.002,
+        "total_uncertainty": 0.5884
+      }
+    ]
+  },
+  {
+    "question": "Who made up most unions between Europeans and natives?",
+    "gold_answers": [
+      "European men and Indigenous American women"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6201717108240402,
+    "retrieval_uncertainty": 0.9074703156169863,
+    "conflict_uncertainty": 0.5545519972164178,
+    "stability_uncertainty": 0.00035476925310846084,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.0925,
+        "delta_uncertainty": 0.399,
+        "evidence_gain": 0.0925,
+        "utilities": [
+          0.0925,
+          0.0427,
+          0.0464
+        ],
+        "candidate_answers": [
+          "Africans",
+          "Early male settlers married Indigenous American women and had informal unions with them.",
+          "Black_people"
+        ],
+        "retrieval_uncertainty": 0.9075,
+        "conflict_uncertainty": 0.4907,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.601
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.0925,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0925,
+          0.0427,
+          0.0464,
+          0.048,
+          0.039
+        ],
+        "candidate_answers": [
+          "Africans",
+          "Early male settlers married Indigenous American women and had informal unions with them.",
+          "Black_people",
+          "Europeans",
+          "merchants and artisans"
+        ],
+        "retrieval_uncertainty": 0.9075,
+        "conflict_uncertainty": 0.6556,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.6505
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.0925,
+        "delta_uncertainty": 0.0303,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0925,
+          0.0688,
+          0.0464
+        ],
+        "candidate_answers": [
+          "Africans",
+          "Europeans",
+          "Black_people"
+        ],
+        "retrieval_uncertainty": 0.9075,
+        "conflict_uncertainty": 0.5546,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.6202
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.0925,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0925,
+          0.0688,
+          0.0464,
+          0.031,
+          0.039
+        ],
+        "candidate_answers": [
+          "Africans",
+          "Europeans",
+          "Black_people",
+          "Early male settlers married Indigenous American women and had informal unions with them.",
+          "merchants and artisans"
+        ],
+        "retrieval_uncertainty": 0.9075,
+        "conflict_uncertainty": 0.6668,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6539
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.0925,
+        "delta_uncertainty": 0.0337,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0925,
+          0.0688,
+          0.0464
+        ],
+        "candidate_answers": [
+          "Africans",
+          "Europeans",
+          "Black_people"
+        ],
+        "retrieval_uncertainty": 0.9075,
+        "conflict_uncertainty": 0.5546,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.6202
+      }
+    ]
+  },
+  {
+    "question": "What did the Guardian name her?",
+    "gold_answers": [
+      "Artist of the Decade"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6179439366165862,
+    "retrieval_uncertainty": 0.8688161375151158,
+    "conflict_uncertainty": 0.6116280387980364,
+    "stability_uncertainty": 0.00023728109808709898,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "max_steps",
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1055,
+        "delta_uncertainty": 0.36,
+        "evidence_gain": 0.1055,
+        "utilities": [
+          0.0936,
+          0.1055,
+          0.0958
+        ],
+        "candidate_answers": [
+          "Zoe Williams",
+          "Beyoncé",
+          "Veronica"
+        ],
+        "retrieval_uncertainty": 0.8945,
+        "conflict_uncertainty": 0.6424,
+        "stability_uncertainty": 0.0,
+        "total_uncertainty": 0.64
+      },
+      {
+        "step": 2,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1312,
+        "delta_uncertainty": 0.0337,
+        "evidence_gain": 0.0257,
+        "utilities": [
+          0.1312,
+          0.1131,
+          0.0624
+        ],
+        "candidate_answers": [
+          "Beyoncé",
+          "Veronica",
+          "Zoe Williams"
+        ],
+        "retrieval_uncertainty": 0.8688,
+        "conflict_uncertainty": 0.5723,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.6063
+      },
+      {
+        "step": 3,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1312,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1312,
+          0.1131,
+          0.0624,
+          0.0786,
+          0.0401
+        ],
+        "candidate_answers": [
+          "Beyoncé",
+          "Veronica",
+          "Zoe Williams",
+          "Madonna",
+          "Albert Frederick Arthur George"
+        ],
+        "retrieval_uncertainty": 0.8688,
+        "conflict_uncertainty": 0.6916,
+        "stability_uncertainty": 0.0011,
+        "total_uncertainty": 0.6421
+      },
+      {
+        "step": 4,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1312,
+        "delta_uncertainty": 0.0242,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1312,
+          0.1131,
+          0.0935
+        ],
+        "candidate_answers": [
+          "Beyoncé",
+          "Veronica",
+          "Madonna"
+        ],
+        "retrieval_uncertainty": 0.8688,
+        "conflict_uncertainty": 0.6116,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.6179
+      },
+      {
+        "step": 5,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1312,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1312,
+          0.1131,
+          0.0935,
+          0.0529,
+          0.0401
+        ],
+        "candidate_answers": [
+          "Beyoncé",
+          "Veronica",
+          "Madonna",
+          "Zoe Williams",
+          "Albert Frederick Arthur George"
+        ],
+        "retrieval_uncertainty": 0.8688,
+        "conflict_uncertainty": 0.6954,
+        "stability_uncertainty": 0.0012,
+        "total_uncertainty": 0.6433
+      }
+    ]
+  },
+  {
+    "question": "The lower regions and larger towns of the Alps are well-served by what?",
+    "gold_answers": [
+      "motorways"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.5899906513776176,
+    "retrieval_uncertainty": 0.8632154282569492,
+    "conflict_uncertainty": 0.5273999088644515,
+    "stability_uncertainty": 0.0008148229490380624,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1368,
+        "delta_uncertainty": 0.41,
+        "evidence_gain": 0.1368,
+        "utilities": [
+          0.1368,
+          0.0782,
+          0.0744
+        ],
+        "candidate_answers": [
+          "motorways and main roads",
+          "precipitation",
+          "a commission"
+        ],
+        "retrieval_uncertainty": 0.8632,
+        "conflict_uncertainty": 0.5274,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.59
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1368,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1368,
+          0.0782,
+          0.0744,
+          0.0721,
+          0.0205
+        ],
+        "candidate_answers": [
+          "motorways and main roads",
+          "precipitation",
+          "a commission",
+          "lithology",
+          "wood tiles"
+        ],
+        "retrieval_uncertainty": 0.8632,
+        "conflict_uncertainty": 0.6419,
+        "stability_uncertainty": 0.0014,
+        "total_uncertainty": 0.6245
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1368,
+        "delta_uncertainty": 0.0345,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1368,
+          0.0782,
+          0.0744
+        ],
+        "candidate_answers": [
+          "motorways and main roads",
+          "precipitation",
+          "a commission"
+        ],
+        "retrieval_uncertainty": 0.8632,
+        "conflict_uncertainty": 0.5274,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.59
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1368,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1368,
+          0.0782,
+          0.0744,
+          0.0721,
+          0.0205
+        ],
+        "candidate_answers": [
+          "motorways and main roads",
+          "precipitation",
+          "a commission",
+          "lithology",
+          "wood tiles"
+        ],
+        "retrieval_uncertainty": 0.8632,
+        "conflict_uncertainty": 0.6419,
+        "stability_uncertainty": 0.0014,
+        "total_uncertainty": 0.6245
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1368,
+        "delta_uncertainty": 0.0345,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1368,
+          0.0782,
+          0.0744
+        ],
+        "candidate_answers": [
+          "motorways and main roads",
+          "precipitation",
+          "a commission"
+        ],
+        "retrieval_uncertainty": 0.8632,
+        "conflict_uncertainty": 0.5274,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.59
+      }
+    ]
+  },
+  {
+    "question": "What does the French constitution state for the language in Aslace?",
+    "gold_answers": [
+      "French alone is the official language"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.651613399554494,
+    "retrieval_uncertainty": 0.9185185207422472,
+    "conflict_uncertainty": 0.6411515455404426,
+    "stability_uncertainty": 4.3377606188647335e-05,
+    "steps": 2,
+    "num_evidence": 3,
+    "budget_used": 0,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.0815,
+        "delta_uncertainty": 0.3484,
+        "evidence_gain": 0.0815,
+        "utilities": [
+          0.0815,
+          0.0791,
+          0.0665
+        ],
+        "candidate_answers": [
+          "standardisation of Dutch language",
+          "Article 4",
+          "the 1855 colonial constitution"
+        ],
+        "retrieval_uncertainty": 0.9185,
+        "conflict_uncertainty": 0.6412,
+        "stability_uncertainty": 0.0,
+        "total_uncertainty": 0.6516
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.0815,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0815,
+          0.0791,
+          0.0665
+        ],
+        "candidate_answers": [
+          "standardisation of Dutch language",
+          "Article 4",
+          "the 1855 colonial constitution"
+        ],
+        "retrieval_uncertainty": 0.9185,
+        "conflict_uncertainty": 0.6412,
+        "stability_uncertainty": 0.0,
+        "total_uncertainty": 0.6516
+      }
+    ]
+  },
+  {
+    "question": "Which BYU building features films in several languages?",
+    "gold_answers": [
+      "International Cinema"
+    ],
+    "final_answer": "International Cinema",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.5782227128883166,
+    "retrieval_uncertainty": 0.8171484202397384,
+    "conflict_uncertainty": 0.5638319777126557,
+    "stability_uncertainty": 0.0024945472732533507,
+    "steps": 2,
+    "num_evidence": 5,
+    "budget_used": 1,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1829,
+        "delta_uncertainty": 0.4699,
+        "evidence_gain": 0.1829,
+        "utilities": [
+          0.1829,
+          0.0714,
+          0.052
+        ],
+        "candidate_answers": [
+          "International Cinema",
+          "Harold B. Lee Library",
+          "Monte L. Bean Life Science Museum"
+        ],
+        "retrieval_uncertainty": 0.8171,
+        "conflict_uncertainty": 0.4029,
+        "stability_uncertainty": 0.0033,
+        "total_uncertainty": 0.5301
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1829,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1829,
+          0.0714,
+          0.052,
+          0.0548,
+          0.0582
+        ],
+        "candidate_answers": [
+          "International Cinema",
+          "Harold B. Lee Library",
+          "Monte L. Bean Life Science Museum",
+          "LDS Church",
+          "Brigham Young University"
+        ],
+        "retrieval_uncertainty": 0.8171,
+        "conflict_uncertainty": 0.5638,
+        "stability_uncertainty": 0.0025,
+        "total_uncertainty": 0.5782
+      }
+    ]
+  },
+  {
+    "question": "What has helped geneologists researching slaves?",
+    "gold_answers": [
+      "Colonial records of French and Spanish slave ships and sales, and plantation records in all the former colonies"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6554101159607494,
+    "retrieval_uncertainty": 0.9395271588540179,
+    "conflict_uncertainty": 0.6188022093298184,
+    "stability_uncertainty": 2.9368673974142684e-05,
+    "steps": 2,
+    "num_evidence": 3,
+    "budget_used": 0,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.0605,
+        "delta_uncertainty": 0.3446,
+        "evidence_gain": 0.0605,
+        "utilities": [
+          0.0605,
+          0.05,
+          0.0482
+        ],
+        "candidate_answers": [
+          "slave ships stopping at ports such as Charleston",
+          "African slaves' escaping from European colonists and being absorbed by Indigenous Americans",
+          "the phenomenon of \"interference\""
+        ],
+        "retrieval_uncertainty": 0.9395,
+        "conflict_uncertainty": 0.6188,
+        "stability_uncertainty": 0.0,
+        "total_uncertainty": 0.6554
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.0605,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0605,
+          0.05,
+          0.0482
+        ],
+        "candidate_answers": [
+          "slave ships stopping at ports such as Charleston",
+          "African slaves' escaping from European colonists and being absorbed by Indigenous Americans",
+          "the phenomenon of \"interference\""
+        ],
+        "retrieval_uncertainty": 0.9395,
+        "conflict_uncertainty": 0.6188,
+        "stability_uncertainty": 0.0,
+        "total_uncertainty": 0.6554
+      }
+    ]
+  },
+  {
+    "question": "When did the first free election take place?",
+    "gold_answers": [
+      "1492"
+    ],
+    "final_answer": "1492",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.5928161494714941,
+    "retrieval_uncertainty": 0.8257043460835715,
+    "conflict_uncertainty": 0.5985454841616233,
+    "stability_uncertainty": 0.002001655906106467,
+    "steps": 2,
+    "num_evidence": 5,
+    "budget_used": 1,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1743,
+        "delta_uncertainty": 0.448,
+        "evidence_gain": 0.1743,
+        "utilities": [
+          0.1743,
+          0.0793,
+          0.0706
+        ],
+        "candidate_answers": [
+          "1492",
+          "November 1989",
+          "April 2015"
+        ],
+        "retrieval_uncertainty": 0.8257,
+        "conflict_uncertainty": 0.4624,
+        "stability_uncertainty": 0.0022,
+        "total_uncertainty": 0.552
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1743,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1743,
+          0.0793,
+          0.0706,
+          0.053,
+          0.057
+        ],
+        "candidate_answers": [
+          "1492",
+          "November 1989",
+          "April 2015",
+          "29 September 1963",
+          "1827"
+        ],
+        "retrieval_uncertainty": 0.8257,
+        "conflict_uncertainty": 0.5985,
+        "stability_uncertainty": 0.002,
+        "total_uncertainty": 0.5928
+      }
+    ]
+  },
+  {
+    "question": "Of what discipline is ethology a branch?",
+    "gold_answers": [
+      "zoology"
+    ],
+    "final_answer": "zoology",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.5834743307910362,
+    "retrieval_uncertainty": 0.8371779355132913,
+    "conflict_uncertainty": 0.5490005951031062,
+    "stability_uncertainty": 0.0009259225172928706,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1628,
+        "delta_uncertainty": 0.4165,
+        "evidence_gain": 0.1628,
+        "utilities": [
+          0.1628,
+          0.1051,
+          0.0931
+        ],
+        "candidate_answers": [
+          "zoology",
+          "school discipline",
+          "sociobiology"
+        ],
+        "retrieval_uncertainty": 0.8372,
+        "conflict_uncertainty": 0.549,
+        "stability_uncertainty": 0.0009,
+        "total_uncertainty": 0.5835
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1628,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1628,
+          0.1051,
+          0.0931,
+          0.0683,
+          0.0676
+        ],
+        "candidate_answers": [
+          "zoology",
+          "school discipline",
+          "sociobiology",
+          "anthropology",
+          "anthropology"
+        ],
+        "retrieval_uncertainty": 0.8372,
+        "conflict_uncertainty": 0.6724,
+        "stability_uncertainty": 0.0012,
+        "total_uncertainty": 0.6205
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1628,
+        "delta_uncertainty": 0.0371,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1628,
+          0.1051,
+          0.0931
+        ],
+        "candidate_answers": [
+          "zoology",
+          "school discipline",
+          "sociobiology"
+        ],
+        "retrieval_uncertainty": 0.8372,
+        "conflict_uncertainty": 0.549,
+        "stability_uncertainty": 0.0009,
+        "total_uncertainty": 0.5835
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1628,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1628,
+          0.1051,
+          0.0931,
+          0.0683,
+          0.0676
+        ],
+        "candidate_answers": [
+          "zoology",
+          "school discipline",
+          "sociobiology",
+          "anthropology",
+          "anthropology"
+        ],
+        "retrieval_uncertainty": 0.8372,
+        "conflict_uncertainty": 0.6724,
+        "stability_uncertainty": 0.0012,
+        "total_uncertainty": 0.6205
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1628,
+        "delta_uncertainty": 0.0371,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1628,
+          0.1051,
+          0.0931
+        ],
+        "candidate_answers": [
+          "zoology",
+          "school discipline",
+          "sociobiology"
+        ],
+        "retrieval_uncertainty": 0.8372,
+        "conflict_uncertainty": 0.549,
+        "stability_uncertainty": 0.0009,
+        "total_uncertainty": 0.5835
+      }
+    ]
+  },
+  {
+    "question": "What New Haven trial is known to be the longest in the history of Connecticut?",
+    "gold_answers": [
+      "New Haven Black Panther trials"
+    ],
+    "final_answer": "Bridgeport",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.599434589540226,
+    "retrieval_uncertainty": 0.8320700668120246,
+    "conflict_uncertainty": 0.6106983954678323,
+    "stability_uncertainty": 0.0009501874693201512,
+    "steps": 2,
+    "num_evidence": 3,
+    "budget_used": 0,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1679,
+        "delta_uncertainty": 0.4037,
+        "evidence_gain": 0.1679,
+        "utilities": [
+          0.1679,
+          0.1183,
+          0.1343
+        ],
+        "candidate_answers": [
+          "Bridgeport",
+          "Gateway Community College",
+          "New Haven Black Panther trials"
+        ],
+        "retrieval_uncertainty": 0.8321,
+        "conflict_uncertainty": 0.6007,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.5963
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1679,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1679,
+          0.1632,
+          0.1003
+        ],
+        "candidate_answers": [
+          "Bridgeport",
+          "New Haven Black Panther trials",
+          "Gateway Community College"
+        ],
+        "retrieval_uncertainty": 0.8321,
+        "conflict_uncertainty": 0.6107,
+        "stability_uncertainty": 0.001,
+        "total_uncertainty": 0.5994
+      }
+    ]
+  },
+  {
+    "question": "In what periodical was the new sovereign status of the Russian Federation first published?",
+    "gold_answers": [
+      "Rossiyskaya Gazeta"
+    ],
+    "final_answer": "Rossiyskaya Gazeta",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.5689302368752623,
+    "retrieval_uncertainty": 0.8391673658883185,
+    "conflict_uncertainty": 0.4968395755248757,
+    "stability_uncertainty": 0.0014734063682020758,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1608,
+        "delta_uncertainty": 0.4311,
+        "evidence_gain": 0.1608,
+        "utilities": [
+          0.1608,
+          0.0795,
+          0.0793
+        ],
+        "candidate_answers": [
+          "Rossiyskaya Gazeta",
+          "Supreme Soviet of the Russian SFSR",
+          "20th-21st centuries"
+        ],
+        "retrieval_uncertainty": 0.8392,
+        "conflict_uncertainty": 0.4968,
+        "stability_uncertainty": 0.0015,
+        "total_uncertainty": 0.5689
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1608,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1608,
+          0.0795,
+          0.0793,
+          0.0442,
+          0.0723
+        ],
+        "candidate_answers": [
+          "Rossiyskaya Gazeta",
+          "Supreme Soviet of the Russian SFSR",
+          "20th-21st centuries",
+          "19th century",
+          "October Revolution"
+        ],
+        "retrieval_uncertainty": 0.8392,
+        "conflict_uncertainty": 0.6312,
+        "stability_uncertainty": 0.0015,
+        "total_uncertainty": 0.6093
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1608,
+        "delta_uncertainty": 0.0403,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1608,
+          0.0795,
+          0.0793
+        ],
+        "candidate_answers": [
+          "Rossiyskaya Gazeta",
+          "Supreme Soviet of the Russian SFSR",
+          "20th-21st centuries"
+        ],
+        "retrieval_uncertainty": 0.8392,
+        "conflict_uncertainty": 0.4968,
+        "stability_uncertainty": 0.0015,
+        "total_uncertainty": 0.5689
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1608,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1608,
+          0.0795,
+          0.0793,
+          0.0442,
+          0.0723
+        ],
+        "candidate_answers": [
+          "Rossiyskaya Gazeta",
+          "Supreme Soviet of the Russian SFSR",
+          "20th-21st centuries",
+          "19th century",
+          "October Revolution"
+        ],
+        "retrieval_uncertainty": 0.8392,
+        "conflict_uncertainty": 0.6312,
+        "stability_uncertainty": 0.0015,
+        "total_uncertainty": 0.6093
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1608,
+        "delta_uncertainty": 0.0403,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1608,
+          0.0795,
+          0.0793
+        ],
+        "candidate_answers": [
+          "Rossiyskaya Gazeta",
+          "Supreme Soviet of the Russian SFSR",
+          "20th-21st centuries"
+        ],
+        "retrieval_uncertainty": 0.8392,
+        "conflict_uncertainty": 0.4968,
+        "stability_uncertainty": 0.0015,
+        "total_uncertainty": 0.5689
+      }
+    ]
+  },
+  {
+    "question": "The first ship to carry a human through space was called what?",
+    "gold_answers": [
+      "Vostok 1"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.5996854841298973,
+    "retrieval_uncertainty": 0.867886369492882,
+    "conflict_uncertainty": 0.5520520648035563,
+    "stability_uncertainty": 0.000633399711947308,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1055,
+        "delta_uncertainty": 0.3746,
+        "evidence_gain": 0.1055,
+        "utilities": [
+          0.0767,
+          0.1055,
+          0.0776
+        ],
+        "candidate_answers": [
+          "Vostok 1",
+          "TARDIS",
+          "Enlightenment"
+        ],
+        "retrieval_uncertainty": 0.8945,
+        "conflict_uncertainty": 0.5937,
+        "stability_uncertainty": 0.0002,
+        "total_uncertainty": 0.6254
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1055,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0767,
+          0.1055,
+          0.0776,
+          0.061,
+          0.0481
+        ],
+        "candidate_answers": [
+          "Vostok 1",
+          "TARDIS",
+          "Enlightenment",
+          "Man in Space Soonest",
+          "Sputnik 1"
+        ],
+        "retrieval_uncertainty": 0.8945,
+        "conflict_uncertainty": 0.7139,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.6615
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1321,
+        "delta_uncertainty": 0.0718,
+        "evidence_gain": 0.0266,
+        "utilities": [
+          0.1321,
+          0.0911,
+          0.0511
+        ],
+        "candidate_answers": [
+          "TARDIS",
+          "Enlightenment",
+          "Vostok 1"
+        ],
+        "retrieval_uncertainty": 0.8679,
+        "conflict_uncertainty": 0.5184,
+        "stability_uncertainty": 0.0011,
+        "total_uncertainty": 0.5897
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1321,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1321,
+          0.0911,
+          0.0511,
+          0.061,
+          0.0481
+        ],
+        "candidate_answers": [
+          "TARDIS",
+          "Enlightenment",
+          "Vostok 1",
+          "Man in Space Soonest",
+          "Sputnik 1"
+        ],
+        "retrieval_uncertainty": 0.8679,
+        "conflict_uncertainty": 0.6555,
+        "stability_uncertainty": 0.001,
+        "total_uncertainty": 0.6308
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1321,
+        "delta_uncertainty": 0.0311,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1321,
+          0.0911,
+          0.0718
+        ],
+        "candidate_answers": [
+          "TARDIS",
+          "Enlightenment",
+          "Man in Space Soonest"
+        ],
+        "retrieval_uncertainty": 0.8679,
+        "conflict_uncertainty": 0.5521,
+        "stability_uncertainty": 0.0006,
+        "total_uncertainty": 0.5997
+      }
+    ]
+  },
+  {
+    "question": "What is an alloy?",
+    "gold_answers": [
+      "a mixture of metals or a mixture of a metal and another element"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.5950822457495248,
+    "retrieval_uncertainty": 0.8804684626514174,
+    "conflict_uncertainty": 0.5156968994274516,
+    "stability_uncertainty": 0.0006947229779030163,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1009,
+        "delta_uncertainty": 0.3848,
+        "evidence_gain": 0.1009,
+        "utilities": [
+          0.0758,
+          0.1009,
+          0.0484
+        ],
+        "candidate_answers": [
+          "a mixture of atoms in which the primary constituent is a metal",
+          "alloys",
+          "a mixture of either pure or fairly pure chemical elements"
+        ],
+        "retrieval_uncertainty": 0.8991,
+        "conflict_uncertainty": 0.5517,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6152
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1009,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0758,
+          0.1009,
+          0.0484,
+          0.0534,
+          0.0499
+        ],
+        "candidate_answers": [
+          "a mixture of atoms in which the primary constituent is a metal",
+          "alloys",
+          "a mixture of either pure or fairly pure chemical elements",
+          "a mixture of metals or a mixture of a metal and another element",
+          "Brass"
+        ],
+        "retrieval_uncertainty": 0.8991,
+        "conflict_uncertainty": 0.6928,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.6575
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1195,
+        "delta_uncertainty": 0.0624,
+        "evidence_gain": 0.0187,
+        "utilities": [
+          0.1195,
+          0.0645,
+          0.0627
+        ],
+        "candidate_answers": [
+          "alloys",
+          "a mixture of atoms in which the primary constituent is a metal",
+          "a mixture of metals or a mixture of a metal and another element"
+        ],
+        "retrieval_uncertainty": 0.8805,
+        "conflict_uncertainty": 0.5157,
+        "stability_uncertainty": 0.0007,
+        "total_uncertainty": 0.5951
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1195,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1195,
+          0.0645,
+          0.0627,
+          0.0412,
+          0.0499
+        ],
+        "candidate_answers": [
+          "alloys",
+          "a mixture of atoms in which the primary constituent is a metal",
+          "a mixture of metals or a mixture of a metal and another element",
+          "a mixture of either pure or fairly pure chemical elements",
+          "Brass"
+        ],
+        "retrieval_uncertainty": 0.8805,
+        "conflict_uncertainty": 0.6463,
+        "stability_uncertainty": 0.0007,
+        "total_uncertainty": 0.6343
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1195,
+        "delta_uncertainty": 0.0392,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1195,
+          0.0645,
+          0.0627
+        ],
+        "candidate_answers": [
+          "alloys",
+          "a mixture of atoms in which the primary constituent is a metal",
+          "a mixture of metals or a mixture of a metal and another element"
+        ],
+        "retrieval_uncertainty": 0.8805,
+        "conflict_uncertainty": 0.5157,
+        "stability_uncertainty": 0.0007,
+        "total_uncertainty": 0.5951
+      }
+    ]
+  },
+  {
+    "question": "Where was the Galilean village?",
+    "gold_answers": [
+      "Nazareth"
+    ],
+    "final_answer": "Nazareth",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.5950546277886117,
+    "retrieval_uncertainty": 0.8303542078019331,
+    "conflict_uncertainty": 0.5982035327228308,
+    "stability_uncertainty": 0.002082320353979807,
+    "steps": 2,
+    "num_evidence": 5,
+    "budget_used": 1,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1696,
+        "delta_uncertainty": 0.4397,
+        "evidence_gain": 0.1696,
+        "utilities": [
+          0.1696,
+          0.0706,
+          0.0876
+        ],
+        "candidate_answers": [
+          "Nazareth",
+          "Washington University",
+          "Galilean"
+        ],
+        "retrieval_uncertainty": 0.8304,
+        "conflict_uncertainty": 0.4826,
+        "stability_uncertainty": 0.0019,
+        "total_uncertainty": 0.5603
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1696,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1696,
+          0.0706,
+          0.0876,
+          0.0564,
+          0.0379
+        ],
+        "candidate_answers": [
+          "Nazareth",
+          "Washington University",
+          "Galilean",
+          "Ordon Village",
+          "Manhattan"
+        ],
+        "retrieval_uncertainty": 0.8304,
+        "conflict_uncertainty": 0.5982,
+        "stability_uncertainty": 0.0021,
+        "total_uncertainty": 0.5951
+      }
+    ]
+  },
+  {
+    "question": "A fifth terminal was opened in 2008 for which UK airline?",
+    "gold_answers": [
+      "British Airways"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6007817056291092,
+    "retrieval_uncertainty": 0.8611448652666551,
+    "conflict_uncertainty": 0.5668499985292366,
+    "stability_uncertainty": 0.0007713671850527937,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1389,
+        "delta_uncertainty": 0.4009,
+        "evidence_gain": 0.1389,
+        "utilities": [
+          0.1389,
+          0.0835,
+          0.0941
+        ],
+        "candidate_answers": [
+          "London Heathrow Airport",
+          "Grupo Aeroportuario del Valle de México",
+          "BeiDou"
+        ],
+        "retrieval_uncertainty": 0.8611,
+        "conflict_uncertainty": 0.5613,
+        "stability_uncertainty": 0.0006,
+        "total_uncertainty": 0.5991
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1389,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1389,
+          0.0835,
+          0.0941,
+          0.0441,
+          0.058
+        ],
+        "candidate_answers": [
+          "London Heathrow Airport",
+          "Grupo Aeroportuario del Valle de México",
+          "BeiDou",
+          "London Academy of Excellence",
+          "Broadway Pier"
+        ],
+        "retrieval_uncertainty": 0.8611,
+        "conflict_uncertainty": 0.6682,
+        "stability_uncertainty": 0.0011,
+        "total_uncertainty": 0.6313
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1389,
+        "delta_uncertainty": 0.0305,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1389,
+          0.1106,
+          0.0711
+        ],
+        "candidate_answers": [
+          "London Heathrow Airport",
+          "BeiDou",
+          "Grupo Aeroportuario del Valle de México"
+        ],
+        "retrieval_uncertainty": 0.8611,
+        "conflict_uncertainty": 0.5668,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.6008
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1389,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1389,
+          0.1106,
+          0.0711,
+          0.0441,
+          0.058
+        ],
+        "candidate_answers": [
+          "London Heathrow Airport",
+          "BeiDou",
+          "Grupo Aeroportuario del Valle de México",
+          "London Academy of Excellence",
+          "Broadway Pier"
+        ],
+        "retrieval_uncertainty": 0.8611,
+        "conflict_uncertainty": 0.6714,
+        "stability_uncertainty": 0.0012,
+        "total_uncertainty": 0.6323
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1389,
+        "delta_uncertainty": 0.0315,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1389,
+          0.1106,
+          0.0711
+        ],
+        "candidate_answers": [
+          "London Heathrow Airport",
+          "BeiDou",
+          "Grupo Aeroportuario del Valle de México"
+        ],
+        "retrieval_uncertainty": 0.8611,
+        "conflict_uncertainty": 0.5668,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.6008
+      }
+    ]
+  },
+  {
+    "question": "Does Florida benefit from taxes",
+    "gold_answers": [
+      "Florida residents have received more federal monies than they pay in taxes: the state is a net beneficiary"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6309162215173837,
+    "retrieval_uncertainty": 0.9129227418405352,
+    "conflict_uncertainty": 0.5810793935128089,
+    "stability_uncertainty": 0.0006551627163668163,
+    "steps": 2,
+    "num_evidence": 5,
+    "budget_used": 1,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.0871,
+        "delta_uncertainty": 0.3975,
+        "evidence_gain": 0.0871,
+        "utilities": [
+          0.0487,
+          0.0871,
+          0.0338
+        ],
+        "candidate_answers": [
+          "Florida residents have received more federal monies than they pay",
+          "exemptions",
+          "Florida benefits from taxes"
+        ],
+        "retrieval_uncertainty": 0.9129,
+        "conflict_uncertainty": 0.4866,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6025
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.0871,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0487,
+          0.0871,
+          0.0338,
+          0.0257,
+          0.0126
+        ],
+        "candidate_answers": [
+          "Florida residents have received more federal monies than they pay",
+          "exemptions",
+          "Florida benefits from taxes",
+          "Florida is an offshore financial centre",
+          "Florida Americans of English descent and Americans of Scots-Irish descent began moving into northern Florida from the backwoods of Georgia and South Carolina"
+        ],
+        "retrieval_uncertainty": 0.9129,
+        "conflict_uncertainty": 0.5811,
+        "stability_uncertainty": 0.0007,
+        "total_uncertainty": 0.6309
+      }
+    ]
+  },
+  {
+    "question": "What two members of city council were convicted of extortion in 2005?",
+    "gold_answers": [
+      "Ralph Inzunza and Deputy Mayor Michael Zucchet"
+    ],
+    "final_answer": "the mayor and 10 city council members",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.5867738141521747,
+    "retrieval_uncertainty": 0.8355671713933273,
+    "conflict_uncertainty": 0.5627728093453248,
+    "stability_uncertainty": 0.0007919282595680232,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1404,
+        "delta_uncertainty": 0.3923,
+        "evidence_gain": 0.1404,
+        "utilities": [
+          0.1338,
+          0.1404,
+          0.0704
+        ],
+        "candidate_answers": [
+          "Ralph Inzunza and Deputy Mayor Michael Zucchet",
+          "the mayor and 10 city council members",
+          "at-large council members"
+        ],
+        "retrieval_uncertainty": 0.8596,
+        "conflict_uncertainty": 0.5925,
+        "stability_uncertainty": 0.001,
+        "total_uncertainty": 0.6077
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1404,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1338,
+          0.1404,
+          0.0704,
+          0.0845,
+          0.07
+        ],
+        "candidate_answers": [
+          "Ralph Inzunza and Deputy Mayor Michael Zucchet",
+          "the mayor and 10 city council members",
+          "at-large council members",
+          "Rada Miasta",
+          "San_Diego"
+        ],
+        "retrieval_uncertainty": 0.8596,
+        "conflict_uncertainty": 0.7186,
+        "stability_uncertainty": 0.001,
+        "total_uncertainty": 0.6456
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1644,
+        "delta_uncertainty": 0.0588,
+        "evidence_gain": 0.024,
+        "utilities": [
+          0.1644,
+          0.1124,
+          0.0993
+        ],
+        "candidate_answers": [
+          "the mayor and 10 city council members",
+          "Ralph Inzunza and Deputy Mayor Michael Zucchet",
+          "Rada Miasta"
+        ],
+        "retrieval_uncertainty": 0.8356,
+        "conflict_uncertainty": 0.5628,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.5868
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1644,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1644,
+          0.1124,
+          0.0993,
+          0.0599,
+          0.07
+        ],
+        "candidate_answers": [
+          "the mayor and 10 city council members",
+          "Ralph Inzunza and Deputy Mayor Michael Zucchet",
+          "Rada Miasta",
+          "at-large council members",
+          "San_Diego"
+        ],
+        "retrieval_uncertainty": 0.8356,
+        "conflict_uncertainty": 0.675,
+        "stability_uncertainty": 0.0014,
+        "total_uncertainty": 0.6206
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1644,
+        "delta_uncertainty": 0.0338,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1644,
+          0.1124,
+          0.0993
+        ],
+        "candidate_answers": [
+          "the mayor and 10 city council members",
+          "Ralph Inzunza and Deputy Mayor Michael Zucchet",
+          "Rada Miasta"
+        ],
+        "retrieval_uncertainty": 0.8356,
+        "conflict_uncertainty": 0.5628,
+        "stability_uncertainty": 0.0008,
+        "total_uncertainty": 0.5868
+      }
+    ]
+  },
+  {
+    "question": "What can affect how a person is treated?",
+    "gold_answers": [
+      "Perceived sexual orientation"
+    ],
+    "final_answer": "Sexual_orientation",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.583015242221544,
+    "retrieval_uncertainty": 0.8176755139966327,
+    "conflict_uncertainty": 0.5785424718148726,
+    "stability_uncertainty": 0.0030737183938291677,
+    "steps": 2,
+    "num_evidence": 5,
+    "budget_used": 1,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1823,
+        "delta_uncertainty": 0.4629,
+        "evidence_gain": 0.1823,
+        "utilities": [
+          0.1823,
+          0.1097,
+          0.025
+        ],
+        "candidate_answers": [
+          "Sexual_orientation",
+          "core affect",
+          "unanswerable"
+        ],
+        "retrieval_uncertainty": 0.8177,
+        "conflict_uncertainty": 0.4249,
+        "stability_uncertainty": 0.0041,
+        "total_uncertainty": 0.5371
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1823,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1823,
+          0.1097,
+          0.025,
+          0.068,
+          0.0475
+        ],
+        "candidate_answers": [
+          "Sexual_orientation",
+          "core affect",
+          "unanswerable",
+          "Psychological factors",
+          "stress and intonation"
+        ],
+        "retrieval_uncertainty": 0.8177,
+        "conflict_uncertainty": 0.5785,
+        "stability_uncertainty": 0.0031,
+        "total_uncertainty": 0.583
+      }
+    ]
+  },
+  {
+    "question": "What currency did the euro replace in Portugal?",
+    "gold_answers": [
+      "Portuguese Escudo"
+    ],
+    "final_answer": "Portuguese Escudo",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.5938819974040388,
+    "retrieval_uncertainty": 0.8419715821695531,
+    "conflict_uncertainty": 0.5759265747786835,
+    "stability_uncertainty": 0.0005911694282853594,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.158,
+        "delta_uncertainty": 0.4061,
+        "evidence_gain": 0.158,
+        "utilities": [
+          0.158,
+          0.1127,
+          0.1019
+        ],
+        "candidate_answers": [
+          "Portuguese Escudo",
+          "Greek drachma",
+          "drachma"
+        ],
+        "retrieval_uncertainty": 0.842,
+        "conflict_uncertainty": 0.5759,
+        "stability_uncertainty": 0.0006,
+        "total_uncertainty": 0.5939
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.158,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.158,
+          0.1127,
+          0.1019,
+          0.0664,
+          0.0508
+        ],
+        "candidate_answers": [
+          "Portuguese Escudo",
+          "Greek drachma",
+          "drachma",
+          "Greek drachma",
+          "the Dollar"
+        ],
+        "retrieval_uncertainty": 0.842,
+        "conflict_uncertainty": 0.6343,
+        "stability_uncertainty": 0.0014,
+        "total_uncertainty": 0.6116
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.158,
+        "delta_uncertainty": 0.0177,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.158,
+          0.1127,
+          0.1019
+        ],
+        "candidate_answers": [
+          "Portuguese Escudo",
+          "Greek drachma",
+          "drachma"
+        ],
+        "retrieval_uncertainty": 0.842,
+        "conflict_uncertainty": 0.5759,
+        "stability_uncertainty": 0.0006,
+        "total_uncertainty": 0.5939
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.158,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.158,
+          0.1127,
+          0.1019,
+          0.0664,
+          0.0508
+        ],
+        "candidate_answers": [
+          "Portuguese Escudo",
+          "Greek drachma",
+          "drachma",
+          "Greek drachma",
+          "the Dollar"
+        ],
+        "retrieval_uncertainty": 0.842,
+        "conflict_uncertainty": 0.6343,
+        "stability_uncertainty": 0.0014,
+        "total_uncertainty": 0.6116
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.158,
+        "delta_uncertainty": 0.0177,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.158,
+          0.1127,
+          0.1019
+        ],
+        "candidate_answers": [
+          "Portuguese Escudo",
+          "Greek drachma",
+          "drachma"
+        ],
+        "retrieval_uncertainty": 0.842,
+        "conflict_uncertainty": 0.5759,
+        "stability_uncertainty": 0.0006,
+        "total_uncertainty": 0.5939
+      }
+    ]
+  },
+  {
+    "question": "Which Chinese suffix means \"area, district, region, ward\"?",
+    "gold_answers": [
+      "qū"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6218533736240157,
+    "retrieval_uncertainty": 0.9061822142886081,
+    "conflict_uncertainty": 0.5623574489794498,
+    "stability_uncertainty": 0.0002751589293835417,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.078,
+        "delta_uncertainty": 0.3895,
+        "evidence_gain": 0.078,
+        "utilities": [
+          0.078,
+          0.0232,
+          0.0541
+        ],
+        "candidate_answers": [
+          "q",
+          "ward",
+          "ward 26"
+        ],
+        "retrieval_uncertainty": 0.922,
+        "conflict_uncertainty": 0.4979,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6105
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.078,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.078,
+          0.0232,
+          0.0541,
+          0.0579,
+          0.0458
+        ],
+        "candidate_answers": [
+          "q",
+          "ward",
+          "ward 26",
+          "Jackson",
+          "610"
+        ],
+        "retrieval_uncertainty": 0.922,
+        "conflict_uncertainty": 0.6989,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6708
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.0798,
+        "delta_uncertainty": 0.0236,
+        "evidence_gain": 0.0018,
+        "utilities": [
+          0.078,
+          0.0798,
+          0.0541
+        ],
+        "candidate_answers": [
+          "q",
+          "Jackson",
+          "ward 26"
+        ],
+        "retrieval_uncertainty": 0.9202,
+        "conflict_uncertainty": 0.6234,
+        "stability_uncertainty": 0.0001,
+        "total_uncertainty": 0.6471
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.0798,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.078,
+          0.0798,
+          0.0541,
+          0.0168,
+          0.0458
+        ],
+        "candidate_answers": [
+          "q",
+          "Jackson",
+          "ward 26",
+          "ward",
+          "610"
+        ],
+        "retrieval_uncertainty": 0.9202,
+        "conflict_uncertainty": 0.7093,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.673
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.0938,
+        "delta_uncertainty": 0.0511,
+        "evidence_gain": 0.014,
+        "utilities": [
+          0.0938,
+          0.0664,
+          0.0541
+        ],
+        "candidate_answers": [
+          "Jackson",
+          "q",
+          "ward 26"
+        ],
+        "retrieval_uncertainty": 0.9062,
+        "conflict_uncertainty": 0.5624,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6219
+      }
+    ]
+  },
+  {
+    "question": "What was another goal of the invasion of Saxony?",
+    "gold_answers": [
+      "to advance into Bohemia where he might set up winter quarters at Austria's expense"
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6166449140455688,
+    "retrieval_uncertainty": 0.9009767084668274,
+    "conflict_uncertainty": 0.5536269301215874,
+    "stability_uncertainty": 0.00034240387839386564,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "max_steps",
+    "history": [
+      {
+        "step": 1,
+        "action": "RERANK",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.0814,
+        "delta_uncertainty": 0.359,
+        "evidence_gain": 0.0814,
+        "utilities": [
+          0.0798,
+          0.0814,
+          0.045
+        ],
+        "candidate_answers": [
+          "to advance into Bohemia",
+          "recapture Normandy",
+          "a TU"
+        ],
+        "retrieval_uncertainty": 0.9186,
+        "conflict_uncertainty": 0.6054,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.641
+      },
+      {
+        "step": 2,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.099,
+        "delta_uncertainty": 0.0306,
+        "evidence_gain": 0.0177,
+        "utilities": [
+          0.099,
+          0.0679,
+          0.045
+        ],
+        "candidate_answers": [
+          "recapture Normandy",
+          "to advance into Bohemia",
+          "a TU"
+        ],
+        "retrieval_uncertainty": 0.901,
+        "conflict_uncertainty": 0.5327,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6104
+      },
+      {
+        "step": 3,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.099,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.099,
+          0.0679,
+          0.045,
+          0.0468,
+          0.0422
+        ],
+        "candidate_answers": [
+          "recapture Normandy",
+          "to advance into Bohemia",
+          "a TU",
+          "the standard of pastoral care and Christian education",
+          "global containment of communism"
+        ],
+        "retrieval_uncertainty": 0.901,
+        "conflict_uncertainty": 0.6709,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6519
+      },
+      {
+        "step": 4,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.099,
+        "delta_uncertainty": 0.0352,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.099,
+          0.0679,
+          0.0549
+        ],
+        "candidate_answers": [
+          "recapture Normandy",
+          "to advance into Bohemia",
+          "the standard of pastoral care and Christian education"
+        ],
+        "retrieval_uncertainty": 0.901,
+        "conflict_uncertainty": 0.5536,
+        "stability_uncertainty": 0.0003,
+        "total_uncertainty": 0.6166
+      },
+      {
+        "step": 5,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.099,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.099,
+          0.0679,
+          0.0549,
+          0.0383,
+          0.0422
+        ],
+        "candidate_answers": [
+          "recapture Normandy",
+          "to advance into Bohemia",
+          "the standard of pastoral care and Christian education",
+          "a TU",
+          "global containment of communism"
+        ],
+        "retrieval_uncertainty": 0.901,
+        "conflict_uncertainty": 0.6725,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6523
+      }
+    ]
+  },
+  {
+    "question": "In what year was War on the Floor released?",
+    "gold_answers": [
+      "2001"
+    ],
+    "final_answer": "2013",
+    "final_action": "ANSWER",
+    "correct": 0,
+    "uncertainty": 0.5766726517806882,
+    "retrieval_uncertainty": 0.8248670293418413,
+    "conflict_uncertainty": 0.5456914653989052,
+    "stability_uncertainty": 0.002658487450479835,
+    "steps": 2,
+    "num_evidence": 5,
+    "budget_used": 1,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.1751,
+        "delta_uncertainty": 0.4766,
+        "evidence_gain": 0.1751,
+        "utilities": [
+          0.1751,
+          0.0262,
+          0.0755
+        ],
+        "candidate_answers": [
+          "2013",
+          "2017",
+          "1941"
+        ],
+        "retrieval_uncertainty": 0.8249,
+        "conflict_uncertainty": 0.3674,
+        "stability_uncertainty": 0.0038,
+        "total_uncertainty": 0.5234
+      },
+      {
+        "step": 2,
+        "action": "STOP",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.1751,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1751,
+          0.0262,
+          0.0755,
+          0.0594,
+          0.0492
+        ],
+        "candidate_answers": [
+          "2013",
+          "2017",
+          "1941",
+          "1690",
+          "2003"
+        ],
+        "retrieval_uncertainty": 0.8249,
+        "conflict_uncertainty": 0.5457,
+        "stability_uncertainty": 0.0027,
+        "total_uncertainty": 0.5767
+      }
+    ]
+  },
+  {
+    "question": "Who was the main opponent that began to argue that the flat canvas did not support Cubism?",
+    "gold_answers": [
+      "Clement Greenberg."
+    ],
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
+    "correct": 0,
+    "uncertainty": 0.6087485272542829,
+    "retrieval_uncertainty": 0.8928784754609141,
+    "conflict_uncertainty": 0.5406816160873795,
+    "stability_uncertainty": 0.00052402348805936,
+    "steps": 5,
+    "num_evidence": 3,
+    "budget_used": 2,
+    "stop_reason": "policy_stop",
+    "history": [
+      {
+        "step": 1,
+        "action": "RETRIEVE_MORE",
+        "last_action": null,
+        "remaining_budget": 2,
+        "num_evidence": 3,
+        "best_utility": 0.091,
+        "delta_uncertainty": 0.3663,
+        "evidence_gain": 0.091,
+        "utilities": [
+          0.0712,
+          0.091,
+          0.0637
+        ],
+        "candidate_answers": [
+          "Clement Greenberg",
+          "Nasser",
+          "Richard Lazarus"
+        ],
+        "retrieval_uncertainty": 0.909,
+        "conflict_uncertainty": 0.5972,
+        "stability_uncertainty": 0.0001,
+        "total_uncertainty": 0.6337
+      },
+      {
+        "step": 2,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_utility": 0.091,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.0712,
+          0.091,
+          0.0637,
+          0.0474,
+          0.0304
+        ],
+        "candidate_answers": [
+          "Clement Greenberg",
+          "Nasser",
+          "Richard Lazarus",
+          "Maurice Raynal",
+          "Metzinger, Gleizes, Delaunay, and Léger"
+        ],
+        "retrieval_uncertainty": 0.909,
+        "conflict_uncertainty": 0.7004,
+        "stability_uncertainty": 0.0004,
+        "total_uncertainty": 0.6647
+      },
+      {
+        "step": 3,
+        "action": "RETRIEVE_MORE",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_utility": 0.1071,
+        "delta_uncertainty": 0.0572,
+        "evidence_gain": 0.0161,
+        "utilities": [
+          0.1071,
+          0.0604,
+          0.0637
+        ],
+        "candidate_answers": [
+          "Nasser",
+          "Clement Greenberg",
+          "Richard Lazarus"
+        ],
+        "retrieval_uncertainty": 0.8929,
+        "conflict_uncertainty": 0.5366,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6075
+      },
+      {
+        "step": 4,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 0,
+        "num_evidence": 5,
+        "best_utility": 0.1071,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1071,
+          0.0604,
+          0.0637,
+          0.0474,
+          0.0304
+        ],
+        "candidate_answers": [
+          "Nasser",
+          "Clement Greenberg",
+          "Richard Lazarus",
+          "Maurice Raynal",
+          "Metzinger, Gleizes, Delaunay, and Léger"
+        ],
+        "retrieval_uncertainty": 0.8929,
+        "conflict_uncertainty": 0.6533,
+        "stability_uncertainty": 0.0007,
+        "total_uncertainty": 0.6426
+      },
+      {
+        "step": 5,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 0,
+        "num_evidence": 3,
+        "best_utility": 0.1071,
+        "delta_uncertainty": 0.0338,
+        "evidence_gain": 0.0,
+        "utilities": [
+          0.1071,
+          0.0748,
+          0.0513
+        ],
+        "candidate_answers": [
+          "Nasser",
+          "Richard Lazarus",
+          "Clement Greenberg"
+        ],
+        "retrieval_uncertainty": 0.8929,
+        "conflict_uncertainty": 0.5407,
+        "stability_uncertainty": 0.0005,
+        "total_uncertainty": 0.6087
+      }
+    ]
+  }
+]
