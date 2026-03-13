@@ -1,0 +1,9 @@
+{
+  "dataset": "squad",
+  "version": "v1.1",
+  "qa_count": 98169,
+  "corpus_count": 20958,
+  "train_count": 87599,
+  "dev_count": 10570,
+  "impossible_count": 0
+}

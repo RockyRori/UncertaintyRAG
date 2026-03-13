@@ -1,43 +1,84 @@
+from pathlib import Path
+from typing import Any, Dict, List, Union
+import re
+
 from rank_bm25 import BM25Okapi
+
 from utils.io_utils import load_json
-from utils.text_utils import normalize_text
 
 
 class BM25Retriever:
-    def __init__(self, corpus_path: str):
-        self.corpus = load_json(corpus_path)
-        self.passages = [item["text"] for item in self.corpus]
-        self.ids = [item["id"] for item in self.corpus]
+    def __init__(self, corpus_source: Union[str, Path, List[Dict[str, Any]]]):
+        """
+        corpus_source can be:
+        1. a file path to a json corpus
+        2. an already loaded list of corpus records
 
-        self.tokenized_corpus = [
-            normalize_text(p).split() for p in self.passages
-        ]
+        Each corpus record is expected to be a dict like:
+        {
+            "id": "...",
+            "text": "...",
+            ...
+        }
+        """
+        if isinstance(corpus_source, (str, Path)):
+            self.corpus = load_json(corpus_source)
+        elif isinstance(corpus_source, list):
+            self.corpus = corpus_source
+        else:
+            raise TypeError(
+                "corpus_source must be a file path or a list of corpus records, "
+                f"got {type(corpus_source)}"
+            )
+
+        if not isinstance(self.corpus, list):
+            raise ValueError("Corpus must be a list of passages/records.")
+
+        self.texts = [self._extract_text(doc) for doc in self.corpus]
+        self.tokenized_corpus = [self._tokenize(text) for text in self.texts]
         self.bm25 = BM25Okapi(self.tokenized_corpus)
 
-    def retrieve(self, question: str, top_k: int = 5, offset: int = 0, exclude_ids: set | None = None):
-        query_tokens = normalize_text(question).split()
-        scores = self.bm25.get_scores(query_tokens)
+    def _extract_text(self, doc: Any) -> str:
+        if isinstance(doc, str):
+            return doc
 
-        ranked = sorted(
-            zip(self.ids, self.passages, scores),
-            key=lambda x: x[2],
+        if isinstance(doc, dict):
+            for key in ["text", "passage", "content", "body", "context"]:
+                if key in doc and doc[key]:
+                    return str(doc[key])
+
+        return str(doc)
+
+    def _tokenize(self, text: str) -> List[str]:
+        text = text.lower()
+        return re.findall(r"\w+", text)
+
+    def retrieve(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
+        if not query or not str(query).strip():
+            return []
+
+        tokenized_query = self._tokenize(query)
+        scores = self.bm25.get_scores(tokenized_query)
+
+        ranked_indices = sorted(
+            range(len(scores)),
+            key=lambda i: scores[i],
             reverse=True
-        )
+        )[:top_k]
 
-        exclude_ids = exclude_ids or set()
-        filtered = [
-            (pid, text, score)
-            for pid, text, score in ranked
-            if pid not in exclude_ids
-        ]
+        results = []
+        for idx in ranked_indices:
+            doc = self.corpus[idx]
 
-        sliced = filtered[offset: offset + top_k]
+            if isinstance(doc, dict):
+                result = dict(doc)
+            else:
+                result = {
+                    "id": f"doc_{idx}",
+                    "text": str(doc),
+                }
 
-        return [
-            {
-                "id": pid,
-                "text": text,
-                "score": float(score)
-            }
-            for pid, text, score in sliced
-        ]
+            result["score"] = float(scores[idx])
+            results.append(result)
+
+        return results

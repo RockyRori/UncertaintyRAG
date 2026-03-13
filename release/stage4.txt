@@ -1,0 +1,82 @@
+(nano) PS C:\Project\UncertaintyRAG> python -m training.train_utility_model
+============================================================
+Baseline Evaluation
+============================================================
+
+[Baseline / All Zero]
+Accuracy : 0.8200
+Precision: 0.0000
+Recall   : 0.0000
+F1       : 0.0000
+AUROC    : 0.5000
+
+[Baseline / All One]
+Accuracy : 0.1800
+Precision: 0.1800
+Recall   : 1.0000
+F1       : 0.3051
+AUROC    : 0.5000
+
+[Baseline / Support Rule]
+Accuracy : 0.8667
+Precision: 0.5745
+Recall   : 1.0000
+F1       : 0.7297
+AUROC    : 0.9187
+
+[Baseline / BM25 Threshold]
+Best threshold on val: 0.0500
+Best F1 on val       : 0.3051
+
+[Baseline / BM25 Threshold (Applied)]
+Accuracy : 0.1800
+Precision: 0.1800
+Recall   : 1.0000
+F1       : 0.3051
+AUROC    : 0.7368
+
+============================================================
+Model Training
+============================================================
+Using device: cuda
+Using pos_weight = 4.5556
+Epoch 1/10 | Train Loss: 0.8553 | Val Best Acc: 0.8833 | Val Best F1: 0.7518 | Best Thresh: 0.60
+Saved best model to C:\Project\UncertaintyRAG\models\saved\utility_mlp.pt
+Epoch 2/10 | Train Loss: 0.3980 | Val Best Acc: 0.8933 | Val Best F1: 0.7647 | Best Thresh: 0.65
+Saved best model to C:\Project\UncertaintyRAG\models\saved\utility_mlp.pt
+Epoch 3/10 | Train Loss: 0.2930 | Val Best Acc: 0.9033 | Val Best F1: 0.7852 | Best Thresh: 0.60
+Saved best model to C:\Project\UncertaintyRAG\models\saved\utility_mlp.pt
+Epoch 4/10 | Train Loss: 0.2221 | Val Best Acc: 0.9033 | Val Best F1: 0.7852 | Best Thresh: 0.50
+Epoch 5/10 | Train Loss: 0.1632 | Val Best Acc: 0.8967 | Val Best F1: 0.7634 | Best Thresh: 0.50
+Epoch 6/10 | Train Loss: 0.1092 | Val Best Acc: 0.8900 | Val Best F1: 0.7556 | Best Thresh: 0.50
+Epoch 7/10 | Train Loss: 0.0716 | Val Best Acc: 0.8833 | Val Best F1: 0.7552 | Best Thresh: 0.20
+Epoch 8/10 | Train Loss: 0.0464 | Val Best Acc: 0.8833 | Val Best F1: 0.7407 | Best Thresh: 0.35
+Epoch 9/10 | Train Loss: 0.0339 | Val Best Acc: 0.8700 | Val Best F1: 0.7347 | Best Thresh: 0.05
+Epoch 10/10 | Train Loss: 0.0246 | Val Best Acc: 0.8700 | Val Best F1: 0.7347 | Best Thresh: 0.05
+
+============================================================
+Best Model Evaluation
+============================================================
+Best epoch: 3
+Best validation F1: 0.7852
+Best threshold: 0.60
+C:\Project\UncertaintyRAG\training\train_utility_model.py:415: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  best_model.load_state_dict(torch.load(UTILITY_MODEL_PATH, map_location=device))
+
+Final validation metrics (best threshold search):
+Accuracy : 0.9033
+F1       : 0.7852
+AUROC    : 0.9452
+Threshold: 0.60
+
+Final validation report:
+              precision    recall  f1-score   support
+
+         0.0     0.9954    0.8862    0.9376       246
+         1.0     0.6543    0.9815    0.7852        54
+
+    accuracy                         0.9033       300
+   macro avg     0.8249    0.9338    0.8614       300
+weighted avg     0.9340    0.9033    0.9102       300
+
+Training complete.

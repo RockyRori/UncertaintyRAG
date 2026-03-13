@@ -1,65 +1,24 @@
 #!/usr/bin/env bash
+set -e
 
-echo "=============================="
-echo "Upgrading repo to Phase 3"
-echo "Decision-Aware Retrieval"
-echo "=============================="
+echo "===> Creating Phase 4 dataset-aware project structure..."
 
-dirs=(
-  "controller"
-  "decision"
-  "retrieval"
-  "uncertainty"
-  "generator"
-  "evaluation"
-  "outputs"
-)
+mkdir -p data/raw/squad
+mkdir -p data/processed
+mkdir -p data/demo
+mkdir -p models/saved
+mkdir -p outputs
+mkdir -p scripts
+mkdir -p datasets
 
-files=(
-  "controller/__init__.py"
-  "controller/state.py"
-  "controller/policy.py"
+touch datasets/__init__.py
 
-  "decision/__init__.py"
-  "decision/actions.py"
-  "decision/loop.py"
-
-  "retrieval/__init__.py"
-  "retrieval/rerank.py"
-
-  "uncertainty/__init__.py"
-  "uncertainty/signals.py"
-
-  "generator/__init__.py"
-  "generator/simple_answerer.py"
-
-  "evaluation/__init__.py"
-  "evaluation/decision_metrics.py"
-
-  "main_phase3.py"
-)
-
-echo ""
-echo "Creating directories..."
-for dir in "${dirs[@]}"; do
-  if [ ! -d "$dir" ]; then
-    mkdir -p "$dir"
-    echo "Created dir: $dir"
-  else
-    echo "Exists dir:  $dir"
-  fi
-done
-
-echo ""
-echo "Creating files..."
-for file in "${files[@]}"; do
-  if [ ! -f "$file" ]; then
-    touch "$file"
-    echo "Created file: $file"
-  else
-    echo "Exists file:  $file"
-  fi
-done
-
-echo ""
-echo "Phase 3 scaffold complete."
+echo "===> Done."
+echo
+echo "Expected structure:"
+echo "data/raw/squad/           # raw SQuAD json files"
+echo "data/processed/           # processed qa/corpus/utility json files"
+echo "datasets/                 # future dataset loaders"
+echo "scripts/                  # data prep / training scripts"
+echo "models/saved/             # trained utility model + tfidf vectorizer"
+echo "outputs/                  # predictions and metrics"

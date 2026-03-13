@@ -1,7 +1,10 @@
+import argparse
+from pathlib import Path
 from typing import Any, Dict, List
 
 from config import (
     MINI_DATASET_PATH,
+    CORPUS_PATH,
     UTILITY_DATASET_PATH,
     GENERATOR_MODEL_NAME,
     MAX_INPUT_LENGTH,
@@ -10,6 +13,7 @@ from config import (
     UTILITY_POSITIVE_THRESHOLD,
 )
 from generator.qa_generator import QAGenerator
+from retriever.bm25_retriever import BM25Retriever
 from utils.io_utils import load_json, save_json
 from utils.text_utils import contains_any_answer, qa_match
 
@@ -23,12 +27,8 @@ def compute_utility_score(
     answer_correct = qa_match(pred_answer, gold_answers)
     support = int(contains_any_answer(passage, gold_answers))
 
-    if include_support:
-        utility_score = 0.5 * answer_correct + 0.5 * support
-    else:
-        utility_score = float(answer_correct)
-
-    label = int(utility_score >= UTILITY_POSITIVE_THRESHOLD)
+    utility_score = float(answer_correct)
+    label = int(answer_correct)
 
     return {
         "answer_correct": int(answer_correct),
@@ -38,37 +38,60 @@ def compute_utility_score(
     }
 
 
-def main() -> None:
-    dataset = load_json(MINI_DATASET_PATH)
-    utility_dataset = []
+def extract_passage_text(p: Any) -> str:
+    if isinstance(p, str):
+        return p
+    if isinstance(p, dict):
+        for key in ["text", "passage", "content", "body", "context"]:
+            if key in p:
+                return str(p[key])
+    return str(p)
 
-    if not dataset:
-        raise ValueError("mini_dataset.json is empty.")
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--max-questions", type=int, default=None)
+    parser.add_argument("--top-k", type=int, default=5)
+    parser.add_argument("--save-every", type=int, default=50)
+    parser.add_argument("--output", type=str, default=str(UTILITY_DATASET_PATH))
+    args = parser.parse_args()
+
+    dataset = load_json(MINI_DATASET_PATH)
+    corpus = load_json(CORPUS_PATH)
+
+    if args.max_questions is not None:
+        dataset = dataset[: args.max_questions]
 
     print(f"Loaded {len(dataset)} QA samples from {MINI_DATASET_PATH}")
+    print(f"Loaded {len(corpus)} corpus passages from {CORPUS_PATH}")
 
+    retriever = BM25Retriever(corpus)
     generator = QAGenerator(
         model_name=GENERATOR_MODEL_NAME,
         max_input_length=MAX_INPUT_LENGTH,
         max_new_tokens=MAX_NEW_TOKENS,
     )
 
+    utility_dataset = []
     total_pairs = 0
     positive_count = 0
+    output_path = Path(args.output)
 
     for sample_idx, sample in enumerate(dataset):
         question = sample["question"]
-        passages = sample["passages"]
         gold_answers = sample["gold_answers"]
         qid = sample.get("id", f"q_{sample_idx}")
 
-        for passage_idx, passage in enumerate(passages):
-            pred_answer = generator.answer_with_single_passage(question, passage)
+        retrieved = retriever.retrieve(question, top_k=args.top_k)
+
+        for passage_idx, item in enumerate(retrieved):
+            passage_text = extract_passage_text(item)
+            pred_answer = generator.answer_with_single_passage(question, passage_text)
 
             stats = compute_utility_score(
                 pred_answer=pred_answer,
                 gold_answers=gold_answers,
-                passage=passage,
+                passage=passage_text,
                 include_support=UTILITY_INCLUDE_SUPPORT_SCORE,
             )
 
@@ -76,10 +99,13 @@ def main() -> None:
                 "question_id": qid,
                 "question": question,
                 "gold_answers": gold_answers,
-                "passage_id": f"{qid}_p_{passage_idx}",
+                "passage_id": item.get("id", f"{qid}_p_{passage_idx}") if isinstance(item, dict) else f"{qid}_p_{passage_idx}",
                 "passage_index": passage_idx,
-                "passage": passage,
+                "passage_rank": passage_idx + 1,
+                "bm25_score": float(item.get("score", 0.0)) if isinstance(item, dict) else 0.0,
+                "passage": passage_text,
                 "pred_answer": pred_answer,
+                "pred_answer_in_passage": int(pred_answer.lower() in passage_text.lower()) if pred_answer else 0,
                 "answer_correct": stats["answer_correct"],
                 "support": stats["support"],
                 "utility_score": stats["utility_score"],
@@ -96,18 +122,15 @@ def main() -> None:
                 f"Pairs so far: {total_pairs}"
             )
 
-    save_json(utility_dataset, UTILITY_DATASET_PATH)
+        if (sample_idx + 1) % args.save_every == 0:
+            save_json(utility_dataset, output_path)
+            print(f"[Checkpoint] Saved {len(utility_dataset)} records -> {output_path}")
+
+    save_json(utility_dataset, output_path)
 
     pos_ratio = positive_count / max(total_pairs, 1)
-
-    print(f"\nSaved {len(utility_dataset)} utility samples to {UTILITY_DATASET_PATH}")
+    print(f"\nSaved {len(utility_dataset)} utility samples to {output_path}")
     print(f"Positive labels: {positive_count}/{total_pairs} ({pos_ratio:.2%})")
-
-    if utility_dataset:
-        print("\nExample utility record:")
-        example = utility_dataset[0]
-        for k, v in example.items():
-            print(f"{k}: {v}")
 
 
 if __name__ == "__main__":
