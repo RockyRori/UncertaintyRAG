@@ -1,5 +1,6 @@
 # UncertaintyRAG
-backend/uploads/*
+data/*
+models/saved/*
 
 # frontend
 **/node_modules/*

@@ -1,0 +1,26 @@
+{
+  "dataset": "squad",
+  "train_size": 50,
+  "test_size": 50,
+  "val_accuracy": 0.98,
+  "val_precision": 0.8888888888888888,
+  "val_recall": 1.0,
+  "val_f1": 0.9411764705882353,
+  "val_auroc": 0.9791666666666666,
+  "best_threshold": 0.6000000000000001,
+  "best_epoch": 3,
+  "accuracy": 0.5,
+  "auroc": 0.6831999999999999,
+  "avg_uncertainty": {
+    "overall": 0.36762489667289977,
+    "correct_only": 0.35914121069535504,
+    "incorrect_only": 0.37610858265044445
+  },
+  "selective_accuracy_80": {
+    "kept_count": 40,
+    "kept_ratio": 0.8,
+    "accuracy": 0.575
+  },
+  "predictions_csv": "outputs\\five_datasets\\squad\\test_predictions.csv",
+  "metrics_json": "outputs\\five_datasets\\squad\\metrics.json"
+}

@@ -6,13 +6,18 @@ import numpy as np
 import torch
 from scipy.sparse import csr_matrix, hstack
 
+from pathlib import Path
+
 from config import TFIDF_VECTORIZER_PATH, UTILITY_MODEL_PATH, HIDDEN_DIM, DROPOUT
 from models.utility_predictor import UtilityMLP
 
 
 class UtilityPredictor:
-    def __init__(self):
-        with open(TFIDF_VECTORIZER_PATH, "rb") as f:
+    def __init__(self, model_path: str | Path | None = None, vectorizer_path: str | Path | None = None):
+        self.model_path = Path(model_path) if model_path is not None else UTILITY_MODEL_PATH
+        self.vectorizer_path = Path(vectorizer_path) if vectorizer_path is not None else TFIDF_VECTORIZER_PATH
+
+        with open(self.vectorizer_path, "rb") as f:
             bundle = pickle.load(f)
 
         # 兼容两种格式：
@@ -40,7 +45,7 @@ class UtilityPredictor:
         ).to(self.device)
 
         self.model.load_state_dict(
-            torch.load(UTILITY_MODEL_PATH, map_location=self.device)
+            torch.load(self.model_path, map_location=self.device)
         )
         self.model.eval()
 

@@ -1,0 +1,26 @@
+{
+  "dataset": "webq",
+  "train_size": 50,
+  "test_size": 50,
+  "val_accuracy": 0.98,
+  "val_precision": 1.0,
+  "val_recall": 0.9090909090909091,
+  "val_f1": 0.9523809523809523,
+  "val_auroc": 0.9324009324009324,
+  "best_threshold": 0.55,
+  "best_epoch": 1,
+  "accuracy": 0.78,
+  "auroc": 0.15617715617715616,
+  "avg_uncertainty": {
+    "overall": 0.3018161209564979,
+    "correct_only": 0.3167415524341555,
+    "incorrect_only": 0.24889868208116656
+  },
+  "selective_accuracy_80": {
+    "kept_count": 40,
+    "kept_ratio": 0.8,
+    "accuracy": 0.75
+  },
+  "predictions_csv": "outputs\\five_datasets\\webq\\test_predictions.csv",
+  "metrics_json": "outputs\\five_datasets\\webq\\metrics.json"
+}
