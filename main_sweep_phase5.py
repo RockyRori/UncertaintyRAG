@@ -48,7 +48,15 @@ def evaluate_records(records):
     }
 
 
-def run_one_setting(setting_name, boundary_cfg, dataset, retriever, utility_predictor, answerer, uncertainty_scorer):
+def run_one_setting(
+    setting_name,
+    boundary_cfg,
+    dataset,
+    retriever,
+    utility_predictor,
+    answerer,
+    uncertainty_scorer,
+):
     policy = RuleBasedPolicy(
         tau_answer=TAU_ANSWER,
         tau_retrieve=TAU_RETRIEVE,
@@ -80,22 +88,24 @@ def run_one_setting(setting_name, boundary_cfg, dataset, retriever, utility_pred
 
         state = runner.run_one(question=question, gold_answers=gold_answers)
 
-        records.append({
-            "question": question,
-            "gold_answers": gold_answers,
-            "final_answer": state.final_answer,
-            "final_action": state.final_action,
-            "correct": state.correct,
-            "uncertainty": state.total_uncertainty,
-            "retrieval_uncertainty": state.retrieval_uncertainty,
-            "conflict_uncertainty": state.conflict_uncertainty,
-            "stability_uncertainty": state.stability_uncertainty,
-            "steps": state.step,
-            "num_evidence": len(state.evidence),
-            "budget_used": MAX_RETRIEVAL_BUDGET - state.remaining_budget,
-            "stop_reason": state.stop_reason,
-            "history": deepcopy(state.history),
-        })
+        records.append(
+            {
+                "question": question,
+                "gold_answers": gold_answers,
+                "final_answer": state.final_answer,
+                "final_action": state.final_action,
+                "correct": state.correct,
+                "uncertainty": state.total_uncertainty,
+                "retrieval_uncertainty": state.retrieval_uncertainty,
+                "conflict_uncertainty": state.conflict_uncertainty,
+                "stability_uncertainty": state.stability_uncertainty,
+                "steps": state.step,
+                "num_evidence": len(state.evidence),
+                "budget_used": MAX_RETRIEVAL_BUDGET - state.remaining_budget,
+                "stop_reason": state.stop_reason,
+                "history": deepcopy(state.history),
+            }
+        )
 
     metrics = evaluate_records(records)
     return records, metrics
@@ -119,20 +129,30 @@ def main():
     )
 
     sweep_settings = {
-        "A_aggressive": {
+        "D_loose_1": {
+            "answer_min_utility": 0.06,
+            "answer_max_conflict": 0.90,
+            "answer_max_total_uncertainty": 0.95,
+        },
+        "E_loose_2": {
+            "answer_min_utility": 0.08,
+            "answer_max_conflict": 0.88,
+            "answer_max_total_uncertainty": 0.92,
+        },
+        "F_balanced": {
+            "answer_min_utility": 0.10,
+            "answer_max_conflict": 0.85,
+            "answer_max_total_uncertainty": 0.90,
+        },
+        "G_selective": {
             "answer_min_utility": 0.12,
-            "answer_max_conflict": 0.75,
-            "answer_max_total_uncertainty": 0.70,
+            "answer_max_conflict": 0.82,
+            "answer_max_total_uncertainty": 0.88,
         },
-        "B_medium": {
+        "H_more_selective": {
             "answer_min_utility": 0.14,
-            "answer_max_conflict": 0.70,
-            "answer_max_total_uncertainty": 0.65,
-        },
-        "C_conservative": {
-            "answer_min_utility": 0.16,
-            "answer_max_conflict": 0.65,
-            "answer_max_total_uncertainty": 0.60,
+            "answer_max_conflict": 0.80,
+            "answer_max_total_uncertainty": 0.86,
         },
     }
 

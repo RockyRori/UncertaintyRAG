@@ -1,0 +1,10 @@
+Metric,Value
+Accuracy (overall),0.5
+Answered-only Accuracy,0.56
+AUROC,0.88
+Answer Rate,0.9
+Abstain Rate,0.1
+Avg. Steps,2.9
+Avg. Evidence Count,4.2
+Avg. Budget Used,1.2
+Overconfident Error Rate,0.0

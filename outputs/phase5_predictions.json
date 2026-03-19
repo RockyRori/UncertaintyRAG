@@ -4,13 +4,22 @@
     "gold_answers": [
       "Ovid"
     ],
-    "final_answer": "Ovid",
+    "final_answer": "ovid",
     "final_action": "ANSWER",
     "correct": 1,
-    "uncertainty": 0.567850602902212,
+    "uncertainty": 0.7548969268570614,
+    "generation_entropy": 0.8594678163715831,
+    "utility_uncertainty": 0.8184730618943492,
+    "stability_score": 0.4207772245480992,
     "retrieval_uncertainty": 0.8184730618943492,
     "conflict_uncertainty": 0.5266870635042458,
-    "stability_uncertainty": 0.0030397645188186776,
+    "stability_uncertainty": 0.5792227754519008,
+    "best_answer": "ovid",
+    "best_answer_weight": 0.4733129364957542,
+    "best_utility": 0.1815269381056508,
+    "answer_utility": 0.33150209483067666,
+    "continue_utility": 0.3892139243999715,
+    "service_utility": 0.23150209483067666,
     "steps": 2,
     "num_evidence": 5,
     "budget_used": 1,
@@ -22,9 +31,14 @@
         "last_action": null,
         "remaining_budget": 2,
         "num_evidence": 3,
+        "best_answer": "ovid",
+        "best_answer_weight": 0.6484,
         "best_utility": 0.1815,
-        "delta_uncertainty": 0.4845,
+        "delta_uncertainty": 0.2627,
         "evidence_gain": 0.1815,
+        "answer_utility": 0.3977,
+        "continue_utility": 0.6131,
+        "service_utility": 0.3977,
         "utilities": [
           0.1815,
           0.0416,
@@ -35,10 +49,13 @@
           "Cdmon's Hymn",
           "Percy Shelley"
         ],
+        "generation_entropy": 0.8082,
+        "utility_uncertainty": 0.8185,
+        "stability_score": 0.4453,
+        "total_uncertainty": 0.7373,
         "retrieval_uncertainty": 0.8185,
         "conflict_uncertainty": 0.3516,
-        "stability_uncertainty": 0.0039,
-        "total_uncertainty": 0.5155
+        "stability_uncertainty": 0.5547
       },
       {
         "step": 2,
@@ -46,9 +63,14 @@
         "last_action": "RETRIEVE_MORE",
         "remaining_budget": 1,
         "num_evidence": 5,
+        "best_answer": "ovid",
+        "best_answer_weight": 0.4733,
         "best_utility": 0.1815,
         "delta_uncertainty": 0.0,
         "evidence_gain": 0.0,
+        "answer_utility": 0.3315,
+        "continue_utility": 0.3892,
+        "service_utility": 0.2315,
         "utilities": [
           0.1815,
           0.0416,
@@ -63,10 +85,13 @@
           "Romans",
           "Virgil At Maecenas"
         ],
+        "generation_entropy": 0.8595,
+        "utility_uncertainty": 0.8185,
+        "stability_score": 0.4208,
+        "total_uncertainty": 0.7549,
         "retrieval_uncertainty": 0.8185,
         "conflict_uncertainty": 0.5267,
-        "stability_uncertainty": 0.003,
-        "total_uncertainty": 0.5679
+        "stability_uncertainty": 0.5792
       }
     ]
   },
@@ -78,12 +103,21 @@
     "final_answer": "ortho-para",
     "final_action": "ANSWER",
     "correct": 0,
-    "uncertainty": 0.5850541070392118,
+    "uncertainty": 0.8285846638928056,
+    "generation_entropy": 0.9610963932666402,
+    "utility_uncertainty": 0.8355072757799458,
+    "stability_score": 0.27129417550165136,
     "retrieval_uncertainty": 0.8355072757799458,
-    "conflict_uncertainty": 0.5569354644462579,
-    "stability_uncertainty": 0.0010991490768081525,
-    "steps": 5,
-    "num_evidence": 3,
+    "conflict_uncertainty": 0.6701701143274561,
+    "stability_uncertainty": 0.7287058244983486,
+    "best_answer": "ortho-para",
+    "best_answer_weight": 0.32982988567254395,
+    "best_utility": 0.1644927242200543,
+    "answer_utility": 0.2437210209847451,
+    "continue_utility": 0.2900046323624819,
+    "service_utility": 0.04372102098474509,
+    "steps": 4,
+    "num_evidence": 5,
     "budget_used": 2,
     "stop_reason": "policy_stop",
     "history": [
@@ -93,9 +127,14 @@
         "last_action": null,
         "remaining_budget": 2,
         "num_evidence": 3,
+        "best_answer": "ortho-para",
+        "best_answer_weight": 0.409,
         "best_utility": 0.1404,
-        "delta_uncertainty": 0.3928,
+        "delta_uncertainty": 0.0941,
         "evidence_gain": 0.1404,
+        "answer_utility": 0.2199,
+        "continue_utility": 0.6232,
+        "service_utility": 0.2199,
         "utilities": [
           0.1171,
           0.1404,
@@ -106,10 +145,13 @@
           "ortho-para",
           "carbon-hydrogen bonds"
         ],
+        "generation_entropy": 0.9822,
+        "utility_uncertainty": 0.8596,
+        "stability_score": 0.0678,
+        "total_uncertainty": 0.9059,
         "retrieval_uncertainty": 0.8596,
         "conflict_uncertainty": 0.591,
-        "stability_uncertainty": 0.0005,
-        "total_uncertainty": 0.6072
+        "stability_uncertainty": 0.9322
       },
       {
         "step": 2,
@@ -117,9 +159,14 @@
         "last_action": "RETRIEVE_MORE",
         "remaining_budget": 1,
         "num_evidence": 5,
+        "best_answer": "ortho-para",
+        "best_answer_weight": 0.2859,
         "best_utility": 0.1404,
-        "delta_uncertainty": 0.0,
+        "delta_uncertainty": 0.0404,
         "evidence_gain": 0.0,
+        "answer_utility": 0.2028,
+        "continue_utility": 0.4441,
+        "service_utility": 0.1028,
         "utilities": [
           0.1171,
           0.1404,
@@ -134,10 +181,13 @@
           "carbon",
           "protonated molecular hydrogen"
         ],
+        "generation_entropy": 0.9746,
+        "utility_uncertainty": 0.8596,
+        "stability_score": 0.1974,
+        "total_uncertainty": 0.8655,
         "retrieval_uncertainty": 0.8596,
         "conflict_uncertainty": 0.7141,
-        "stability_uncertainty": 0.0008,
-        "total_uncertainty": 0.6442
+        "stability_uncertainty": 0.8026
       },
       {
         "step": 3,
@@ -145,9 +195,14 @@
         "last_action": "RERANK",
         "remaining_budget": 1,
         "num_evidence": 3,
+        "best_answer": "ortho-para",
+        "best_answer_weight": 0.4489,
         "best_utility": 0.1645,
-        "delta_uncertainty": 0.0609,
+        "delta_uncertainty": 0.0475,
         "evidence_gain": 0.0241,
+        "answer_utility": 0.2942,
+        "continue_utility": 0.4303,
+        "service_utility": 0.1942,
         "utilities": [
           0.1645,
           0.0979,
@@ -158,20 +213,28 @@
           "hydrocarbons",
           "carbon"
         ],
+        "generation_entropy": 0.9736,
+        "utility_uncertainty": 0.8355,
+        "stability_score": 0.3151,
+        "total_uncertainty": 0.818,
         "retrieval_uncertainty": 0.8355,
         "conflict_uncertainty": 0.5511,
-        "stability_uncertainty": 0.0009,
-        "total_uncertainty": 0.5833
+        "stability_uncertainty": 0.6849
       },
       {
         "step": 4,
-        "action": "RERANK",
+        "action": "STOP",
         "last_action": "RETRIEVE_MORE",
         "remaining_budget": 0,
         "num_evidence": 5,
+        "best_answer": "ortho-para",
+        "best_answer_weight": 0.3298,
         "best_utility": 0.1645,
         "delta_uncertainty": 0.0,
         "evidence_gain": 0.0,
+        "answer_utility": 0.2437,
+        "continue_utility": 0.29,
+        "service_utility": 0.0437,
         "utilities": [
           0.1645,
           0.0979,
@@ -186,34 +249,13 @@
           "carbon-hydrogen bonds",
           "protonated molecular hydrogen"
         ],
+        "generation_entropy": 0.9611,
+        "utility_uncertainty": 0.8355,
+        "stability_score": 0.2713,
+        "total_uncertainty": 0.8286,
         "retrieval_uncertainty": 0.8355,
         "conflict_uncertainty": 0.6702,
-        "stability_uncertainty": 0.0013,
-        "total_uncertainty": 0.6191
-      },
-      {
-        "step": 5,
-        "action": "STOP",
-        "last_action": "RERANK",
-        "remaining_budget": 0,
-        "num_evidence": 3,
-        "best_utility": 0.1645,
-        "delta_uncertainty": 0.034,
-        "evidence_gain": 0.0,
-        "utilities": [
-          0.1645,
-          0.1235,
-          0.0833
-        ],
-        "candidate_answers": [
-          "ortho-para",
-          "carbon",
-          "hydrocarbons"
-        ],
-        "retrieval_uncertainty": 0.8355,
-        "conflict_uncertainty": 0.5569,
-        "stability_uncertainty": 0.0011,
-        "total_uncertainty": 0.5851
+        "stability_uncertainty": 0.7287
       }
     ]
   },
@@ -222,27 +264,41 @@
     "gold_answers": [
       "Bored"
     ],
-    "final_answer": "Bored",
+    "final_answer": "bored",
     "final_action": "ANSWER",
     "correct": 1,
-    "uncertainty": 0.4456418893446617,
+    "uncertainty": 0.6553342273227218,
+    "generation_entropy": 0.8458035688399421,
+    "utility_uncertainty": 0.6692183954153399,
+    "stability_score": 0.4947856138431219,
     "retrieval_uncertainty": 0.6692183954153399,
-    "conflict_uncertainty": 0.36172182455608737,
-    "stability_uncertainty": 0.012580721350827731,
-    "steps": 1,
-    "num_evidence": 3,
-    "budget_used": 0,
-    "stop_reason": "policy_stop",
+    "conflict_uncertainty": 0.4936269692798888,
+    "stability_uncertainty": 0.5052143861568781,
+    "best_answer": "bored",
+    "best_answer_weight": 0.5063730307201112,
+    "best_utility": 0.33078160458466016,
+    "answer_utility": 0.42503940558376035,
+    "continue_utility": 0.35962561474765864,
+    "service_utility": 0.3250394055837603,
+    "steps": 2,
+    "num_evidence": 5,
+    "budget_used": 1,
+    "stop_reason": "",
     "history": [
       {
         "step": 1,
-        "action": "STOP",
+        "action": "RETRIEVE_MORE",
         "last_action": null,
         "remaining_budget": 2,
         "num_evidence": 3,
+        "best_answer": "bored",
+        "best_answer_weight": 0.6383,
         "best_utility": 0.3308,
-        "delta_uncertainty": 0.5544,
+        "delta_uncertainty": 0.3315,
         "evidence_gain": 0.3308,
+        "answer_utility": 0.4592,
+        "continue_utility": 0.6166,
+        "service_utility": 0.4592,
         "utilities": [
           0.3308,
           0.1056,
@@ -253,10 +309,49 @@
           "fourth",
           "short"
         ],
+        "generation_entropy": 0.8213,
+        "utility_uncertainty": 0.6692,
+        "stability_score": 0.4346,
+        "total_uncertainty": 0.6685,
         "retrieval_uncertainty": 0.6692,
         "conflict_uncertainty": 0.3617,
-        "stability_uncertainty": 0.0126,
-        "total_uncertainty": 0.4456
+        "stability_uncertainty": 0.5654
+      },
+      {
+        "step": 2,
+        "action": "ANSWER",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_answer": "bored",
+        "best_answer_weight": 0.5064,
+        "best_utility": 0.3308,
+        "delta_uncertainty": 0.0131,
+        "evidence_gain": 0.0,
+        "answer_utility": 0.425,
+        "continue_utility": 0.3596,
+        "service_utility": 0.325,
+        "utilities": [
+          0.3308,
+          0.1056,
+          0.0819,
+          0.0853,
+          0.0497
+        ],
+        "candidate_answers": [
+          "Bored",
+          "fourth",
+          "short",
+          "recurring",
+          "co-producer"
+        ],
+        "generation_entropy": 0.8458,
+        "utility_uncertainty": 0.6692,
+        "stability_score": 0.4948,
+        "total_uncertainty": 0.6553,
+        "retrieval_uncertainty": 0.6692,
+        "conflict_uncertainty": 0.4936,
+        "stability_uncertainty": 0.5052
       }
     ]
   },
@@ -265,16 +360,25 @@
     "gold_answers": [
       "Bainbridge and Vashon"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "east cowes and cowes",
+    "final_action": "ANSWER",
     "correct": 0,
-    "uncertainty": 0.6145495085935296,
+    "uncertainty": 0.8568085941142864,
+    "generation_entropy": 0.9854117728663572,
+    "utility_uncertainty": 0.8799816049392137,
+    "stability_score": 0.26754854309530596,
     "retrieval_uncertainty": 0.8799816049392137,
     "conflict_uncertainty": 0.5816604722445056,
-    "stability_uncertainty": 0.0003028222528556133,
-    "steps": 5,
+    "stability_uncertainty": 0.732451456904694,
+    "best_answer": "east cowes and cowes",
+    "best_answer_weight": 0.41833952775549443,
+    "best_utility": 0.1200183950607863,
+    "answer_utility": 0.2539368211108381,
+    "continue_utility": 0.42667216745507885,
+    "service_utility": 0.1539368211108381,
+    "steps": 3,
     "num_evidence": 3,
-    "budget_used": 2,
+    "budget_used": 1,
     "stop_reason": "policy_stop",
     "history": [
       {
@@ -283,9 +387,14 @@
         "last_action": null,
         "remaining_budget": 2,
         "num_evidence": 3,
+        "best_answer": "east cowes and cowes",
+        "best_answer_weight": 0.4183,
         "best_utility": 0.12,
-        "delta_uncertainty": 0.3855,
+        "delta_uncertainty": 0.0982,
         "evidence_gain": 0.12,
+        "answer_utility": 0.2239,
+        "continue_utility": 0.6136,
+        "service_utility": 0.2239,
         "utilities": [
           0.12,
           0.0863,
@@ -296,10 +405,13 @@
           "France (Roscoff) and Spain (Santander)",
           "Bergen and Stavanger"
         ],
+        "generation_entropy": 0.9854,
+        "utility_uncertainty": 0.88,
+        "stability_score": 0.1175,
+        "total_uncertainty": 0.9018,
         "retrieval_uncertainty": 0.88,
         "conflict_uncertainty": 0.5817,
-        "stability_uncertainty": 0.0003,
-        "total_uncertainty": 0.6145
+        "stability_uncertainty": 0.8825
       },
       {
         "step": 2,
@@ -307,9 +419,14 @@
         "last_action": "RETRIEVE_MORE",
         "remaining_budget": 1,
         "num_evidence": 5,
+        "best_answer": "east cowes and cowes",
+        "best_answer_weight": 0.3123,
         "best_utility": 0.12,
-        "delta_uncertainty": 0.0,
+        "delta_uncertainty": 0.0405,
         "evidence_gain": 0.0,
+        "answer_utility": 0.2109,
+        "continue_utility": 0.4427,
+        "service_utility": 0.1109,
         "utilities": [
           0.12,
           0.0863,
@@ -324,20 +441,28 @@
           "Bellingham, Washington and Prince Rupert, British Columbia",
           "translunar"
         ],
+        "generation_entropy": 0.9631,
+        "utility_uncertainty": 0.88,
+        "stability_score": 0.2377,
+        "total_uncertainty": 0.8613,
         "retrieval_uncertainty": 0.88,
         "conflict_uncertainty": 0.6877,
-        "stability_uncertainty": 0.0007,
-        "total_uncertainty": 0.6464
+        "stability_uncertainty": 0.7623
       },
       {
         "step": 3,
-        "action": "RETRIEVE_MORE",
+        "action": "STOP",
         "last_action": "RERANK",
         "remaining_budget": 1,
         "num_evidence": 3,
+        "best_answer": "east cowes and cowes",
+        "best_answer_weight": 0.4183,
         "best_utility": 0.12,
-        "delta_uncertainty": 0.0319,
+        "delta_uncertainty": 0.0045,
         "evidence_gain": 0.0,
+        "answer_utility": 0.2539,
+        "continue_utility": 0.4267,
+        "service_utility": 0.1539,
         "utilities": [
           0.12,
           0.0863,
@@ -348,62 +473,13 @@
           "France (Roscoff) and Spain (Santander)",
           "Bergen and Stavanger"
         ],
+        "generation_entropy": 0.9854,
+        "utility_uncertainty": 0.88,
+        "stability_score": 0.2675,
+        "total_uncertainty": 0.8568,
         "retrieval_uncertainty": 0.88,
         "conflict_uncertainty": 0.5817,
-        "stability_uncertainty": 0.0003,
-        "total_uncertainty": 0.6145
-      },
-      {
-        "step": 4,
-        "action": "RERANK",
-        "last_action": "RETRIEVE_MORE",
-        "remaining_budget": 0,
-        "num_evidence": 5,
-        "best_utility": 0.12,
-        "delta_uncertainty": 0.0,
-        "evidence_gain": 0.0,
-        "utilities": [
-          0.12,
-          0.0863,
-          0.0806,
-          0.0491,
-          0.0484
-        ],
-        "candidate_answers": [
-          "East Cowes and Cowes",
-          "France (Roscoff) and Spain (Santander)",
-          "Bergen and Stavanger",
-          "Bellingham, Washington and Prince Rupert, British Columbia",
-          "translunar"
-        ],
-        "retrieval_uncertainty": 0.88,
-        "conflict_uncertainty": 0.6877,
-        "stability_uncertainty": 0.0007,
-        "total_uncertainty": 0.6464
-      },
-      {
-        "step": 5,
-        "action": "STOP",
-        "last_action": "RERANK",
-        "remaining_budget": 0,
-        "num_evidence": 3,
-        "best_utility": 0.12,
-        "delta_uncertainty": 0.0319,
-        "evidence_gain": 0.0,
-        "utilities": [
-          0.12,
-          0.0863,
-          0.0806
-        ],
-        "candidate_answers": [
-          "East Cowes and Cowes",
-          "France (Roscoff) and Spain (Santander)",
-          "Bergen and Stavanger"
-        ],
-        "retrieval_uncertainty": 0.88,
-        "conflict_uncertainty": 0.5817,
-        "stability_uncertainty": 0.0003,
-        "total_uncertainty": 0.6145
+        "stability_uncertainty": 0.7325
       }
     ]
   },
@@ -412,15 +488,24 @@
     "gold_answers": [
       "Mac Mini and Mac Pro"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
-    "uncertainty": 0.5931938950345588,
+    "final_answer": "mac mini and mac pro",
+    "final_action": "ANSWER",
+    "correct": 1,
+    "uncertainty": 0.8440777631254113,
+    "generation_entropy": 0.9649253692200718,
+    "utility_uncertainty": 0.8686820918306755,
+    "stability_score": 0.27749452211313586,
     "retrieval_uncertainty": 0.8686820918306755,
-    "conflict_uncertainty": 0.528995924247448,
-    "stability_uncertainty": 0.0007703592249329909,
-    "steps": 5,
-    "num_evidence": 3,
+    "conflict_uncertainty": 0.6682212172567841,
+    "stability_uncertainty": 0.7225054778868641,
+    "best_answer": "mac mini and mac pro",
+    "best_answer_weight": 0.3317787827432159,
+    "best_utility": 0.13131790816932448,
+    "answer_utility": 0.23071453705894876,
+    "continue_utility": 0.2954272170938939,
+    "service_utility": 0.03071453705894875,
+    "steps": 4,
+    "num_evidence": 5,
     "budget_used": 2,
     "stop_reason": "policy_stop",
     "history": [
@@ -430,9 +515,14 @@
         "last_action": null,
         "remaining_budget": 2,
         "num_evidence": 3,
+        "best_answer": "mac mini and mac pro",
+        "best_answer_weight": 0.471,
         "best_utility": 0.1313,
-        "delta_uncertainty": 0.4068,
+        "delta_uncertainty": 0.1278,
         "evidence_gain": 0.1313,
+        "answer_utility": 0.2601,
+        "continue_utility": 0.6078,
+        "service_utility": 0.2601,
         "utilities": [
           0.1313,
           0.0809,
@@ -443,10 +533,13 @@
           "Beringia",
           "Mac OS 8"
         ],
+        "generation_entropy": 0.9609,
+        "utility_uncertainty": 0.8687,
+        "stability_score": 0.181,
+        "total_uncertainty": 0.8722,
         "retrieval_uncertainty": 0.8687,
         "conflict_uncertainty": 0.529,
-        "stability_uncertainty": 0.0008,
-        "total_uncertainty": 0.5932
+        "stability_uncertainty": 0.819
       },
       {
         "step": 2,
@@ -454,9 +547,14 @@
         "last_action": "RETRIEVE_MORE",
         "remaining_budget": 1,
         "num_evidence": 5,
+        "best_answer": "mac mini and mac pro",
+        "best_answer_weight": 0.3318,
         "best_utility": 0.1313,
-        "delta_uncertainty": 0.0,
+        "delta_uncertainty": 0.0281,
         "evidence_gain": 0.0,
+        "answer_utility": 0.2307,
+        "continue_utility": 0.4317,
+        "service_utility": 0.1307,
         "utilities": [
           0.1313,
           0.0809,
@@ -471,10 +569,13 @@
           "IBM",
           "Macintosh 128k"
         ],
+        "generation_entropy": 0.9649,
+        "utility_uncertainty": 0.8687,
+        "stability_score": 0.2775,
+        "total_uncertainty": 0.8441,
         "retrieval_uncertainty": 0.8687,
         "conflict_uncertainty": 0.6682,
-        "stability_uncertainty": 0.0008,
-        "total_uncertainty": 0.635
+        "stability_uncertainty": 0.7225
       },
       {
         "step": 3,
@@ -482,9 +583,14 @@
         "last_action": "RERANK",
         "remaining_budget": 1,
         "num_evidence": 3,
+        "best_answer": "mac mini and mac pro",
+        "best_answer_weight": 0.471,
         "best_utility": 0.1313,
-        "delta_uncertainty": 0.0418,
+        "delta_uncertainty": 0.0169,
         "evidence_gain": 0.0,
+        "answer_utility": 0.2901,
+        "continue_utility": 0.4213,
+        "service_utility": 0.1901,
         "utilities": [
           0.1313,
           0.0809,
@@ -495,20 +601,28 @@
           "Beringia",
           "Mac OS 8"
         ],
+        "generation_entropy": 0.9609,
+        "utility_uncertainty": 0.8687,
+        "stability_score": 0.331,
+        "total_uncertainty": 0.8272,
         "retrieval_uncertainty": 0.8687,
         "conflict_uncertainty": 0.529,
-        "stability_uncertainty": 0.0008,
-        "total_uncertainty": 0.5932
+        "stability_uncertainty": 0.669
       },
       {
         "step": 4,
-        "action": "RERANK",
+        "action": "STOP",
         "last_action": "RETRIEVE_MORE",
         "remaining_budget": 0,
         "num_evidence": 5,
+        "best_answer": "mac mini and mac pro",
+        "best_answer_weight": 0.3318,
         "best_utility": 0.1313,
         "delta_uncertainty": 0.0,
         "evidence_gain": 0.0,
+        "answer_utility": 0.2307,
+        "continue_utility": 0.2954,
+        "service_utility": 0.0307,
         "utilities": [
           0.1313,
           0.0809,
@@ -523,34 +637,13 @@
           "IBM",
           "Macintosh 128k"
         ],
+        "generation_entropy": 0.9649,
+        "utility_uncertainty": 0.8687,
+        "stability_score": 0.2775,
+        "total_uncertainty": 0.8441,
         "retrieval_uncertainty": 0.8687,
         "conflict_uncertainty": 0.6682,
-        "stability_uncertainty": 0.0008,
-        "total_uncertainty": 0.635
-      },
-      {
-        "step": 5,
-        "action": "STOP",
-        "last_action": "RERANK",
-        "remaining_budget": 0,
-        "num_evidence": 3,
-        "best_utility": 0.1313,
-        "delta_uncertainty": 0.0418,
-        "evidence_gain": 0.0,
-        "utilities": [
-          0.1313,
-          0.0809,
-          0.0666
-        ],
-        "candidate_answers": [
-          "Mac Mini and Mac Pro",
-          "Beringia",
-          "Mac OS 8"
-        ],
-        "retrieval_uncertainty": 0.8687,
-        "conflict_uncertainty": 0.529,
-        "stability_uncertainty": 0.0008,
-        "total_uncertainty": 0.5932
+        "stability_uncertainty": 0.7225
       }
     ]
   },
@@ -559,16 +652,25 @@
     "gold_answers": [
       "still image streaming"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "live and still image streaming",
+    "final_action": "ANSWER",
     "correct": 0,
-    "uncertainty": 0.6465263699216701,
-    "retrieval_uncertainty": 0.9210395629615976,
-    "conflict_uncertainty": 0.6198972242314413,
-    "stability_uncertainty": 0.00018710585719458172,
-    "steps": 5,
+    "uncertainty": 0.8970384490143701,
+    "generation_entropy": 0.9932884943642787,
+    "utility_uncertainty": 0.9211263230486898,
+    "stability_score": 0.20727470460943506,
+    "retrieval_uncertainty": 0.9211263230486898,
+    "conflict_uncertainty": 0.6145934286510841,
+    "stability_uncertainty": 0.7927252953905649,
+    "best_answer": "live and still image streaming",
+    "best_answer_weight": 0.38540657134891587,
+    "best_utility": 0.07887367695131021,
+    "answer_utility": 0.21184039552209716,
+    "continue_utility": 0.43896345715502955,
+    "service_utility": 0.11184039552209715,
+    "steps": 3,
     "num_evidence": 3,
-    "budget_used": 2,
+    "budget_used": 1,
     "stop_reason": "policy_stop",
     "history": [
       {
@@ -577,9 +679,14 @@
         "last_action": null,
         "remaining_budget": 2,
         "num_evidence": 3,
+        "best_answer": "live and still image streaming",
+        "best_answer_weight": 0.4617,
         "best_utility": 0.0789,
-        "delta_uncertainty": 0.3779,
+        "delta_uncertainty": 0.0852,
         "evidence_gain": 0.0789,
+        "answer_utility": 0.2208,
+        "continue_utility": 0.6043,
+        "service_utility": 0.2208,
         "utilities": [
           0.0789,
           0.0586,
@@ -590,10 +697,13 @@
           "diagnosis, consulting, transmission of medical images",
           "calling or conferencing on a one-on-one, one-to-many or many-to-many basis for personal, business,"
         ],
+        "generation_entropy": 0.9491,
+        "utility_uncertainty": 0.9211,
+        "stability_score": 0.1185,
+        "total_uncertainty": 0.9148,
         "retrieval_uncertainty": 0.9211,
         "conflict_uncertainty": 0.5383,
-        "stability_uncertainty": 0.0003,
-        "total_uncertainty": 0.6221
+        "stability_uncertainty": 0.8815
       },
       {
         "step": 2,
@@ -601,9 +711,14 @@
         "last_action": "RETRIEVE_MORE",
         "remaining_budget": 1,
         "num_evidence": 5,
+        "best_answer": "live and still image streaming",
+        "best_answer_weight": 0.2899,
         "best_utility": 0.0789,
-        "delta_uncertainty": 0.0,
+        "delta_uncertainty": 0.0265,
         "evidence_gain": 0.0,
+        "answer_utility": 0.1818,
+        "continue_utility": 0.4465,
+        "service_utility": 0.0818,
         "utilities": [
           0.0789,
           0.0586,
@@ -618,20 +733,28 @@
           "chat programs",
           "VoIP"
         ],
+        "generation_entropy": 0.9753,
+        "utility_uncertainty": 0.9211,
+        "stability_score": 0.2244,
+        "total_uncertainty": 0.8883,
         "retrieval_uncertainty": 0.9211,
         "conflict_uncertainty": 0.7101,
-        "stability_uncertainty": 0.0002,
-        "total_uncertainty": 0.6736
+        "stability_uncertainty": 0.7756
       },
       {
         "step": 3,
-        "action": "RETRIEVE_MORE",
+        "action": "STOP",
         "last_action": "RERANK",
         "remaining_budget": 1,
         "num_evidence": 3,
+        "best_answer": "live and still image streaming",
+        "best_answer_weight": 0.3854,
         "best_utility": 0.0789,
-        "delta_uncertainty": 0.0287,
+        "delta_uncertainty": 0.0,
         "evidence_gain": 0.0,
+        "answer_utility": 0.2118,
+        "continue_utility": 0.439,
+        "service_utility": 0.1118,
         "utilities": [
           0.0789,
           0.0586,
@@ -642,62 +765,13 @@
           "diagnosis, consulting, transmission of medical images",
           "chat programs"
         ],
+        "generation_entropy": 0.9933,
+        "utility_uncertainty": 0.9211,
+        "stability_score": 0.2073,
+        "total_uncertainty": 0.897,
         "retrieval_uncertainty": 0.9211,
         "conflict_uncertainty": 0.6146,
-        "stability_uncertainty": 0.0001,
-        "total_uncertainty": 0.645
-      },
-      {
-        "step": 4,
-        "action": "RERANK",
-        "last_action": "RETRIEVE_MORE",
-        "remaining_budget": 0,
-        "num_evidence": 5,
-        "best_utility": 0.0789,
-        "delta_uncertainty": 0.0,
-        "evidence_gain": 0.0,
-        "utilities": [
-          0.0789,
-          0.0586,
-          0.0672,
-          0.0284,
-          0.0441
-        ],
-        "candidate_answers": [
-          "live and still image streaming",
-          "diagnosis, consulting, transmission of medical images",
-          "chat programs",
-          "calling or conferencing on a one-on-one, one-to-many or many-to-many basis for personal, business,",
-          "VoIP"
-        ],
-        "retrieval_uncertainty": 0.9211,
-        "conflict_uncertainty": 0.7154,
-        "stability_uncertainty": 0.0003,
-        "total_uncertainty": 0.6752
-      },
-      {
-        "step": 5,
-        "action": "STOP",
-        "last_action": "RERANK",
-        "remaining_budget": 0,
-        "num_evidence": 3,
-        "best_utility": 0.079,
-        "delta_uncertainty": 0.0287,
-        "evidence_gain": 0.0001,
-        "utilities": [
-          0.0789,
-          0.079,
-          0.0499
-        ],
-        "candidate_answers": [
-          "live and still image streaming",
-          "chat programs",
-          "diagnosis, consulting, transmission of medical images"
-        ],
-        "retrieval_uncertainty": 0.921,
-        "conflict_uncertainty": 0.6199,
-        "stability_uncertainty": 0.0002,
-        "total_uncertainty": 0.6465
+        "stability_uncertainty": 0.7927
       }
     ]
   },
@@ -706,13 +780,22 @@
     "gold_answers": [
       "dialetti"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "dialects",
+    "final_action": "ANSWER",
     "correct": 0,
-    "uncertainty": 0.594438188215262,
+    "uncertainty": 0.7953987688569126,
+    "generation_entropy": 0.9190045201592596,
+    "utility_uncertainty": 0.8681377507787585,
+    "stability_score": 0.4082367018810621,
     "retrieval_uncertainty": 0.8681377507787585,
     "conflict_uncertainty": 0.5343340390978599,
-    "stability_uncertainty": 0.0003455054826235133,
+    "stability_uncertainty": 0.5917632981189379,
+    "best_answer": "dialects",
+    "best_answer_weight": 0.4656659609021401,
+    "best_utility": 0.13186224922124146,
+    "answer_utility": 0.3039684388415201,
+    "continue_utility": 0.40410313562805167,
+    "service_utility": 0.20396843884152008,
     "steps": 2,
     "num_evidence": 5,
     "budget_used": 1,
@@ -724,9 +807,14 @@
         "last_action": null,
         "remaining_budget": 2,
         "num_evidence": 3,
+        "best_answer": "dialects",
+        "best_answer_weight": 0.6918,
         "best_utility": 0.1319,
-        "delta_uncertainty": 0.4734,
+        "delta_uncertainty": 0.2028,
         "evidence_gain": 0.1319,
+        "answer_utility": 0.3782,
+        "continue_utility": 0.6101,
+        "service_utility": 0.3782,
         "utilities": [
           0.1319,
           0.1006,
@@ -737,10 +825,13 @@
           "Dialects",
           "standard Italian"
         ],
+        "generation_entropy": 0.8911,
+        "utility_uncertainty": 0.8681,
+        "stability_score": 0.3837,
+        "total_uncertainty": 0.7972,
         "retrieval_uncertainty": 0.8681,
         "conflict_uncertainty": 0.3082,
-        "stability_uncertainty": 0.0002,
-        "total_uncertainty": 0.5266
+        "stability_uncertainty": 0.6163
       },
       {
         "step": 2,
@@ -748,9 +839,14 @@
         "last_action": "RETRIEVE_MORE",
         "remaining_budget": 1,
         "num_evidence": 5,
+        "best_answer": "dialects",
+        "best_answer_weight": 0.4657,
         "best_utility": 0.1319,
-        "delta_uncertainty": 0.0,
+        "delta_uncertainty": 0.0018,
         "evidence_gain": 0.0,
+        "answer_utility": 0.304,
+        "continue_utility": 0.4041,
+        "service_utility": 0.204,
         "utilities": [
           0.1319,
           0.1006,
@@ -765,10 +861,13 @@
           "Spanish",
           "dialects of standard Italian"
         ],
+        "generation_entropy": 0.919,
+        "utility_uncertainty": 0.8681,
+        "stability_score": 0.4082,
+        "total_uncertainty": 0.7954,
         "retrieval_uncertainty": 0.8681,
         "conflict_uncertainty": 0.5343,
-        "stability_uncertainty": 0.0003,
-        "total_uncertainty": 0.5944
+        "stability_uncertainty": 0.5918
       }
     ]
   },
@@ -780,13 +879,22 @@
     "final_answer": "movie production",
     "final_action": "ANSWER",
     "correct": 1,
-    "uncertainty": 0.572839881784266,
+    "uncertainty": 0.8233622512641323,
+    "generation_entropy": 0.9474245806894022,
+    "utility_uncertainty": 0.8184606670479003,
+    "stability_score": 0.2511766613256613,
     "retrieval_uncertainty": 0.8184606670479003,
     "conflict_uncertainty": 0.5440892119991289,
-    "stability_uncertainty": 0.0019139233028856192,
-    "steps": 5,
+    "stability_uncertainty": 0.7488233386743387,
+    "best_answer": "movie production",
+    "best_answer_weight": 0.45591078800087115,
+    "best_utility": 0.1815393329520997,
+    "answer_utility": 0.29149680789388205,
+    "continue_utility": 0.4131767879424463,
+    "service_utility": 0.19149680789388204,
+    "steps": 3,
     "num_evidence": 3,
-    "budget_used": 2,
+    "budget_used": 1,
     "stop_reason": "policy_stop",
     "history": [
       {
@@ -795,9 +903,14 @@
         "last_action": null,
         "remaining_budget": 2,
         "num_evidence": 3,
+        "best_answer": "movie production",
+        "best_answer_weight": 0.5062,
         "best_utility": 0.1815,
-        "delta_uncertainty": 0.4421,
+        "delta_uncertainty": 0.1596,
         "evidence_gain": 0.1815,
+        "answer_utility": 0.2932,
+        "continue_utility": 0.6168,
+        "service_utility": 0.2932,
         "utilities": [
           0.1815,
           0.057,
@@ -808,10 +921,13 @@
           "Universal Studios",
           "NBC Universal"
         ],
+        "generation_entropy": 0.9133,
+        "utility_uncertainty": 0.8185,
+        "stability_score": 0.1715,
+        "total_uncertainty": 0.8404,
         "retrieval_uncertainty": 0.8185,
         "conflict_uncertainty": 0.4938,
-        "stability_uncertainty": 0.0026,
-        "total_uncertainty": 0.5579
+        "stability_uncertainty": 0.8285
       },
       {
         "step": 2,
@@ -819,9 +935,14 @@
         "last_action": "RETRIEVE_MORE",
         "remaining_budget": 1,
         "num_evidence": 5,
+        "best_answer": "movie production",
+        "best_answer_weight": 0.3761,
         "best_utility": 0.1815,
-        "delta_uncertainty": 0.0,
+        "delta_uncertainty": 0.0288,
         "evidence_gain": 0.0,
+        "answer_utility": 0.2688,
+        "continue_utility": 0.4206,
+        "service_utility": 0.1688,
         "utilities": [
           0.1815,
           0.057,
@@ -836,72 +957,28 @@
           "production company",
           "digital distribution"
         ],
+        "generation_entropy": 0.928,
+        "utility_uncertainty": 0.8185,
+        "stability_score": 0.2774,
+        "total_uncertainty": 0.8116,
         "retrieval_uncertainty": 0.8185,
         "conflict_uncertainty": 0.6239,
-        "stability_uncertainty": 0.0023,
-        "total_uncertainty": 0.5969
+        "stability_uncertainty": 0.7226
       },
       {
         "step": 3,
-        "action": "RETRIEVE_MORE",
+        "action": "STOP",
         "last_action": "RERANK",
         "remaining_budget": 1,
         "num_evidence": 3,
-        "best_utility": 0.1815,
-        "delta_uncertainty": 0.024,
-        "evidence_gain": 0.0,
-        "utilities": [
-          0.1815,
-          0.1413,
-          0.0754
-        ],
-        "candidate_answers": [
-          "movie production",
-          "NBC Universal",
-          "production company"
-        ],
-        "retrieval_uncertainty": 0.8185,
-        "conflict_uncertainty": 0.5441,
-        "stability_uncertainty": 0.0019,
-        "total_uncertainty": 0.5728
-      },
-      {
-        "step": 4,
-        "action": "RERANK",
-        "last_action": "RETRIEVE_MORE",
-        "remaining_budget": 0,
-        "num_evidence": 5,
+        "best_answer": "movie production",
+        "best_answer_weight": 0.4559,
         "best_utility": 0.1815,
         "delta_uncertainty": 0.0,
         "evidence_gain": 0.0,
-        "utilities": [
-          0.1815,
-          0.1413,
-          0.0754,
-          0.0413,
-          0.06
-        ],
-        "candidate_answers": [
-          "movie production",
-          "NBC Universal",
-          "production company",
-          "Universal Studios",
-          "digital distribution"
-        ],
-        "retrieval_uncertainty": 0.8185,
-        "conflict_uncertainty": 0.6366,
-        "stability_uncertainty": 0.0028,
-        "total_uncertainty": 0.6008
-      },
-      {
-        "step": 5,
-        "action": "STOP",
-        "last_action": "RERANK",
-        "remaining_budget": 0,
-        "num_evidence": 3,
-        "best_utility": 0.1815,
-        "delta_uncertainty": 0.0279,
-        "evidence_gain": 0.0,
+        "answer_utility": 0.2915,
+        "continue_utility": 0.4132,
+        "service_utility": 0.1915,
         "utilities": [
           0.1815,
           0.1413,
@@ -912,10 +989,13 @@
           "NBC Universal",
           "production company"
         ],
+        "generation_entropy": 0.9474,
+        "utility_uncertainty": 0.8185,
+        "stability_score": 0.2512,
+        "total_uncertainty": 0.8234,
         "retrieval_uncertainty": 0.8185,
         "conflict_uncertainty": 0.5441,
-        "stability_uncertainty": 0.0019,
-        "total_uncertainty": 0.5728
+        "stability_uncertainty": 0.7488
       }
     ]
   },
@@ -924,13 +1004,22 @@
     "gold_answers": [
       "Oskar Schindler"
     ],
-    "final_answer": "Oskar Schindler",
+    "final_answer": "oskar schindler",
     "final_action": "ANSWER",
     "correct": 1,
-    "uncertainty": 0.5346727617496428,
+    "uncertainty": 0.7367861171670285,
+    "generation_entropy": 0.8603239645735096,
+    "utility_uncertainty": 0.7722932672018801,
+    "stability_score": 0.4047510311620447,
     "retrieval_uncertainty": 0.7722932672018801,
     "conflict_uncertainty": 0.4917834806548931,
-    "stability_uncertainty": 0.004955419761174798,
+    "stability_uncertainty": 0.5952489688379553,
+    "best_answer": "oskar schindler",
+    "best_answer_weight": 0.5082165193451069,
+    "best_utility": 0.22770673279811993,
+    "answer_utility": 0.3612940177623503,
+    "continue_utility": 0.38287514100845993,
+    "service_utility": 0.2612940177623503,
     "steps": 2,
     "num_evidence": 5,
     "budget_used": 1,
@@ -942,9 +1031,14 @@
         "last_action": null,
         "remaining_budget": 2,
         "num_evidence": 3,
+        "best_answer": "oskar schindler",
+        "best_answer_weight": 0.6628,
         "best_utility": 0.2277,
-        "delta_uncertainty": 0.5114,
+        "delta_uncertainty": 0.2912,
         "evidence_gain": 0.2277,
+        "answer_utility": 0.4236,
+        "continue_utility": 0.6146,
+        "service_utility": 0.4236,
         "utilities": [
           0.2277,
           0.0746,
@@ -955,10 +1049,13 @@
           "Steven_Spielberg Spielberg",
           "Janusz Kamiski"
         ],
+        "generation_entropy": 0.7817,
+        "utility_uncertainty": 0.7723,
+        "stability_score": 0.4457,
+        "total_uncertainty": 0.7088,
         "retrieval_uncertainty": 0.7723,
         "conflict_uncertainty": 0.3372,
-        "stability_uncertainty": 0.0066,
-        "total_uncertainty": 0.4886
+        "stability_uncertainty": 0.5543
       },
       {
         "step": 2,
@@ -966,9 +1063,14 @@
         "last_action": "RETRIEVE_MORE",
         "remaining_budget": 1,
         "num_evidence": 5,
+        "best_answer": "oskar schindler",
+        "best_answer_weight": 0.5082,
         "best_utility": 0.2277,
         "delta_uncertainty": 0.0,
         "evidence_gain": 0.0,
+        "answer_utility": 0.3613,
+        "continue_utility": 0.3829,
+        "service_utility": 0.2613,
         "utilities": [
           0.2277,
           0.0746,
@@ -983,10 +1085,13 @@
           "Steven_Spielberg",
           "Steven_Spielberg Spielberg"
         ],
+        "generation_entropy": 0.8603,
+        "utility_uncertainty": 0.7723,
+        "stability_score": 0.4048,
+        "total_uncertainty": 0.7368,
         "retrieval_uncertainty": 0.7723,
         "conflict_uncertainty": 0.4918,
-        "stability_uncertainty": 0.005,
-        "total_uncertainty": 0.5347
+        "stability_uncertainty": 0.5952
       }
     ]
   },
@@ -995,16 +1100,25 @@
     "gold_answers": [
       "1988"
     ],
-    "final_answer": "2008",
-    "final_action": "ANSWER",
+    "final_answer": "ABSTAIN",
+    "final_action": "ABSTAIN",
     "correct": 0,
-    "uncertainty": 0.6124568934586475,
+    "uncertainty": 0.919030565763288,
+    "generation_entropy": 0.9919431943905017,
+    "utility_uncertainty": 0.8451949231664995,
+    "stability_score": 0.0065184489935398715,
     "retrieval_uncertainty": 0.8451949231664995,
     "conflict_uncertainty": 0.6326397976227154,
-    "stability_uncertainty": 0.0003374629429160042,
-    "steps": 2,
+    "stability_uncertainty": 0.9934815510064601,
+    "best_answer": "2008",
+    "best_answer_weight": 0.36736020237728456,
+    "best_utility": 0.1548050768335006,
+    "answer_utility": 0.19954204520583285,
+    "continue_utility": 0.4466606980171508,
+    "service_utility": 0.09954204520583285,
+    "steps": 4,
     "num_evidence": 3,
-    "budget_used": 0,
+    "budget_used": 1,
     "stop_reason": "policy_stop",
     "history": [
       {
@@ -1013,9 +1127,14 @@
         "last_action": null,
         "remaining_budget": 2,
         "num_evidence": 3,
+        "best_answer": "2008",
+        "best_answer_weight": 0.3674,
         "best_utility": 0.1548,
-        "delta_uncertainty": 0.3875,
+        "delta_uncertainty": 0.081,
         "evidence_gain": 0.1548,
+        "answer_utility": 0.1995,
+        "continue_utility": 0.6336,
+        "service_utility": 0.1995,
         "utilities": [
           0.1548,
           0.1521,
@@ -1026,20 +1145,28 @@
           "1988",
           "2006"
         ],
+        "generation_entropy": 0.9919,
+        "utility_uncertainty": 0.8452,
+        "stability_score": 0.0065,
+        "total_uncertainty": 0.919,
         "retrieval_uncertainty": 0.8452,
         "conflict_uncertainty": 0.6326,
-        "stability_uncertainty": 0.0003,
-        "total_uncertainty": 0.6125
+        "stability_uncertainty": 0.9935
       },
       {
         "step": 2,
-        "action": "STOP",
+        "action": "RETRIEVE_MORE",
         "last_action": "RERANK",
         "remaining_budget": 2,
         "num_evidence": 3,
+        "best_answer": "2008",
+        "best_answer_weight": 0.3674,
         "best_utility": 0.1548,
-        "delta_uncertainty": 0.0,
+        "delta_uncertainty": 0.045,
         "evidence_gain": 0.0,
+        "answer_utility": 0.2295,
+        "continue_utility": 0.5739,
+        "service_utility": 0.2295,
         "utilities": [
           0.1548,
           0.1521,
@@ -1050,10 +1177,81 @@
           "1988",
           "2006"
         ],
+        "generation_entropy": 0.9919,
+        "utility_uncertainty": 0.8452,
+        "stability_score": 0.1565,
+        "total_uncertainty": 0.874,
         "retrieval_uncertainty": 0.8452,
         "conflict_uncertainty": 0.6326,
-        "stability_uncertainty": 0.0003,
-        "total_uncertainty": 0.6125
+        "stability_uncertainty": 0.8435
+      },
+      {
+        "step": 3,
+        "action": "RERANK",
+        "last_action": "RETRIEVE_MORE",
+        "remaining_budget": 1,
+        "num_evidence": 5,
+        "best_answer": "2006",
+        "best_answer_weight": 0.3614,
+        "best_utility": 0.1548,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "answer_utility": 0.2154,
+        "continue_utility": 0.4343,
+        "service_utility": 0.1154,
+        "utilities": [
+          0.1548,
+          0.1521,
+          0.1145,
+          0.0964,
+          0.0659
+        ],
+        "candidate_answers": [
+          "2008",
+          "1988",
+          "2006",
+          "2006",
+          "2004"
+        ],
+        "generation_entropy": 0.9497,
+        "utility_uncertainty": 0.8452,
+        "stability_score": 0.0962,
+        "total_uncertainty": 0.8837,
+        "retrieval_uncertainty": 0.8452,
+        "conflict_uncertainty": 0.6386,
+        "stability_uncertainty": 0.9038
+      },
+      {
+        "step": 4,
+        "action": "STOP",
+        "last_action": "RERANK",
+        "remaining_budget": 1,
+        "num_evidence": 3,
+        "best_answer": "2008",
+        "best_answer_weight": 0.3674,
+        "best_utility": 0.1548,
+        "delta_uncertainty": 0.0,
+        "evidence_gain": 0.0,
+        "answer_utility": 0.1995,
+        "continue_utility": 0.4467,
+        "service_utility": 0.0995,
+        "utilities": [
+          0.1548,
+          0.1521,
+          0.1145
+        ],
+        "candidate_answers": [
+          "2008",
+          "1988",
+          "2006"
+        ],
+        "generation_entropy": 0.9919,
+        "utility_uncertainty": 0.8452,
+        "stability_score": 0.0065,
+        "total_uncertainty": 0.919,
+        "retrieval_uncertainty": 0.8452,
+        "conflict_uncertainty": 0.6326,
+        "stability_uncertainty": 0.9935
       }
     ]
   }

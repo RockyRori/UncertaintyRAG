@@ -80,9 +80,9 @@ HIDDEN_DIM = 256
 # =========================================================
 # Uncertainty weighting
 # =========================================================
-UNCERTAINTY_ALPHA = 0.5
-UNCERTAINTY_BETA = 0.3
-UNCERTAINTY_GAMMA = 0.2
+UNCERTAINTY_ALPHA = 0.2
+UNCERTAINTY_BETA = 0.5
+UNCERTAINTY_GAMMA = 0.3
 
 # =========================================================
 # Generator config

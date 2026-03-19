@@ -7,10 +7,10 @@
     "final_answer": "Romans",
     "final_action": "ANSWER",
     "correct": 0,
-    "uncertainty": 0.5522603481716718,
+    "uncertainty": 0.8266467645583647,
     "retrieval_uncertainty": 0.8184730618943492,
     "conflict_uncertainty": 0.4749982160399132,
-    "stability_uncertainty": 0.002621762062616301,
+    "stability_uncertainty": 0.7855859833237362,
     "steps": 2,
     "num_evidence": 3,
     "budget_used": 0,
@@ -37,8 +37,8 @@
         ],
         "retrieval_uncertainty": 0.8185,
         "conflict_uncertainty": 0.5267,
-        "stability_uncertainty": 0.003,
-        "total_uncertainty": 0.5679
+        "stability_uncertainty": 0.7292,
+        "total_uncertainty": 0.7999
       },
       {
         "step": 2,
@@ -57,8 +57,8 @@
         ],
         "retrieval_uncertainty": 0.8185,
         "conflict_uncertainty": 0.475,
-        "stability_uncertainty": 0.0026,
-        "total_uncertainty": 0.5523
+        "stability_uncertainty": 0.7856,
+        "total_uncertainty": 0.8266
       }
     ]
   },
@@ -70,10 +70,10 @@
     "final_answer": "a hydrogen economy",
     "final_action": "ANSWER",
     "correct": 0,
-    "uncertainty": 0.5832581041763689,
+    "uncertainty": 0.8629541879920044,
     "retrieval_uncertainty": 0.8355072757799458,
     "conflict_uncertainty": 0.5510795193185201,
-    "stability_uncertainty": 0.0009030524542005311,
+    "stability_uncertainty": 0.8349105343833982,
     "steps": 2,
     "num_evidence": 3,
     "budget_used": 0,
@@ -100,8 +100,8 @@
         ],
         "retrieval_uncertainty": 0.8596,
         "conflict_uncertainty": 0.7141,
-        "stability_uncertainty": 0.0008,
-        "total_uncertainty": 0.6442
+        "stability_uncertainty": 0.9526,
+        "total_uncertainty": 0.9105
       },
       {
         "step": 2,
@@ -120,8 +120,8 @@
         ],
         "retrieval_uncertainty": 0.8355,
         "conflict_uncertainty": 0.5511,
-        "stability_uncertainty": 0.0009,
-        "total_uncertainty": 0.5833
+        "stability_uncertainty": 0.8349,
+        "total_uncertainty": 0.863
       }
     ]
   },
@@ -133,10 +133,10 @@
     "final_answer": "Bored",
     "final_action": "ANSWER",
     "correct": 1,
-    "uncertainty": 0.4522983469325536,
+    "uncertainty": 0.6787257484978021,
     "retrieval_uncertainty": 0.6692183954153399,
     "conflict_uncertainty": 0.38463391634898525,
-    "stability_uncertainty": 0.011494871600940487,
+    "stability_uncertainty": 0.5810018306304194,
     "steps": 2,
     "num_evidence": 3,
     "budget_used": 0,
@@ -163,8 +163,8 @@
         ],
         "retrieval_uncertainty": 0.6692,
         "conflict_uncertainty": 0.4936,
-        "stability_uncertainty": 0.0103,
-        "total_uncertainty": 0.4848
+        "stability_uncertainty": 0.6552,
+        "total_uncertainty": 0.7003
       },
       {
         "step": 2,
@@ -183,8 +183,8 @@
         ],
         "retrieval_uncertainty": 0.6692,
         "conflict_uncertainty": 0.3846,
-        "stability_uncertainty": 0.0115,
-        "total_uncertainty": 0.4523
+        "stability_uncertainty": 0.581,
+        "total_uncertainty": 0.6787
       }
     ]
   },
@@ -196,10 +196,10 @@
     "final_answer": "Gothenburg, Sweden",
     "final_action": "ANSWER",
     "correct": 0,
-    "uncertainty": 0.6145495085935296,
+    "uncertainty": 0.9018085941142864,
     "retrieval_uncertainty": 0.8799816049392137,
     "conflict_uncertainty": 0.5816604722445056,
-    "stability_uncertainty": 0.0003028222528556133,
+    "stability_uncertainty": 0.882451456904694,
     "steps": 2,
     "num_evidence": 3,
     "budget_used": 0,
@@ -226,8 +226,8 @@
         ],
         "retrieval_uncertainty": 0.88,
         "conflict_uncertainty": 0.6877,
-        "stability_uncertainty": 0.0007,
-        "total_uncertainty": 0.6464
+        "stability_uncertainty": 0.9123,
+        "total_uncertainty": 0.9063
       },
       {
         "step": 2,
@@ -246,8 +246,8 @@
         ],
         "retrieval_uncertainty": 0.88,
         "conflict_uncertainty": 0.5817,
-        "stability_uncertainty": 0.0003,
-        "total_uncertainty": 0.6145
+        "stability_uncertainty": 0.8825,
+        "total_uncertainty": 0.9018
       }
     ]
   },
@@ -259,10 +259,10 @@
     "final_answer": "Apple",
     "final_action": "ANSWER",
     "correct": 0,
-    "uncertainty": 0.5931938950345588,
+    "uncertainty": 0.8722253098970653,
     "retrieval_uncertainty": 0.8686820918306755,
     "conflict_uncertainty": 0.528995924247448,
-    "stability_uncertainty": 0.0007703592249329909,
+    "stability_uncertainty": 0.8190045817429874,
     "steps": 2,
     "num_evidence": 3,
     "budget_used": 0,
@@ -289,8 +289,8 @@
         ],
         "retrieval_uncertainty": 0.8687,
         "conflict_uncertainty": 0.6682,
-        "stability_uncertainty": 0.0008,
-        "total_uncertainty": 0.635
+        "stability_uncertainty": 0.8725,
+        "total_uncertainty": 0.8891
       },
       {
         "step": 2,
@@ -309,8 +309,8 @@
         ],
         "retrieval_uncertainty": 0.8687,
         "conflict_uncertainty": 0.529,
-        "stability_uncertainty": 0.0008,
-        "total_uncertainty": 0.5932
+        "stability_uncertainty": 0.819,
+        "total_uncertainty": 0.8722
       }
     ]
   },
@@ -322,10 +322,10 @@
     "final_answer": "Live and still image streaming",
     "final_action": "ANSWER",
     "correct": 0,
-    "uncertainty": 0.6449549710389585,
+    "uncertainty": 0.9420384490143701,
     "retrieval_uncertainty": 0.9211263230486898,
     "conflict_uncertainty": 0.6145934286510841,
-    "stability_uncertainty": 6.890459644172707e-05,
+    "stability_uncertainty": 0.9427252953905649,
     "steps": 2,
     "num_evidence": 3,
     "budget_used": 0,
@@ -352,8 +352,8 @@
         ],
         "retrieval_uncertainty": 0.9211,
         "conflict_uncertainty": 0.7101,
-        "stability_uncertainty": 0.0002,
-        "total_uncertainty": 0.6736
+        "stability_uncertainty": 0.9256,
+        "total_uncertainty": 0.9333
       },
       {
         "step": 2,
@@ -372,8 +372,8 @@
         ],
         "retrieval_uncertainty": 0.9211,
         "conflict_uncertainty": 0.6146,
-        "stability_uncertainty": 0.0001,
-        "total_uncertainty": 0.645
+        "stability_uncertainty": 0.9427,
+        "total_uncertainty": 0.942
       }
     ]
   },
@@ -385,10 +385,10 @@
     "final_answer": "Italian",
     "final_action": "ANSWER",
     "correct": 0,
-    "uncertainty": 0.5416058303120705,
+    "uncertainty": 0.8372217137068586,
     "retrieval_uncertainty": 0.8681377507787585,
     "conflict_uncertainty": 0.35819617030211137,
-    "stability_uncertainty": 0.00039051916028941773,
+    "stability_uncertainty": 0.7163923406042227,
     "steps": 2,
     "num_evidence": 3,
     "budget_used": 0,
@@ -415,8 +415,8 @@
         ],
         "retrieval_uncertainty": 0.8681,
         "conflict_uncertainty": 0.5343,
-        "stability_uncertainty": 0.0003,
-        "total_uncertainty": 0.5944
+        "stability_uncertainty": 0.7418,
+        "total_uncertainty": 0.8404
       },
       {
         "step": 2,
@@ -435,8 +435,8 @@
         ],
         "retrieval_uncertainty": 0.8681,
         "conflict_uncertainty": 0.3582,
-        "stability_uncertainty": 0.0004,
-        "total_uncertainty": 0.5416
+        "stability_uncertainty": 0.7164,
+        "total_uncertainty": 0.8372
       }
     ]
   },
@@ -448,10 +448,10 @@
     "final_answer": "The Champagne Murders)",
     "final_action": "ANSWER",
     "correct": 0,
-    "uncertainty": 0.572839881784266,
+    "uncertainty": 0.8683622512641322,
     "retrieval_uncertainty": 0.8184606670479003,
     "conflict_uncertainty": 0.5440892119991289,
-    "stability_uncertainty": 0.0019139233028856192,
+    "stability_uncertainty": 0.8988233386743387,
     "steps": 2,
     "num_evidence": 3,
     "budget_used": 0,
@@ -478,8 +478,8 @@
         ],
         "retrieval_uncertainty": 0.8185,
         "conflict_uncertainty": 0.6239,
-        "stability_uncertainty": 0.0023,
-        "total_uncertainty": 0.5969
+        "stability_uncertainty": 0.8726,
+        "total_uncertainty": 0.8566
       },
       {
         "step": 2,
@@ -498,8 +498,8 @@
         ],
         "retrieval_uncertainty": 0.8185,
         "conflict_uncertainty": 0.5441,
-        "stability_uncertainty": 0.0019,
-        "total_uncertainty": 0.5728
+        "stability_uncertainty": 0.8988,
+        "total_uncertainty": 0.8684
       }
     ]
   },
@@ -511,10 +511,10 @@
     "final_answer": "The Holocaust",
     "final_action": "ANSWER",
     "correct": 0,
-    "uncertainty": 0.5072804153019964,
+    "uncertainty": 0.7405005734309386,
     "retrieval_uncertainty": 0.7722932672018801,
     "conflict_uncertainty": 0.400369603431569,
-    "stability_uncertainty": 0.005114503357928687,
+    "stability_uncertainty": 0.6043277183224395,
     "steps": 2,
     "num_evidence": 3,
     "budget_used": 0,
@@ -541,8 +541,8 @@
         ],
         "retrieval_uncertainty": 0.7723,
         "conflict_uncertainty": 0.4918,
-        "stability_uncertainty": 0.005,
-        "total_uncertainty": 0.5347
+        "stability_uncertainty": 0.7452,
+        "total_uncertainty": 0.7818
       },
       {
         "step": 2,
@@ -561,8 +561,8 @@
         ],
         "retrieval_uncertainty": 0.7723,
         "conflict_uncertainty": 0.4004,
-        "stability_uncertainty": 0.0051,
-        "total_uncertainty": 0.5073
+        "stability_uncertainty": 0.6043,
+        "total_uncertainty": 0.7405
       }
     ]
   },
@@ -574,10 +574,10 @@
     "final_answer": "2008",
     "final_action": "ANSWER",
     "correct": 0,
-    "uncertainty": 0.6124568934586475,
+    "uncertainty": 0.919030565763288,
     "retrieval_uncertainty": 0.8451949231664995,
     "conflict_uncertainty": 0.6326397976227154,
-    "stability_uncertainty": 0.0003374629429160042,
+    "stability_uncertainty": 0.9934815510064601,
     "steps": 2,
     "num_evidence": 3,
     "budget_used": 0,
@@ -604,8 +604,8 @@
         ],
         "retrieval_uncertainty": 0.8452,
         "conflict_uncertainty": 0.6386,
-        "stability_uncertainty": 0.0011,
-        "total_uncertainty": 0.6144
+        "stability_uncertainty": 0.9038,
+        "total_uncertainty": 0.8837
       },
       {
         "step": 2,
@@ -624,8 +624,8 @@
         ],
         "retrieval_uncertainty": 0.8452,
         "conflict_uncertainty": 0.6326,
-        "stability_uncertainty": 0.0003,
-        "total_uncertainty": 0.6125
+        "stability_uncertainty": 0.9935,
+        "total_uncertainty": 0.919
       }
     ]
   }

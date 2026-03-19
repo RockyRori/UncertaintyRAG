@@ -4,9 +4,9 @@
     "gold_answers": [
       "Ovid"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
+    "final_answer": "ovid",
+    "final_action": "ANSWER",
+    "correct": 1,
     "uncertainty": 0.7548969268570614,
     "retrieval_uncertainty": 0.8184730618943492,
     "conflict_uncertainty": 0.5266870635042458,
@@ -91,8 +91,8 @@
     "gold_answers": [
       "hydrocarbons"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "ortho-para",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8285846638928056,
     "retrieval_uncertainty": 0.8355072757799458,
@@ -246,9 +246,9 @@
     "gold_answers": [
       "Bored"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
+    "final_answer": "bored",
+    "final_action": "ANSWER",
+    "correct": 1,
     "uncertainty": 0.6553342273227218,
     "retrieval_uncertainty": 0.6692183954153399,
     "conflict_uncertainty": 0.4936269692798888,
@@ -256,7 +256,7 @@
     "steps": 2,
     "num_evidence": 5,
     "budget_used": 1,
-    "stop_reason": "policy_stop",
+    "stop_reason": "",
     "history": [
       {
         "step": 1,
@@ -292,7 +292,7 @@
       },
       {
         "step": 2,
-        "action": "STOP",
+        "action": "ANSWER",
         "last_action": "RETRIEVE_MORE",
         "remaining_budget": 1,
         "num_evidence": 5,
@@ -333,8 +333,8 @@
     "gold_answers": [
       "Bainbridge and Vashon"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "east cowes and cowes",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8568085941142864,
     "retrieval_uncertainty": 0.8799816049392137,
@@ -452,9 +452,9 @@
     "gold_answers": [
       "Mac Mini and Mac Pro"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
+    "final_answer": "mac mini and mac pro",
+    "final_action": "ANSWER",
+    "correct": 1,
     "uncertainty": 0.8440777631254113,
     "retrieval_uncertainty": 0.8686820918306755,
     "conflict_uncertainty": 0.6682212172567841,
@@ -607,8 +607,8 @@
     "gold_answers": [
       "still image streaming"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "live and still image streaming",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8970384490143701,
     "retrieval_uncertainty": 0.9211263230486898,
@@ -726,8 +726,8 @@
     "gold_answers": [
       "dialetti"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "dialects",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.7953987688569126,
     "retrieval_uncertainty": 0.8681377507787585,
@@ -813,9 +813,9 @@
     "gold_answers": [
       "movie production"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
+    "final_answer": "movie production",
+    "final_action": "ANSWER",
+    "correct": 1,
     "uncertainty": 0.8233622512641323,
     "retrieval_uncertainty": 0.8184606670479003,
     "conflict_uncertainty": 0.5440892119991289,
@@ -932,9 +932,9 @@
     "gold_answers": [
       "Oskar Schindler"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
+    "final_answer": "oskar schindler",
+    "final_action": "ANSWER",
+    "correct": 1,
     "uncertainty": 0.7367861171670285,
     "retrieval_uncertainty": 0.7722932672018801,
     "conflict_uncertainty": 0.4917834806548931,
@@ -1019,8 +1019,8 @@
     "gold_answers": [
       "1988"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "2008",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.919030565763288,
     "retrieval_uncertainty": 0.8451949231664995,
@@ -1170,8 +1170,8 @@
     "gold_answers": [
       "ICs"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "pcb",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8341839135401703,
     "retrieval_uncertainty": 0.8314782584818045,
@@ -1325,8 +1325,8 @@
     "gold_answers": [
       "From 1988 to 1997, the BBC and Sky Sports had coverage of the FA Cup"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "bbc and sky sports",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8569377503782203,
     "retrieval_uncertainty": 0.8682208854779567,
@@ -1480,8 +1480,8 @@
     "gold_answers": [
       "92%"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "3.0%",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8239993947625356,
     "retrieval_uncertainty": 0.8525303660045588,
@@ -1635,8 +1635,8 @@
     "gold_answers": [
       "1754"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "1950",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8472257601040799,
     "retrieval_uncertainty": 0.8913077992813616,
@@ -1754,9 +1754,9 @@
     "gold_answers": [
       "pub landlord"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
+    "final_answer": "pub landlord",
+    "final_action": "ANSWER",
+    "correct": 1,
     "uncertainty": 0.6678782913513172,
     "retrieval_uncertainty": 0.7107112970561218,
     "conflict_uncertainty": 0.48724577805624336,
@@ -1764,7 +1764,7 @@
     "steps": 2,
     "num_evidence": 5,
     "budget_used": 1,
-    "stop_reason": "policy_stop",
+    "stop_reason": "",
     "history": [
       {
         "step": 1,
@@ -1800,7 +1800,7 @@
       },
       {
         "step": 2,
-        "action": "STOP",
+        "action": "ANSWER",
         "last_action": "RETRIEVE_MORE",
         "remaining_budget": 1,
         "num_evidence": 5,
@@ -1841,8 +1841,8 @@
     "gold_answers": [
       "over 22,000"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "22,000",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.7984329236716449,
     "retrieval_uncertainty": 0.835542337294455,
@@ -1928,9 +1928,9 @@
     "gold_answers": [
       "transparency"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
+    "final_answer": "transparency",
+    "final_action": "ANSWER",
+    "correct": 1,
     "uncertainty": 0.8732608659619456,
     "retrieval_uncertainty": 0.9021537721302545,
     "conflict_uncertainty": 0.5828601229010353,
@@ -2047,8 +2047,8 @@
     "gold_answers": [
       "everyday life and in modern Japanese martial arts"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "lichens",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8956615964642838,
     "retrieval_uncertainty": 0.9067496511389812,
@@ -2198,8 +2198,8 @@
     "gold_answers": [
       "four"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "4",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8251340660509001,
     "retrieval_uncertainty": 0.7991798011915153,
@@ -2317,9 +2317,9 @@
     "gold_answers": [
       "December 2008"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
+    "final_answer": "december 2008",
+    "final_action": "ANSWER",
+    "correct": 1,
     "uncertainty": 0.8821553142513622,
     "retrieval_uncertainty": 0.9155990568723805,
     "conflict_uncertainty": 0.7117075364380265,
@@ -2472,8 +2472,8 @@
     "gold_answers": [
       "forced to commit suicide"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "killed after deng mengnü resisted liang ji's attempts to control her",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.856471657425913,
     "retrieval_uncertainty": 0.9139186399733288,
@@ -2595,9 +2595,9 @@
     "gold_answers": [
       "Durango"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
+    "final_answer": "durango",
+    "final_action": "ANSWER",
+    "correct": 1,
     "uncertainty": 0.7667880081481069,
     "retrieval_uncertainty": 0.7985856582248766,
     "conflict_uncertainty": 0.5799724323055933,
@@ -2605,7 +2605,7 @@
     "steps": 3,
     "num_evidence": 5,
     "budget_used": 2,
-    "stop_reason": "policy_stop",
+    "stop_reason": "",
     "history": [
       {
         "step": 1,
@@ -2677,7 +2677,7 @@
       },
       {
         "step": 3,
-        "action": "STOP",
+        "action": "ANSWER",
         "last_action": "RETRIEVE_MORE",
         "remaining_budget": 0,
         "num_evidence": 5,
@@ -2718,9 +2718,9 @@
     "gold_answers": [
       "personality and contextual factors"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
+    "final_answer": "personality and contextual factors",
+    "final_action": "ANSWER",
+    "correct": 1,
     "uncertainty": 0.8593289864248517,
     "retrieval_uncertainty": 0.8460203788616333,
     "conflict_uncertainty": 0.7181661544415323,
@@ -2873,8 +2873,8 @@
     "gold_answers": [
       "futuristic science fiction"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "mp3",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8811193268916059,
     "retrieval_uncertainty": 0.8721466364930568,
@@ -2992,9 +2992,9 @@
     "gold_answers": [
       "NAACP"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
+    "final_answer": "naacp",
+    "final_action": "ANSWER",
+    "correct": 1,
     "uncertainty": 0.8502420650877722,
     "retrieval_uncertainty": 0.8922146833177192,
     "conflict_uncertainty": 0.6611031227555861,
@@ -3147,8 +3147,8 @@
     "gold_answers": [
       "deployment of heavy jets with full loadouts"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "catobar recovery",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8271343248530633,
     "retrieval_uncertainty": 0.8748457340631101,
@@ -3302,8 +3302,8 @@
     "gold_answers": [
       "hills"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "the swedes",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8902773662612233,
     "retrieval_uncertainty": 0.9137216953405882,
@@ -3421,8 +3421,8 @@
     "gold_answers": [
       "Spirochaetes of the genus Borrelia"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "borrelia burgdorferi",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.7768064200246199,
     "retrieval_uncertainty": 0.8354574935684485,
@@ -3431,7 +3431,7 @@
     "steps": 3,
     "num_evidence": 5,
     "budget_used": 2,
-    "stop_reason": "policy_stop",
+    "stop_reason": "",
     "history": [
       {
         "step": 1,
@@ -3503,7 +3503,7 @@
       },
       {
         "step": 3,
-        "action": "STOP",
+        "action": "ANSWER",
         "last_action": "RETRIEVE_MORE",
         "remaining_budget": 0,
         "num_evidence": 5,
@@ -3544,8 +3544,8 @@
     "gold_answers": [
       "European men and Indigenous American women"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "africans",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8676119749789258,
     "retrieval_uncertainty": 0.9074703156169863,
@@ -3663,8 +3663,8 @@
     "gold_answers": [
       "Artist of the Decade"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "beyoncé",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8716588182464167,
     "retrieval_uncertainty": 0.8688161375151158,
@@ -3814,8 +3814,8 @@
     "gold_answers": [
       "motorways"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "motorways and main roads",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8183602089037779,
     "retrieval_uncertainty": 0.8632154282569492,
@@ -3933,8 +3933,8 @@
     "gold_answers": [
       "French alone is the official language"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "standardisation of dutch language",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.9104189147507524,
     "retrieval_uncertainty": 0.9185185207422472,
@@ -4084,9 +4084,9 @@
     "gold_answers": [
       "International Cinema"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
+    "final_answer": "international cinema",
+    "final_action": "ANSWER",
+    "correct": 1,
     "uncertainty": 0.7655082190345642,
     "retrieval_uncertainty": 0.8171484202397384,
     "conflict_uncertainty": 0.5638319777126557,
@@ -4171,8 +4171,8 @@
     "gold_answers": [
       "Colonial records of French and Spanish slave ships and sales, and plantation records in all the former colonies"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "treaties",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8889244770567079,
     "retrieval_uncertainty": 0.9223498679897791,
@@ -4358,9 +4358,9 @@
     "gold_answers": [
       "1492"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
+    "final_answer": "1492",
+    "final_action": "ANSWER",
+    "correct": 1,
     "uncertainty": 0.7881258368431724,
     "retrieval_uncertainty": 0.8257043460835715,
     "conflict_uncertainty": 0.6004753467444699,
@@ -4368,7 +4368,7 @@
     "steps": 3,
     "num_evidence": 5,
     "budget_used": 2,
-    "stop_reason": "policy_stop",
+    "stop_reason": "",
     "history": [
       {
         "step": 1,
@@ -4440,7 +4440,7 @@
       },
       {
         "step": 3,
-        "action": "STOP",
+        "action": "ANSWER",
         "last_action": "RETRIEVE_MORE",
         "remaining_budget": 0,
         "num_evidence": 5,
@@ -4481,9 +4481,9 @@
     "gold_answers": [
       "zoology"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
+    "final_answer": "zoology",
+    "final_action": "ANSWER",
+    "correct": 1,
     "uncertainty": 0.8539247781484757,
     "retrieval_uncertainty": 0.8371779355132913,
     "conflict_uncertainty": 0.6723596634979044,
@@ -4636,8 +4636,8 @@
     "gold_answers": [
       "New Haven Black Panther trials"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "bridgeport",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8632629841866597,
     "retrieval_uncertainty": 0.8320700668120246,
@@ -4787,9 +4787,9 @@
     "gold_answers": [
       "Rossiyskaya Gazeta"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
+    "final_answer": "rossiyskaya gazeta",
+    "final_action": "ANSWER",
+    "correct": 1,
     "uncertainty": 0.8072937766434427,
     "retrieval_uncertainty": 0.8391673658883185,
     "conflict_uncertainty": 0.6312117357234317,
@@ -4942,8 +4942,8 @@
     "gold_answers": [
       "Vostok 1"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "tardis",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8469756043231996,
     "retrieval_uncertainty": 0.867886369492882,
@@ -5097,8 +5097,8 @@
     "gold_answers": [
       "a mixture of metals or a mixture of a metal and another element"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "alloys",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8372159999466287,
     "retrieval_uncertainty": 0.8804684626514174,
@@ -5252,9 +5252,9 @@
     "gold_answers": [
       "Nazareth"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
-    "correct": 0,
+    "final_answer": "nazareth",
+    "final_action": "ANSWER",
+    "correct": 1,
     "uncertainty": 0.8151757909594973,
     "retrieval_uncertainty": 0.8303542078019331,
     "conflict_uncertainty": 0.6231076612962793,
@@ -5375,8 +5375,8 @@
     "gold_answers": [
       "British Airways"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "london heathrow airport",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8527463571242455,
     "retrieval_uncertainty": 0.8611448652666551,
@@ -5494,8 +5494,8 @@
     "gold_answers": [
       "Florida residents have received more federal monies than they pay in taxes: the state is a net beneficiary"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "exemptions",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8028961720018742,
     "retrieval_uncertainty": 0.8959892078225603,
@@ -5617,8 +5617,8 @@
     "gold_answers": [
       "Ralph Inzunza and Deputy Mayor Michael Zucchet"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "the mayor and 10 city council members",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8339410017546374,
     "retrieval_uncertainty": 0.8355671713933273,
@@ -5772,8 +5772,8 @@
     "gold_answers": [
       "Perceived sexual orientation"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "sexual_orientation",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8090086512269902,
     "retrieval_uncertainty": 0.8176755139966327,
@@ -5895,8 +5895,8 @@
     "gold_answers": [
       "Portuguese Escudo"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "greek drachma",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8947962169167171,
     "retrieval_uncertainty": 0.8419715821695531,
@@ -6169,8 +6169,8 @@
     "gold_answers": [
       "to advance into Bohemia where he might set up winter quarters at Austria's expense"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "recapture normandy",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.8578167506862915,
     "retrieval_uncertainty": 0.9009767084668274,
@@ -6320,8 +6320,8 @@
     "gold_answers": [
       "2001"
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "2013",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.765317696646481,
     "retrieval_uncertainty": 0.8248670293418413,
@@ -6407,8 +6407,8 @@
     "gold_answers": [
       "Clement Greenberg."
     ],
-    "final_answer": "ABSTAIN",
-    "final_action": "ABSTAIN",
+    "final_answer": "nasser",
+    "final_action": "ANSWER",
     "correct": 0,
     "uncertainty": 0.849093513817902,
     "retrieval_uncertainty": 0.8928784754609141,

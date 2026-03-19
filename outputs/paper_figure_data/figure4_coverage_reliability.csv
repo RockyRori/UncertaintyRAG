@@ -1,0 +1,9 @@
+policy,policy_display,answer_rate,answered_only_accuracy,overall_accuracy
+loose-1,Loose-1,0.98,0.33,0.32
+loose-2,Loose-2,0.98,0.33,0.32
+balanced,Balanced,0.94,0.34,0.32
+selective,Selective,0.8,0.38,0.3
+more-selective,More Selective,0.72,0.39,0.28
+aggressive,Aggressive,0.04,1.0,0.04
+conservative,Conservative,0.0,,0.0
+medium,Medium,0.0,,0.0
