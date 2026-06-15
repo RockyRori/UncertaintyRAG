@@ -9,7 +9,6 @@ models/saved/*
 .DS_Store
 **/.DS_Store
 .DS_Store?
-.idea
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -142,6 +141,8 @@ celerybeat.pid
 # Environments
 .env
 .venv
+.vscode
+.idea
 env/
 venv/
 ENV/
