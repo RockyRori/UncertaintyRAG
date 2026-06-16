@@ -1,6 +1,5 @@
 # UncertaintyRAG
-data/*
-models/saved/*
+outputs/*
 
 # frontend
 **/node_modules/*
