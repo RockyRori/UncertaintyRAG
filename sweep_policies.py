@@ -16,6 +16,11 @@ from config import (
     TAU_STOP,
     TAU_DELTA,
     TAU_GAIN,
+    ANSWER_MIN_UTILITY,
+    ANSWER_MIN_BEST_UTILITY,
+    ANSWER_MAX_CONFLICT,
+    ANSWER_MAX_TOTAL_UNCERTAINTY,
+    ANSWER_MIN_STABILITY,
     UNCERTAINTY_ALPHA,
     UNCERTAINTY_BETA,
     UNCERTAINTY_GAMMA,
@@ -66,9 +71,15 @@ def run_one_setting(
         tau_stop=TAU_STOP,
         tau_delta=TAU_DELTA,
         tau_gain=TAU_GAIN,
-        answer_min_utility=boundary_cfg["answer_min_utility"],
-        answer_max_conflict=boundary_cfg["answer_max_conflict"],
-        answer_max_total_uncertainty=boundary_cfg["answer_max_total_uncertainty"],
+        answer_min_utility=boundary_cfg.get("answer_min_utility", ANSWER_MIN_UTILITY),
+        answer_min_best_utility=boundary_cfg.get(
+            "answer_min_best_utility", ANSWER_MIN_BEST_UTILITY
+        ),
+        answer_max_conflict=boundary_cfg.get("answer_max_conflict", ANSWER_MAX_CONFLICT),
+        answer_max_total_uncertainty=boundary_cfg.get(
+            "answer_max_total_uncertainty", ANSWER_MAX_TOTAL_UNCERTAINTY
+        ),
+        tau_stability=boundary_cfg.get("tau_stability", ANSWER_MIN_STABILITY),
     )
 
     runner = DecisionAwareRAG(
@@ -137,29 +148,39 @@ def main():
 
     sweep_settings = {
         "D_loose_1": {
-            "answer_min_utility": 0.06,
-            "answer_max_conflict": 0.90,
-            "answer_max_total_uncertainty": 0.95,
+            "answer_min_utility": 0.30,
+            "answer_min_best_utility": 0.20,
+            "answer_max_conflict": 0.75,
+            "answer_max_total_uncertainty": 0.90,
+            "tau_stability": 0.02,
         },
         "E_loose_2": {
-            "answer_min_utility": 0.08,
-            "answer_max_conflict": 0.88,
-            "answer_max_total_uncertainty": 0.92,
+            "answer_min_utility": 0.40,
+            "answer_min_best_utility": 0.28,
+            "answer_max_conflict": 0.65,
+            "answer_max_total_uncertainty": 0.80,
+            "tau_stability": 0.08,
         },
         "F_balanced": {
-            "answer_min_utility": 0.10,
-            "answer_max_conflict": 0.85,
-            "answer_max_total_uncertainty": 0.90,
+            "answer_min_utility": ANSWER_MIN_UTILITY,
+            "answer_min_best_utility": ANSWER_MIN_BEST_UTILITY,
+            "answer_max_conflict": ANSWER_MAX_CONFLICT,
+            "answer_max_total_uncertainty": ANSWER_MAX_TOTAL_UNCERTAINTY,
+            "tau_stability": ANSWER_MIN_STABILITY,
         },
         "G_selective": {
-            "answer_min_utility": 0.12,
-            "answer_max_conflict": 0.82,
-            "answer_max_total_uncertainty": 0.88,
+            "answer_min_utility": 0.60,
+            "answer_min_best_utility": 0.50,
+            "answer_max_conflict": 0.45,
+            "answer_max_total_uncertainty": 0.60,
+            "tau_stability": 0.22,
         },
         "H_more_selective": {
-            "answer_min_utility": 0.14,
-            "answer_max_conflict": 0.80,
-            "answer_max_total_uncertainty": 0.86,
+            "answer_min_utility": 0.72,
+            "answer_min_best_utility": 0.65,
+            "answer_max_conflict": 0.35,
+            "answer_max_total_uncertainty": 0.50,
+            "tau_stability": 0.35,
         },
     }
 

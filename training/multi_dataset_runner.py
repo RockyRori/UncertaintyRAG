@@ -2,6 +2,7 @@ import argparse
 import csv
 import pickle
 import random
+import shutil
 from pathlib import Path
 from typing import Dict, List, Tuple
 
@@ -41,6 +42,11 @@ from config import (
     TAU_GAIN,
     TAU_RETRIEVE,
     TAU_STOP,
+    ANSWER_MIN_UTILITY,
+    ANSWER_MIN_BEST_UTILITY,
+    ANSWER_MAX_CONFLICT,
+    ANSWER_MAX_TOTAL_UNCERTAINTY,
+    ANSWER_MIN_STABILITY,
     UNCERTAINTY_ALPHA,
     UNCERTAINTY_BETA,
     UNCERTAINTY_GAMMA,
@@ -117,6 +123,27 @@ def get_split_records(records: List[Dict], split_name: str) -> List[Dict]:
     return [x for x in records if str(x.get("split", "")).lower() == split_name]
 
 
+def record_key(record: Dict) -> str:
+    if record.get("id") is not None:
+        return str(record.get("id"))
+    return f"{record.get('split', '')}::{record.get('question', '')}"
+
+
+def sample_without_replacement(
+    rng: random.Random,
+    records: List[Dict],
+    n: int,
+    dataset_name: str,
+    split_label: str,
+) -> List[Dict]:
+    if len(records) < n:
+        raise ValueError(
+            f"{dataset_name}: not enough non-overlapping {split_label} samples "
+            f"({len(records)} available, {n} requested)"
+        )
+    return rng.sample(records, n)
+
+
 def build_fixed_mini_splits(
     dataset_name: str,
     files: DatasetFiles,
@@ -132,25 +159,37 @@ def build_fixed_mini_splits(
     rng = random.Random(RANDOM_SEED)
 
     # 优先使用真实 split；没有 test 时用 dev 顶上；还没有就从 all 里做伪切分
-    if len(train_records) >= train_n:
-        train_selected = rng.sample(train_records, train_n)
+    if train_records:
+        train_selected = sample_without_replacement(
+            rng, train_records, train_n, dataset_name, "train"
+        )
     else:
-        fallback_source = train_records if train_records else records
-        if len(fallback_source) < train_n:
-            raise ValueError(f"{dataset_name}: not enough samples to build {train_n}-train split")
-        train_selected = rng.sample(fallback_source, train_n)
+        train_selected = sample_without_replacement(
+            rng, records, train_n, dataset_name, "train fallback"
+        )
 
-    if len(test_records) >= test_n:
-        test_selected = rng.sample(test_records, test_n)
-    elif len(dev_records) >= test_n:
-        test_selected = rng.sample(dev_records, test_n)
+    train_ids = {record_key(r) for r in train_selected}
+    test_candidates = [r for r in test_records if record_key(r) not in train_ids]
+    dev_candidates = [r for r in dev_records if record_key(r) not in train_ids]
+    remaining_candidates = [r for r in records if record_key(r) not in train_ids]
+
+    if len(test_candidates) >= test_n:
+        test_selected = rng.sample(test_candidates, test_n)
+    elif len(dev_candidates) >= test_n:
+        test_selected = rng.sample(dev_candidates, test_n)
     else:
-        remaining = [x for x in records if x.get("id") not in {r.get("id") for r in train_selected}]
-        if len(remaining) < test_n:
-            remaining = [x for x in records if x.get("id") not in set()]
-        if len(remaining) < test_n:
-            raise ValueError(f"{dataset_name}: not enough samples to build {test_n}-test split")
-        test_selected = rng.sample(remaining, test_n)
+        test_selected = sample_without_replacement(
+            rng, remaining_candidates, test_n, dataset_name, "test fallback"
+        )
+
+    overlap = {record_key(r) for r in train_selected} & {
+        record_key(r) for r in test_selected
+    }
+    if overlap:
+        raise ValueError(
+            f"{dataset_name}: train/test split overlap detected "
+            f"({len(overlap)} duplicated ids)"
+        )
 
     files.mini_dir.mkdir(parents=True, exist_ok=True)
     save_json(train_selected, files.mini_train_path)
@@ -368,6 +407,11 @@ def run_dataset_experiment(
         tau_stop=TAU_STOP,
         tau_delta=TAU_DELTA,
         tau_gain=TAU_GAIN,
+        answer_min_utility=ANSWER_MIN_UTILITY,
+        answer_min_best_utility=ANSWER_MIN_BEST_UTILITY,
+        answer_max_conflict=ANSWER_MAX_CONFLICT,
+        answer_max_total_uncertainty=ANSWER_MAX_TOTAL_UNCERTAINTY,
+        tau_stability=ANSWER_MIN_STABILITY,
     )
     runner = DecisionAwareRAG(
         retriever=retriever,
@@ -463,23 +507,41 @@ def write_summary_csv(summary_rows: List[Dict], output_path: Path) -> None:
             writer.writerow(row)
 
 
+def clear_dataset_outputs(dataset_name: str, train_size: int, test_size: int) -> None:
+    files = DatasetFiles(DATA_DIR, dataset_name, train_size=train_size, test_size=test_size)
+    if files.output_dir.exists():
+        shutil.rmtree(files.output_dir)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--datasets", nargs="*", default=DATASET_NAMES)
     parser.add_argument("--top-k-utility", type=int, default=5)
     parser.add_argument("--train-size", type=int, default=DEFAULT_MULTI_DATASET_TRAIN_SIZE)
     parser.add_argument("--test-size", type=int, default=DEFAULT_MULTI_DATASET_TEST_SIZE)
+    parser.add_argument(
+        "--strict-splits",
+        action="store_true",
+        help="Fail instead of skipping datasets that cannot form non-overlapping splits.",
+    )
     args = parser.parse_args()
 
     set_seed(RANDOM_SEED)
     summary_rows = []
     for dataset_name in args.datasets:
-        result = run_dataset_experiment(
-            dataset_name=dataset_name,
-            top_k_utility=args.top_k_utility,
-            train_size=args.train_size,
-            test_size=args.test_size,
-        )
+        try:
+            result = run_dataset_experiment(
+                dataset_name=dataset_name,
+                top_k_utility=args.top_k_utility,
+                train_size=args.train_size,
+                test_size=args.test_size,
+            )
+        except ValueError as exc:
+            if args.strict_splits:
+                raise
+            print(f"[SKIP] {dataset_name}: {exc}")
+            clear_dataset_outputs(dataset_name, args.train_size, args.test_size)
+            continue
         summary_rows.append({
             "dataset": result["dataset"],
             "train_size": result["train_size"],

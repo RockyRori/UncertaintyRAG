@@ -107,6 +107,7 @@ def reset_output_dir(path: str) -> None:
 def table_i(default_metrics: Dict) -> pd.DataFrame:
     ds = default_metrics["decision_summary"]
     rows = [
+        {"Metric": "Sample Count", "Value": ds.get("count")},
         {"Metric": "Accuracy (overall)", "Value": default_metrics.get("accuracy")},
         {"Metric": "Answered-only Accuracy", "Value": ds.get("accuracy_answered_only")},
         {"Metric": "AUROC", "Value": default_metrics.get("auroc")},
@@ -142,6 +143,7 @@ def table_ii(compare_metrics: Dict) -> pd.DataFrame:
         rows.append(
             {
                 "Method": rename[key],
+                "N": ds.get("count"),
                 "Acc.": m.get("accuracy"),
                 "AUROC": m.get("auroc"),
                 "Answer Rate": ds.get("answer_rate"),
@@ -165,6 +167,7 @@ def table_iii(sweep_metrics: Dict) -> pd.DataFrame:
             {
                 "Policy Setting": label,
                 "Source Policy": key,
+                "N": ds.get("count"),
                 "Acc.": m.get("accuracy"),
                 "AUROC": m.get("auroc"),
                 "Answer Rate": ds.get("answer_rate"),
@@ -183,6 +186,7 @@ def table_iii_all(sweep_metrics: Dict) -> pd.DataFrame:
         rows.append(
             {
                 "Policy": key,
+                "N": ds.get("count"),
                 "Acc.": m.get("accuracy"),
                 "AUROC": m.get("auroc"),
                 "Answer Rate": ds.get("answer_rate"),
@@ -230,6 +234,16 @@ def table_v(pred_df: pd.DataFrame, action_df: pd.DataFrame) -> pd.DataFrame:
     default_pred = pred_df[pred_df["policy"] == "phase5_default"].copy()
     default_act = action_df[action_df["policy"] == "phase5_default"].copy()
 
+    columns = [
+        "Case",
+        "Question",
+        "Step",
+        "Action",
+        "Uncertainty",
+        "Outcome / Note",
+        "Final Outcome",
+    ]
+
     success = default_pred[
         (default_pred["answered"] == 1)
         & (default_pred["correct"] == 1)
@@ -243,8 +257,23 @@ def table_v(pred_df: pd.DataFrame, action_df: pd.DataFrame) -> pd.DataFrame:
     chosen = []
     if not success.empty:
         chosen.append(("Case A", success.iloc[0]["qid"]))
+    else:
+        correct = default_pred[
+            (default_pred["answered"] == 1) & (default_pred["correct"] == 1)
+        ].head(1)
+        if not correct.empty:
+            chosen.append(("Case A", correct.iloc[0]["qid"]))
+
     if not abstain.empty:
         chosen.append(("Case B", abstain.iloc[0]["qid"]))
+    else:
+        failure = default_pred[
+            (default_pred["answered"] == 1)
+            & (default_pred["correct"] == 0)
+            & (default_pred["steps"] >= 2)
+        ].sort_values("uncertainty", ascending=False).head(1)
+        if not failure.empty:
+            chosen.append(("Case B", failure.iloc[0]["qid"]))
 
     rows: List[Dict] = []
     for case_label, qid in chosen:
@@ -281,7 +310,7 @@ def table_v(pred_df: pd.DataFrame, action_df: pd.DataFrame) -> pd.DataFrame:
                 }
             )
 
-    return pd.DataFrame(rows)
+    return pd.DataFrame(rows, columns=columns)
 
 
 def figure_data_coverage(pred_df: pd.DataFrame) -> pd.DataFrame:

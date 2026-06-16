@@ -13,6 +13,11 @@ from config import (
     TAU_STOP,
     TAU_DELTA,
     TAU_GAIN,
+    ANSWER_MIN_UTILITY,
+    ANSWER_MIN_BEST_UTILITY,
+    ANSWER_MAX_CONFLICT,
+    ANSWER_MAX_TOTAL_UNCERTAINTY,
+    ANSWER_MIN_STABILITY,
     UNCERTAINTY_ALPHA,
     UNCERTAINTY_BETA,
     UNCERTAINTY_GAMMA,
@@ -84,6 +89,11 @@ def main():
         tau_stop=TAU_STOP,
         tau_delta=TAU_DELTA,
         tau_gain=TAU_GAIN,
+        answer_min_utility=ANSWER_MIN_UTILITY,
+        answer_min_best_utility=ANSWER_MIN_BEST_UTILITY,
+        answer_max_conflict=ANSWER_MAX_CONFLICT,
+        answer_max_total_uncertainty=ANSWER_MAX_TOTAL_UNCERTAINTY,
+        tau_stability=ANSWER_MIN_STABILITY,
     )
 
     runner = DecisionAwareRAG(

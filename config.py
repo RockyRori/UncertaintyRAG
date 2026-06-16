@@ -142,6 +142,14 @@ RETRIEVE_MORE_K = 2
 MAX_RETRIEVAL_BUDGET = 2
 MAX_DECISION_STEPS = 5
 
+# Answer commitment guardrails. These are intentionally stricter than the
+# older prototype defaults so uncertainty can actually control coverage.
+ANSWER_MIN_UTILITY = 0.50
+ANSWER_MIN_BEST_UTILITY = 0.35
+ANSWER_MAX_CONFLICT = 0.55
+ANSWER_MAX_TOTAL_UNCERTAINTY = 0.70
+ANSWER_MIN_STABILITY = 0.12
+
 # =========================================================
 # Create necessary directories automatically
 # =========================================================

@@ -56,7 +56,7 @@ POLICY_DISPLAY = {
     "more_selective": "More Selective",
     "default": "Default",
     "phase5_default": "Phase5 Default",
-    "none": "None",
+    "none": "No Policy",
 }
 
 

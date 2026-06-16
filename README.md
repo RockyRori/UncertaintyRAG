@@ -1,26 +1,24 @@
 # UncertaintyRAG TPAMI Prototype
 
-This repository is being refactored from a conference prototype into a TPAMI-oriented experimental codebase for uncertainty-guided adaptive RAG.
+This repository is a TPAMI-oriented prototype for uncertainty-guided adaptive retrieval-augmented question answering.
 
-The current default is intentionally small: training is capped at 100 questions so the full loop can be debugged quickly before scaling up.
-
-All generated artifacts are written under `outputs/`, including downloaded data, processed JSON files, saved models, result CSVs, paper tables, and figures.
+The current default is intentionally small: all main experiments use 100 examples so the pipeline can be debugged quickly before scaling up. All generated artifacts are written under `outputs/`, including downloaded data, processed JSON files, saved models, prediction files, result CSVs, paper tables, and figures.
 
 ## Current Defaults
 
 - Dataset download limit per split: `100`
-- Mini training questions: `100`
+- Mini SQuAD training questions: `100`
 - Utility training questions: `100`
 - Evaluation samples: `100`
 - Multi-dataset train/test split: `100/100`
 
-Change these in `config.py` only after the pipeline is stable.
+Keep these defaults unchanged while debugging the pipeline. Change them in `config.py` only after data quality, split construction, and policy behavior are stable.
 
 ## Clean Data Rule
 
 Gold answers may be used to create supervision labels and evaluation metrics. They must not be copied into retrieval corpus text or runtime model features.
 
-The utility model now uses only inference-available structured features:
+The utility model uses only inference-available structured features:
 
 - `bm25_score`
 - `passage_rank`
@@ -31,11 +29,29 @@ The utility model now uses only inference-available structured features:
 - `question_passage_overlap`
 - `pred_answer_passage_overlap`
 
-Legacy saved models with older feature bundles are still readable, but newly trained models use the safe feature list.
+Open-domain datasets without clean evidence passages need an external retrieval corpus for serious experiments. Placeholder corpora are useful for debugging failure behavior, not for final benchmark claims.
 
-## Quick SQuAD Prototype
+## Run Directory
 
-Run commands from this directory.
+Run all commands from this folder:
+
+```powershell
+cd UncertaintyRAG
+```
+
+## First-Time Full Run
+
+### 1. Environment
+
+Install dependencies if the current environment has not been prepared yet.
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+### 2. SQuAD Single-Dataset Prototype
+
+Use this path to build the main small SQuAD pipeline: processed data, mini dataset, utility supervision, utility model, governed decision loop, baseline comparison, policy sweep, and paper outputs.
 
 ```powershell
 python -m scripts.prepare_squad --version v1.1
@@ -45,23 +61,129 @@ python -m training.train_utility_model --max-questions 100
 python main.py --max-samples 100
 python compare_baselines.py --max-samples 100
 python sweep_policies.py --max-samples 100
+python -m scripts.build_results_csv
+python -m scripts.export_paper_results
+python -m scripts.plot_results
 ```
 
-## Small Multi-Dataset Prototype
+### 3. Multi-Dataset Prototype
 
-The helper below downloads at most 100 examples per split. Open-domain datasets without clean evidence passages need an external retrieval corpus for serious experiments.
+Use this path to download and prepare the five small QA datasets, train per-dataset utility models, and run per-dataset evaluation.
 
 ```powershell
 python -m scripts.download_qa_datasets --limit 100
 python -m scripts.prepare_all_datasets
 python -m training.multi_dataset_runner --train-size 100 --test-size 100
+python -m scripts.build_results_csv
+python -m scripts.export_paper_results
+python -m scripts.plot_results
 ```
 
-## Result Export
-
-After prediction files are generated:
+By default, `multi_dataset_runner` skips datasets that cannot form non-overlapping train/test splits. Use strict mode when you want the run to fail instead of skipping invalid datasets:
 
 ```powershell
+python -m training.multi_dataset_runner --train-size 100 --test-size 100 --strict-splits
+```
+
+## Command Categories
+
+### Data Preparation
+
+```powershell
+python -m scripts.prepare_squad --version v1.1
+python -m scripts.build_mini_dataset --sample-size 100 --split train
+python -m scripts.download_qa_datasets --limit 100
+python -m scripts.prepare_all_datasets
+```
+
+### Utility Supervision and Training
+
+```powershell
+python -m scripts.build_utility_dataset --max-questions 100 --top-k 3
+python -m training.train_utility_model --max-questions 100
+python -m training.multi_dataset_runner --train-size 100 --test-size 100
+```
+
+### Evaluation
+
+```powershell
+python main.py --max-samples 100
+python compare_baselines.py --max-samples 100
+python sweep_policies.py --max-samples 100
+```
+
+### Result Aggregation and Paper Artifacts
+
+```powershell
+python -m scripts.build_results_csv
+python -m scripts.export_paper_results
+python -m scripts.plot_results
+```
+
+## Later Runs Without Starting Over
+
+You do not need to rerun the full pipeline after every change. Use the smallest block that matches what changed.
+
+### Only Policy or Decision Logic Changed
+
+Run evaluation and export again. No data preparation or utility retraining is needed.
+
+```powershell
+python main.py --max-samples 100
+python compare_baselines.py --max-samples 100
+python sweep_policies.py --max-samples 100
+python -m scripts.build_results_csv
+python -m scripts.export_paper_results
+python -m scripts.plot_results
+```
+
+### Only Baseline Scripts Changed
+
+```powershell
+python compare_baselines.py --max-samples 100
+python -m scripts.build_results_csv
+python -m scripts.export_paper_results
+python -m scripts.plot_results
+```
+
+### Only Policy Sweep Settings Changed
+
+```powershell
+python sweep_policies.py --max-samples 100
+python -m scripts.build_results_csv
+python -m scripts.export_paper_results
+python -m scripts.plot_results
+```
+
+### Only Utility Model or Utility Features Changed
+
+Rebuild utility supervision, retrain the utility model, then rerun evaluation and export.
+
+```powershell
+python -m scripts.build_utility_dataset --max-questions 100 --top-k 3
+python -m training.train_utility_model --max-questions 100
+python main.py --max-samples 100
+python compare_baselines.py --max-samples 100
+python sweep_policies.py --max-samples 100
+python -m scripts.build_results_csv
+python -m scripts.export_paper_results
+python -m scripts.plot_results
+```
+
+### Only Tables or Figures Changed
+
+No model or prediction rerun is needed.
+
+```powershell
+python -m scripts.build_results_csv
+python -m scripts.export_paper_results
+python -m scripts.plot_results
+```
+
+### Only Multi-Dataset Runner Changed
+
+```powershell
+python -m training.multi_dataset_runner --train-size 100 --test-size 100
 python -m scripts.build_results_csv
 python -m scripts.export_paper_results
 python -m scripts.plot_results
