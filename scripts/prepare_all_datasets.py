@@ -60,11 +60,11 @@ def dedup_corpus(corpus: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         key = (title, text)
         if key not in seen:
             seen.add(key)
-            out.append({
-                "id": str(item.get("id", f"doc_{len(out)}")),
-                "title": title,
-                "text": text
-            })
+            clean_item = dict(item)
+            clean_item["id"] = str(item.get("id", f"doc_{len(out)}"))
+            clean_item["title"] = title
+            clean_item["text"] = text
+            out.append(clean_item)
     return out
 
 
@@ -77,12 +77,56 @@ def make_qa_item(qid: str, split: str, question: str, gold_answers: List[str]) -
     }
 
 
-def make_corpus_item(doc_id: str, text: str, title: str = "") -> Dict[str, Any]:
-    return {
+def make_corpus_item(
+    doc_id: str,
+    text: str,
+    title: str = "",
+    **metadata: Any,
+) -> Dict[str, Any]:
+    item = {
         "id": str(doc_id),
         "title": normalize_text(title),
         "text": normalize_text(text)
     }
+    item.update(metadata)
+    return item
+
+
+def split_sentences(text: str) -> List[str]:
+    text = normalize_text(text)
+    if not text:
+        return []
+    pieces = re.split(r"(?<=[.!?])\s+", text)
+    return [p.strip() for p in pieces if p.strip()]
+
+
+def chunk_text(
+    text: str,
+    max_words: int = 80,
+    window_sentences: int = 2,
+) -> List[str]:
+    sentences = split_sentences(text)
+    if not sentences:
+        return []
+
+    chunks = []
+    current: List[str] = []
+    current_words = 0
+
+    for sentence in sentences:
+        words = sentence.split()
+        if current and current_words + len(words) > max_words:
+            chunks.append(" ".join(current))
+            current = current[-max(0, window_sentences - 1):]
+            current_words = sum(len(s.split()) for s in current)
+
+        current.append(sentence)
+        current_words += len(words)
+
+    if current:
+        chunks.append(" ".join(current))
+
+    return list(dict.fromkeys(chunks))
 
 
 def make_no_evidence_placeholder(dataset_name: str, question: str) -> str:
@@ -155,13 +199,20 @@ def prepare_squad():
                 gold_answers = safe_list(answers.get("text", []))
 
             qa_items.append(make_qa_item(qid, split, question, gold_answers))
-            corpus_items.append(
-                make_corpus_item(
-                    doc_id=f"squad_doc_{doc_idx}",
-                    text=context,
-                    title=title
+
+            chunks = chunk_text(context, max_words=80, window_sentences=2) or [context]
+            for chunk_idx, chunk in enumerate(chunks):
+                corpus_items.append(
+                    make_corpus_item(
+                        doc_id=f"squad_doc_{doc_idx}_chunk_{chunk_idx}",
+                        text=chunk,
+                        title=title,
+                        dataset="squad",
+                        source_split=split,
+                        source_doc_id=f"squad_doc_{doc_idx}",
+                        chunk_index=chunk_idx,
+                    )
                 )
-            )
             doc_idx += 1
 
     corpus_items = dedup_corpus(corpus_items)
@@ -323,19 +374,26 @@ def prepare_triviaqa():
                         if k.lower() in {"wiki_context", "description"}:
                             context_parts.extend([normalize_text(x) for x in v if normalize_text(x)])
 
-            context = normalize_text(" ".join(context_parts))
-
-            if not context:
-                context = make_no_evidence_placeholder("TriviaQA", question)
+            context_parts = list(dict.fromkeys([x for x in context_parts if x]))
+            if not context_parts:
+                context_parts = [make_no_evidence_placeholder("TriviaQA", question)]
 
             qa_items.append(make_qa_item(qid, split, question, gold_answers))
-            corpus_items.append(
-                make_corpus_item(
-                    doc_id=f"triviaqa_doc_{doc_idx}",
-                    text=context,
-                    title="TriviaQA"
-                )
-            )
+            for part_idx, part in enumerate(context_parts):
+                chunks = chunk_text(part, max_words=80, window_sentences=1) or [part]
+                for chunk_idx, chunk in enumerate(chunks):
+                    corpus_items.append(
+                        make_corpus_item(
+                            doc_id=f"triviaqa_doc_{doc_idx}_part_{part_idx}_chunk_{chunk_idx}",
+                            text=chunk,
+                            title="TriviaQA",
+                            dataset="triviaqa",
+                            source_split=split,
+                            source_doc_id=f"triviaqa_doc_{doc_idx}",
+                            source_part_index=part_idx,
+                            chunk_index=chunk_idx,
+                        )
+                    )
             doc_idx += 1
 
     corpus_items = dedup_corpus(corpus_items)

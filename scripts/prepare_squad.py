@@ -1,5 +1,6 @@
 import argparse
 import hashlib
+import re
 from typing import Any, Dict, List, Tuple
 
 from config import (
@@ -41,6 +42,43 @@ def build_passage_text(title: str, context: str) -> str:
     return context
 
 
+def split_sentences(text: str) -> List[str]:
+    text = re.sub(r"\s+", " ", str(text or "")).strip()
+    if not text:
+        return []
+    pieces = re.split(r"(?<=[.!?])\s+", text)
+    return [p.strip() for p in pieces if p.strip()]
+
+
+def chunk_text(
+    text: str,
+    max_words: int = 80,
+    window_sentences: int = 2,
+) -> List[str]:
+    sentences = split_sentences(text)
+    if not sentences:
+        return []
+
+    chunks = []
+    current: List[str] = []
+    current_words = 0
+
+    for sentence in sentences:
+        words = sentence.split()
+        if current and current_words + len(words) > max_words:
+            chunks.append(" ".join(current))
+            current = current[-max(0, window_sentences - 1):]
+            current_words = sum(len(s.split()) for s in current)
+
+        current.append(sentence)
+        current_words += len(words)
+
+    if current:
+        chunks.append(" ".join(current))
+
+    return list(dict.fromkeys(chunks))
+
+
 def make_context_id(title: str, context: str) -> str:
     digest = hashlib.md5(f"{title}||{context}".encode("utf-8")).hexdigest()[:16]
     return f"squad_ctx_{digest}"
@@ -54,7 +92,7 @@ def parse_squad_file(
     qa_records: List[Dict[str, Any]] = []
     corpus_records: List[Dict[str, Any]] = []
 
-    seen_context_ids = set()
+    seen_chunk_ids = set()
 
     articles = raw_data.get("data", [])
     for article_idx, article in enumerate(articles):
@@ -68,18 +106,23 @@ def parse_squad_file(
 
             context_id = make_context_id(title, context)
 
-            if context_id not in seen_context_ids:
-                corpus_records.append({
-                    "id": context_id,
-                    "dataset": "squad",
-                    "version": version,
-                    "source_split": split_name,
-                    "title": title,
-                    "paragraph_index": para_idx,
-                    "text": build_passage_text(title, context),
-                    "context": context,
-                })
-                seen_context_ids.add(context_id)
+            chunks = chunk_text(context, max_words=80, window_sentences=2) or [context]
+            for chunk_idx, chunk in enumerate(chunks):
+                chunk_id = f"{context_id}_chunk_{chunk_idx}"
+                if chunk_id not in seen_chunk_ids:
+                    corpus_records.append({
+                        "id": chunk_id,
+                        "dataset": "squad",
+                        "version": version,
+                        "source_split": split_name,
+                        "title": title,
+                        "paragraph_index": para_idx,
+                        "parent_context_id": context_id,
+                        "chunk_index": chunk_idx,
+                        "text": build_passage_text(title, chunk),
+                        "context": chunk,
+                    })
+                    seen_chunk_ids.add(chunk_id)
 
             qas = para.get("qas", [])
             for qa_idx, qa in enumerate(qas):
