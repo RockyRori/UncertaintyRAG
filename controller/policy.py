@@ -10,11 +10,14 @@ class RuleBasedPolicy:
         tau_stop: float = 0.45,
         tau_delta: float = 0.01,
         tau_gain: float = 0.01,
-        answer_min_utility: float = 0.50,
-        answer_min_best_utility: float = 0.35,
-        answer_max_conflict: float = 0.55,
-        answer_max_total_uncertainty: float = 0.70,
-        tau_stability: float = 0.12,
+        answer_min_utility: float = 0.46,
+        answer_min_best_utility: float = 0.55,
+        answer_max_conflict: float = 0.66,
+        answer_max_total_uncertainty: float = 0.72,
+        tau_stability: float = 0.05,
+        answer_high_utility: float = 0.76,
+        answer_high_utility_min_answer_utility: float = 0.50,
+        answer_high_utility_max_total_uncertainty: float = 0.66,
         retrieve_cost: float = 0.05,
     ):
         self.tau_answer = tau_answer
@@ -29,10 +32,21 @@ class RuleBasedPolicy:
         self.answer_max_conflict = answer_max_conflict
         self.answer_max_total_uncertainty = answer_max_total_uncertainty
         self.tau_stability = tau_stability
+        self.answer_high_utility = answer_high_utility
+        self.answer_high_utility_min_answer_utility = answer_high_utility_min_answer_utility
+        self.answer_high_utility_max_total_uncertainty = answer_high_utility_max_total_uncertainty
         self.retrieve_cost = retrieve_cost
 
-    def can_answer(self, state) -> bool:
+    def has_high_utility_answer(self, state) -> bool:
         return (
+            bool(state.best_answer)
+            and state.best_utility >= self.answer_high_utility
+            and state.answer_utility >= self.answer_high_utility_min_answer_utility
+            and state.total_uncertainty <= self.answer_high_utility_max_total_uncertainty
+        )
+
+    def can_answer(self, state) -> bool:
+        standard_answer = (
             bool(state.best_answer)
             and state.answer_utility >= self.answer_min_utility
             and state.best_utility >= self.answer_min_best_utility
@@ -40,6 +54,7 @@ class RuleBasedPolicy:
             and state.total_uncertainty <= self.answer_max_total_uncertainty
             and state.stability_score >= self.tau_stability
         )
+        return standard_answer or self.has_high_utility_answer(state)
 
     def act(self, state) -> str:
         max_u = state.best_utility
@@ -52,7 +67,9 @@ class RuleBasedPolicy:
         answer_utility = state.answer_utility
         continue_utility = state.continue_utility
 
-        if answer_utility >= continue_utility and self.can_answer(state):
+        if self.can_answer(state) and (
+            answer_utility >= continue_utility or self.has_high_utility_answer(state)
+        ):
             return ANSWER
 
         if budget <= 0:

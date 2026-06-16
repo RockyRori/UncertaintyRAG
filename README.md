@@ -14,6 +14,12 @@ The current default is intentionally small: all main experiments use 100 example
 
 Keep these defaults unchanged while debugging the pipeline. Change them in `config.py` only after data quality, split construction, and policy behavior are stable.
 
+## Current Policy Notes
+
+The default rule policy is calibrated for the current chunked-corpus outputs. It uses relaxed answer guardrails plus a utility-dominant answer rule: when the best candidate has strong predicted utility and total uncertainty is still acceptable, the controller may answer even if answer diversity across chunks raises conflict.
+
+`sweep_policies.py` uses threshold bands derived from the current score distribution, from high-coverage settings to more selective settings. Rerun the sweep after utility-model, corpus, chunking, or answer-postprocessing changes.
+
 ## Clean Data Rule
 
 Gold answers may be used to create supervision labels and evaluation metrics. They must not be copied into retrieval corpus text or runtime model features.
@@ -58,6 +64,7 @@ python -m scripts.prepare_squad --version v1.1
 python -m scripts.build_mini_dataset --sample-size 100 --split train
 python -m scripts.build_utility_dataset --max-questions 100 --top-k 3
 python -m training.train_utility_model --max-questions 100
+python -m scripts.diagnose_retrieval --datasets squad --split all --top-k 1 3 5
 python main.py --max-samples 100
 python compare_baselines.py --max-samples 100
 python sweep_policies.py --max-samples 100
@@ -73,11 +80,14 @@ Use this path to download and prepare the five small QA datasets, train per-data
 ```powershell
 python -m scripts.download_qa_datasets --limit 100
 python -m scripts.prepare_all_datasets
+python -m scripts.diagnose_retrieval --datasets squad triviaqa webq --split test --top-k 1 3 5
 python -m training.multi_dataset_runner --train-size 100 --test-size 100
 python -m scripts.build_results_csv
 python -m scripts.export_paper_results
 python -m scripts.plot_results
 ```
+
+The TriviaQA downloader tries multiple HuggingFace configurations and rejects empty streams. If one configuration returns no rows, it falls back automatically before writing final raw JSONL files.
 
 By default, `multi_dataset_runner` skips datasets that cannot form non-overlapping train/test splits. Use strict mode when you want the run to fail instead of skipping invalid datasets:
 
@@ -94,6 +104,12 @@ python -m scripts.prepare_squad --version v1.1
 python -m scripts.build_mini_dataset --sample-size 100 --split train
 python -m scripts.download_qa_datasets --limit 100
 python -m scripts.prepare_all_datasets
+```
+
+### Retrieval Diagnostics
+
+```powershell
+python -m scripts.diagnose_retrieval --datasets squad triviaqa webq --split test --top-k 1 3 5
 ```
 
 ### Utility Supervision and Training
@@ -126,12 +142,33 @@ You do not need to rerun the full pipeline after every change. Use the smallest 
 
 ### Only Policy or Decision Logic Changed
 
-Run evaluation and export again. No data preparation or utility retraining is needed.
+Run evaluation, policy sweep, and export again. No data preparation or utility retraining is needed.
 
 ```powershell
 python main.py --max-samples 100
 python compare_baselines.py --max-samples 100
 python sweep_policies.py --max-samples 100
+python -m scripts.build_results_csv
+python -m scripts.export_paper_results
+python -m scripts.plot_results
+```
+
+### Only Dataset Download, Corpus, or Chunking Changed
+
+Regenerate processed data, check retrieval support, then rebuild utility supervision/models before evaluation. Use this block after changes to TriviaQA download, corpus construction, or chunking.
+
+```powershell
+python -m scripts.download_qa_datasets --limit 100
+python -m scripts.prepare_all_datasets
+python -m scripts.diagnose_retrieval --datasets squad triviaqa webq --split test --top-k 1 3 5
+python -m scripts.prepare_squad --version v1.1
+python -m scripts.build_mini_dataset --sample-size 100 --split train
+python -m scripts.build_utility_dataset --max-questions 100 --top-k 3
+python -m training.train_utility_model --max-questions 100
+python main.py --max-samples 100
+python compare_baselines.py --max-samples 100
+python sweep_policies.py --max-samples 100
+python -m training.multi_dataset_runner --train-size 100 --test-size 100
 python -m scripts.build_results_csv
 python -m scripts.export_paper_results
 python -m scripts.plot_results

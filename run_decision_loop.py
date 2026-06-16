@@ -18,6 +18,9 @@ from config import (
     ANSWER_MAX_CONFLICT,
     ANSWER_MAX_TOTAL_UNCERTAINTY,
     ANSWER_MIN_STABILITY,
+    ANSWER_HIGH_UTILITY,
+    ANSWER_HIGH_UTILITY_MIN_ANSWER_UTILITY,
+    ANSWER_HIGH_UTILITY_MAX_TOTAL_UNCERTAINTY,
     UNCERTAINTY_ALPHA,
     UNCERTAINTY_BETA,
     UNCERTAINTY_GAMMA,
@@ -77,6 +80,9 @@ def main():
         answer_max_conflict=ANSWER_MAX_CONFLICT,
         answer_max_total_uncertainty=ANSWER_MAX_TOTAL_UNCERTAINTY,
         tau_stability=ANSWER_MIN_STABILITY,
+        answer_high_utility=ANSWER_HIGH_UTILITY,
+        answer_high_utility_min_answer_utility=ANSWER_HIGH_UTILITY_MIN_ANSWER_UTILITY,
+        answer_high_utility_max_total_uncertainty=ANSWER_HIGH_UTILITY_MAX_TOTAL_UNCERTAINTY,
     )
 
     runner = DecisionAwareRAG(

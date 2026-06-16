@@ -142,13 +142,17 @@ RETRIEVE_MORE_K = 2
 MAX_RETRIEVAL_BUDGET = 2
 MAX_DECISION_STEPS = 5
 
-# Answer commitment guardrails. These are intentionally stricter than the
-# older prototype defaults so uncertainty can actually control coverage.
-ANSWER_MIN_UTILITY = 0.50
-ANSWER_MIN_BEST_UTILITY = 0.35
-ANSWER_MAX_CONFLICT = 0.55
-ANSWER_MAX_TOTAL_UNCERTAINTY = 0.70
-ANSWER_MIN_STABILITY = 0.12
+# Answer commitment guardrails. These are calibrated for the chunked corpus
+# pipeline: strict enough to abstain on weak evidence, but not so strict that
+# answer diversity across chunks suppresses high-utility answers.
+ANSWER_MIN_UTILITY = 0.46
+ANSWER_MIN_BEST_UTILITY = 0.55
+ANSWER_MAX_CONFLICT = 0.66
+ANSWER_MAX_TOTAL_UNCERTAINTY = 0.72
+ANSWER_MIN_STABILITY = 0.05
+ANSWER_HIGH_UTILITY = 0.76
+ANSWER_HIGH_UTILITY_MIN_ANSWER_UTILITY = 0.50
+ANSWER_HIGH_UTILITY_MAX_TOTAL_UNCERTAINTY = 0.66
 
 # =========================================================
 # Create necessary directories automatically

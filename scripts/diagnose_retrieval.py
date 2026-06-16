@@ -3,13 +3,23 @@ import csv
 from pathlib import Path
 from typing import Dict, List
 
-from config import OUTPUTS_DIR, PROCESSED_DATA_DIR
+from config import DATASET_CORPUS_PATH, DATASET_QA_PATH, OUTPUTS_DIR, PROCESSED_DATA_DIR
 from retriever.bm25_retriever import BM25Retriever
 from utils.io_utils import load_json
 from utils.text_utils import contains_any_answer
 
 
 DEFAULT_DATASETS = ["squad", "triviaqa", "webq", "nq", "popqa"]
+
+
+def find_processed_paths(dataset: str) -> tuple[Path, Path]:
+    qa_path = PROCESSED_DATA_DIR / f"{dataset}_qa.json"
+    corpus_path = PROCESSED_DATA_DIR / f"{dataset}_corpus.json"
+    if qa_path.exists() and corpus_path.exists():
+        return qa_path, corpus_path
+    if dataset == "squad" and DATASET_QA_PATH.exists() and DATASET_CORPUS_PATH.exists():
+        return DATASET_QA_PATH, DATASET_CORPUS_PATH
+    return qa_path, corpus_path
 
 
 def select_records(records: List[Dict], split: str, limit: int | None) -> List[Dict]:
@@ -40,8 +50,7 @@ def diagnose_dataset(
     limit: int | None,
     output_rows: List[Dict],
 ) -> Dict:
-    qa_path = PROCESSED_DATA_DIR / f"{dataset}_qa.json"
-    corpus_path = PROCESSED_DATA_DIR / f"{dataset}_corpus.json"
+    qa_path, corpus_path = find_processed_paths(dataset)
     if not qa_path.exists() or not corpus_path.exists():
         summary = {
             "dataset": dataset,
