@@ -1,5 +1,0 @@
-Method,Acc.,AUROC,Answer Rate,Ans.-Only Acc.
-Single-Pass,0.1,0.75,1.0,0.1
-Single-Pass + Rerank,0.09,0.79,1.0,0.09
-Single-Pass + Abstain,0.09,0.8,0.63,0.14
-Governed Decision Loop,0.45,0.92,1.0,0.45

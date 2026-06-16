@@ -10,6 +10,8 @@ from config import DEFAULT_DATASET_DOWNLOAD_LIMIT, RAW_DATA_DIR
 
 def save_jsonl(data_iter, path: Path, limit: int) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
+    if path.exists():
+        path.unlink()
     with path.open("w", encoding="utf-8") as f:
         for ex in islice(data_iter, limit):
             f.write(json.dumps(ex, ensure_ascii=False) + "\n")

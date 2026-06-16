@@ -3,8 +3,10 @@ import re
 from pathlib import Path
 from typing import Any, Dict, List
 
-RAW_DIR = Path("data/raw")
-PROCESSED_DIR = Path("data/processed")
+from config import PROCESSED_DATA_DIR, RAW_DATA_DIR
+
+RAW_DIR = RAW_DATA_DIR
+PROCESSED_DIR = PROCESSED_DATA_DIR
 PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 
 DATASETS = ["squad", "nq", "triviaqa", "webq", "popqa"]
@@ -24,6 +26,9 @@ def load_jsonl(path: Path) -> List[Dict[str, Any]]:
 
 
 def save_json(data: Any, path: Path):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if path.exists():
+        path.unlink()
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
@@ -468,7 +473,7 @@ def main():
 
     save_json(all_stats, PROCESSED_DIR / "all_datasets_stats.json")
 
-    print("\n[OK] Saved summary stats to data/processed/all_datasets_stats.json")
+    print(f"\n[OK] Saved summary stats to {PROCESSED_DIR / 'all_datasets_stats.json'}")
     print("[DONE] All available datasets have been processed.")
 
 

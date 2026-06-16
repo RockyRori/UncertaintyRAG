@@ -1,6 +1,0 @@
-Policy,Acc.,AUROC,Answer Rate,Ans.-Only Acc.,Avg. Steps
-D-loose-1,0.45,0.92,1.0,0.45,1.38
-E-loose-2,0.45,0.92,1.0,0.45,1.38
-F-balanced,0.45,0.92,1.0,0.45,1.38
-G-selective,0.45,0.92,1.0,0.45,1.38
-H-more-selective,0.45,0.92,1.0,0.45,1.38

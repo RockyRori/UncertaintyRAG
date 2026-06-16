@@ -4,6 +4,8 @@ This repository is being refactored from a conference prototype into a TPAMI-ori
 
 The current default is intentionally small: training is capped at 100 questions so the full loop can be debugged quickly before scaling up.
 
+All generated artifacts are written under `outputs/`, including downloaded data, processed JSON files, saved models, result CSVs, paper tables, and figures.
+
 ## Current Defaults
 
 - Dataset download limit per split: `100`
@@ -41,8 +43,8 @@ python -m scripts.build_mini_dataset --sample-size 100 --split train
 python -m scripts.build_utility_dataset --max-questions 100 --top-k 3
 python -m training.train_utility_model --max-questions 100
 python main.py --max-samples 100
-python main_compare_phase5.py --max-samples 100
-python main_sweep_phase5.py --max-samples 100
+python compare_baselines.py --max-samples 100
+python sweep_policies.py --max-samples 100
 ```
 
 ## Small Multi-Dataset Prototype
@@ -60,9 +62,9 @@ python -m training.multi_dataset_runner --train-size 100 --test-size 100
 After prediction files are generated:
 
 ```powershell
-python -m scripts.build_results_csv_v2
-python -m scripts.export_paper_results_v2
-python -m scripts.plot_results_v2
+python -m scripts.build_results_csv
+python -m scripts.export_paper_results
+python -m scripts.plot_results
 ```
 
 ## TPAMI Refactor Notes

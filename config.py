@@ -8,15 +8,15 @@ ROOT_DIR = Path(__file__).resolve().parent
 # =========================================================
 # Directories
 # =========================================================
-DATA_DIR = ROOT_DIR / "data"
+OUTPUTS_DIR = ROOT_DIR / "outputs"
+
+DATA_DIR = OUTPUTS_DIR / "data"
 RAW_DATA_DIR = DATA_DIR / "raw"
 PROCESSED_DATA_DIR = DATA_DIR / "processed"
 DEMO_DATA_DIR = DATA_DIR / "demo"
 
-MODELS_DIR = ROOT_DIR / "models"
+MODELS_DIR = OUTPUTS_DIR / "models"
 SAVED_MODELS_DIR = MODELS_DIR / "saved"
-
-OUTPUTS_DIR = ROOT_DIR / "outputs"
 
 # =========================================================
 # Dataset selection
