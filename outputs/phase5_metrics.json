@@ -1,25 +1,25 @@
 {
-  "accuracy": 0.5,
-  "auroc": 0.88,
+  "accuracy": 0.45,
+  "auroc": 0.9244444444444444,
   "avg_uncertainty": {
-    "overall": 0.8111318327378019,
-    "correct_only": 0.7628914571472711,
-    "incorrect_only": 0.8593722083283326
+    "overall": 0.5269544779924693,
+    "correct_only": 0.39710664156366626,
+    "incorrect_only": 0.6331936168887627
   },
   "selective_accuracy_80": {
-    "kept_count": 8,
+    "kept_count": 80,
     "kept_ratio": 0.8,
-    "accuracy": 0.625
+    "accuracy": 0.5625
   },
   "decision_summary": {
-    "count": 10,
-    "answer_rate": 0.9,
-    "abstain_rate": 0.1,
-    "accuracy_all": 0.5,
-    "accuracy_answered_only": 0.5555555555555556,
-    "avg_steps": 2.9,
-    "avg_evidence": 4.2,
-    "avg_budget_used": 1.2,
-    "overconfident_error_rate": 0.0
+    "count": 100,
+    "answer_rate": 1.0,
+    "abstain_rate": 0.0,
+    "accuracy_all": 0.45,
+    "accuracy_answered_only": 0.45,
+    "avg_steps": 1.38,
+    "avg_evidence": 3.08,
+    "avg_budget_used": 0.19,
+    "overconfident_error_rate": 0.01
   }
 }

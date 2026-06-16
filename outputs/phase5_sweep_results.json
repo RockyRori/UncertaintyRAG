@@ -6,28 +6,28 @@
       "answer_max_total_uncertainty": 0.95
     },
     "metrics": {
-      "accuracy": 0.32,
-      "auroc": 0.7352941176470588,
+      "accuracy": 0.45,
+      "auroc": 0.9244444444444444,
       "avg_uncertainty": {
-        "overall": 0.83358583259701,
-        "correct_only": 0.796508701161929,
-        "incorrect_only": 0.8510338944488126
+        "overall": 0.5269544779924693,
+        "correct_only": 0.39710664156366626,
+        "incorrect_only": 0.6331936168887627
       },
       "selective_accuracy_80": {
-        "kept_count": 40,
+        "kept_count": 80,
         "kept_ratio": 0.8,
-        "accuracy": 0.375
+        "accuracy": 0.5625
       },
       "decision_summary": {
-        "count": 50,
-        "answer_rate": 0.98,
-        "abstain_rate": 0.02,
-        "accuracy_all": 0.32,
-        "accuracy_answered_only": 0.32653061224489793,
-        "avg_steps": 3.32,
-        "avg_evidence": 4.28,
-        "avg_budget_used": 1.48,
-        "overconfident_error_rate": 0.0
+        "count": 100,
+        "answer_rate": 1.0,
+        "abstain_rate": 0.0,
+        "accuracy_all": 0.45,
+        "accuracy_answered_only": 0.45,
+        "avg_steps": 1.38,
+        "avg_evidence": 3.08,
+        "avg_budget_used": 0.19,
+        "overconfident_error_rate": 0.01
       }
     }
   },
@@ -38,28 +38,28 @@
       "answer_max_total_uncertainty": 0.92
     },
     "metrics": {
-      "accuracy": 0.32,
-      "auroc": 0.7352941176470588,
+      "accuracy": 0.45,
+      "auroc": 0.9244444444444444,
       "avg_uncertainty": {
-        "overall": 0.83358583259701,
-        "correct_only": 0.796508701161929,
-        "incorrect_only": 0.8510338944488126
+        "overall": 0.5269544779924693,
+        "correct_only": 0.39710664156366626,
+        "incorrect_only": 0.6331936168887627
       },
       "selective_accuracy_80": {
-        "kept_count": 40,
+        "kept_count": 80,
         "kept_ratio": 0.8,
-        "accuracy": 0.375
+        "accuracy": 0.5625
       },
       "decision_summary": {
-        "count": 50,
-        "answer_rate": 0.98,
-        "abstain_rate": 0.02,
-        "accuracy_all": 0.32,
-        "accuracy_answered_only": 0.32653061224489793,
-        "avg_steps": 3.32,
-        "avg_evidence": 4.28,
-        "avg_budget_used": 1.48,
-        "overconfident_error_rate": 0.0
+        "count": 100,
+        "answer_rate": 1.0,
+        "abstain_rate": 0.0,
+        "accuracy_all": 0.45,
+        "accuracy_answered_only": 0.45,
+        "avg_steps": 1.38,
+        "avg_evidence": 3.08,
+        "avg_budget_used": 0.19,
+        "overconfident_error_rate": 0.01
       }
     }
   },
@@ -70,28 +70,28 @@
       "answer_max_total_uncertainty": 0.9
     },
     "metrics": {
-      "accuracy": 0.32,
-      "auroc": 0.7352941176470588,
+      "accuracy": 0.45,
+      "auroc": 0.9244444444444444,
       "avg_uncertainty": {
-        "overall": 0.83358583259701,
-        "correct_only": 0.796508701161929,
-        "incorrect_only": 0.8510338944488126
+        "overall": 0.5269544779924693,
+        "correct_only": 0.39710664156366626,
+        "incorrect_only": 0.6331936168887627
       },
       "selective_accuracy_80": {
-        "kept_count": 40,
+        "kept_count": 80,
         "kept_ratio": 0.8,
-        "accuracy": 0.375
+        "accuracy": 0.5625
       },
       "decision_summary": {
-        "count": 50,
-        "answer_rate": 0.94,
-        "abstain_rate": 0.06,
-        "accuracy_all": 0.32,
-        "accuracy_answered_only": 0.3404255319148936,
-        "avg_steps": 3.32,
-        "avg_evidence": 4.28,
-        "avg_budget_used": 1.48,
-        "overconfident_error_rate": 0.0
+        "count": 100,
+        "answer_rate": 1.0,
+        "abstain_rate": 0.0,
+        "accuracy_all": 0.45,
+        "accuracy_answered_only": 0.45,
+        "avg_steps": 1.38,
+        "avg_evidence": 3.08,
+        "avg_budget_used": 0.19,
+        "overconfident_error_rate": 0.01
       }
     }
   },
@@ -102,28 +102,28 @@
       "answer_max_total_uncertainty": 0.88
     },
     "metrics": {
-      "accuracy": 0.3,
-      "auroc": 0.7752380952380952,
+      "accuracy": 0.45,
+      "auroc": 0.9244444444444444,
       "avg_uncertainty": {
-        "overall": 0.83358583259701,
-        "correct_only": 0.7907989269559667,
-        "incorrect_only": 0.8519230778717427
+        "overall": 0.5269544779924693,
+        "correct_only": 0.39710664156366626,
+        "incorrect_only": 0.6331936168887627
       },
       "selective_accuracy_80": {
-        "kept_count": 40,
+        "kept_count": 80,
         "kept_ratio": 0.8,
-        "accuracy": 0.375
+        "accuracy": 0.5625
       },
       "decision_summary": {
-        "count": 50,
-        "answer_rate": 0.8,
-        "abstain_rate": 0.2,
-        "accuracy_all": 0.3,
-        "accuracy_answered_only": 0.375,
-        "avg_steps": 3.32,
-        "avg_evidence": 4.28,
-        "avg_budget_used": 1.48,
-        "overconfident_error_rate": 0.0
+        "count": 100,
+        "answer_rate": 1.0,
+        "abstain_rate": 0.0,
+        "accuracy_all": 0.45,
+        "accuracy_answered_only": 0.45,
+        "avg_steps": 1.38,
+        "avg_evidence": 3.08,
+        "avg_budget_used": 0.19,
+        "overconfident_error_rate": 0.01
       }
     }
   },
@@ -134,28 +134,28 @@
       "answer_max_total_uncertainty": 0.86
     },
     "metrics": {
-      "accuracy": 0.28,
-      "auroc": 0.8154761904761905,
+      "accuracy": 0.45,
+      "auroc": 0.9244444444444444,
       "avg_uncertainty": {
-        "overall": 0.83358583259701,
-        "correct_only": 0.7849087884555397,
-        "incorrect_only": 0.8525157942075816
+        "overall": 0.5269544779924693,
+        "correct_only": 0.39710664156366626,
+        "incorrect_only": 0.6331936168887627
       },
       "selective_accuracy_80": {
-        "kept_count": 40,
+        "kept_count": 80,
         "kept_ratio": 0.8,
-        "accuracy": 0.35
+        "accuracy": 0.5625
       },
       "decision_summary": {
-        "count": 50,
-        "answer_rate": 0.72,
-        "abstain_rate": 0.28,
-        "accuracy_all": 0.28,
-        "accuracy_answered_only": 0.3888888888888889,
-        "avg_steps": 3.32,
-        "avg_evidence": 4.28,
-        "avg_budget_used": 1.48,
-        "overconfident_error_rate": 0.0
+        "count": 100,
+        "answer_rate": 1.0,
+        "abstain_rate": 0.0,
+        "accuracy_all": 0.45,
+        "accuracy_answered_only": 0.45,
+        "avg_steps": 1.38,
+        "avg_evidence": 3.08,
+        "avg_budget_used": 0.19,
+        "overconfident_error_rate": 0.01
       }
     }
   }

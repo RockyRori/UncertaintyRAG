@@ -1,5 +1,6 @@
 from config import (
     CORPUS_PATH,
+    DEFAULT_EVAL_SAMPLE_LIMIT,
     MINI_DATASET_PATH,
     OUTPUTS_DIR,
     INITIAL_TOP_K,
@@ -16,6 +17,7 @@ from config import (
     MAX_INPUT_LENGTH,
     MAX_NEW_TOKENS,
 )
+import argparse
 from utils.io_utils import load_json, save_json
 from retriever.bm25_retriever import BM25Retriever
 from inference.predict_utility import UtilityPredictor
@@ -28,7 +30,13 @@ from evaluation.decision_metrics import summarize_decision_records
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--max-samples", type=int, default=DEFAULT_EVAL_SAMPLE_LIMIT)
+    args = parser.parse_args()
+
     dataset = load_json(MINI_DATASET_PATH)
+    if args.max_samples is not None and args.max_samples > 0:
+        dataset = dataset[: args.max_samples]
 
     retriever = BM25Retriever(CORPUS_PATH)
     utility_predictor = UtilityPredictor()
@@ -62,7 +70,7 @@ def main():
 
     records = []
 
-    for sample in dataset[:20]:
+    for sample in dataset:
         question = sample["question"]
         gold_answers = sample["gold_answers"]
 

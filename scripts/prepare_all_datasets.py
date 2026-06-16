@@ -80,6 +80,15 @@ def make_corpus_item(doc_id: str, text: str, title: str = "") -> Dict[str, Any]:
     }
 
 
+def make_no_evidence_placeholder(dataset_name: str, question: str) -> str:
+    return (
+        f"Dataset: {normalize_text(dataset_name)}. "
+        f"Question: {normalize_text(question)}. "
+        "No gold answer or reference answer is included in this placeholder. "
+        "Use an external retrieval corpus for open-domain experiments."
+    )
+
+
 def extract_text_from_nq_tokens(tokens: List[Dict[str, Any]]) -> str:
     """
     Natural Questions 的 document.tokens 常带 html token。
@@ -240,8 +249,7 @@ def prepare_nq():
                 context = extract_text_from_nq_tokens(tokens)
 
         if not context:
-            answer_text = "; ".join(gold_answers[:5]) if gold_answers else ""
-            context = f"Question: {question}. Candidate answers: {answer_text}"
+            context = make_no_evidence_placeholder("Natural Questions", question)
 
         qa_items.append(make_qa_item(qid, "train", question, gold_answers))
         corpus_items.append(make_corpus_item(f"nq_doc_{i}", context, title))
@@ -313,7 +321,7 @@ def prepare_triviaqa():
             context = normalize_text(" ".join(context_parts))
 
             if not context:
-                context = f"Question: {question}. Candidate answers: {'; '.join(gold_answers[:5])}"
+                context = make_no_evidence_placeholder("TriviaQA", question)
 
             qa_items.append(make_qa_item(qid, split, question, gold_answers))
             corpus_items.append(
@@ -364,8 +372,9 @@ def prepare_webq():
             answers = safe_list(ex.get("answers", []))
             gold_answers = [normalize_text(x) for x in answers if normalize_text(x)]
 
-            # WebQuestions 通常没有标准 context，构造 pseudo corpus
-            pseudo_context = f"Question: {question}. Reference answers: {'; '.join(gold_answers[:5])}"
+            # WebQuestions does not ship a clean passage corpus here. Keep a
+            # non-leaking placeholder and use an external corpus for real runs.
+            pseudo_context = make_no_evidence_placeholder("WebQuestions", question)
 
             qa_items.append(make_qa_item(qid, split, question, gold_answers))
             corpus_items.append(
@@ -411,14 +420,11 @@ def prepare_popqa():
 
         subject = ex.get("subject", "")
         prop = ex.get("prop", "")
-        obj = ex.get("object", "")
-
         pseudo_context = (
             f"Subject: {normalize_text(subject)}. "
             f"Relation: {normalize_text(prop)}. "
-            f"Object: {normalize_text(obj)}. "
             f"Question: {normalize_text(question)}. "
-            f"Candidate answers: {'; '.join(gold_answers[:5])}"
+            "No object or possible_answers field is copied into retrieval text."
         )
 
         qa_items.append(make_qa_item(qid, "test", question, gold_answers))

@@ -1,26 +1,26 @@
 {
   "dataset": "webq",
-  "train_size": 50,
-  "test_size": 50,
-  "val_accuracy": 0.98,
-  "val_precision": 1.0,
-  "val_recall": 0.9090909090909091,
-  "val_f1": 0.9523809523809523,
-  "val_auroc": 0.9324009324009324,
-  "best_threshold": 0.55,
-  "best_epoch": 1,
-  "accuracy": 0.78,
-  "auroc": 0.15617715617715616,
+  "train_size": 100,
+  "test_size": 100,
+  "val_accuracy": 0.06,
+  "val_precision": 0.020833333333333332,
+  "val_recall": 1.0,
+  "val_f1": 0.04081632653061224,
+  "val_auroc": 0.0918367346938776,
+  "best_threshold": 0.15000000000000002,
+  "best_epoch": 4,
+  "accuracy": 0.05,
+  "auroc": 0.6673684210526316,
   "avg_uncertainty": {
-    "overall": 0.3018161209564979,
-    "correct_only": 0.3167415524341555,
-    "incorrect_only": 0.24889868208116656
+    "overall": 0.5215923781146202,
+    "correct_only": 0.48089566279705825,
+    "incorrect_only": 0.5237343104997549
   },
   "selective_accuracy_80": {
-    "kept_count": 40,
+    "kept_count": 80,
     "kept_ratio": 0.8,
-    "accuracy": 0.75
+    "accuracy": 0.0625
   },
-  "predictions_csv": "outputs\\five_datasets\\webq\\test_predictions.csv",
-  "metrics_json": "outputs\\five_datasets\\webq\\metrics.json"
+  "predictions_csv": "C:\\File\\履历\\论文写作\\TPAMI\\UncertaintyRAG\\outputs\\five_datasets\\webq\\test_predictions.csv",
+  "metrics_json": "C:\\File\\履历\\论文写作\\TPAMI\\UncertaintyRAG\\outputs\\five_datasets\\webq\\metrics.json"
 }

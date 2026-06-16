@@ -1,7 +1,9 @@
 from copy import deepcopy
+import argparse
 
 from config import (
     CORPUS_PATH,
+    DEFAULT_EVAL_SAMPLE_LIMIT,
     MINI_DATASET_PATH,
     OUTPUTS_DIR,
     INITIAL_TOP_K,
@@ -112,8 +114,13 @@ def run_one_setting(
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--max-samples", type=int, default=DEFAULT_EVAL_SAMPLE_LIMIT)
+    args = parser.parse_args()
+
     dataset = load_json(MINI_DATASET_PATH)
-    dataset = dataset[:50]
+    if args.max_samples is not None and args.max_samples > 0:
+        dataset = dataset[: args.max_samples]
 
     retriever = BM25Retriever(CORPUS_PATH)
     utility_predictor = UtilityPredictor()

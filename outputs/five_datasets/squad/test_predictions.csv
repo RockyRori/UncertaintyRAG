@@ -1,51 +1,101 @@
 dataset,sample_id,question,gold_answers,prediction,final_action,correct,uncertainty,retrieval_uncertainty,conflict_uncertainty,stability_uncertainty,steps,num_evidence,budget_used,stop_reason
-squad,56d20362e7d4791d009025eb,Who won Super Bowl 50?,Denver Broncos || Denver Broncos || Denver Broncos,Carolina Panthers,ANSWER,0,0.360563,0.345688,0.623871,0.002787,1,3,0,policy_stop
-squad,56be8e613aeaaa14008c90d1,What was the theme of Super Bowl 50?,"""golden anniversary"" || gold-themed || ""golden anniversary",gold-themed initiatives,ANSWER,0,0.33723,0.314933,0.591297,0.011872,1,3,0,
-squad,56bead5a3aeaaa14008c91e9,Who did the Panthers beat in the NFC Championship Game?,Arizona Cardinals || the Arizona Cardinals || Arizona Cardinals,Arizona Cardinals,ANSWER,1,0.380522,0.371568,0.648635,0.000736,1,3,0,policy_stop
-squad,56bf10f43aeaaa14008c94ff,What stadium did Super Bowl 50 take place in?,Levi's Stadium || Levi's Stadium || Levi's Stadium,Levi's Stadium,ANSWER,1,0.365582,0.349176,0.634901,0.00262,1,3,0,policy_stop
-squad,56bf159b3aeaaa14008c9507,What was the win/loss ratio in 2015 for the Carolina Panthers during their regular season?,15–1 || 15–1 || 15–1,24–10,ANSWER,0,0.387273,0.388017,0.643185,0.001545,1,3,0,policy_stop
-squad,56bead5a3aeaaa14008c91ed,Who was this season's NFL MVP?,Cam Newton || Cam Newton || Cam Newton,Denver Broncos,ANSWER,0,0.397408,0.397532,0.662075,9.6e-05,1,3,0,policy_stop
-squad,56d20362e7d4791d009025ea,What team was the NFC champion?,Carolina Panthers || Carolina Panthers || Carolina Panthers,Carolina Panthers,ANSWER,1,0.365742,0.360545,0.615684,0.003822,1,3,0,policy_stop
-squad,56bead5a3aeaaa14008c91ea,Who lost to the Broncos in the AFC Championship?,New England Patriots || the New England Patriots || New England Patriots,New England Patriots,ANSWER,1,0.383369,0.373905,0.654561,0.000241,1,3,0,policy_stop
-squad,56beace93aeaaa14008c91e0,What venue did Super Bowl 50 take place in?,Levi's Stadium || Levi's Stadium || Levi's Stadium in the San Francisco Bay Area at Santa Clara,Levi's Stadium,ANSWER,1,0.383607,0.379034,0.645843,0.001686,1,3,0,policy_stop
-squad,56be4db0acb8001400a502f0,What color was used to emphasize the 50th anniversary of the Super Bowl?,gold || gold || gold,gold,ANSWER,1,0.331077,0.309053,0.581881,0.009932,1,3,0,
-squad,56be4db0acb8001400a502ee,Where did Super Bowl 50 take place?,"Santa Clara, California || Levi's Stadium || Levi's Stadium in the San Francisco Bay Area at Santa Clara, California.","Lourdes, France",ANSWER,0,0.3842,0.379126,0.647409,0.00207,1,3,0,policy_stop
-squad,56beace93aeaaa14008c91e2,"If Roman numerals were used, what would Super Bowl 50 have been called?",Super Bowl L || L || Super Bowl L,Super Bowl L,ANSWER,1,0.318725,0.288904,0.572237,0.013009,1,3,0,
-squad,56d2045de7d4791d009025f4,Who did Carolina beat in the NFC championship game?,Arizona Cardinals || the Arizona Cardinals || Arizona Cardinals,Denver Broncos,ANSWER,0,0.397987,0.401164,0.657829,0.000284,1,3,0,policy_stop
-squad,56d2045de7d4791d009025f6,Who did Denver beat in the AFC championship?,New England Patriots || the New England Patriots || New England Patriots,Carolina Panthers,ANSWER,0,0.413401,0.427734,0.665109,5e-06,1,3,0,policy_stop
-squad,56bead5a3aeaaa14008c91ec,How many teams have been in the Super Bowl eight times?,four || four || four,four,ANSWER,1,0.382607,0.37885,0.643364,0.000863,1,3,0,policy_stop
-squad,56be8e613aeaaa14008c90d2,What day was the game played on?,"February 7, 2016 || February 7 || February 7, 2016","February 7, 2016",ANSWER,1,0.365461,0.359372,0.616875,0.003561,1,3,0,policy_stop
-squad,56d6017d1c85041400946ebe,Who was the Most Valuable Player for the 2015 NFL season?,Cam Newton || Cam Newton || Cam Newton,Cam Newton,ANSWER,1,0.376174,0.370169,0.635111,0.002783,1,3,0,policy_stop
-squad,56bf10f43aeaaa14008c94fe,What city did Super Bowl 50 take place in?,Santa Clara || Santa Clara || Santa Clara,San Francisco Bay Area,ANSWER,0,0.385496,0.382085,0.647119,0.001586,1,3,0,policy_stop
-squad,56d9895ddc89441400fdb510,What 2015 NFL team one the AFC playoff?,Denver Broncos || Denver Broncos || Denver Broncos,Carolina Panthers,ANSWER,0,0.398068,0.406448,0.649101,0.000566,1,3,0,policy_stop
-squad,56bf10f43aeaaa14008c9501,"What month, day and year did Super Bowl 50 take place?","February 7, 2016 || February 7, 2016 || February 7, 2016",November,ANSWER,0,0.318956,0.404069,0.38701,0.004093,1,3,0,
-squad,56d600e31c85041400946eb0,Which team won Super Bowl 50.,Denver Broncos || Denver Broncos || Denver Broncos,Denver Broncos,ANSWER,1,0.354425,0.33791,0.61566,0.003862,1,3,0,policy_stop
-squad,56beace93aeaaa14008c91df,Who won Super Bowl 50?,Denver Broncos || Denver Broncos || Denver Broncos,Carolina Panthers,ANSWER,0,0.360563,0.345688,0.623871,0.002787,1,3,0,policy_stop
-squad,56bf159b3aeaaa14008c9509,What were the win/loss game stats for the Denver Bronco's regular season in 2015?,12–4 || 12–4 || 12–4,24–10,ANSWER,0,0.371294,0.375627,0.607259,0.006514,1,3,0,policy_stop
-squad,56d9895ddc89441400fdb50e,The name of the NFL championship game is?,Super Bowl || Super Bowl || Super Bowl,NFC Championship Game,ANSWER,0,0.38211,0.377249,0.643977,0.001461,1,3,0,policy_stop
-squad,56be4e1facb8001400a502f9,How many appearances have the Denver Broncos made in the Super Bowl?,8 || eight || eight,eight,ANSWER,1,0.364196,0.34648,0.632157,0.006546,1,3,0,policy_stop
-squad,56beaa4a3aeaaa14008c91c3,Who did the Broncos prevent from going to the Super Bowl?,New England Patriots || the New England Patriots || New England Patriots,Carolina Panthers,ANSWER,0,0.394221,0.393023,0.65888,0.000226,1,3,0,policy_stop
-squad,56d20362e7d4791d009025e8,What year was Super Bowl 50?,2015 || 2016 || 2016,2015,ANSWER,1,0.353082,0.330833,0.623595,0.002934,1,3,0,policy_stop
-squad,56bea9923aeaaa14008c91b9,What was the theme of Super Bowl 50?,"""golden anniversary"" || gold-themed || gold",gold-themed initiatives,ANSWER,0,0.33723,0.314933,0.591297,0.011872,1,3,0,
-squad,56bf159b3aeaaa14008c950a,How many teams have played in the Super Bowl eight times?,4 || four || four,four,ANSWER,1,0.382514,0.378692,0.643338,0.000834,1,3,0,policy_stop
-squad,56be4e1facb8001400a502f6,Which Carolina Panthers player was named Most Valuable Player?,Cam Newton || Cam Newton || Cam Newton,Cam Newton,ANSWER,1,0.361809,0.351986,0.616133,0.004881,1,3,0,policy_stop
-squad,56bf159b3aeaaa14008c950b,Which team did not get a chance to defend their Super Bowl XLIX win in Super Bowl 50?,New England Patriots || the New England Patriots || New England Patriots,Broncos,ANSWER,0,0.349606,0.317911,0.632833,0.004002,1,3,0,policy_stop
-squad,56d600e31c85041400946eb1,Where was Super Bowl 50 held?,"Santa Clara, California. || Levi's Stadium || Levi's Stadium",San Francisco Bay Area,ANSWER,0,0.359817,0.338474,0.633871,0.002096,1,3,0,policy_stop
-squad,56be4e1facb8001400a502fa,What year was the Carolina Panthers franchise founded?,1995 || 1995 || 1995,1995,ANSWER,1,0.402506,0.411012,0.656467,0.000303,1,3,0,policy_stop
-squad,56be8e613aeaaa14008c90d3,What is the AFC short for?,American Football Conference || American Football Conference || American Football Conference,Notre Dame Stadium,ANSWER,0,0.403779,0.415825,0.652147,0.001111,1,3,0,policy_stop
-squad,56bead5a3aeaaa14008c91eb,Who were the defending Super Bowl champions?,New England Patriots || the New England Patriots || New England Patriots,Carolina Panthers,ANSWER,0,0.387917,0.394415,0.634642,0.001584,1,3,0,policy_stop
-squad,56bf10f43aeaaa14008c94fd,What year did the Denver Broncos secure a Super Bowl title for the third time?,2015 || 2016 || 2015,2016,ANSWER,1,0.347999,0.321872,0.621346,0.003296,1,3,0,policy_stop
-squad,56beaa4a3aeaaa14008c91c2,What team did the Panthers defeat?,Arizona Cardinals || the Arizona Cardinals || Arizona Cardinals,Denver Broncos,ANSWER,0,0.425543,0.455197,0.659773,6.3e-05,1,3,0,policy_stop
-squad,56d2045de7d4791d009025f3,Who is the quarterback for the Panthers?,Cam Newton || Cam Newton || Cam Newton,Denver Broncos,ANSWER,0,0.411497,0.432063,0.650778,0.001163,1,3,0,policy_stop
-squad,56bea9923aeaaa14008c91bb,What day was the Super Bowl played on?,"February 7, 2016 || February 7 || February 7, 2016","February 7, 2016",ANSWER,1,0.343465,0.32831,0.590317,0.011073,1,3,0,
-squad,56d20362e7d4791d009025e9,What team was the AFC champion?,Denver Broncos || Denver Broncos || Denver Broncos,Denver Broncos,ANSWER,1,0.365708,0.360668,0.61535,0.003846,1,3,0,policy_stop
-squad,56be4db0acb8001400a502ef,Which NFL team won Super Bowl 50?,Denver Broncos || Denver Broncos || Denver Broncos,Denver Broncos,ANSWER,1,0.344847,0.320625,0.612023,0.004639,1,3,0,policy_stop
-squad,56beace93aeaaa14008c91e3,Super Bowl 50 decided the NFL champion for what season?,2015 || the 2015 season || 2015,2015,ANSWER,1,0.31068,0.263211,0.589742,0.010759,1,3,0,
-squad,56be4db0acb8001400a502ec,Which NFL team represented the AFC at Super Bowl 50?,Denver Broncos || Denver Broncos || Denver Broncos,Denver Broncos,ANSWER,1,0.32882,0.290198,0.608655,0.005623,1,3,0,policy_stop
-squad,56be4db0acb8001400a502ed,Which NFL team represented the NFC at Super Bowl 50?,Carolina Panthers || Carolina Panthers || Carolina Panthers,Denver Broncos,ANSWER,0,0.329149,0.290172,0.609894,0.005472,1,3,0,policy_stop
-squad,56d2045de7d4791d009025f5,How many times have the Panthers been in the Super Bowl?,2 || second || second,24,ANSWER,0,0.347239,0.324498,0.612477,0.006233,1,3,0,policy_stop
-squad,56bf10f43aeaaa14008c9500,What was the final score of Super Bowl 50?,24–10 || 24–10 || 24–10,24–10,ANSWER,1,0.34381,0.328013,0.592118,0.010837,1,3,0,
-squad,56bea9923aeaaa14008c91ba,What does AFC stand for?,American Football Conference || American Football Conference || American Football Conference,American Football Conference,ANSWER,1,0.411122,0.432475,0.648751,0.001293,1,3,0,policy_stop
-squad,56beace93aeaaa14008c91e1,What city did Super Bowl 50 take place in?,Santa Clara || Santa Clara || Santa Clara,San Francisco Bay Area,ANSWER,0,0.385496,0.382085,0.647119,0.001586,1,3,0,policy_stop
-squad,56d600e31c85041400946eae,Super Bowl 50 determined the NFL champion for what season?,2015 || the 2015 season || 2015,2015,ANSWER,1,0.31068,0.263211,0.589742,0.010759,1,3,0,
-squad,56bf159b3aeaaa14008c9508,Which Carolina Panthers team member was picked as the team's MVP in 2015?,Cam Newton || Cam Newton || Cam Newton,Denver Broncos,ANSWER,0,0.376675,0.369487,0.638599,0.001756,1,3,0,policy_stop
+squad,56d601e41c85041400946ecf,How many times did the Denver defense force Newton into turnovers?,three || three || three,three,ANSWER,1,0.328647,0.045383,0.319513,0.508557,1,3,0,
+squad,56bf1ae93aeaaa14008c951c,What was the average cost for a TV ad lasting 30 seconds during Super Bowl 50?,$5 million || $5 million || $5 million,$5 million,ANSWER,1,0.326591,0.046409,0.324367,0.492618,1,3,0,
+squad,56bf159b3aeaaa14008c9507,What was the win/loss ratio in 2015 for the Carolina Panthers during their regular season?,15–1 || 15–1 || 15–1,24–10,ANSWER,0,0.561719,0.171616,0.563295,0.966724,1,3,0,policy_stop
+squad,56d600e31c85041400946eb1,Where was Super Bowl 50 held?,"Santa Clara, California. || Levi's Stadium || Levi's Stadium",cbs,ANSWER,0,0.486475,0.091704,0.629612,0.804101,2,3,0,
+squad,56be5333acb8001400a5030d,Which performers joined the headliner during the Super Bowl 50 halftime show?,Beyoncé and Bruno Mars || Beyoncé and Bruno Mars || Beyoncé and Bruno Mars,beyoncé and bruno mars,ANSWER,1,0.456341,0.026597,0.522397,0.84629,1,3,0,policy_stop
+squad,56beae423aeaaa14008c91f6,How many turnovers did Cam Newton have?,three || three || three,15,ANSWER,0,0.791822,0.645931,0.595959,0.902973,1,3,0,policy_stop
+squad,56d6017d1c85041400946ec1,Who did Denver beat in the 2015 AFC Championship game?,New England Patriots || the New England Patriots || New England Patriots,carolina panthers,ANSWER,0,0.542381,0.169409,0.575773,0.869865,1,3,0,policy_stop
+squad,56be5333acb8001400a5030c,Which group headlined the Super Bowl 50 halftime show?,Coldplay || Coldplay || Coldplay,coldplay,ANSWER,1,0.470771,0.017048,0.579914,0.884515,1,3,0,policy_stop
+squad,56beab833aeaaa14008c91d2,Which Denver linebacker was named Super Bowl MVP?,linebacker Von Miller || Von Miller || Miller,von miller,ANSWER,1,0.469144,0.02287,0.577837,0.869425,1,3,0,policy_stop
+squad,56bf10f43aeaaa14008c94ff,What stadium did Super Bowl 50 take place in?,Levi's Stadium || Levi's Stadium || Levi's Stadium,levi's stadium,ANSWER,1,0.566158,0.180579,0.56232,0.969113,1,3,0,policy_stop
+squad,56beaa4a3aeaaa14008c91c2,What team did the Panthers defeat?,Arizona Cardinals || the Arizona Cardinals || Arizona Cardinals,new york giants,ANSWER,0,0.734843,0.576263,0.620334,0.830068,2,3,0,policy_stop
+squad,56bf10f43aeaaa14008c94fe,What city did Super Bowl 50 take place in?,Santa Clara || Santa Clara || Santa Clara,cbs,ANSWER,0,0.546845,0.169184,0.580661,0.884285,1,3,0,policy_stop
+squad,56be4e1facb8001400a502f9,How many appearances have the Denver Broncos made in the Super Bowl?,8 || eight || eight,eight,ANSWER,1,0.486895,0.078511,0.641434,0.826727,2,3,0,
+squad,56d601e41c85041400946ece,How many times was Cam Newton sacked in Super Bowl 50?,seven || seven || seven,seven,ANSWER,1,0.413266,0.045053,0.452176,0.695203,1,3,0,policy_stop
+squad,56bf17653aeaaa14008c9515,How many forced fumbles did Von Miller have during the Super Bowl 50 game?,2 || two || two,two,ANSWER,1,0.442848,0.038684,0.490737,0.792772,1,3,0,policy_stop
+squad,56beaf5e3aeaaa14008c9201,Who was the main performer at this year's halftime show?,Coldplay || Coldplay || Coldplay,beyoncé,ANSWER,0,0.473834,0.090507,0.524274,0.788184,1,3,0,policy_stop
+squad,56d601e41c85041400946ed1,Who was the Most Valuable Player of Super Bowl 50?,Von Miller || Von Miller || Von Miller,beyoncé,ANSWER,0,0.469956,0.049484,0.622938,0.822823,2,3,0,
+squad,56d98a59dc89441400fdb52e,What year did the Carolina Panthers form?,1995. || 1995 || 1995,1854–1855,ANSWER,0,0.552969,0.195508,0.529942,0.901952,1,3,0,policy_stop
+squad,56d2051ce7d4791d00902609,How much money did a 1/2 minute commercial cost?,$5 million || $5 million || $5 million,$5 million,ANSWER,1,0.615395,0.530305,0.374683,0.619328,1,3,0,policy_stop
+squad,56d6017d1c85041400946ec2,Who did the Carolina Panthers beat in the 2015 NFC Championship game?,Arizona Cardinals || the Arizona Cardinals || Arizona Cardinals,denver broncos,ANSWER,0,0.512635,0.090869,0.581155,0.902247,1,3,0,policy_stop
+squad,56d2045de7d4791d009025f4,Who did Carolina beat in the NFC championship game?,Arizona Cardinals || the Arizona Cardinals || Arizona Cardinals,arizona cardinals,ANSWER,1,0.604282,0.29944,0.654144,0.849363,2,3,0,policy_stop
+squad,56d9895ddc89441400fdb50e,The name of the NFL championship game is?,Super Bowl || Super Bowl || Super Bowl,nfc championship game,ANSWER,0,0.535864,0.16706,0.629537,0.848696,2,3,0,
+squad,56beaf5e3aeaaa14008c9200,What halftime performer previously headlined Super Bowl XLVIII?,Bruno Mars || Bruno Mars || Mars,beyoncé,ANSWER,0,0.395912,0.046187,0.416018,0.65939,1,3,0,policy_stop
+squad,56bf17653aeaaa14008c9511,Who was given the esteemed status of MVP for Super Bowl 50?,Von Miller || Von Miller || Miller,beyoncé,ANSWER,0,0.477512,0.067935,0.622451,0.816539,2,3,0,
+squad,56d2051ce7d4791d00902608,What station aired the Super Bowl?,CBS || CBS || CBS,cbs,ANSWER,1,0.540348,0.166466,0.549754,0.882254,1,3,0,policy_stop
+squad,56beace93aeaaa14008c91df,Who won Super Bowl 50?,Denver Broncos || Denver Broncos || Denver Broncos,cbs,ANSWER,0,0.503837,0.065628,0.59866,0.909821,1,3,0,policy_stop
+squad,56be8e613aeaaa14008c90d2,What day was the game played on?,"February 7, 2016 || February 7 || February 7, 2016","february 7, 2016",ANSWER,1,0.546492,0.156508,0.552667,0.937789,1,3,0,policy_stop
+squad,56beace93aeaaa14008c91e2,"If Roman numerals were used, what would Super Bowl 50 have been called?",Super Bowl L || L || Super Bowl L,super bowl l,ANSWER,1,0.456229,0.056348,0.503811,0.798837,1,3,0,policy_stop
+squad,56bf10f43aeaaa14008c9500,What was the final score of Super Bowl 50?,24–10 || 24–10 || 24–10,xlviii,ANSWER,0,0.512839,0.081135,0.557648,0.954276,1,3,0,policy_stop
+squad,56bf10f43aeaaa14008c9501,"What month, day and year did Super Bowl 50 take place?","February 7, 2016 || February 7, 2016 || February 7, 2016",february,ANSWER,0,0.614696,0.474248,0.494595,0.634411,2,3,0,policy_stop
+squad,56bf1ae93aeaaa14008c951e,Who was the male singer who performed as a special guest during Super Bowl 50?,"Bruno Mars || Bruno Mars || Bruno Mars,",beyoncé,ANSWER,0,0.460454,0.026893,0.550222,0.841621,1,3,0,policy_stop
+squad,56bea9923aeaaa14008c91b9,What was the theme of Super Bowl 50?,"""golden anniversary"" || gold-themed || gold",super bowl xlvii,ANSWER,0,0.482314,0.070766,0.631963,0.826264,2,3,0,
+squad,56d6017d1c85041400946ebe,Who was the Most Valuable Player for the 2015 NFL season?,Cam Newton || Cam Newton || Cam Newton,cam newton,ANSWER,1,0.480244,0.097155,0.60261,0.778931,2,3,0,
+squad,56d2045de7d4791d009025f6,Who did Denver beat in the AFC championship?,New England Patriots || the New England Patriots || New England Patriots,arizona cardinals,ANSWER,0,0.644208,0.389089,0.652074,0.832536,2,3,0,policy_stop
+squad,56beab833aeaaa14008c91d3,How many solo tackles did Von Miller make at Super Bowl 50?,five solo tackles || five || five,5,ANSWER,0,0.4327,0.108184,0.421892,0.677053,1,3,0,policy_stop
+squad,56be4e1facb8001400a502fa,What year was the Carolina Panthers franchise founded?,1995 || 1995 || 1995,1995,ANSWER,1,0.594264,0.259026,0.548995,0.922903,1,3,0,policy_stop
+squad,56be4db0acb8001400a502ed,Which NFL team represented the NFC at Super Bowl 50?,Carolina Panthers || Carolina Panthers || Carolina Panthers,denver broncos,ANSWER,0,0.485909,0.05981,0.569652,0.865975,1,3,0,policy_stop
+squad,56bf159b3aeaaa14008c950a,How many teams have played in the Super Bowl eight times?,4 || four || four,four,ANSWER,1,0.517232,0.178515,0.518093,0.788757,1,3,0,policy_stop
+squad,56d98b33dc89441400fdb53e,How many tackles did Von Miller accomlish by himself in the game?,five || five || five,five,ANSWER,1,0.477085,0.110779,0.382821,0.765643,1,3,0,policy_stop
+squad,56be8e613aeaaa14008c90d3,What is the AFC short for?,American Football Conference || American Football Conference || American Football Conference,a purely research organization,ANSWER,0,0.486792,0.126709,0.486753,0.797926,1,3,0,policy_stop
+squad,56beae423aeaaa14008c91f5,Who won the Super Bowl MVP?,Von Miller || The Broncos || Miller,beyoncé,ANSWER,0,0.491349,0.096879,0.60897,0.820696,2,3,0,
+squad,56be4eafacb8001400a50303,How many fumbles did Von Miller force in Super Bowl 50?,2 || two || two,two,ANSWER,1,0.424343,0.049543,0.474103,0.712688,1,3,0,policy_stop
+squad,56beaa4a3aeaaa14008c91c3,Who did the Broncos prevent from going to the Super Bowl?,New England Patriots || the New England Patriots || New England Patriots,new england patriots,ANSWER,1,0.572737,0.248074,0.645841,0.829816,2,3,0,
+squad,56bf17653aeaaa14008c9513,What position does Von Miller play for the Denver Broncos?,linebacker || linebacker || linebacker,linebacker,ANSWER,1,0.349614,0.07361,0.320073,0.543091,1,3,0,
+squad,56d98b33dc89441400fdb53c,How many times did the Broncos cause turnovers in the game?,three || three || three,three,ANSWER,1,0.552347,0.159168,0.456433,0.912866,1,3,0,policy_stop
+squad,56bf17653aeaaa14008c9514,What was the number of solo tackles that Von Miller had in Super Bowl 50?,5 || five || five,five,ANSWER,1,0.439756,0.030547,0.602004,0.753825,2,3,0,
+squad,56bf159b3aeaaa14008c9508,Which Carolina Panthers team member was picked as the team's MVP in 2015?,Cam Newton || Cam Newton || Cam Newton,denver broncos,ANSWER,0,0.49488,0.118441,0.513067,0.822698,1,3,0,policy_stop
+squad,56d20362e7d4791d009025e8,What year was Super Bowl 50?,2015 || 2016 || 2016,super bowl xlvii,ANSWER,0,0.48673,0.094577,0.628022,0.800271,2,3,0,
+squad,56beab833aeaaa14008c91d4,Who was limited by Denver's defense?,Newton was limited by Denver's defense || Newton || Newton,newton,ANSWER,1,0.486915,0.047484,0.566088,0.895035,1,3,0,policy_stop
+squad,56bf1ae93aeaaa14008c951b,Which network broadcasted the 50th Super Bowl game?,CBS || CBS || CBS,nfl,ANSWER,0,0.511536,0.078379,0.567482,0.936519,1,3,0,policy_stop
+squad,56d2051ce7d4791d0090260a,What band headlined half-time during Super Bowl 50?,Coldplay || Coldplay || Coldplay,coldplay,ANSWER,1,0.458839,0.073692,0.507675,0.772865,1,3,0,policy_stop
+squad,56bea9923aeaaa14008c91bb,What day was the Super Bowl played on?,"February 7, 2016 || February 7 || February 7, 2016","february 7, 2016",ANSWER,1,0.517278,0.089911,0.566317,0.93803,1,3,0,policy_stop
+squad,56d9895ddc89441400fdb510,What 2015 NFL team one the AFC playoff?,Denver Broncos || Denver Broncos || Denver Broncos,carolina panthers,ANSWER,0,0.586337,0.288149,0.521945,0.843145,1,3,0,policy_stop
+squad,56be4db0acb8001400a502ec,Which NFL team represented the AFC at Super Bowl 50?,Denver Broncos || Denver Broncos || Denver Broncos,denver broncos,ANSWER,1,0.48602,0.059789,0.570397,0.866152,1,3,0,policy_stop
+squad,56bf10f43aeaaa14008c94fd,What year did the Denver Broncos secure a Super Bowl title for the third time?,2015 || 2016 || 2015,2016,ANSWER,1,0.522356,0.080478,0.586913,0.963149,1,3,0,policy_stop
+squad,56beae423aeaaa14008c91f7,How many fumbles did Von Miller force?,two || two || two,two,ANSWER,1,0.400086,0.157927,0.33546,0.550306,1,3,0,policy_stop
+squad,56be5333acb8001400a5030b,What was the average cost for a 30 second commercial during Super Bowl 50?,$5 million || $5 million || $5 million,$5 million,ANSWER,1,0.394911,0.015993,0.337416,0.674832,1,3,0,policy_stop
+squad,56bf159b3aeaaa14008c950b,Which team did not get a chance to defend their Super Bowl XLIX win in Super Bowl 50?,New England Patriots || the New England Patriots || New England Patriots,broncos,ANSWER,0,0.466094,0.067618,0.611672,0.778556,2,3,0,
+squad,56d601e41c85041400946ed0,Which Newton turnover resulted in seven points for Denver?,a fumble || a fumble || fumble,fumble,ANSWER,1,0.432531,0.087006,0.433219,0.709429,1,3,0,policy_stop
+squad,56d2051ce7d4791d0090260b,What two artists came out with Coldplay during the half-time show?,Beyoncé and Bruno Mars || Beyoncé and Bruno Mars || Beyoncé and Bruno Mars,beyoncé and bruno mars,ANSWER,1,0.553604,0.160814,0.562128,0.950423,1,3,0,policy_stop
+squad,56beaf5e3aeaaa14008c91fe,What was the average cost of a 30-second commercial?,$5 million || $5 million || $5 million,$5 million,ANSWER,1,0.329404,0.041173,0.321287,0.518306,1,3,0,
+squad,56bf159b3aeaaa14008c9509,What were the win/loss game stats for the Denver Bronco's regular season in 2015?,12–4 || 12–4 || 12–4,24–10,ANSWER,0,0.587865,0.270659,0.525602,0.89408,1,3,0,policy_stop
+squad,56beace93aeaaa14008c91e0,What venue did Super Bowl 50 take place in?,Levi's Stadium || Levi's Stadium || Levi's Stadium in the San Francisco Bay Area at Santa Clara,cbs,ANSWER,0,0.545534,0.168304,0.579742,0.881517,1,3,0,policy_stop
+squad,56bea9923aeaaa14008c91ba,What does AFC stand for?,American Football Conference || American Football Conference || American Football Conference,knights of columbus,ANSWER,0,0.682321,0.489471,0.618491,0.795684,2,3,0,policy_stop
+squad,56d20362e7d4791d009025ea,What team was the NFC champion?,Carolina Panthers || Carolina Panthers || Carolina Panthers,carolina panthers,ANSWER,1,0.481636,0.13354,0.485348,0.761129,1,3,0,policy_stop
+squad,56d602631c85041400946ed8,Who broadcast the Super Bowl on TV?,CBS || CBS || CBS,cbs,ANSWER,1,0.477034,0.059157,0.5232,0.867706,1,3,0,policy_stop
+squad,56be5333acb8001400a5030e,At which Super Bowl did Beyonce headline the halftime show?,Super Bowl XLVII || Super Bowl XLVII || XLVII,super bowl xlviii,ANSWER,0,0.477395,0.089181,0.499376,0.827047,1,3,0,policy_stop
+squad,56beae423aeaaa14008c91f4,How many times was Cam Newton sacked?,seven || seven || seven,seven,ANSWER,1,0.414945,0.123188,0.378069,0.628915,1,3,0,policy_stop
+squad,56d204ade7d4791d00902604,How many tackles did Von Miller get during the game?,5 || five || five,5,ANSWER,1,0.628234,0.461639,0.442968,0.736015,1,3,0,policy_stop
+squad,56beace93aeaaa14008c91e3,Super Bowl 50 decided the NFL champion for what season?,2015 || the 2015 season || 2015,2015,ANSWER,1,0.488475,0.038866,0.586533,0.906792,1,3,0,policy_stop
+squad,56bead5a3aeaaa14008c91ec,How many teams have been in the Super Bowl eight times?,four || four || four,four,ANSWER,1,0.497694,0.178141,0.480629,0.740744,1,3,0,policy_stop
+squad,56be4db0acb8001400a502ef,Which NFL team won Super Bowl 50?,Denver Broncos || Denver Broncos || Denver Broncos,denver broncos,ANSWER,1,0.523104,0.106132,0.564687,0.928061,1,3,0,policy_stop
+squad,56d98b33dc89441400fdb53b,How many times was the Panthers' quarterback sacked?,seven || seven || seven,seven,ANSWER,1,0.496944,0.206164,0.436529,0.729284,1,3,0,policy_stop
+squad,56d600e31c85041400946eb0,Which team won Super Bowl 50.,Denver Broncos || Denver Broncos || Denver Broncos,cbs,ANSWER,0,0.544026,0.144491,0.592207,0.914694,1,3,0,policy_stop
+squad,56d600e31c85041400946eae,Super Bowl 50 determined the NFL champion for what season?,2015 || the 2015 season || 2015,2015,ANSWER,1,0.488475,0.038866,0.586533,0.906792,1,3,0,policy_stop
+squad,56bead5a3aeaaa14008c91ea,Who lost to the Broncos in the AFC Championship?,New England Patriots || the New England Patriots || New England Patriots,new england patriots,ANSWER,1,0.495987,0.123754,0.619475,0.783377,2,3,0,
+squad,56be5333acb8001400a5030a,Which network broadcasted Super Bowl 50 in the U.S.?,CBS || CBS || CBS,cbs,ANSWER,1,0.505393,0.061704,0.567337,0.949076,1,3,0,policy_stop
+squad,56d601e41c85041400946ed2,What position does Von Miller play?,linebacker || linebacker || linebacker,linebacker,ANSWER,1,0.434577,0.318981,0.285131,0.434499,1,3,0,policy_stop
+squad,56bead5a3aeaaa14008c91e9,Who did the Panthers beat in the NFC Championship Game?,Arizona Cardinals || the Arizona Cardinals || Arizona Cardinals,arizona cardinals,ANSWER,1,0.505004,0.141673,0.614542,0.784499,2,3,0,
+squad,56bf1ae93aeaaa14008c951f,What ranking does the Super Bowl 50 halftime show have on the list of most watched TV broadcasts?,third || third || third,third-most watched u.s. broadcast ever,ANSWER,0,0.46214,0.044437,0.511577,0.845475,1,3,0,policy_stop
+squad,56be4db0acb8001400a502ee,Where did Super Bowl 50 take place?,"Santa Clara, California || Levi's Stadium || Levi's Stadium in the San Francisco Bay Area at Santa Clara, California.",cbs,ANSWER,0,0.552708,0.183412,0.576776,0.881172,1,3,0,policy_stop
+squad,56bead5a3aeaaa14008c91ed,Who was this season's NFL MVP?,Cam Newton || Cam Newton || Cam Newton,denver broncos,ANSWER,0,0.496001,0.171482,0.559105,0.717845,2,3,0,
+squad,56be4e1facb8001400a502f6,Which Carolina Panthers player was named Most Valuable Player?,Cam Newton || Cam Newton || Cam Newton,cam newton,ANSWER,1,0.475162,0.084038,0.51377,0.811221,1,3,0,policy_stop
+squad,56beaf5e3aeaaa14008c91ff,What halftime performer previously headlined Super Bowl XLVII?,Beyoncé || Beyoncé || Beyoncé,beyoncé,ANSWER,1,0.395912,0.046187,0.416018,0.65939,1,3,0,policy_stop
+squad,56be4db0acb8001400a502f0,What color was used to emphasize the 50th anniversary of the Super Bowl?,gold || gold || gold,gold,ANSWER,1,0.354463,0.064898,0.342681,0.541949,1,3,0,policy_stop
+squad,56d2045de7d4791d009025f3,Who is the quarterback for the Panthers?,Cam Newton || Cam Newton || Cam Newton,beyoncé,ANSWER,0,0.636177,0.304091,0.608555,0.955187,2,3,0,policy_stop
+squad,56be4eafacb8001400a50304,Which team held the scoring lead throughout the entire game?,Broncos || The Broncos || Broncos,notre dame kofc,ANSWER,0,0.622152,0.412249,0.577356,0.731057,2,3,0,policy_stop
+squad,56d98a59dc89441400fdb52a,Who was the 2015 NFL MVP?,Cam Newton || Cam Newton || Cam Newton,denver broncos,ANSWER,0,0.527006,0.207908,0.587145,0.752869,2,3,0,
+squad,56beaf5e3aeaaa14008c91fd,Who was the broadcaster for Super Bowl 50 in the United States?,CBS || CBS || CBS,cbs,ANSWER,1,0.468016,0.054093,0.628922,0.805422,2,3,0,
+squad,56d602631c85041400946eda,Who headlined the halftime show for Super Bowl 50?,Coldplay || Coldplay || Coldplay,coldplay,ANSWER,1,0.470816,0.013207,0.584424,0.889997,1,3,0,policy_stop
+squad,56be4eafacb8001400a50302,Who was the Super Bowl 50 MVP?,Von Miller || Von Miller || Miller,beyoncé,ANSWER,0,0.47618,0.050055,0.639897,0.839851,2,3,0,
+squad,56d204ade7d4791d00902603,Who won the MVP for the Super Bowl?,Von Miller || Von Miller || Von Miller,beyoncé,ANSWER,0,0.48104,0.074967,0.60322,0.828113,2,3,0,
+squad,56d98a59dc89441400fdb52b,Who did the Panthers beat to become the NFC champs?,Arizona Cardinals || the Arizona Cardinals || Arizona Cardinals,denver broncos,ANSWER,0,0.686639,0.42529,0.553881,0.98541,1,3,0,policy_stop
+squad,56d20362e7d4791d009025e9,What team was the AFC champion?,Denver Broncos || Denver Broncos || Denver Broncos,denver broncos,ANSWER,1,0.482454,0.13419,0.486805,0.761866,1,3,0,policy_stop
+squad,56d20362e7d4791d009025eb,Who won Super Bowl 50?,Denver Broncos || Denver Broncos || Denver Broncos,cbs,ANSWER,0,0.503837,0.065628,0.59866,0.909821,1,3,0,policy_stop
+squad,56bead5a3aeaaa14008c91eb,Who were the defending Super Bowl champions?,New England Patriots || the New England Patriots || New England Patriots,beyoncé and bruno mars,ANSWER,0,0.49364,0.119073,0.509633,0.819385,1,3,0,policy_stop
+squad,56beace93aeaaa14008c91e1,What city did Super Bowl 50 take place in?,Santa Clara || Santa Clara || Santa Clara,cbs,ANSWER,0,0.546845,0.169184,0.580661,0.884285,1,3,0,policy_stop
+squad,56be8e613aeaaa14008c90d1,What was the theme of Super Bowl 50?,"""golden anniversary"" || gold-themed || ""golden anniversary",super bowl xlvii,ANSWER,0,0.482314,0.070766,0.631963,0.826264,2,3,0,
+squad,56d98b33dc89441400fdb53d,What Denver player caused two fumbles for the Panthers?,Von Miller || Von Miller || Von Miller,von miller,ANSWER,1,0.46028,0.108896,0.474291,0.734866,1,3,0,policy_stop
+squad,56d2045de7d4791d009025f5,How many times have the Panthers been in the Super Bowl?,2 || second || second,24,ANSWER,0,0.475664,0.075427,0.494652,0.883214,1,3,0,policy_stop

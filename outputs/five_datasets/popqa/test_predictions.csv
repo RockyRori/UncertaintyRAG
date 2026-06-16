@@ -1,51 +1,101 @@
 dataset,sample_id,question,gold_answers,prediction,final_action,correct,uncertainty,retrieval_uncertainty,conflict_uncertainty,stability_uncertainty,steps,num_evidence,budget_used,stop_reason
-popqa,839130,"What is Harvey Peltier, Sr.'s occupation?","[""lawyer"", ""attorney"", ""solicitor"", ""barrister"", ""lawyers"", ""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",director,ANSWER,0,0.370957,0.344844,0.661688,0.00014,1,3,0,policy_stop
-popqa,1730929,What is Alexander Rinnooy Kan's occupation?,"[""mathematician"", ""economist"", ""economists""]",composer,ANSWER,0,0.271997,0.344662,0.332216,9e-06,1,3,0,
-popqa,3583128,What is Bruce McDaniel's occupation?,"[""composer""]",astronomer,ANSWER,0,0.371887,0.344119,0.666091,2e-06,1,3,0,policy_stop
-popqa,783368,What is John Floyd's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",politician,ANSWER,0,0.267805,0.331521,0.340083,9.7e-05,1,3,0,
-popqa,5120341,What is Matthew McKay's occupation?,"[""dentist"", ""dentists"", ""dental surgeon""]",dentist,ANSWER,0,0.368557,0.338357,0.664591,9e-06,1,3,0,policy_stop
-popqa,3121959,What is Tsutomu Seki's occupation?,"[""astronomer""]",director,ANSWER,0,0.372017,0.344506,0.665878,3e-06,1,3,0,policy_stop
-popqa,2605479,What is Richard Martin's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",composer,ANSWER,0,0.368028,0.336935,0.665198,4e-06,1,3,0,policy_stop
-popqa,5807710,What is Thomas R. Whitney's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",test pilot,ANSWER,0,0.365364,0.334675,0.659995,0.00014,1,3,0,policy_stop
-popqa,596555,What is Fred C. Newmeyer's occupation?,"[""film director"", ""movie director"", ""director"", ""motion picture director"", ""film producer"", ""movie producer"", ""producer"", ""actor"", ""actress"", ""actors"", ""actresses""]",composer,ANSWER,0,0.370301,0.34331,0.662071,0.000123,1,3,0,policy_stop
-popqa,4011112,What is Eleanor Davis's occupation?,"[""cartoonist"", ""graphic artist"", ""animator"", ""illustrator""]",composer,ANSWER,0,0.270336,0.340404,0.333772,1.2e-05,1,3,0,
-popqa,4382392,What is Henry Feilden's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",writer,ANSWER,0,0.370305,0.341684,0.664864,1.9e-05,1,3,0,policy_stop
-popqa,394743,What is Bae Geu-rin's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",composer,ANSWER,0,0.371199,0.343875,0.664198,1.4e-05,1,3,0,policy_stop
-popqa,2218017,What is Michael Arad's occupation?,"[""architect""]",architect,ANSWER,1,0.269839,0.339338,0.333899,2e-06,1,3,0,
-popqa,6539068,What is Ole Krarup's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",composer,ANSWER,0,0.268989,0.34025,0.329521,3.7e-05,1,3,0,
-popqa,2303897,What is Edwin Wallock's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",composer,ANSWER,0,0.369463,0.339555,0.665617,2e-06,1,3,0,policy_stop
-popqa,276787,What is Scooter Braun's occupation?,"[""talent manager"", ""artist manager"", ""band manager"", ""music manager"", ""musician manager"", ""manager"", ""pop entrepreneur""]",composer,ANSWER,0,0.368524,0.339174,0.663103,3.2e-05,1,3,0,policy_stop
-popqa,1772720,What is Antonio Álvarez Alonso's occupation?,"[""composer"", ""pianist""]",composer,ANSWER,0,0.271741,0.343255,0.333703,1e-05,1,3,0,
-popqa,4711830,What is John Finlay's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",politician,ANSWER,0,0.266314,0.328619,0.339957,8.6e-05,1,3,0,
-popqa,3261572,What is Albert Bates's occupation?,"[""lawyer"", ""attorney"", ""solicitor"", ""barrister"", ""lawyers""]",composer,ANSWER,0,0.369544,0.33973,0.665594,3e-06,1,3,0,policy_stop
-popqa,4419938,What is Rudolf Hilferding's occupation?,"[""economist"", ""economists"", ""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",composer,ANSWER,0,0.265951,0.334056,0.329721,3.3e-05,1,3,0,
-popqa,4087826,What is Fairfax M. Cone's occupation?,"[""businessperson"", ""business person"", ""dealer"", ""businesswoman"", ""business man"", ""business woman"", ""businessman""]",writer,ANSWER,0,0.37029,0.342422,0.663576,3.2e-05,1,3,0,policy_stop
-popqa,4607081,What is Jacob Kraemer's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",composer,ANSWER,0,0.368764,0.338194,0.665554,2e-06,1,3,0,policy_stop
-popqa,3174290,What is William Watson's occupation?,"[""physician"", ""physicians"", ""medical doctor"", ""medical practitioner"", ""doctor"", ""medical doctors""]",architect,ANSWER,0,0.3695,0.341467,0.662534,3.3e-05,1,3,0,policy_stop
-popqa,5982132,What is Thomas McMurtry's occupation?,"[""test pilot""]",test pilot,ANSWER,1,0.370964,0.342804,0.665204,4e-06,1,3,0,policy_stop
-popqa,6206947,What is Wise's occupation?,"[""record producer"", ""music producer""]",record producer,ANSWER,0,0.36716,0.33542,0.664829,8e-06,1,3,0,policy_stop
-popqa,4198902,What is Geeling Ng's occupation?,"[""restaurateur"", ""gastronomist"", ""restauranteur""]",chef,ANSWER,0,0.36665,0.335619,0.662778,3.3e-05,1,3,0,policy_stop
-popqa,3696050,"What is Charles Strachey, 4th Baron O'Hagan's occupation?","[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",lawyer,ANSWER,0,0.378037,0.360427,0.659243,0.000255,1,3,0,policy_stop
-popqa,6339290,"What is William Murray, 1st Earl of Mansfield's occupation?","[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",architect,ANSWER,0,0.381923,0.367611,0.66024,0.000229,1,3,0,policy_stop
-popqa,1917994,What is Sarah Dawn Finer's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses"", ""songwriter"", ""song writer""]",writer,ANSWER,0,0.271094,0.34529,0.328128,5.3e-05,1,3,0,
-popqa,857817,What is Heath's occupation?,"[""songwriter"", ""song writer""]",singer,ANSWER,0,0.365287,0.332531,0.66339,2.3e-05,1,3,0,policy_stop
-popqa,2224150,What is Brendan Canty's occupation?,"[""composer"", ""musician"", ""musical artist""]",musician,ANSWER,0,0.370324,0.341369,0.665458,9e-06,1,3,0,policy_stop
-popqa,3635613,What is Colleen Zenk Pinter's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",composer,ANSWER,0,0.270815,0.342723,0.331503,1.5e-05,1,3,0,
-popqa,2657379,What is Stevie Cameron's occupation?,"[""journalist"", ""journo"", ""journalists""]",composer,ANSWER,0,0.269283,0.337348,0.335353,1.6e-05,1,3,0,
-popqa,1758574,What is Leona Detiège's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",composer,ANSWER,0,0.267218,0.33659,0.32972,3.6e-05,1,3,0,
-popqa,4172941,What is William Lescaze's occupation?,"[""architect""]",doctor,ANSWER,0,0.371232,0.343836,0.664368,1.9e-05,1,3,0,policy_stop
-popqa,1085496,What is Edgar Allan Poe's occupation?,"[""journalist"", ""journo"", ""journalists"", ""playwright"", ""dramatist"", ""playwrite"", ""scriptwriter"", ""poet"", ""poetess"", ""bard""]",writer,ANSWER,0,0.371024,0.343674,0.663933,3.7e-05,1,3,0,policy_stop
-popqa,3835721,What is Yoshiki Tonogai's occupation?,"[""mangaka"", ""manga artist""]",artist,ANSWER,0,0.267847,0.334807,0.334802,1.5e-05,1,3,0,
-popqa,1536600,What is María Elena Marqués's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",composer,ANSWER,0,0.371005,0.34338,0.66437,2.3e-05,1,3,0,policy_stop
-popqa,1223902,What is Herlyn Espinal's occupation?,"[""journalist"", ""journo"", ""journalists""]",journalist,ANSWER,0,0.368449,0.338208,0.664477,1.1e-05,1,3,0,policy_stop
-popqa,4651204,What is Akari Hayami's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",composer,ANSWER,0,0.368913,0.339006,0.664692,1e-05,1,3,0,policy_stop
-popqa,4822110,What is Kathy Saltzman's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",writer,ANSWER,0,0.368348,0.337786,0.664843,1.1e-05,1,3,0,policy_stop
-popqa,4650739,What is Javier Alva Orlandini's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",composer,ANSWER,0,0.368761,0.34005,0.662396,8.9e-05,1,3,0,policy_stop
-popqa,4222362,What is George Rankin's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",writer,ANSWER,0,0.371849,0.34454,0.665253,1.4e-05,1,3,0,policy_stop
-popqa,4725190,What is John Mayne's occupation?,"[""journalist"", ""journo"", ""journalists""]",politician,ANSWER,0,0.268738,0.335354,0.336851,2.8e-05,1,3,0,
-popqa,5394168,What is Patrick O'Brien Demsey's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",writer,ANSWER,0,0.373823,0.3499,0.66289,3.3e-05,1,3,0,policy_stop
-popqa,2693461,What is Sachiko Kokubu's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses"", ""model"", ""fashion model"", ""sitter"", ""poser""]",composer,ANSWER,0,0.367284,0.33656,0.663334,2.3e-05,1,3,0,policy_stop
-popqa,6250781,What is Þorsteinn Bachmann's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",composer,ANSWER,0,0.269988,0.33979,0.333633,1.4e-05,1,3,0,
-popqa,3994636,What is Edward Corser's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",architect,ANSWER,0,0.372318,0.345452,0.665296,1.3e-05,1,3,0,policy_stop
-popqa,5383283,What is Paris's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",actress,ANSWER,0,0.368515,0.337793,0.66539,6e-06,1,3,0,policy_stop
-popqa,3931528,What is Dominick Bellizzi's occupation?,"[""jockey""]",composer,ANSWER,0,0.272069,0.344317,0.333025,1.3e-05,1,3,0,
+popqa,3154588,What is Jon Eikemo's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",a sailor,ANSWER,0,0.182999,0.365997,0.0,0.0,1,3,0,
+popqa,3882000,What is Dean Alfange's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",professor,ANSWER,0,0.631321,0.353924,0.66457,0.847871,2,3,0,policy_stop
+popqa,5120341,What is Matthew McKay's occupation?,"[""dentist"", ""dentists"", ""dental surgeon""]",writer,ANSWER,0,0.633456,0.357324,0.663804,0.849347,2,3,0,policy_stop
+popqa,3635613,What is Colleen Zenk Pinter's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",director,ANSWER,0,0.678847,0.357936,0.662789,0.999672,2,3,0,policy_stop
+popqa,177542,What is Claire Berlinski's occupation?,"[""journalist"", ""journo"", ""journalists""]",film director,ANSWER,0,0.634121,0.359311,0.66519,0.848221,2,3,0,policy_stop
+popqa,5304362,"What is Norman Crowther Hunt, Baron Crowther-Hunt's occupation?","[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",baron,ANSWER,0,0.633004,0.366194,0.646344,0.833976,2,3,0,policy_stop
+popqa,3553522,What is Boutheina Jabnoun's occupation?,"[""journalist"", ""journo"", ""journalists""]",composer,ANSWER,0,0.629975,0.35144,0.659511,0.84772,2,3,0,policy_stop
+popqa,6135583,What is Wallace Dollase's occupation?,"[""horse trainer"", ""racehorse trainer""]",writer,ANSWER,0,0.552062,0.354548,0.322343,0.644686,1,3,0,policy_stop
+popqa,837389,What is Herman A. Barnett's occupation?,"[""surgeon"", ""surgeons""]",writer,ANSWER,0,0.549731,0.359672,0.316364,0.632728,1,3,0,policy_stop
+popqa,783368,What is John Floyd's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",a computer engineer,ANSWER,0,0.568078,0.357872,0.340225,0.68045,1,3,0,policy_stop
+popqa,3835721,What is Yoshiki Tonogai's occupation?,"[""mangaka"", ""manga artist""]",a sailor,ANSWER,0,0.564735,0.356746,0.336721,0.673441,1,3,0,policy_stop
+popqa,4711830,What is John Finlay's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",a computer engineer,ANSWER,0,0.569324,0.360337,0.340242,0.680485,1,3,0,policy_stop
+popqa,6206947,What is Wise's occupation?,"[""record producer"", ""music producer""]",a computer engineer,ANSWER,0,0.580447,0.385823,0.338197,0.676395,1,3,0,policy_stop
+popqa,5582866,What is Rick Gilmore's occupation?,"[""economist"", ""economists""]",director,ANSWER,0,0.636716,0.364001,0.663877,0.849082,2,3,0,policy_stop
+popqa,1872067,What is Thomas Hinds's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",a librarian,ANSWER,0,0.678984,0.360122,0.661974,0.996461,2,3,0,policy_stop
+popqa,1505982,What is C. E. Webber's occupation?,"[""playwright"", ""dramatist"", ""playwrite"", ""scriptwriter""]",director,ANSWER,0,0.679871,0.362242,0.657211,0.996151,2,3,0,policy_stop
+popqa,3780672,What is Ingrid Martinez's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",writer,ANSWER,0,0.636225,0.362641,0.663939,0.849719,2,3,0,policy_stop
+popqa,6416076,What is Paul's occupation?,"[""missionary"", ""Christian missionary""]",a librarian,ANSWER,0,0.57266,0.385526,0.328648,0.657296,1,3,0,policy_stop
+popqa,1901465,What is Ivo Perilli's occupation?,"[""screenwriter"", ""scenarist"", ""writer"", ""screen writer"", ""script writer"", ""scriptwriter""]",a sailor,ANSWER,0,0.566488,0.361135,0.336167,0.672334,1,3,0,policy_stop
+popqa,970059,What is Robert Viharo's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",director,ANSWER,0,0.559367,0.360818,0.327485,0.654969,1,3,0,policy_stop
+popqa,2218017,What is Michael Arad's occupation?,"[""architect""]",director,ANSWER,0,0.555664,0.359564,0.323688,0.647375,1,3,0,policy_stop
+popqa,5982132,What is Thomas McMurtry's occupation?,"[""test pilot""]",a librarian,ANSWER,0,0.565947,0.359938,0.336239,0.672479,1,3,0,policy_stop
+popqa,3111664,What is Christoph Schlingensief's occupation?,"[""theatrical director"", ""stage director"", ""theatre director"", ""play director"", ""director"", ""theater director""]",physicist,ANSWER,0,0.628256,0.348549,0.663854,0.846618,2,3,0,policy_stop
+popqa,6055820,What is Tor Aulin's occupation?,"[""composer""]",journalist,ANSWER,0,0.631771,0.353644,0.662731,0.849913,2,3,0,policy_stop
+popqa,5178335,What is Muhammad Ali Luqman's occupation?,"[""journalist"", ""journo"", ""journalists""]",journalist,ANSWER,0,0.629951,0.351028,0.66223,0.848194,2,3,0,policy_stop
+popqa,4607081,What is Jacob Kraemer's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",a sailor,ANSWER,0,0.679765,0.359782,0.664564,0.9996,2,3,0,policy_stop
+popqa,276787,What is Scooter Braun's occupation?,"[""talent manager"", ""artist manager"", ""band manager"", ""music manager"", ""musician manager"", ""manager"", ""pop entrepreneur""]",a scout,ANSWER,0,0.632244,0.35627,0.662224,0.847083,2,3,0,policy_stop
+popqa,394743,What is Bae Geu-rin's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",engineer,ANSWER,0,0.678083,0.356278,0.663659,0.999861,2,3,0,policy_stop
+popqa,2693461,What is Sachiko Kokubu's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses"", ""model"", ""fashion model"", ""sitter"", ""poser""]",composer,ANSWER,0,0.631708,0.353964,0.664766,0.8491,2,3,0,policy_stop
+popqa,4419938,What is Rudolf Hilferding's occupation?,"[""economist"", ""economists"", ""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",a sailor,ANSWER,0,0.181685,0.363369,0.0,0.0,1,3,0,
+popqa,1056532,"What is Tyler, the Creator's occupation?","[""record producer"", ""music producer"", ""actor"", ""actress"", ""actors"", ""actresses"", ""graphic designer""]",creator,ANSWER,0,0.171418,0.342835,0.0,0.0,1,3,0,
+popqa,6339290,"What is William Murray, 1st Earl of Mansfield's occupation?","[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",solicitor,ANSWER,0,0.54459,0.369816,0.304067,0.608135,1,3,0,policy_stop
+popqa,1772720,What is Antonio Álvarez Alonso's occupation?,"[""composer"", ""pianist""]",a sailor,ANSWER,0,0.675979,0.35204,0.66343,0.999919,2,3,0,policy_stop
+popqa,6539068,What is Ole Krarup's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",a sailor,ANSWER,0,0.681044,0.3626,0.664084,0.999174,2,3,0,policy_stop
+popqa,2523400,What is Modou Dia's occupation?,"[""diplomat"", ""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",composer,ANSWER,0,0.632012,0.355441,0.664648,0.847646,2,3,0,policy_stop
+popqa,2657379,What is Stevie Cameron's occupation?,"[""journalist"", ""journo"", ""journalists""]",composer,ANSWER,0,0.631007,0.353267,0.66188,0.84799,2,3,0,policy_stop
+popqa,4725190,What is John Mayne's occupation?,"[""journalist"", ""journo"", ""journalists""]",a librarian,ANSWER,0,0.679778,0.360337,0.663068,0.998747,2,3,0,policy_stop
+popqa,1917994,What is Sarah Dawn Finer's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses"", ""songwriter"", ""song writer""]",writer,ANSWER,0,0.554224,0.357948,0.322911,0.645821,1,3,0,policy_stop
+popqa,1044970,What is Mohd Sharkar Shamsudin's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",director,ANSWER,0,0.554412,0.361504,0.320959,0.641918,1,3,0,policy_stop
+popqa,1758574,What is Leona Detiège's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",composer,ANSWER,0,0.63064,0.352748,0.663916,0.847569,2,3,0,policy_stop
+popqa,5052828,What is Maev-Ann Wren's occupation?,"[""journalist"", ""journo"", ""journalists""]",film director,ANSWER,0,0.63211,0.354432,0.663774,0.849689,2,3,0,policy_stop
+popqa,2311611,What is Esquerita's occupation?,"[""pianist"", ""songwriter"", ""song writer""]",a librarian,ANSWER,0,0.568861,0.372162,0.332235,0.664471,1,3,0,policy_stop
+popqa,4198902,What is Geeling Ng's occupation?,"[""restaurateur"", ""gastronomist"", ""restauranteur""]",engineer,ANSWER,0,0.634588,0.359776,0.663515,0.849041,2,3,0,policy_stop
+popqa,6384726,What is Henry Tizard's occupation?,"[""chemist"", ""chemists""]",architect,ANSWER,0,0.633481,0.357647,0.662126,0.848949,2,3,0,policy_stop
+popqa,1805806,What is Tolis Voskopoulos's occupation?,"[""composer""]",tolis voskopoulos,ANSWER,0,0.54577,0.342098,0.322261,0.644522,1,3,0,policy_stop
+popqa,4251288,What is Glenn Albrecht's occupation?,"[""philosopher""]",a writer,ANSWER,0,0.678943,0.357926,0.663918,0.999974,2,3,0,policy_stop
+popqa,3931528,What is Dominick Bellizzi's occupation?,"[""jockey""]",a scout,ANSWER,0,0.67566,0.35138,0.663067,0.999969,2,3,0,policy_stop
+popqa,3696050,"What is Charles Strachey, 4th Baron O'Hagan's occupation?","[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",solicitor,ANSWER,0,0.643074,0.379228,0.656318,0.845225,2,3,0,policy_stop
+popqa,3275327,What is Alex Krieps's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",writer,ANSWER,0,0.632288,0.358353,0.659338,0.843821,2,3,0,policy_stop
+popqa,371747,What is Gladwyn Jebb's occupation?,"[""diplomat"", ""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",a writer,ANSWER,0,0.679858,0.359974,0.666283,0.99957,2,3,0,policy_stop
+popqa,5254909,What is Nathan Purdee's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",writer,ANSWER,0,0.633798,0.35776,0.663889,0.849764,2,3,0,policy_stop
+popqa,1223902,What is Herlyn Espinal's occupation?,"[""journalist"", ""journo"", ""journalists""]",doctor,ANSWER,0,0.63045,0.352311,0.659638,0.847844,2,3,0,policy_stop
+popqa,3261572,What is Albert Bates's occupation?,"[""lawyer"", ""attorney"", ""solicitor"", ""barrister"", ""lawyers""]",inventor,ANSWER,0,0.177484,0.354969,0.0,0.0,1,3,0,
+popqa,4222362,What is George Rankin's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",a writer,ANSWER,0,0.561166,0.360252,0.330068,0.660136,1,3,0,policy_stop
+popqa,1085496,What is Edgar Allan Poe's occupation?,"[""journalist"", ""journo"", ""journalists"", ""playwright"", ""dramatist"", ""playwrite"", ""scriptwriter"", ""poet"", ""poetess"", ""bard""]",writer,ANSWER,0,0.563326,0.346403,0.341468,0.682936,1,3,0,policy_stop
+popqa,6110369,What is Vincenzo Di Nicola's occupation?,"[""psychiatrist"", ""alienist"", ""head-shrinker"", ""shrinker"", ""psychologist"", ""psychologists""]",entrepreneur,ANSWER,0,0.676811,0.353711,0.662438,0.99995,2,3,0,policy_stop
+popqa,4062418,What is Valgerður Bjarnadóttir's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",a sculptor,ANSWER,0,0.562986,0.352011,0.337499,0.674997,1,3,0,policy_stop
+popqa,2224150,What is Brendan Canty's occupation?,"[""composer"", ""musician"", ""musical artist""]",writer,ANSWER,0,0.552334,0.353823,0.323123,0.646246,1,3,0,policy_stop
+popqa,1094065,What is Jilly Cooper's occupation?,"[""journalist"", ""journo"", ""journalists"", ""novelist""]",a writer,ANSWER,0,0.562546,0.365047,0.328804,0.657608,1,3,0,policy_stop
+popqa,1701577,What is Joseph Weydemeyer's occupation?,"[""journalist"", ""journo"", ""journalists"", ""revolutionary"", ""insurrectionist"", ""revolutionist"", ""revolutioner""]",a writer,ANSWER,0,0.565237,0.381412,0.322028,0.644055,1,3,0,policy_stop
+popqa,4265255,What is Henk Bleker's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",a computer engineer,ANSWER,0,0.568963,0.359529,0.340297,0.680594,1,3,0,policy_stop
+popqa,3174290,What is William Watson's occupation?,"[""physician"", ""physicians"", ""medical doctor"", ""medical practitioner"", ""doctor"", ""medical doctors""]",inventor,ANSWER,0,0.548711,0.358884,0.315602,0.631205,1,3,0,policy_stop
+popqa,596555,What is Fred C. Newmeyer's occupation?,"[""film director"", ""movie director"", ""director"", ""motion picture director"", ""film producer"", ""movie producer"", ""producer"", ""actor"", ""actress"", ""actors"", ""actresses""]",inventor,ANSWER,0,0.567574,0.361204,0.337489,0.674978,1,3,0,policy_stop
+popqa,6250781,What is Þorsteinn Bachmann's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",composer,ANSWER,0,0.629969,0.352413,0.661879,0.845925,2,3,0,policy_stop
+popqa,2605479,What is Richard Martin's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",inventor,ANSWER,0,0.678051,0.356335,0.666033,0.999614,2,3,0,policy_stop
+popqa,2951170,What is Ai's occupation?,"[""poet"", ""poetess"", ""bard""]",a computer engineer,ANSWER,0,0.572907,0.372592,0.337035,0.67407,1,3,0,policy_stop
+popqa,5571000,What is James Cook's occupation?,"[""sailor"", ""seaman"", ""mariner"", ""seafarer"", ""merchant sailor"", ""merchant seaman"", ""merchant mariner""]",chef,ANSWER,0,0.628908,0.351607,0.660083,0.843765,2,3,0,policy_stop
+popqa,1976296,What is Veronica Franco's occupation?,"[""poet"", ""poetess"", ""bard""]",a writer,ANSWER,0,0.559839,0.360656,0.32817,0.65634,1,3,0,policy_stop
+popqa,4973369,What is Lisa McRee's occupation?,"[""journalist"", ""journo"", ""journalists""]",librarian,ANSWER,0,0.678574,0.35785,0.665815,0.99883,2,3,0,policy_stop
+popqa,4650739,What is Javier Alva Orlandini's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",a sailor,ANSWER,0,0.566784,0.356905,0.339202,0.678403,1,3,0,policy_stop
+popqa,2303897,What is Edwin Wallock's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",inventor,ANSWER,0,0.565216,0.356198,0.33767,0.675341,1,3,0,policy_stop
+popqa,4822110,What is Kathy Saltzman's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",writer,ANSWER,0,0.632609,0.355446,0.661062,0.849787,2,3,0,policy_stop
+popqa,4244332,What is Gillian Raine's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",writer,ANSWER,0,0.676322,0.353144,0.665405,0.999171,2,3,0,policy_stop
+popqa,4087826,What is Fairfax M. Cone's occupation?,"[""businessperson"", ""business person"", ""dealer"", ""businesswoman"", ""business man"", ""business woman"", ""businessman""]",a librarian,ANSWER,0,0.178196,0.356392,0.0,0.0,1,3,0,
+popqa,5383283,What is Paris's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",a librarian,ANSWER,0,0.193392,0.386784,0.0,0.0,1,3,0,
+popqa,5807710,What is Thomas R. Whitney's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",a librarian,ANSWER,0,0.543889,0.354268,0.312557,0.625113,1,3,0,policy_stop
+popqa,6042978,What is Anthony Sharp's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",a writer,ANSWER,0,0.557397,0.361509,0.324624,0.649247,1,3,0,policy_stop
+popqa,6430975,What is Teddy Riley's occupation?,"[""record producer"", ""music producer"", ""singer-songwriter"", ""singer songwriter"", ""singer/songwriter"", ""singersongwriter"", ""singer-songwriter""]",a writer,ANSWER,0,0.556781,0.361611,0.323803,0.647605,1,3,0,policy_stop
+popqa,3583128,What is Bruce McDaniel's occupation?,"[""composer""]",writer,ANSWER,0,0.562156,0.361239,0.330686,0.661372,1,3,0,policy_stop
+popqa,843797,What is Edwin E. Ellis's occupation?,"[""photographer"", ""photog"", ""photographers""]",inventor,ANSWER,0,0.626711,0.355695,0.652063,0.829841,2,3,0,policy_stop
+popqa,4382392,What is Henry Feilden's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",inventor,ANSWER,0,0.565487,0.357866,0.336963,0.673926,1,3,0,policy_stop
+popqa,3121959,What is Tsutomu Seki's occupation?,"[""astronomer""]",a sailor,ANSWER,0,0.563498,0.345071,0.342531,0.685061,1,3,0,policy_stop
+popqa,857817,What is Heath's occupation?,"[""songwriter"", ""song writer""]",a computer engineer,ANSWER,0,0.581509,0.390301,0.336717,0.673435,1,3,0,policy_stop
+popqa,4674890,What is Jim Brown's occupation?,"[""radio personality"", ""radio presenter"", ""radio hostess"", ""host"", ""hostess"", ""radio host"", ""radio jockey"", ""radio program boss"", ""RJ""]",director,ANSWER,0,0.63466,0.359644,0.664081,0.849491,2,3,0,policy_stop
+popqa,4011112,What is Eleanor Davis's occupation?,"[""cartoonist"", ""graphic artist"", ""animator"", ""illustrator""]",composer,ANSWER,0,0.628035,0.34753,0.664316,0.847577,2,3,0,policy_stop
+popqa,1536600,What is María Elena Marqués's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",director,ANSWER,0,0.547534,0.355934,0.315965,0.63193,1,3,0,policy_stop
+popqa,3901091,What is Derek Wheatley's occupation?,"[""novelist"", ""barrister"", ""barrister-at-law"", ""Bar-at-law""]",writer,ANSWER,0,0.636083,0.362217,0.664469,0.84994,2,3,0,policy_stop
+popqa,2092231,What is Ankita Sharma's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",writer,ANSWER,0,0.558886,0.359153,0.32792,0.655841,1,3,0,policy_stop
+popqa,5651252,What is Russell Stokes's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",director,ANSWER,0,0.554444,0.357954,0.323177,0.646354,1,3,0,policy_stop
+popqa,5586772,What is Rinaldo del Mel's occupation?,"[""composer""]",director,ANSWER,0,0.178534,0.357068,0.0,0.0,1,3,0,
+popqa,130213,What is Shozaburo Nakamura's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",a sculptor,ANSWER,0,0.548918,0.352791,0.319567,0.639135,1,3,0,policy_stop
+popqa,1905981,What is Tobias Lindholm's occupation?,"[""film director"", ""movie director"", ""director"", ""motion picture director"", ""screenwriter"", ""scenarist"", ""writer"", ""screen writer"", ""script writer"", ""scriptwriter""]",tobias lindholm,ANSWER,0,0.547456,0.342547,0.324058,0.648116,1,3,0,policy_stop
+popqa,2360504,What is Robby Krieger's occupation?,"[""guitarist"", ""guitar player"", ""guitarists""]",a writer,ANSWER,0,0.557978,0.36261,0.324663,0.649325,1,3,0,policy_stop
+popqa,4651204,What is Akari Hayami's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",a sailor,ANSWER,0,0.566333,0.360388,0.336441,0.672883,1,3,0,policy_stop
+popqa,839130,"What is Harvey Peltier, Sr.'s occupation?","[""lawyer"", ""attorney"", ""solicitor"", ""barrister"", ""lawyers"", ""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",a sr.,ANSWER,0,0.630722,0.351803,0.662167,0.849502,2,3,0,policy_stop
+popqa,4172941,What is William Lescaze's occupation?,"[""architect""]",a writer,ANSWER,0,0.637488,0.366334,0.657383,0.848122,2,3,0,policy_stop
+popqa,3994636,What is Edward Corser's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",inventor,ANSWER,0,0.564808,0.360516,0.334448,0.668897,1,3,0,policy_stop
+popqa,1730929,What is Alexander Rinnooy Kan's occupation?,"[""mathematician"", ""economist"", ""economists""]",engineer,ANSWER,0,0.676494,0.353319,0.663142,0.999506,2,3,0,policy_stop
+popqa,900521,What is Marco Ameglio's occupation?,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",director,ANSWER,0,0.553026,0.355591,0.322886,0.645772,1,3,0,policy_stop
+popqa,5394168,What is Patrick O'Brien Demsey's occupation?,"[""actor"", ""actress"", ""actors"", ""actresses""]",writer,ANSWER,0,0.631448,0.363782,0.651572,0.832209,2,3,0,policy_stop

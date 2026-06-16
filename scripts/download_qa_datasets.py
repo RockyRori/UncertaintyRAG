@@ -1,60 +1,58 @@
-from datasets import load_dataset
+import argparse
 import json
-from pathlib import Path
 from itertools import islice
+from pathlib import Path
 
-SAVE_DIR = Path("data/raw")
-SAVE_DIR.mkdir(parents=True, exist_ok=True)
+from datasets import load_dataset
 
-N_SAMPLE = 150
+from config import DEFAULT_DATASET_DOWNLOAD_LIMIT, RAW_DATA_DIR
 
 
-def save_jsonl(data_iter, path, n=N_SAMPLE):
-    with open(path, "w", encoding="utf8") as f:
-        for ex in islice(data_iter, n):
+def save_jsonl(data_iter, path: Path, limit: int) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as f:
+        for ex in islice(data_iter, limit):
             f.write(json.dumps(ex, ensure_ascii=False) + "\n")
 
 
-print("Downloading SMALL streaming subsets...")
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=DEFAULT_DATASET_DOWNLOAD_LIMIT,
+        help="Maximum examples per split for the TPAMI prototype.",
+    )
+    args = parser.parse_args()
 
-# -----------------
-# SQuAD
-# -----------------
-ds = load_dataset("squad", split="train", streaming=True)
-save_jsonl(ds, SAVE_DIR / "squad_train.jsonl")
+    limit = max(1, int(args.limit))
+    save_dir = RAW_DATA_DIR
+    save_dir.mkdir(parents=True, exist_ok=True)
 
-ds = load_dataset("squad", split="validation", streaming=True)
-save_jsonl(ds, SAVE_DIR / "squad_dev.jsonl")
+    print(f"Downloading streaming QA subsets with limit={limit} per split...")
 
-# -----------------
-# Natural Questions
-# -----------------
-ds = load_dataset("natural_questions", split="train", streaming=True)
-save_jsonl(ds, SAVE_DIR / "nq.jsonl")
+    datasets = [
+        ("squad", {"split": "train"}, save_dir / "squad_train.jsonl"),
+        ("squad", {"split": "validation"}, save_dir / "squad_dev.jsonl"),
+        ("natural_questions", {"split": "train"}, save_dir / "nq.jsonl"),
+        ("trivia_qa", {"name": "rc", "split": "train"}, save_dir / "trivia_train.jsonl"),
+        ("trivia_qa", {"name": "rc", "split": "validation"}, save_dir / "trivia_dev.jsonl"),
+        ("web_questions", {"split": "train"}, save_dir / "webq_train.jsonl"),
+        ("web_questions", {"split": "test"}, save_dir / "webq_test.jsonl"),
+        ("akariasai/PopQA", {"split": "test"}, save_dir / "popqa_test.jsonl"),
+    ]
 
-# -----------------
-# TriviaQA
-# -----------------
-ds = load_dataset("trivia_qa", "rc", split="train", streaming=True)
-save_jsonl(ds, SAVE_DIR / "trivia_train.jsonl")
+    for dataset_name, kwargs, out_path in datasets:
+        name = kwargs.pop("name", None)
+        print(f"[download] {dataset_name} -> {out_path}")
+        if name is None:
+            ds = load_dataset(dataset_name, streaming=True, **kwargs)
+        else:
+            ds = load_dataset(dataset_name, name, streaming=True, **kwargs)
+        save_jsonl(ds, out_path, limit=limit)
 
-ds = load_dataset("trivia_qa", "rc", split="validation", streaming=True)
-save_jsonl(ds, SAVE_DIR / "trivia_dev.jsonl")
-
-# -----------------
-# WebQuestions
-# -----------------
-ds = load_dataset("web_questions", split="train", streaming=True)
-save_jsonl(ds, SAVE_DIR / "webq_train.jsonl")
-
-ds = load_dataset("web_questions", split="test", streaming=True)
-save_jsonl(ds, SAVE_DIR / "webq_test.jsonl")
-
-# -----------------
-# PopQA
-# -----------------
-ds = load_dataset("akariasai/PopQA", split="test", streaming=True)
-save_jsonl(ds, SAVE_DIR / "popqa_test.jsonl")
+    print("Done.")
 
 
-print("DONE. Only small subsets downloaded.")
+if __name__ == "__main__":
+    main()

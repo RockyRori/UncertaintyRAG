@@ -69,6 +69,14 @@ TFIDF_VECTORIZER_PATH = SAVED_MODELS_DIR / "tfidf_vectorizer.pkl"
 RANDOM_SEED = 42
 TEST_SIZE = 0.2
 
+# TPAMI prototype limits. Keep the first iteration small and reproducible;
+# increase these only after the end-to-end pipeline and evidence quality pass.
+DEFAULT_DATASET_DOWNLOAD_LIMIT = 100
+DEFAULT_TRAIN_QUESTION_LIMIT = 100
+DEFAULT_EVAL_SAMPLE_LIMIT = 100
+DEFAULT_MULTI_DATASET_TRAIN_SIZE = 100
+DEFAULT_MULTI_DATASET_TEST_SIZE = 100
+
 MAX_FEATURES = 5000
 BATCH_SIZE = 32
 EPOCHS = 10

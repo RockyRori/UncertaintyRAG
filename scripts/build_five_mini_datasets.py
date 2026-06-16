@@ -3,9 +3,14 @@ import random
 from pathlib import Path
 from typing import List, Dict, Any
 
-RANDOM_SEED = 42
-TRAIN_SIZE = 50
-TEST_SIZE = 50
+from config import (
+    DEFAULT_MULTI_DATASET_TEST_SIZE,
+    DEFAULT_MULTI_DATASET_TRAIN_SIZE,
+    RANDOM_SEED,
+)
+
+TRAIN_SIZE = DEFAULT_MULTI_DATASET_TRAIN_SIZE
+TEST_SIZE = DEFAULT_MULTI_DATASET_TEST_SIZE
 
 PROCESSED_DIR = Path("data/processed")
 OUTPUT_DIR = Path("data/mini_datasets")

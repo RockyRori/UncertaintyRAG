@@ -1,4 +1,4 @@
 Policy Setting,Source Policy,Acc.,AUROC,Answer Rate,Ans.-Only Acc.,Avg. Steps
-Aggressive,D-loose-1,0.32,0.74,0.98,0.33,3.32
-Balanced,F-balanced,0.32,0.74,0.94,0.34,3.32
-Conservative,H-more-selective,0.28,0.82,0.72,0.39,3.32
+Aggressive,D-loose-1,0.45,0.92,1.0,0.45,1.38
+Balanced,F-balanced,0.45,0.92,1.0,0.45,1.38
+Conservative,H-more-selective,0.45,0.92,1.0,0.45,1.38

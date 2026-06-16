@@ -1,8 +1,8 @@
 Metric,Value
-Avg. Retrieve Actions,1.2
-Avg. Reason Actions,0.7
-Avg. Termination Depth,2.9
-Avg. Evidence per Answered Case,4.33
-Avg. Evidence per Abstained Case,3.0
-Avg. Budget per Sample,1.2
+Avg. Retrieve Actions,0.19
+Avg. Reason Actions,0.19
+Avg. Termination Depth,1.38
+Avg. Evidence per Answered Case,3.08
+Avg. Evidence per Abstained Case,
+Avg. Budget per Sample,0.19
 Max Observed Step Depth,4.0

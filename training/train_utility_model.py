@@ -1,6 +1,6 @@
+import argparse
 import pickle
 import random
-import re
 from pathlib import Path
 from typing import Dict, List, Tuple
 
@@ -30,18 +30,40 @@ from config import (
     MAX_FEATURES,
     BATCH_SIZE,
     EPOCHS,
+    DEFAULT_TRAIN_QUESTION_LIMIT,
     LEARNING_RATE,
     HIDDEN_DIM,
     DROPOUT,
 )
 from models.utility_predictor import UtilityMLP
 from utils.io_utils import load_json
+from utils.feature_utils import (
+    SAFE_STRUCTURED_FEATURE_NAMES,
+    build_text_feature_from_sample,
+    structured_features_from_sample,
+)
 
 
 # -----------------------------
 # threshold search config
 # -----------------------------
 THRESHOLD_CANDIDATES = np.arange(0.05, 1.00, 0.05)
+
+
+def limit_by_question_count(data: List[Dict], max_questions: int | None) -> List[Dict]:
+    if max_questions is None or max_questions <= 0:
+        return data
+
+    selected = []
+    seen_questions = set()
+    for row in data:
+        qid = row.get("question_id") or row.get("question") or len(seen_questions)
+        if qid not in seen_questions:
+            if len(seen_questions) >= max_questions:
+                break
+            seen_questions.add(qid)
+        selected.append(row)
+    return selected
 
 
 def set_seed(seed: int) -> None:
@@ -64,86 +86,12 @@ class UtilityDataset(Dataset):
         return self.x[idx], self.y[idx]
 
 
-def tokenize(text: str) -> List[str]:
-    return re.findall(r"\w+", str(text).lower())
-
-
-def safe_text(x) -> str:
-    return "" if x is None else str(x)
-
-
-def overlap_ratio(a: str, b: str) -> float:
-    a_tokens = set(tokenize(a))
-    b_tokens = set(tokenize(b))
-    if not a_tokens:
-        return 0.0
-    return len(a_tokens & b_tokens) / max(len(a_tokens), 1)
-
-
-def contains_any_gold_answer(passage: str, gold_answers: List[str]) -> int:
-    passage_low = safe_text(passage).lower()
-    for ans in gold_answers or []:
-        ans = safe_text(ans).strip().lower()
-        if ans and ans in passage_low:
-            return 1
-    return 0
-
-
-def answer_in_passage(pred_answer: str, passage: str) -> int:
-    pred = safe_text(pred_answer).strip().lower()
-    passage_low = safe_text(passage).lower()
-    if not pred:
-        return 0
-    return int(pred in passage_low)
-
-
 def build_text_feature(sample: Dict) -> str:
-    question = safe_text(sample.get("question", ""))
-    pred_answer = safe_text(sample.get("pred_answer", ""))
-    passage = safe_text(sample.get("passage", ""))
-
-    return (
-        f"question: {question} "
-        f"[SEP] predicted_answer: {pred_answer} "
-        f"[SEP] passage: {passage}"
-    )
+    return build_text_feature_from_sample(sample)
 
 
 def extract_structured_features(sample: Dict) -> List[float]:
-    question = safe_text(sample.get("question", ""))
-    passage = safe_text(sample.get("passage", ""))
-    pred_answer = safe_text(sample.get("pred_answer", ""))
-    gold_answers = sample.get("gold_answers", [])
-
-    q_tokens = tokenize(question)
-    p_tokens = tokenize(passage)
-    a_tokens = tokenize(pred_answer)
-
-    bm25_score = float(sample.get("bm25_score", sample.get("score", 0.0)))
-    passage_rank = float(sample.get("passage_index", 0))
-    question_len = float(len(q_tokens))
-    passage_len = float(len(p_tokens))
-    pred_answer_len = float(len(a_tokens))
-
-    support = float(sample.get("support", contains_any_gold_answer(passage, gold_answers)))
-    pred_in_passage = float(sample.get("pred_answer_in_passage", answer_in_passage(pred_answer, passage)))
-    gold_in_passage = float(contains_any_gold_answer(passage, gold_answers))
-
-    q_p_overlap = float(overlap_ratio(question, passage))
-    a_p_overlap = float(overlap_ratio(pred_answer, passage))
-
-    return [
-        bm25_score,
-        passage_rank,
-        question_len,
-        passage_len,
-        pred_answer_len,
-        support,
-        pred_in_passage,
-        gold_in_passage,
-        q_p_overlap,
-        a_p_overlap,
-    ]
+    return structured_features_from_sample(sample, SAFE_STRUCTURED_FEATURE_NAMES)
 
 
 def find_best_threshold(y_true: np.ndarray, y_prob: np.ndarray) -> Tuple[float, float, float]:
@@ -200,13 +148,14 @@ def run_baselines(
     preds_one = np.ones_like(y_true)
     evaluate_predictions("Baseline / All One", y_true, preds_one, preds_one.astype(float))
 
-    # baseline 3: support rule
+    # Diagnostic only: this uses gold-derived support metadata from the utility
+    # dataset and is not a deployable baseline.
     support_scores = np.array(
         [int(sample.get("support", 0)) for sample in val_samples],
         dtype=int,
     )
     support_preds = support_scores.copy()
-    evaluate_predictions("Baseline / Support Rule", y_true, support_preds, support_scores.astype(float))
+    evaluate_predictions("Diagnostic / Gold Support Rule", y_true, support_preds, support_scores.astype(float))
 
     # baseline 4: bm25 threshold
     bm25_scores = np.array(
@@ -233,20 +182,35 @@ def run_baselines(
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--max-questions",
+        type=int,
+        default=DEFAULT_TRAIN_QUESTION_LIMIT,
+        help="Limit utility training rows to the first N unique questions.",
+    )
+    args = parser.parse_args()
+
     set_seed(RANDOM_SEED)
 
     data = load_json(UTILITY_DATASET_PATH)
     if not data:
         raise ValueError(f"No data found in {UTILITY_DATASET_PATH}")
+    data = limit_by_question_count(data, args.max_questions)
+    if not data:
+        raise ValueError("No utility training rows remain after applying --max-questions")
+    print(f"Loaded {len(data)} utility rows after max_questions={args.max_questions}")
 
     labels = np.array([int(d["label"]) for d in data], dtype=np.float32)
+    unique_labels, label_counts = np.unique(labels.astype(int), return_counts=True)
+    stratify_labels = labels if len(unique_labels) > 1 and int(label_counts.min()) >= 2 else None
 
     train_samples, val_samples, y_train, y_val = train_test_split(
         data,
         labels,
         test_size=TEST_SIZE,
         random_state=RANDOM_SEED,
-        stratify=labels,
+        stratify=stratify_labels,
     )
 
     # -----------------------------
@@ -298,18 +262,7 @@ def main() -> None:
             {
                 "vectorizer": vectorizer,
                 "scaler": scaler,
-                "structured_feature_names": [
-                    "bm25_score",
-                    "passage_rank",
-                    "question_len",
-                    "passage_len",
-                    "pred_answer_len",
-                    "support",
-                    "pred_answer_in_passage",
-                    "gold_answer_in_passage",
-                    "question_passage_overlap",
-                    "pred_answer_passage_overlap",
-                ],
+                "structured_feature_names": SAFE_STRUCTURED_FEATURE_NAMES,
             },
             f,
         )

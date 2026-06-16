@@ -1,26 +1,26 @@
 {
   "dataset": "triviaqa",
-  "train_size": 50,
-  "test_size": 50,
-  "val_accuracy": 0.88,
-  "val_precision": 0.3333333333333333,
-  "val_recall": 1.0,
-  "val_f1": 0.5,
-  "val_auroc": 0.8865248226950355,
-  "best_threshold": 0.5,
-  "best_epoch": 6,
-  "accuracy": 0.06,
-  "auroc": 0.47517730496453897,
+  "train_size": 100,
+  "test_size": 100,
+  "val_accuracy": 0.95,
+  "val_precision": 0.5,
+  "val_recall": 0.6,
+  "val_f1": 0.5454545454545454,
+  "val_auroc": 0.8168421052631579,
+  "best_threshold": 0.55,
+  "best_epoch": 8,
+  "accuracy": 0.04,
+  "auroc": 0.6979166666666666,
   "avg_uncertainty": {
-    "overall": 0.4011464878600476,
-    "correct_only": 0.40952728593951687,
-    "incorrect_only": 0.4006115433017835
+    "overall": 0.5638755634049075,
+    "correct_only": 0.5309476222201093,
+    "incorrect_only": 0.565247560954274
   },
   "selective_accuracy_80": {
-    "kept_count": 40,
+    "kept_count": 80,
     "kept_ratio": 0.8,
     "accuracy": 0.05
   },
-  "predictions_csv": "outputs\\five_datasets\\triviaqa\\test_predictions.csv",
-  "metrics_json": "outputs\\five_datasets\\triviaqa\\metrics.json"
+  "predictions_csv": "C:\\File\\履历\\论文写作\\TPAMI\\UncertaintyRAG\\outputs\\five_datasets\\triviaqa\\test_predictions.csv",
+  "metrics_json": "C:\\File\\履历\\论文写作\\TPAMI\\UncertaintyRAG\\outputs\\five_datasets\\triviaqa\\metrics.json"
 }

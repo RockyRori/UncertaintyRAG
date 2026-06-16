@@ -9,6 +9,9 @@ from config import (
     GENERATOR_MODEL_NAME,
     MAX_INPUT_LENGTH,
     MAX_NEW_TOKENS,
+    DEFAULT_UTILITY_MAX_QUESTIONS,
+    DEFAULT_UTILITY_SAVE_EVERY,
+    DEFAULT_UTILITY_TOP_K,
     UTILITY_INCLUDE_SUPPORT_SCORE,
     UTILITY_POSITIVE_THRESHOLD,
 )
@@ -50,9 +53,9 @@ def extract_passage_text(p: Any) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--max-questions", type=int, default=None)
-    parser.add_argument("--top-k", type=int, default=5)
-    parser.add_argument("--save-every", type=int, default=50)
+    parser.add_argument("--max-questions", type=int, default=DEFAULT_UTILITY_MAX_QUESTIONS)
+    parser.add_argument("--top-k", type=int, default=DEFAULT_UTILITY_TOP_K)
+    parser.add_argument("--save-every", type=int, default=DEFAULT_UTILITY_SAVE_EVERY)
     parser.add_argument("--output", type=str, default=str(UTILITY_DATASET_PATH))
     args = parser.parse_args()
 

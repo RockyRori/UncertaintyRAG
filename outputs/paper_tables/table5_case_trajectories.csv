@@ -1,7 +1,1 @@
-Case,Question,Step,Action,Uncertainty,Outcome / Note,Final Outcome
-Case A,What poet wrote a long poem describing Roman religious holidays?,1,RETRIEVE-MORE,0.74,Initial / additional evidence retrieved,
-Case A,What poet wrote a long poem describing Roman religious holidays?,2,STOP,0.75,Termination decision triggered,ANSWER
-Case B,In what presidential election year did Schwarzenegger make a name for himself as a prominent Republican?,1,RERANK,0.92,Hypothesis refined,
-Case B,In what presidential election year did Schwarzenegger make a name for himself as a prominent Republican?,2,RETRIEVE-MORE,0.87,Initial / additional evidence retrieved,
-Case B,In what presidential election year did Schwarzenegger make a name for himself as a prominent Republican?,3,RERANK,0.88,Hypothesis refined,
-Case B,In what presidential election year did Schwarzenegger make a name for himself as a prominent Republican?,4,STOP,0.92,Termination decision triggered,ABSTAIN
+

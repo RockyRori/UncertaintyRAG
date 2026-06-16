@@ -19,6 +19,8 @@ from config import (
     BATCH_SIZE,
     CORPUS_PATH,
     DATA_DIR,
+    DEFAULT_MULTI_DATASET_TEST_SIZE,
+    DEFAULT_MULTI_DATASET_TRAIN_SIZE,
     DROPOUT,
     EPOCHS,
     GENERATOR_MODEL_NAME,
@@ -31,6 +33,8 @@ from config import (
     MAX_DECISION_STEPS,
     RANDOM_SEED,
     RETRIEVE_MORE_K,
+    SAVED_MODELS_DIR,
+    OUTPUTS_DIR,
     TAU_ANSWER,
     TAU_CONFLICT,
     TAU_DELTA,
@@ -58,23 +62,30 @@ from training.train_utility_model import (
 )
 from uncertainty.signals import DecisionAwareUncertainty
 from utils.io_utils import load_json, save_json
+from utils.feature_utils import SAFE_STRUCTURED_FEATURE_NAMES
 
 DATASET_NAMES = ["nq", "triviaqa", "webq", "squad", "popqa"]
 
 
 class DatasetFiles:
-    def __init__(self, base_dir: Path, dataset_name: str):
+    def __init__(
+        self,
+        base_dir: Path,
+        dataset_name: str,
+        train_size: int = DEFAULT_MULTI_DATASET_TRAIN_SIZE,
+        test_size: int = DEFAULT_MULTI_DATASET_TEST_SIZE,
+    ):
         self.dataset_name = dataset_name
         self.qa_path = base_dir / "processed" / f"{dataset_name}_qa.json"
         self.corpus_path = base_dir / "processed" / f"{dataset_name}_corpus.json"
         self.mini_dir = base_dir / "mini" / dataset_name
-        self.mini_train_path = self.mini_dir / "train_50.json"
-        self.mini_test_path = self.mini_dir / "test_50.json"
+        self.mini_train_path = self.mini_dir / f"train_{train_size}.json"
+        self.mini_test_path = self.mini_dir / f"test_{test_size}.json"
         self.utility_dataset_path = self.mini_dir / "utility_train.json"
-        self.model_dir = Path("models") / "saved" / dataset_name
+        self.model_dir = SAVED_MODELS_DIR / dataset_name
         self.model_path = self.model_dir / "utility_mlp.pt"
         self.vectorizer_path = self.model_dir / "tfidf_vectorizer.pkl"
-        self.output_dir = Path("outputs") / "five_datasets" / dataset_name
+        self.output_dir = OUTPUTS_DIR / "five_datasets" / dataset_name
         self.predictions_csv = self.output_dir / "test_predictions.csv"
         self.metrics_json = self.output_dir / "metrics.json"
 
@@ -106,7 +117,12 @@ def get_split_records(records: List[Dict], split_name: str) -> List[Dict]:
     return [x for x in records if str(x.get("split", "")).lower() == split_name]
 
 
-def build_fixed_mini_splits(dataset_name: str, files: DatasetFiles, train_n: int = 50, test_n: int = 50) -> Tuple[List[Dict], List[Dict]]:
+def build_fixed_mini_splits(
+    dataset_name: str,
+    files: DatasetFiles,
+    train_n: int = DEFAULT_MULTI_DATASET_TRAIN_SIZE,
+    test_n: int = DEFAULT_MULTI_DATASET_TEST_SIZE,
+) -> Tuple[List[Dict], List[Dict]]:
     records = load_dataset_records(files.qa_path)
 
     train_records = get_split_records(records, "train")
@@ -121,7 +137,7 @@ def build_fixed_mini_splits(dataset_name: str, files: DatasetFiles, train_n: int
     else:
         fallback_source = train_records if train_records else records
         if len(fallback_source) < train_n:
-            raise ValueError(f"{dataset_name}: not enough samples to build 50-train split")
+            raise ValueError(f"{dataset_name}: not enough samples to build {train_n}-train split")
         train_selected = rng.sample(fallback_source, train_n)
 
     if len(test_records) >= test_n:
@@ -133,7 +149,7 @@ def build_fixed_mini_splits(dataset_name: str, files: DatasetFiles, train_n: int
         if len(remaining) < test_n:
             remaining = [x for x in records if x.get("id") not in set()]
         if len(remaining) < test_n:
-            raise ValueError(f"{dataset_name}: not enough samples to build 50-test split")
+            raise ValueError(f"{dataset_name}: not enough samples to build {test_n}-test split")
         test_selected = rng.sample(remaining, test_n)
 
     files.mini_dir.mkdir(parents=True, exist_ok=True)
@@ -199,12 +215,15 @@ class UtilityTrainer:
 
     def fit(self, data: List[Dict]) -> Dict:
         labels = np.array([int(d["label"]) for d in data], dtype=np.float32)
+        unique_labels, label_counts = np.unique(labels.astype(int), return_counts=True)
+        stratify_labels = labels if len(unique_labels) > 1 and int(label_counts.min()) >= 2 else None
+
         train_samples, val_samples, y_train, y_val = train_test_split(
             data,
             labels,
             test_size=0.2,
             random_state=RANDOM_SEED,
-            stratify=labels if len(set(labels.tolist())) > 1 else None,
+            stratify=stratify_labels,
         )
 
         x_train_texts = [build_text_feature(d) for d in train_samples]
@@ -230,11 +249,7 @@ class UtilityTrainer:
                 {
                     "vectorizer": vectorizer,
                     "scaler": scaler,
-                    "structured_feature_names": [
-                        "bm25_score", "passage_rank", "question_len", "passage_len", "pred_answer_len",
-                        "support", "pred_answer_in_passage", "gold_answer_in_passage",
-                        "question_passage_overlap", "pred_answer_passage_overlap",
-                    ],
+                    "structured_feature_names": SAFE_STRUCTURED_FEATURE_NAMES,
                 },
                 f,
             )
@@ -305,9 +320,19 @@ class UtilityTrainer:
         }
 
 
-def run_dataset_experiment(dataset_name: str, top_k_utility: int = 5) -> Dict:
-    files = DatasetFiles(DATA_DIR, dataset_name)
-    train_samples, test_samples = build_fixed_mini_splits(dataset_name, files)
+def run_dataset_experiment(
+    dataset_name: str,
+    top_k_utility: int = 5,
+    train_size: int = DEFAULT_MULTI_DATASET_TRAIN_SIZE,
+    test_size: int = DEFAULT_MULTI_DATASET_TEST_SIZE,
+) -> Dict:
+    files = DatasetFiles(DATA_DIR, dataset_name, train_size=train_size, test_size=test_size)
+    train_samples, test_samples = build_fixed_mini_splits(
+        dataset_name,
+        files,
+        train_n=train_size,
+        test_n=test_size,
+    )
 
     corpus = load_json(files.corpus_path)
     retriever = BM25Retriever(corpus)
@@ -442,12 +467,19 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--datasets", nargs="*", default=DATASET_NAMES)
     parser.add_argument("--top-k-utility", type=int, default=5)
+    parser.add_argument("--train-size", type=int, default=DEFAULT_MULTI_DATASET_TRAIN_SIZE)
+    parser.add_argument("--test-size", type=int, default=DEFAULT_MULTI_DATASET_TEST_SIZE)
     args = parser.parse_args()
 
     set_seed(RANDOM_SEED)
     summary_rows = []
     for dataset_name in args.datasets:
-        result = run_dataset_experiment(dataset_name=dataset_name, top_k_utility=args.top_k_utility)
+        result = run_dataset_experiment(
+            dataset_name=dataset_name,
+            top_k_utility=args.top_k_utility,
+            train_size=args.train_size,
+            test_size=args.test_size,
+        )
         summary_rows.append({
             "dataset": result["dataset"],
             "train_size": result["train_size"],
@@ -470,7 +502,7 @@ def main():
             "metrics_json": result["metrics_json"],
         })
 
-    summary_path = Path("outputs") / "five_datasets" / "summary_metrics.csv"
+    summary_path = OUTPUTS_DIR / "five_datasets" / "summary_metrics.csv"
     write_summary_csv(summary_rows, summary_path)
     print(f"Saved summary csv to {summary_path}")
 
