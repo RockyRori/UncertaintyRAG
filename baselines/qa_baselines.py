@@ -1,7 +1,7 @@
 from typing import Any, Dict, List
 
 from retrieval.rerank import rerank_by_utility
-from utils.text_utils import qa_match, majority_answer
+from utils.text_utils import qa_match, majority_answer, qa_metrics
 
 
 def _build_record(
@@ -20,12 +20,18 @@ def _build_record(
     history: List[Dict[str, Any]] | None = None,
     stop_reason: str = "",
 ) -> Dict[str, Any]:
+    answer_metrics = qa_metrics(final_answer, gold_answers) if final_action == "ANSWER" else {
+        "exact_match": 0.0,
+        "contains_answer": 0.0,
+        "token_f1": 0.0,
+    }
     return {
         "question": question,
         "gold_answers": gold_answers,
         "final_answer": final_answer,
         "final_action": final_action,
         "correct": correct,
+        **answer_metrics,
         "uncertainty": uncertainty,
         "retrieval_uncertainty": retrieval_uncertainty,
         "conflict_uncertainty": conflict_uncertainty,
@@ -36,6 +42,39 @@ def _build_record(
         "stop_reason": stop_reason,
         "history": history or [],
     }
+
+
+def apply_matched_coverage(
+    records: List[Dict[str, Any]],
+    target_answer_rate: float,
+) -> List[Dict[str, Any]]:
+    if not records:
+        return []
+
+    keep_n = max(1, min(len(records), round(len(records) * target_answer_rate)))
+    keep_ids = {
+        idx for idx, _ in sorted(
+            enumerate(records),
+            key=lambda x: float(x[1].get("uncertainty", 1.0)),
+        )[:keep_n]
+    }
+
+    matched = []
+    for idx, record in enumerate(records):
+        out = dict(record)
+        out["history"] = list(record.get("history", []))
+        if idx not in keep_ids:
+            out["final_answer"] = "ABSTAIN"
+            out["final_action"] = "ABSTAIN"
+            out["correct"] = 0
+            out["exact_match"] = 0.0
+            out["contains_answer"] = 0.0
+            out["token_f1"] = 0.0
+            out["stop_reason"] = "matched_coverage_abstain"
+        else:
+            out["stop_reason"] = "matched_coverage_answer"
+        matched.append(out)
+    return matched
 
 
 def _compute_signals(question, evidence, utility_predictor, answerer, uncertainty_scorer):
@@ -242,6 +281,72 @@ def run_single_shot_rerank(
         budget_used=0,
         history=history,
         stop_reason="single_shot_rerank",
+    )
+
+
+def run_majority_vote(
+    question: str,
+    gold_answers: List[str],
+    retriever,
+    utility_predictor,
+    answerer,
+    uncertainty_scorer,
+    top_k: int = 5,
+) -> Dict[str, Any]:
+    evidence = retriever.retrieve(
+        question=question,
+        top_k=top_k,
+        offset=0,
+        exclude_ids=set(),
+    )
+
+    signals = _compute_signals(
+        question=question,
+        evidence=evidence,
+        utility_predictor=utility_predictor,
+        answerer=answerer,
+        uncertainty_scorer=uncertainty_scorer,
+    )
+
+    pred, vote_count = majority_answer(signals["candidate_answers"])
+    if not pred:
+        pred = _final_answer_from_evidence(
+            question=question,
+            evidence=evidence,
+            candidate_answers=signals["candidate_answers"],
+            answerer=answerer,
+        )
+
+    correct = qa_match(pred, gold_answers)
+    history = [{
+        "step": 1,
+        "action": "MAJORITY_VOTE_ANSWER",
+        "remaining_budget": 0,
+        "num_evidence": len(evidence),
+        "vote_count": vote_count,
+        "utilities": [round(u, 4) for u in signals["utilities"]],
+        "candidate_answers": signals["candidate_answers"],
+        "retrieval_uncertainty": round(signals["retrieval_uncertainty"], 4),
+        "conflict_uncertainty": round(signals["conflict_uncertainty"], 4),
+        "stability_uncertainty": round(signals["stability_uncertainty"], 4),
+        "total_uncertainty": round(signals["total_uncertainty"], 4),
+    }]
+
+    return _build_record(
+        question=question,
+        gold_answers=gold_answers,
+        final_answer=pred,
+        final_action="ANSWER",
+        correct=correct,
+        uncertainty=signals["total_uncertainty"],
+        retrieval_uncertainty=signals["retrieval_uncertainty"],
+        conflict_uncertainty=signals["conflict_uncertainty"],
+        stability_uncertainty=signals["stability_uncertainty"],
+        steps=1,
+        num_evidence=len(evidence),
+        budget_used=0,
+        history=history,
+        stop_reason="majority_vote",
     )
 
 

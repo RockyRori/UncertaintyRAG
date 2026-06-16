@@ -39,7 +39,13 @@ def load_json(path: str):
 COMPARE_BASELINES = {
     "single_shot": ("single_shot", "none", "compare_small"),
     "single_shot_rerank": ("single_shot_rerank", "none", "compare_small"),
+    "majority_vote": ("majority_vote", "none", "compare_small"),
     "single_shot_abstain": ("single_shot_abstain", "none", "compare_small"),
+    "single_shot_matched_coverage": (
+        "single_shot_matched_coverage",
+        "matched_coverage",
+        "compare_small",
+    ),
     "decision_loop": ("decision_loop", "default", "compare_small"),
     "phase5": ("decision_loop", "phase5_default", "compare_small"),
 }
@@ -57,6 +63,7 @@ POLICY_DISPLAY = {
     "default": "Default",
     "phase5_default": "Phase5 Default",
     "none": "No Policy",
+    "matched_coverage": "Matched Coverage",
 }
 
 
@@ -191,8 +198,13 @@ def extract_prediction_row(item: Dict[str, Any], fname: str, idx: int, method: s
         "final_answer": item.get("final_answer"),
         "final_action": final_action,
         "correct": item.get("correct", 0),
+        "exact_match": item.get("exact_match", item.get("correct", 0)),
+        "contains_answer": item.get("contains_answer"),
+        "token_f1": item.get("token_f1"),
         "answered": answered,
         "answered_correct": item.get("correct", 0) if answered else None,
+        "answered_token_f1": item.get("token_f1") if answered else None,
+        "answered_contains_answer": item.get("contains_answer") if answered else None,
         "uncertainty": item.get("uncertainty"),
         "retrieval_uncertainty": item.get("retrieval_uncertainty"),
         "conflict_uncertainty": item.get("conflict_uncertainty"),
@@ -208,7 +220,8 @@ def extract_prediction_row(item: Dict[str, Any], fname: str, idx: int, method: s
 
 
 NUMERIC_COLS = [
-    "correct", "answered", "answered_correct",
+    "correct", "exact_match", "contains_answer", "token_f1",
+    "answered", "answered_correct", "answered_token_f1", "answered_contains_answer",
     "uncertainty", "retrieval_uncertainty", "conflict_uncertainty", "stability_uncertainty",
     "steps", "num_evidence", "budget_used",
     "history_len", "last_history_step", "remaining_budget",
@@ -280,6 +293,10 @@ def build_prediction_summary(pred_df: pd.DataFrame) -> pd.DataFrame:
             accuracy=("correct", "mean"),
             answer_rate=("answered", "mean"),
             answered_only_accuracy=("answered_correct", answered_only_acc),
+            answered_only_token_f1=("answered_token_f1", answered_only_acc),
+            answered_only_contains=("answered_contains_answer", answered_only_acc),
+            token_f1=("token_f1", "mean"),
+            contains_answer=("contains_answer", "mean"),
             avg_uncertainty=("uncertainty", "mean"),
             avg_retrieval_uncertainty=("retrieval_uncertainty", "mean"),
             avg_conflict_uncertainty=("conflict_uncertainty", "mean"),
@@ -327,7 +344,15 @@ def build_five_dataset_tables() -> Tuple[pd.DataFrame, pd.DataFrame]:
                 "best_threshold": metrics.get("best_threshold"),
                 "best_epoch": metrics.get("best_epoch"),
                 "accuracy": metrics.get("accuracy"),
+                "exact_match": metrics.get("answer_metrics", {}).get("exact_match", metrics.get("accuracy")),
+                "contains_answer": metrics.get("answer_metrics", {}).get("contains_answer"),
+                "token_f1": metrics.get("answer_metrics", {}).get("token_f1"),
+                "answered_exact_match": metrics.get("answer_metrics", {}).get("answered_exact_match"),
+                "answered_contains_answer": metrics.get("answer_metrics", {}).get("answered_contains_answer"),
+                "answered_token_f1": metrics.get("answer_metrics", {}).get("answered_token_f1"),
                 "auroc": metrics.get("auroc"),
+                "corpus_placeholder_ratio": metrics.get("corpus_quality", {}).get("placeholder_ratio"),
+                "corpus_path": metrics.get("corpus_path"),
                 "avg_uncertainty_overall": metrics.get("avg_uncertainty", {}).get("overall"),
                 "avg_uncertainty_correct": metrics.get("avg_uncertainty", {}).get("correct_only"),
                 "avg_uncertainty_incorrect": metrics.get("avg_uncertainty", {}).get("incorrect_only"),
@@ -340,7 +365,8 @@ def build_five_dataset_tables() -> Tuple[pd.DataFrame, pd.DataFrame]:
     pred_df = pd.concat(pred_frames, ignore_index=True) if pred_frames else pd.DataFrame()
     metric_df = pd.DataFrame(metric_rows)
     pred_df = convert_numeric(pred_df, [
-        "correct", "uncertainty", "retrieval_uncertainty", "conflict_uncertainty",
+        "correct", "exact_match", "contains_answer", "token_f1",
+        "uncertainty", "retrieval_uncertainty", "conflict_uncertainty",
         "stability_uncertainty", "steps", "num_evidence", "budget_used"
     ])
     if not pred_df.empty:

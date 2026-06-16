@@ -1,4 +1,5 @@
 from generator.qa_generator import QAGenerator
+from utils.text_utils import postprocess_answer
 
 
 class SimpleAnswerer:
@@ -24,18 +25,21 @@ class SimpleAnswerer:
 
     def answer(self, question: str, passages: list[str]) -> str:
         if self.available and self.generator is not None:
-            return self.generator.answer_with_passages(question, passages)
+            raw_answer = self.generator.answer_with_passages(question, passages)
+            return postprocess_answer(raw_answer, question)
 
-        # fallback：非常弱，只是防止系统直接崩
         if passages:
-            return passages[0].split(".")[0].strip()
+            return postprocess_answer(passages[0].split(".")[0].strip(), question)
         return "I don't know."
 
     def answer_per_passage(self, question: str, passages: list[str]) -> list[str]:
         if self.available and self.generator is not None:
             return [
-                self.generator.answer_with_single_passage(question, p)
+                postprocess_answer(
+                    self.generator.answer_with_single_passage(question, p),
+                    question,
+                )
                 for p in passages
             ]
 
-        return [p.split(".")[0].strip() for p in passages]
+        return [postprocess_answer(p.split(".")[0].strip(), question) for p in passages]

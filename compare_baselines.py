@@ -36,6 +36,8 @@ from controller.policy import RuleBasedPolicy
 from decision.loop import DecisionAwareRAG
 
 from baselines.qa_baselines import (
+    apply_matched_coverage,
+    run_majority_vote,
     run_single_shot,
     run_single_shot_rerank,
     run_single_shot_abstain,
@@ -44,6 +46,7 @@ from baselines.qa_baselines import (
 
 from evaluation.metrics import (
     compute_accuracy,
+    compute_answer_metrics,
     compute_auroc,
     compute_avg_uncertainty,
     selective_accuracy,
@@ -54,6 +57,7 @@ from evaluation.decision_metrics import summarize_decision_records
 def evaluate_records(records):
     return {
         "accuracy": compute_accuracy(records),
+        "answer_metrics": compute_answer_metrics(records),
         "auroc": compute_auroc(records),
         "avg_uncertainty": compute_avg_uncertainty(records),
         "selective_accuracy_80": selective_accuracy(records, keep_ratio=0.8),
@@ -111,6 +115,7 @@ def main():
     methods = {
         "single_shot": [],
         "single_shot_rerank": [],
+        "majority_vote": [],
         "single_shot_abstain": [],
         "decision_loop": [],
     }
@@ -144,6 +149,18 @@ def main():
             )
         )
 
+        methods["majority_vote"].append(
+            run_majority_vote(
+                question=question,
+                gold_answers=gold_answers,
+                retriever=retriever,
+                utility_predictor=utility_predictor,
+                answerer=answerer,
+                uncertainty_scorer=uncertainty_scorer,
+                top_k=max(INITIAL_TOP_K, 5),
+            )
+        )
+
         methods["single_shot_abstain"].append(
             run_single_shot_abstain(
                 question=question,
@@ -166,6 +183,14 @@ def main():
                 runner=runner,
             )
         )
+
+    decision_answer_rate = evaluate_records(methods["decision_loop"])[
+        "decision_summary"
+    ]["answer_rate"]
+    methods["single_shot_matched_coverage"] = apply_matched_coverage(
+        methods["single_shot"],
+        target_answer_rate=decision_answer_rate,
+    )
 
     OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
 

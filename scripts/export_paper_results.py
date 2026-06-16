@@ -106,10 +106,13 @@ def reset_output_dir(path: str) -> None:
 
 def table_i(default_metrics: Dict) -> pd.DataFrame:
     ds = default_metrics["decision_summary"]
+    answer_metrics = default_metrics.get("answer_metrics", {})
     rows = [
         {"Metric": "Sample Count", "Value": ds.get("count")},
         {"Metric": "Accuracy (overall)", "Value": default_metrics.get("accuracy")},
         {"Metric": "Answered-only Accuracy", "Value": ds.get("accuracy_answered_only")},
+        {"Metric": "Answered-only Token F1", "Value": answer_metrics.get("answered_token_f1")},
+        {"Metric": "Answered Contains Answer", "Value": answer_metrics.get("answered_contains_answer")},
         {"Metric": "AUROC", "Value": default_metrics.get("auroc")},
         {"Metric": "Answer Rate", "Value": ds.get("answer_rate")},
         {"Metric": "Abstain Rate", "Value": ds.get("abstain_rate")},
@@ -128,23 +131,25 @@ def table_ii(compare_metrics: Dict) -> pd.DataFrame:
     rename = {
         "single_shot": "Single-Pass",
         "single_shot_rerank": "Single-Pass + Rerank",
+        "majority_vote": "Top-k Majority Vote",
         "single_shot_abstain": "Single-Pass + Abstain",
+        "single_shot_matched_coverage": "Single-Pass + Matched Coverage",
         "decision_loop": "Governed Decision Loop",
     }
     rows = []
-    for key in [
-        "single_shot",
-        "single_shot_rerank",
-        "single_shot_abstain",
-        "decision_loop",
-    ]:
+    for key in rename:
+        if key not in compare_metrics:
+            continue
         m = compare_metrics[key]
         ds = m["decision_summary"]
+        answer_metrics = m.get("answer_metrics", {})
         rows.append(
             {
                 "Method": rename[key],
                 "N": ds.get("count"),
                 "Acc.": m.get("accuracy"),
+                "Ans.-Only F1": answer_metrics.get("answered_token_f1"),
+                "Ans. Contains": answer_metrics.get("answered_contains_answer"),
                 "AUROC": m.get("auroc"),
                 "Answer Rate": ds.get("answer_rate"),
                 "Ans.-Only Acc.": ds.get("accuracy_answered_only"),
@@ -163,6 +168,7 @@ def table_iii(sweep_metrics: Dict) -> pd.DataFrame:
     for key, label in selection:
         m = sweep_metrics[key]["metrics"]
         ds = m["decision_summary"]
+        answer_metrics = m.get("answer_metrics", {})
         rows.append(
             {
                 "Policy Setting": label,
@@ -172,6 +178,7 @@ def table_iii(sweep_metrics: Dict) -> pd.DataFrame:
                 "AUROC": m.get("auroc"),
                 "Answer Rate": ds.get("answer_rate"),
                 "Ans.-Only Acc.": ds.get("accuracy_answered_only"),
+                "Ans.-Only F1": answer_metrics.get("answered_token_f1"),
                 "Avg. Steps": ds.get("avg_steps"),
             }
         )
@@ -183,6 +190,7 @@ def table_iii_all(sweep_metrics: Dict) -> pd.DataFrame:
     for key, pack in sweep_metrics.items():
         m = pack["metrics"]
         ds = m["decision_summary"]
+        answer_metrics = m.get("answer_metrics", {})
         rows.append(
             {
                 "Policy": key,
@@ -191,6 +199,7 @@ def table_iii_all(sweep_metrics: Dict) -> pd.DataFrame:
                 "AUROC": m.get("auroc"),
                 "Answer Rate": ds.get("answer_rate"),
                 "Ans.-Only Acc.": ds.get("accuracy_answered_only"),
+                "Ans.-Only F1": answer_metrics.get("answered_token_f1"),
                 "Avg. Steps": ds.get("avg_steps"),
             }
         )

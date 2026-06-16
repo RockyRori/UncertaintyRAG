@@ -35,11 +35,13 @@ from controller.policy import RuleBasedPolicy
 from decision.loop import DecisionAwareRAG
 from evaluation.metrics import (
     compute_accuracy,
+    compute_answer_metrics,
     compute_auroc,
     compute_avg_uncertainty,
     selective_accuracy,
 )
 from evaluation.decision_metrics import summarize_decision_records
+from utils.text_utils import qa_metrics
 
 
 def main():
@@ -104,6 +106,15 @@ def main():
                 "final_answer": state.final_answer,
                 "final_action": state.final_action,
                 "correct": state.correct,
+                **(
+                    qa_metrics(state.final_answer, gold_answers)
+                    if state.final_action == "ANSWER"
+                    else {
+                        "exact_match": 0.0,
+                        "contains_answer": 0.0,
+                        "token_f1": 0.0,
+                    }
+                ),
 
                 "uncertainty": state.total_uncertainty,
                 "generation_entropy": state.generation_entropy,
@@ -182,6 +193,7 @@ def main():
 
     metrics = {
         "accuracy": compute_accuracy(records),
+        "answer_metrics": compute_answer_metrics(records),
         "auroc": compute_auroc(records),
         "avg_uncertainty": compute_avg_uncertainty(records),
         "selective_accuracy_80": selective_accuracy(records, keep_ratio=0.8),

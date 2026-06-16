@@ -198,3 +198,15 @@ The immediate goal is a reliable small-data pipeline, not final numbers. Next st
 - add dense/hybrid retrieval and reranker baselines;
 - evaluate with matched budget and matched answer coverage;
 - report calibration, risk-coverage, and error-type analysis.
+
+## Average Rerun
+```
+python main.py --max-samples 100
+python compare_baselines.py --max-samples 100
+python sweep_policies.py --max-samples 100
+python -m training.multi_dataset_runner --train-size 100 --test-size 100
+
+python -m scripts.build_results_csv
+python -m scripts.export_paper_results
+python -m scripts.plot_results
+```

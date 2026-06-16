@@ -55,6 +55,7 @@ from config import (
 from controller.policy import RuleBasedPolicy
 from decision.loop import DecisionAwareRAG
 from evaluation.metrics import compute_accuracy, compute_auroc, compute_avg_uncertainty, selective_accuracy
+from evaluation.metrics import compute_answer_metrics
 from generator.simple_answerer import SimpleAnswerer
 from inference.predict_utility import UtilityPredictor
 from models.utility_predictor import UtilityMLP
@@ -68,6 +69,7 @@ from training.train_utility_model import (
 )
 from uncertainty.signals import DecisionAwareUncertainty
 from utils.io_utils import load_json, save_json
+from utils.text_utils import qa_metrics
 from utils.feature_utils import SAFE_STRUCTURED_FEATURE_NAMES
 
 DATASET_NAMES = ["nq", "triviaqa", "webq", "squad", "popqa"]
@@ -117,6 +119,49 @@ def load_dataset_records(qa_path: Path) -> List[Dict]:
     if not isinstance(data, list) or not data:
         raise ValueError(f"Dataset file is empty or invalid: {qa_path}")
     return data
+
+
+def extract_corpus_text(item: Dict) -> str:
+    for key in ["text", "passage", "content", "body", "context"]:
+        if key in item:
+            return str(item.get(key) or "")
+    return str(item)
+
+
+def corpus_quality_report(corpus: List[Dict]) -> Dict:
+    placeholder_markers = [
+        "no gold answer",
+        "external retrieval corpus",
+        "no object or possible_answers",
+        "placeholder",
+    ]
+    placeholder_count = 0
+    empty_count = 0
+    for item in corpus:
+        text = extract_corpus_text(item).strip().lower()
+        if not text:
+            empty_count += 1
+        if any(marker in text for marker in placeholder_markers):
+            placeholder_count += 1
+
+    total = len(corpus)
+    return {
+        "corpus_count": total,
+        "empty_count": empty_count,
+        "placeholder_count": placeholder_count,
+        "placeholder_ratio": placeholder_count / total if total else 1.0,
+    }
+
+
+def validate_corpus_quality(dataset_name: str, corpus: List[Dict]) -> Dict:
+    report = corpus_quality_report(corpus)
+    if report["placeholder_ratio"] >= 0.5:
+        raise ValueError(
+            f"{dataset_name}: placeholder corpus ratio is too high "
+            f"({report['placeholder_ratio']:.2f}); provide an external retrieval corpus "
+            "or rerun with --allow-placeholder-corpus for stress testing only"
+        )
+    return report
 
 
 def get_split_records(records: List[Dict], split_name: str) -> List[Dict]:
@@ -364,6 +409,8 @@ def run_dataset_experiment(
     top_k_utility: int = 5,
     train_size: int = DEFAULT_MULTI_DATASET_TRAIN_SIZE,
     test_size: int = DEFAULT_MULTI_DATASET_TEST_SIZE,
+    allow_placeholder_corpus: bool = False,
+    external_corpus_dir: Path | None = None,
 ) -> Dict:
     files = DatasetFiles(DATA_DIR, dataset_name, train_size=train_size, test_size=test_size)
     train_samples, test_samples = build_fixed_mini_splits(
@@ -373,7 +420,16 @@ def run_dataset_experiment(
         test_n=test_size,
     )
 
-    corpus = load_json(files.corpus_path)
+    corpus_path = files.corpus_path
+    if external_corpus_dir is not None:
+        candidate = external_corpus_dir / f"{dataset_name}_corpus.json"
+        if candidate.exists():
+            corpus_path = candidate
+
+    corpus = load_json(corpus_path)
+    corpus_report = corpus_quality_report(corpus)
+    if not allow_placeholder_corpus:
+        corpus_report = validate_corpus_quality(dataset_name, corpus)
     retriever = BM25Retriever(corpus)
     utility_builder = MiniUtilityBuilder(
         retriever=retriever,
@@ -429,12 +485,18 @@ def run_dataset_experiment(
     csv_rows = []
     for idx, sample in enumerate(test_samples):
         state = runner.run_one(question=sample["question"], gold_answers=sample.get("gold_answers", []))
+        answer_metrics = (
+            qa_metrics(state.final_answer, sample.get("gold_answers", []))
+            if state.final_action == "ANSWER"
+            else {"exact_match": 0.0, "contains_answer": 0.0, "token_f1": 0.0}
+        )
         test_records.append({
             "question": sample["question"],
             "gold_answers": sample.get("gold_answers", []),
             "final_answer": state.final_answer,
             "final_action": state.final_action,
             "correct": state.correct,
+            **answer_metrics,
             "uncertainty": state.total_uncertainty,
             "retrieval_uncertainty": state.retrieval_uncertainty,
             "conflict_uncertainty": state.conflict_uncertainty,
@@ -453,6 +515,9 @@ def run_dataset_experiment(
             "prediction": state.final_answer,
             "final_action": state.final_action,
             "correct": int(state.correct),
+            "exact_match": round(float(answer_metrics["exact_match"]), 6),
+            "contains_answer": round(float(answer_metrics["contains_answer"]), 6),
+            "token_f1": round(float(answer_metrics["token_f1"]), 6),
             "uncertainty": round(float(state.total_uncertainty), 6),
             "retrieval_uncertainty": round(float(state.retrieval_uncertainty), 6),
             "conflict_uncertainty": round(float(state.conflict_uncertainty), 6),
@@ -467,6 +532,7 @@ def run_dataset_experiment(
         files.predictions_csv,
         [
             "dataset", "sample_id", "question", "gold_answers", "prediction", "final_action", "correct",
+            "exact_match", "contains_answer", "token_f1",
             "uncertainty", "retrieval_uncertainty", "conflict_uncertainty", "stability_uncertainty",
             "steps", "num_evidence", "budget_used", "stop_reason",
         ],
@@ -474,6 +540,7 @@ def run_dataset_experiment(
 
     test_metrics = {
         "accuracy": compute_accuracy(test_records),
+        "answer_metrics": compute_answer_metrics(test_records),
         "auroc": compute_auroc(test_records),
         "avg_uncertainty": compute_avg_uncertainty(test_records),
         "selective_accuracy_80": selective_accuracy(test_records, keep_ratio=0.8),
@@ -483,6 +550,8 @@ def run_dataset_experiment(
         "dataset": dataset_name,
         "train_size": len(train_samples),
         "test_size": len(test_samples),
+        "corpus_quality": corpus_report,
+        "corpus_path": str(corpus_path),
         **train_metrics,
         **test_metrics,
         "predictions_csv": str(files.predictions_csv),
@@ -496,9 +565,11 @@ def write_summary_csv(summary_rows: List[Dict], output_path: Path) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     fieldnames = [
         "dataset", "train_size", "test_size", "val_accuracy", "val_precision", "val_recall", "val_f1", "val_auroc",
-        "best_threshold", "best_epoch", "accuracy", "auroc", "avg_uncertainty_overall",
+        "best_threshold", "best_epoch", "accuracy", "exact_match", "contains_answer", "token_f1",
+        "answered_exact_match", "answered_contains_answer", "answered_token_f1",
+        "auroc", "avg_uncertainty_overall",
         "avg_uncertainty_correct", "avg_uncertainty_incorrect", "selective_accuracy_80",
-        "kept_count_80", "predictions_csv", "metrics_json",
+        "kept_count_80", "corpus_placeholder_ratio", "corpus_path", "predictions_csv", "metrics_json",
     ]
     with output_path.open("w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -513,6 +584,16 @@ def clear_dataset_outputs(dataset_name: str, train_size: int, test_size: int) ->
         shutil.rmtree(files.output_dir)
 
 
+def write_skipped_csv(skipped_rows: List[Dict], output_path: Path) -> None:
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    fieldnames = ["dataset", "reason"]
+    with output_path.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in skipped_rows:
+            writer.writerow(row)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--datasets", nargs="*", default=DATASET_NAMES)
@@ -524,10 +605,22 @@ def main():
         action="store_true",
         help="Fail instead of skipping datasets that cannot form non-overlapping splits.",
     )
+    parser.add_argument(
+        "--allow-placeholder-corpus",
+        action="store_true",
+        help="Allow placeholder corpora for stress testing. Do not use for main results.",
+    )
+    parser.add_argument(
+        "--external-corpus-dir",
+        type=str,
+        default=None,
+        help="Optional directory containing <dataset>_corpus.json files.",
+    )
     args = parser.parse_args()
 
     set_seed(RANDOM_SEED)
     summary_rows = []
+    skipped_rows = []
     for dataset_name in args.datasets:
         try:
             result = run_dataset_experiment(
@@ -535,13 +628,20 @@ def main():
                 top_k_utility=args.top_k_utility,
                 train_size=args.train_size,
                 test_size=args.test_size,
+                allow_placeholder_corpus=args.allow_placeholder_corpus,
+                external_corpus_dir=Path(args.external_corpus_dir)
+                if args.external_corpus_dir
+                else None,
             )
         except ValueError as exc:
             if args.strict_splits:
                 raise
             print(f"[SKIP] {dataset_name}: {exc}")
+            skipped_rows.append({"dataset": dataset_name, "reason": str(exc)})
             clear_dataset_outputs(dataset_name, args.train_size, args.test_size)
             continue
+        answer_metrics = result["answer_metrics"]
+        corpus_quality = result.get("corpus_quality", {})
         summary_rows.append({
             "dataset": result["dataset"],
             "train_size": result["train_size"],
@@ -554,19 +654,30 @@ def main():
             "best_threshold": result["best_threshold"],
             "best_epoch": result["best_epoch"],
             "accuracy": result["accuracy"],
+            "exact_match": answer_metrics["exact_match"],
+            "contains_answer": answer_metrics["contains_answer"],
+            "token_f1": answer_metrics["token_f1"],
+            "answered_exact_match": answer_metrics["answered_exact_match"],
+            "answered_contains_answer": answer_metrics["answered_contains_answer"],
+            "answered_token_f1": answer_metrics["answered_token_f1"],
             "auroc": result["auroc"],
             "avg_uncertainty_overall": result["avg_uncertainty"]["overall"],
             "avg_uncertainty_correct": result["avg_uncertainty"]["correct_only"],
             "avg_uncertainty_incorrect": result["avg_uncertainty"]["incorrect_only"],
             "selective_accuracy_80": result["selective_accuracy_80"]["accuracy"],
             "kept_count_80": result["selective_accuracy_80"]["kept_count"],
+            "corpus_placeholder_ratio": corpus_quality.get("placeholder_ratio"),
+            "corpus_path": result.get("corpus_path"),
             "predictions_csv": result["predictions_csv"],
             "metrics_json": result["metrics_json"],
         })
 
     summary_path = OUTPUTS_DIR / "five_datasets" / "summary_metrics.csv"
     write_summary_csv(summary_rows, summary_path)
+    skipped_path = OUTPUTS_DIR / "five_datasets" / "skipped_datasets.csv"
+    write_skipped_csv(skipped_rows, skipped_path)
     print(f"Saved summary csv to {summary_path}")
+    print(f"Saved skipped dataset csv to {skipped_path}")
 
 
 if __name__ == "__main__":
