@@ -21,9 +21,11 @@ def compute_answer_metrics(records: list[dict]) -> dict:
     if not records:
         return {
             "exact_match": 0.0,
+            "relaxed_match": 0.0,
             "contains_answer": 0.0,
             "token_f1": 0.0,
             "answered_exact_match": 0.0,
+            "answered_relaxed_match": 0.0,
             "answered_contains_answer": 0.0,
             "answered_token_f1": 0.0,
         }
@@ -37,9 +39,11 @@ def compute_answer_metrics(records: list[dict]) -> dict:
 
     return {
         "exact_match": mean_metric(records, "exact_match"),
+        "relaxed_match": mean_metric(records, "relaxed_match"),
         "contains_answer": mean_metric(records, "contains_answer"),
         "token_f1": mean_metric(records, "token_f1"),
         "answered_exact_match": mean_metric(answered, "exact_match"),
+        "answered_relaxed_match": mean_metric(answered, "relaxed_match"),
         "answered_contains_answer": mean_metric(answered, "contains_answer"),
         "answered_token_f1": mean_metric(answered, "token_f1"),
     }

@@ -1,8 +1,7 @@
-from controller import state
 from controller.state import DecisionState
 from decision.actions import RETRIEVE_MORE, RERANK, ANSWER, ABSTAIN, STOP
 from retrieval.rerank import rerank_by_utility
-from utils.text_utils import qa_match
+from utils.text_utils import is_unknown_answer, qa_match
 
 
 class DecisionAwareRAG:
@@ -105,7 +104,7 @@ class DecisionAwareRAG:
         state.delta_uncertainty = max(0.0, prev_total - state.total_uncertainty)
 
         state.prev_best_utility = prev_best
-        state.best_utility = max(state.utilities) if state.utilities else 0.0
+        state.best_utility = stats.get("best_answer_utility", 0.0)
         state.evidence_gain = max(0.0, state.best_utility - prev_best)
 
         # utility of answering now
@@ -183,8 +182,12 @@ class DecisionAwareRAG:
         state.candidate_answers = [x[2] for x in ranked]
 
     def _answer(self, state: DecisionState) -> None:
-        final_answer = state.best_answer.strip() if state.best_answer else ""
-        if not final_answer:
+        passages = [e["text"] for e in state.evidence]
+        final_answer = self.answerer.answer(state.question, passages).strip() if passages else ""
+        if not final_answer or is_unknown_answer(final_answer):
+            final_answer = state.best_answer.strip() if state.best_answer else ""
+
+        if not final_answer or is_unknown_answer(final_answer):
             state.final_answer = "ABSTAIN"
             state.correct = 0
             state.final_action = ABSTAIN

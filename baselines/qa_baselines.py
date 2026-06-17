@@ -22,6 +22,7 @@ def _build_record(
 ) -> Dict[str, Any]:
     answer_metrics = qa_metrics(final_answer, gold_answers) if final_action == "ANSWER" else {
         "exact_match": 0.0,
+        "relaxed_match": 0.0,
         "contains_answer": 0.0,
         "token_f1": 0.0,
     }

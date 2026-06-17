@@ -24,16 +24,13 @@ from config import (
     UNCERTAINTY_ALPHA,
     UNCERTAINTY_BETA,
     UNCERTAINTY_GAMMA,
-    GENERATOR_MODEL_NAME,
-    MAX_INPUT_LENGTH,
-    MAX_NEW_TOKENS,
 )
 import argparse
 
 from utils.io_utils import load_json, save_json
 from retriever.bm25_retriever import BM25Retriever
 from inference.predict_utility import UtilityPredictor
-from generator.simple_answerer import SimpleAnswerer
+from generator.deepseek_answerer import DeepSeekAnswerer
 from uncertainty.signals import DecisionAwareUncertainty
 from controller.policy import RuleBasedPolicy
 from decision.loop import DecisionAwareRAG
@@ -79,11 +76,7 @@ def main():
 
     retriever = BM25Retriever(CORPUS_PATH)
     utility_predictor = UtilityPredictor()
-    answerer = SimpleAnswerer(
-        model_name=GENERATOR_MODEL_NAME,
-        max_input_length=MAX_INPUT_LENGTH,
-        max_new_tokens=MAX_NEW_TOKENS,
-    )
+    answerer = DeepSeekAnswerer()
     uncertainty_scorer = DecisionAwareUncertainty(
         alpha=UNCERTAINTY_ALPHA,
         beta=UNCERTAINTY_BETA,

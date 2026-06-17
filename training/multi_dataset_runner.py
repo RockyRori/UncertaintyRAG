@@ -24,12 +24,9 @@ from config import (
     DEFAULT_MULTI_DATASET_TRAIN_SIZE,
     DROPOUT,
     EPOCHS,
-    GENERATOR_MODEL_NAME,
     HIDDEN_DIM,
     LEARNING_RATE,
     MAX_FEATURES,
-    MAX_INPUT_LENGTH,
-    MAX_NEW_TOKENS,
     MAX_RETRIEVAL_BUDGET,
     MAX_DECISION_STEPS,
     RANDOM_SEED,
@@ -59,7 +56,7 @@ from controller.policy import RuleBasedPolicy
 from decision.loop import DecisionAwareRAG
 from evaluation.metrics import compute_accuracy, compute_auroc, compute_avg_uncertainty, selective_accuracy
 from evaluation.metrics import compute_answer_metrics
-from generator.simple_answerer import SimpleAnswerer
+from generator.deepseek_answerer import DeepSeekAnswerer
 from inference.predict_utility import UtilityPredictor
 from models.utility_predictor import UtilityMLP
 from retriever.bm25_retriever import BM25Retriever
@@ -72,7 +69,7 @@ from training.train_utility_model import (
 )
 from uncertainty.signals import DecisionAwareUncertainty
 from utils.io_utils import load_json, save_json
-from utils.text_utils import qa_metrics
+from utils.text_utils import qa_metrics, relaxed_match_score
 from utils.feature_utils import SAFE_STRUCTURED_FEATURE_NAMES
 
 DATASET_NAMES = ["nq", "triviaqa", "webq", "squad", "popqa"]
@@ -246,9 +243,9 @@ def build_fixed_mini_splits(
 
 
 class MiniUtilityBuilder:
-    def __init__(self, retriever, generator):
+    def __init__(self, retriever, answerer):
         self.retriever = retriever
-        self.generator = generator
+        self.answerer = answerer
 
     @staticmethod
     def extract_passage_text(item: Dict) -> str:
@@ -271,10 +268,17 @@ class MiniUtilityBuilder:
 
             for passage_idx, item in enumerate(retrieved):
                 passage = self.extract_passage_text(item)
-                pred_answer = self.generator.answer_with_single_passage(question, passage)
+                pred_answer = self.answerer.answer_with_single_passage(question, passage)
                 pred_norm = self.normalize(pred_answer)
                 passage_norm = self.normalize(passage)
-                answer_correct = int(any(self.normalize(g) == pred_norm or self.normalize(g) in pred_norm for g in gold_answers if self.normalize(g)))
+                exact_answer_correct = int(
+                    any(
+                        self.normalize(g) == pred_norm
+                        for g in gold_answers
+                        if self.normalize(g)
+                    )
+                )
+                answer_correct = int(relaxed_match_score(pred_answer, gold_answers))
                 support = int(any(self.normalize(g) in passage_norm for g in gold_answers if self.normalize(g)))
                 rows.append({
                     "question_id": qid,
@@ -287,6 +291,7 @@ class MiniUtilityBuilder:
                     "passage": passage,
                     "pred_answer": pred_answer,
                     "pred_answer_in_passage": int(pred_norm in passage_norm) if pred_norm else 0,
+                    "exact_answer_correct": exact_answer_correct,
                     "answer_correct": answer_correct,
                     "support": support,
                     "utility_score": float(answer_correct),
@@ -434,13 +439,10 @@ def run_dataset_experiment(
     if not allow_placeholder_corpus:
         corpus_report = validate_corpus_quality(dataset_name, corpus)
     retriever = BM25Retriever(corpus)
+    answerer = DeepSeekAnswerer()
     utility_builder = MiniUtilityBuilder(
         retriever=retriever,
-        generator=SimpleAnswerer(
-            model_name=GENERATOR_MODEL_NAME,
-            max_input_length=MAX_INPUT_LENGTH,
-            max_new_tokens=MAX_NEW_TOKENS,
-        ).generator,
+        answerer=answerer,
     )
     utility_rows = utility_builder.build(train_samples, top_k=top_k_utility)
     save_json(utility_rows, files.utility_dataset_path)
@@ -449,11 +451,6 @@ def run_dataset_experiment(
     train_metrics = trainer.fit(utility_rows)
 
     utility_predictor = UtilityPredictor(model_path=files.model_path, vectorizer_path=files.vectorizer_path)
-    answerer = SimpleAnswerer(
-        model_name=GENERATOR_MODEL_NAME,
-        max_input_length=MAX_INPUT_LENGTH,
-        max_new_tokens=MAX_NEW_TOKENS,
-    )
     uncertainty_scorer = DecisionAwareUncertainty(
         alpha=UNCERTAINTY_ALPHA,
         beta=UNCERTAINTY_BETA,
@@ -494,7 +491,12 @@ def run_dataset_experiment(
         answer_metrics = (
             qa_metrics(state.final_answer, sample.get("gold_answers", []))
             if state.final_action == "ANSWER"
-            else {"exact_match": 0.0, "contains_answer": 0.0, "token_f1": 0.0}
+            else {
+                "exact_match": 0.0,
+                "relaxed_match": 0.0,
+                "contains_answer": 0.0,
+                "token_f1": 0.0,
+            }
         )
         test_records.append({
             "question": sample["question"],
@@ -522,6 +524,7 @@ def run_dataset_experiment(
             "final_action": state.final_action,
             "correct": int(state.correct),
             "exact_match": round(float(answer_metrics["exact_match"]), 6),
+            "relaxed_match": round(float(answer_metrics["relaxed_match"]), 6),
             "contains_answer": round(float(answer_metrics["contains_answer"]), 6),
             "token_f1": round(float(answer_metrics["token_f1"]), 6),
             "uncertainty": round(float(state.total_uncertainty), 6),
@@ -538,7 +541,7 @@ def run_dataset_experiment(
         files.predictions_csv,
         [
             "dataset", "sample_id", "question", "gold_answers", "prediction", "final_action", "correct",
-            "exact_match", "contains_answer", "token_f1",
+            "exact_match", "relaxed_match", "contains_answer", "token_f1",
             "uncertainty", "retrieval_uncertainty", "conflict_uncertainty", "stability_uncertainty",
             "steps", "num_evidence", "budget_used", "stop_reason",
         ],
@@ -571,8 +574,8 @@ def write_summary_csv(summary_rows: List[Dict], output_path: Path) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     fieldnames = [
         "dataset", "train_size", "test_size", "val_accuracy", "val_precision", "val_recall", "val_f1", "val_auroc",
-        "best_threshold", "best_epoch", "accuracy", "exact_match", "contains_answer", "token_f1",
-        "answered_exact_match", "answered_contains_answer", "answered_token_f1",
+        "best_threshold", "best_epoch", "accuracy", "exact_match", "relaxed_match", "contains_answer", "token_f1",
+        "answered_exact_match", "answered_relaxed_match", "answered_contains_answer", "answered_token_f1",
         "auroc", "avg_uncertainty_overall",
         "avg_uncertainty_correct", "avg_uncertainty_incorrect", "selective_accuracy_80",
         "kept_count_80", "corpus_placeholder_ratio", "corpus_path", "predictions_csv", "metrics_json",
@@ -661,9 +664,11 @@ def main():
             "best_epoch": result["best_epoch"],
             "accuracy": result["accuracy"],
             "exact_match": answer_metrics["exact_match"],
+            "relaxed_match": answer_metrics["relaxed_match"],
             "contains_answer": answer_metrics["contains_answer"],
             "token_f1": answer_metrics["token_f1"],
             "answered_exact_match": answer_metrics["answered_exact_match"],
+            "answered_relaxed_match": answer_metrics["answered_relaxed_match"],
             "answered_contains_answer": answer_metrics["answered_contains_answer"],
             "answered_token_f1": answer_metrics["answered_token_f1"],
             "auroc": result["auroc"],

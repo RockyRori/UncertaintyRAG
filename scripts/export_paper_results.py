@@ -111,6 +111,7 @@ def table_i(default_metrics: Dict) -> pd.DataFrame:
         {"Metric": "Sample Count", "Value": ds.get("count")},
         {"Metric": "Accuracy (overall)", "Value": default_metrics.get("accuracy")},
         {"Metric": "Answered-only Accuracy", "Value": ds.get("accuracy_answered_only")},
+        {"Metric": "Answered-only Relaxed Match", "Value": answer_metrics.get("answered_relaxed_match")},
         {"Metric": "Answered-only Token F1", "Value": answer_metrics.get("answered_token_f1")},
         {"Metric": "Answered Contains Answer", "Value": answer_metrics.get("answered_contains_answer")},
         {"Metric": "AUROC", "Value": default_metrics.get("auroc")},
@@ -148,6 +149,7 @@ def table_ii(compare_metrics: Dict) -> pd.DataFrame:
                 "Method": rename[key],
                 "N": ds.get("count"),
                 "Acc.": m.get("accuracy"),
+                "Ans.-Only Relaxed": answer_metrics.get("answered_relaxed_match"),
                 "Ans.-Only F1": answer_metrics.get("answered_token_f1"),
                 "Ans. Contains": answer_metrics.get("answered_contains_answer"),
                 "AUROC": m.get("auroc"),
@@ -178,6 +180,7 @@ def table_iii(sweep_metrics: Dict) -> pd.DataFrame:
                 "AUROC": m.get("auroc"),
                 "Answer Rate": ds.get("answer_rate"),
                 "Ans.-Only Acc.": ds.get("accuracy_answered_only"),
+                "Ans.-Only Relaxed": answer_metrics.get("answered_relaxed_match"),
                 "Ans.-Only F1": answer_metrics.get("answered_token_f1"),
                 "Avg. Steps": ds.get("avg_steps"),
             }
@@ -199,6 +202,7 @@ def table_iii_all(sweep_metrics: Dict) -> pd.DataFrame:
                 "AUROC": m.get("auroc"),
                 "Answer Rate": ds.get("answer_rate"),
                 "Ans.-Only Acc.": ds.get("accuracy_answered_only"),
+                "Ans.-Only Relaxed": answer_metrics.get("answered_relaxed_match"),
                 "Ans.-Only F1": answer_metrics.get("answered_token_f1"),
                 "Avg. Steps": ds.get("avg_steps"),
             }

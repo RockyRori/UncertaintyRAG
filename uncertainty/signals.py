@@ -2,6 +2,8 @@ from collections import defaultdict
 from typing import List, Dict, Any
 import math
 
+from utils.text_utils import is_unknown_answer
+
 
 class DecisionAwareUncertainty:
     def __init__(self, alpha: float = 0.2, beta: float = 0.5, gamma: float = 0.3):
@@ -18,7 +20,7 @@ class DecisionAwareUncertainty:
 
         for u, ans in zip(utilities, answers):
             ans_norm = self._normalize_text(ans)
-            if not ans_norm:
+            if not ans_norm or is_unknown_answer(ans_norm):
                 continue
             weight_by_answer[ans_norm] += max(float(u), 0.0)
 
@@ -47,12 +49,24 @@ class DecisionAwareUncertainty:
         max_entropy = math.log(len(probs))
         return min(1.0, entropy / (max_entropy + 1e-12))
 
-    def utility_uncertainty(self, utilities: List[float]) -> float:
+    def utility_uncertainty(
+        self,
+        utilities: List[float],
+        answers: List[str] | None = None,
+    ) -> float:
         """
         1 - u_t, 其中 u_t 近似取当前最优 utility
         """
         if not utilities:
             return 1.0
+        if answers is not None:
+            utilities = [
+                float(u)
+                for u, ans in zip(utilities, answers)
+                if not is_unknown_answer(ans)
+            ]
+            if not utilities:
+                return 1.0
         u_t = max(float(u) for u in utilities)
         return 1.0 - u_t
 
@@ -65,12 +79,22 @@ class DecisionAwareUncertainty:
             return {
                 "best_answer": "",
                 "best_answer_weight": 0.0,
+                "best_answer_utility": 0.0,
             }
 
         best_answer, best_weight = max(dist.items(), key=lambda x: x[1])
+        best_answer_utility = max(
+            (
+                float(u)
+                for u, ans in zip(utilities, answers)
+                if self._normalize_text(ans) == best_answer
+            ),
+            default=0.0,
+        )
         return {
             "best_answer": best_answer,
             "best_answer_weight": float(best_weight),
+            "best_answer_utility": float(best_answer_utility),
         }
 
     def stability_score(self, utilities: List[float], answers: List[str], previous_best_answer: str = "") -> float:
@@ -117,11 +141,12 @@ class DecisionAwareUncertainty:
         previous_best_answer: str = "",
     ) -> Dict[str, Any]:
         h_t = self.generation_entropy(utilities, answers)
-        util_u = self.utility_uncertainty(utilities)
+        util_u = self.utility_uncertainty(utilities, answers)
 
         best_info = self.best_answer_info(utilities, answers)
         best_answer = best_info["best_answer"]
         best_answer_weight = best_info["best_answer_weight"]
+        best_answer_utility = best_info["best_answer_utility"]
 
         s_t = self.stability_score(utilities, answers, previous_best_answer)
 
@@ -139,6 +164,7 @@ class DecisionAwareUncertainty:
             "total_uncertainty": total,
             "best_answer": best_answer,
             "best_answer_weight": best_answer_weight,
+            "best_answer_utility": best_answer_utility,
             "retrieval_uncertainty": retrieval_u,
             "conflict_uncertainty": conflict_u,
             "stability_uncertainty": stability_u,

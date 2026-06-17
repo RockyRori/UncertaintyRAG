@@ -6,19 +6,16 @@ from config import (
     MINI_DATASET_PATH,
     CORPUS_PATH,
     UTILITY_DATASET_PATH,
-    GENERATOR_MODEL_NAME,
-    MAX_INPUT_LENGTH,
-    MAX_NEW_TOKENS,
     DEFAULT_UTILITY_MAX_QUESTIONS,
     DEFAULT_UTILITY_SAVE_EVERY,
     DEFAULT_UTILITY_TOP_K,
     UTILITY_INCLUDE_SUPPORT_SCORE,
     UTILITY_POSITIVE_THRESHOLD,
 )
-from generator.qa_generator import QAGenerator
+from generator.deepseek_answerer import DeepSeekAnswerer
 from retriever.bm25_retriever import BM25Retriever
 from utils.io_utils import load_json, save_json
-from utils.text_utils import contains_any_answer, qa_match
+from utils.text_utils import contains_any_answer, exact_match_score, relaxed_match_score
 
 
 def compute_utility_score(
@@ -27,13 +24,15 @@ def compute_utility_score(
     passage: str,
     include_support: bool = True,
 ) -> Dict[str, Any]:
-    answer_correct = qa_match(pred_answer, gold_answers)
+    exact_answer_correct = exact_match_score(pred_answer, gold_answers)
+    answer_correct = relaxed_match_score(pred_answer, gold_answers)
     support = int(contains_any_answer(passage, gold_answers))
 
     utility_score = float(answer_correct)
     label = int(answer_correct)
 
     return {
+        "exact_answer_correct": int(exact_answer_correct),
         "answer_correct": int(answer_correct),
         "support": int(support),
         "utility_score": float(utility_score),
@@ -69,11 +68,7 @@ def main() -> None:
     print(f"Loaded {len(corpus)} corpus passages from {CORPUS_PATH}")
 
     retriever = BM25Retriever(corpus)
-    generator = QAGenerator(
-        model_name=GENERATOR_MODEL_NAME,
-        max_input_length=MAX_INPUT_LENGTH,
-        max_new_tokens=MAX_NEW_TOKENS,
-    )
+    answerer = DeepSeekAnswerer()
 
     utility_dataset = []
     total_pairs = 0
@@ -89,7 +84,7 @@ def main() -> None:
 
         for passage_idx, item in enumerate(retrieved):
             passage_text = extract_passage_text(item)
-            pred_answer = generator.answer_with_single_passage(question, passage_text)
+            pred_answer = answerer.answer_with_single_passage(question, passage_text)
 
             stats = compute_utility_score(
                 pred_answer=pred_answer,
@@ -109,6 +104,7 @@ def main() -> None:
                 "passage": passage_text,
                 "pred_answer": pred_answer,
                 "pred_answer_in_passage": int(pred_answer.lower() in passage_text.lower()) if pred_answer else 0,
+                "exact_answer_correct": stats["exact_answer_correct"],
                 "answer_correct": stats["answer_correct"],
                 "support": stats["support"],
                 "utility_score": stats["utility_score"],

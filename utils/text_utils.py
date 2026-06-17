@@ -5,6 +5,16 @@ from typing import Dict, List, Tuple
 
 
 _ARTICLES = {"a", "an", "the"}
+_UNKNOWN_ANSWERS = {
+    "i dont know",
+    "dont know",
+    "unknown",
+    "unanswerable",
+    "not enough information",
+    "insufficient information",
+    "cannot answer",
+    "no answer",
+}
 _WHO_VERBS = {
     "is",
     "was",
@@ -39,6 +49,11 @@ def normalize_text(text: str) -> str:
     text = "".join(ch for ch in text if ch not in string.punctuation)
     tokens = [tok for tok in text.split() if tok not in _ARTICLES]
     return " ".join(tokens)
+
+
+def is_unknown_answer(answer: str) -> bool:
+    answer_norm = normalize_text(answer)
+    return answer_norm in _UNKNOWN_ANSWERS
 
 
 def _simple_words(text: str) -> List[str]:
@@ -127,6 +142,33 @@ def contains_answer_score(pred: str, gold_answers: List[str]) -> int:
     return 0
 
 
+def relaxed_match_score(pred: str, gold_answers: List[str]) -> int:
+    pred_norm = normalize_text(pred)
+    if not pred_norm or not gold_answers:
+        return 0
+
+    if exact_match_score(pred, gold_answers):
+        return 1
+
+    if max_token_f1(pred, gold_answers) >= 0.80:
+        return 1
+
+    pred_len = len(pred_norm.split())
+    for gold in gold_answers:
+        gold_norm = normalize_text(gold)
+        if not gold_norm:
+            continue
+
+        gold_len = len(gold_norm.split())
+        if gold_norm in pred_norm and pred_len <= max(8, 3 * gold_len):
+            return 1
+
+        if pred_norm in gold_norm and pred_len >= 2:
+            return 1
+
+    return 0
+
+
 def token_f1_score(pred: str, gold: str) -> float:
     pred_tokens = normalize_text(pred).split()
     gold_tokens = normalize_text(gold).split()
@@ -152,6 +194,7 @@ def max_token_f1(pred: str, gold_answers: List[str]) -> float:
 def qa_metrics(pred: str, gold_answers: List[str]) -> Dict[str, float]:
     return {
         "exact_match": float(exact_match_score(pred, gold_answers)),
+        "relaxed_match": float(relaxed_match_score(pred, gold_answers)),
         "contains_answer": float(contains_answer_score(pred, gold_answers)),
         "token_f1": float(max_token_f1(pred, gold_answers)),
     }
@@ -162,7 +205,11 @@ def qa_match(pred: str, gold_answers: List[str]) -> int:
 
 
 def majority_answer(answers: List[str]) -> Tuple[str, int]:
-    cleaned = [normalize_text(a) for a in answers if normalize_text(a)]
+    cleaned = [
+        normalize_text(a)
+        for a in answers
+        if normalize_text(a) and not is_unknown_answer(a)
+    ]
     if not cleaned:
         return "", 0
     counter = Counter(cleaned)

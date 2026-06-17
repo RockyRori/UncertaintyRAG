@@ -8,6 +8,7 @@ from typing import Any, Dict, List, Optional, Tuple
 import pandas as pd
 
 from config import OUTPUTS_DIR
+from utils.text_utils import qa_metrics
 
 OUTPUT_DIR = str(OUTPUTS_DIR)
 SAVE_NAME = "final_results_v2.csv"
@@ -185,6 +186,18 @@ def extract_action_rows(item: Dict[str, Any], fname: str, idx: int, method: str,
 def extract_prediction_row(item: Dict[str, Any], fname: str, idx: int, method: str, policy: str, experiment_group: str) -> Dict[str, Any]:
     final_action = get_final_action(item)
     answered = infer_answered(item)
+    if final_action == "ANSWER":
+        metric_values = qa_metrics(
+            item.get("final_answer", ""),
+            item.get("gold_answers", []),
+        )
+    else:
+        metric_values = {
+            "exact_match": 0.0,
+            "relaxed_match": 0.0,
+            "contains_answer": 0.0,
+            "token_f1": 0.0,
+        }
     row = {
         "source_file": fname,
         "row_id": idx,
@@ -198,13 +211,15 @@ def extract_prediction_row(item: Dict[str, Any], fname: str, idx: int, method: s
         "final_answer": item.get("final_answer"),
         "final_action": final_action,
         "correct": item.get("correct", 0),
-        "exact_match": item.get("exact_match", item.get("correct", 0)),
-        "contains_answer": item.get("contains_answer"),
-        "token_f1": item.get("token_f1"),
+        "exact_match": item.get("exact_match", metric_values["exact_match"]),
+        "relaxed_match": item.get("relaxed_match", metric_values["relaxed_match"]),
+        "contains_answer": item.get("contains_answer", metric_values["contains_answer"]),
+        "token_f1": item.get("token_f1", metric_values["token_f1"]),
         "answered": answered,
         "answered_correct": item.get("correct", 0) if answered else None,
-        "answered_token_f1": item.get("token_f1") if answered else None,
-        "answered_contains_answer": item.get("contains_answer") if answered else None,
+        "answered_relaxed_match": item.get("relaxed_match", metric_values["relaxed_match"]) if answered else None,
+        "answered_token_f1": item.get("token_f1", metric_values["token_f1"]) if answered else None,
+        "answered_contains_answer": item.get("contains_answer", metric_values["contains_answer"]) if answered else None,
         "uncertainty": item.get("uncertainty"),
         "retrieval_uncertainty": item.get("retrieval_uncertainty"),
         "conflict_uncertainty": item.get("conflict_uncertainty"),
@@ -220,8 +235,8 @@ def extract_prediction_row(item: Dict[str, Any], fname: str, idx: int, method: s
 
 
 NUMERIC_COLS = [
-    "correct", "exact_match", "contains_answer", "token_f1",
-    "answered", "answered_correct", "answered_token_f1", "answered_contains_answer",
+    "correct", "exact_match", "relaxed_match", "contains_answer", "token_f1",
+    "answered", "answered_correct", "answered_relaxed_match", "answered_token_f1", "answered_contains_answer",
     "uncertainty", "retrieval_uncertainty", "conflict_uncertainty", "stability_uncertainty",
     "steps", "num_evidence", "budget_used",
     "history_len", "last_history_step", "remaining_budget",
@@ -293,8 +308,10 @@ def build_prediction_summary(pred_df: pd.DataFrame) -> pd.DataFrame:
             accuracy=("correct", "mean"),
             answer_rate=("answered", "mean"),
             answered_only_accuracy=("answered_correct", answered_only_acc),
+            answered_only_relaxed_match=("answered_relaxed_match", answered_only_acc),
             answered_only_token_f1=("answered_token_f1", answered_only_acc),
             answered_only_contains=("answered_contains_answer", answered_only_acc),
+            relaxed_match=("relaxed_match", "mean"),
             token_f1=("token_f1", "mean"),
             contains_answer=("contains_answer", "mean"),
             avg_uncertainty=("uncertainty", "mean"),
@@ -345,9 +362,11 @@ def build_five_dataset_tables() -> Tuple[pd.DataFrame, pd.DataFrame]:
                 "best_epoch": metrics.get("best_epoch"),
                 "accuracy": metrics.get("accuracy"),
                 "exact_match": metrics.get("answer_metrics", {}).get("exact_match", metrics.get("accuracy")),
+                "relaxed_match": metrics.get("answer_metrics", {}).get("relaxed_match"),
                 "contains_answer": metrics.get("answer_metrics", {}).get("contains_answer"),
                 "token_f1": metrics.get("answer_metrics", {}).get("token_f1"),
                 "answered_exact_match": metrics.get("answer_metrics", {}).get("answered_exact_match"),
+                "answered_relaxed_match": metrics.get("answer_metrics", {}).get("answered_relaxed_match"),
                 "answered_contains_answer": metrics.get("answer_metrics", {}).get("answered_contains_answer"),
                 "answered_token_f1": metrics.get("answer_metrics", {}).get("answered_token_f1"),
                 "auroc": metrics.get("auroc"),
@@ -365,7 +384,7 @@ def build_five_dataset_tables() -> Tuple[pd.DataFrame, pd.DataFrame]:
     pred_df = pd.concat(pred_frames, ignore_index=True) if pred_frames else pd.DataFrame()
     metric_df = pd.DataFrame(metric_rows)
     pred_df = convert_numeric(pred_df, [
-        "correct", "exact_match", "contains_answer", "token_f1",
+        "correct", "exact_match", "relaxed_match", "contains_answer", "token_f1",
         "uncertainty", "retrieval_uncertainty", "conflict_uncertainty",
         "stability_uncertainty", "steps", "num_evidence", "budget_used"
     ])
